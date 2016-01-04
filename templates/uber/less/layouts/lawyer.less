@@ -1,0 +1,74 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+.home-lawyer {
+
+	// Hero
+	.acm-features.style-6 .features-content {
+		padding: @t3-global-padding * 4 0;
+	}
+
+  // Blog
+  .item-grid-view {
+  	margin-bottom: 0;
+
+  	.item-image {
+  		display: block;
+  	}
+  }
+
+  // Testimonials
+  // ------------
+  .section-primary .acm-testimonials.style-2  {
+    .item {
+
+      .fa {
+        color: #fff;
+      }
+
+      .testimonial-text {
+        color: #fff;
+      }
+
+      // Author information
+      // ------------------
+      .author-info {
+        color: @gray-light;
+        color: rgba(255,255,255,.7);
+
+        // Author info text
+        .author-info-text {
+          span.author-name {
+            color: #fff;
+          }
+        }
+
+      }
+    }
+
+    // Indicators
+    .carousel-indicators {
+
+      li {
+        background: @gray-light;
+        background: rgba(255,255,255,.2);
+        border-color: transparent;
+        border-width: 8px;
+
+        &.active {
+          background: #fff;
+          border-color: #fff;
+        }
+      }
+    }
+
+  }
+
+// End
+}

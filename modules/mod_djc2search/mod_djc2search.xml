@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>mod_djc2search</name>
+	<creationDate>January 2011</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.4</version>
+	<description>MOD_DJC2SEARCH</description>
+	<files>
+		<filename module="mod_djc2search">mod_djc2search.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default=""
+					label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="filter" type="radio" default="1"
+					label="MOD_DJC2SEARCH_ISFILTER" description="MOD_DJC2SEARCH_ISFILTER_DESC">
+					<option value="0">MOD_DJC2SEARCH_FILTER_CATEGORY</option>
+					<option value="1">MOD_DJC2SEARCH_SHOW_FROM_ALL</option>
+				</field>
+				<field name="show_label" type="radio" default="1" label="MOD_DJC2SEARCH_LABEL">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_button" type="radio" default="1" label="MOD_DJC2SEARCH_BUTTON">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

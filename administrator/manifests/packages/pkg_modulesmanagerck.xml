@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>Modules Manager CK Package</name>
+	<author>Cédric KEIFLIN</author>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<creationDate>Mai 2013</creationDate>
+	<copyright>Copyright (C) 2013. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+ 	<packagename>modulesmanagerck</packagename>
+	 <version>1.0.2</version>
+	 <url>http://www.joomlack.fr</url>
+	 <description>Manages your modules with drag and drop into your template with Modules Manager CK.</description>
+	 <files folder="packages">
+		 <file type="component" id="com_modulesmanagerck">com_modulesmanagerck_j3.zip</file>
+		 <file type="plugin" id="plg_modulesmanagersystemck" client="site">plg_modulesmanagersystemck.zip</file>
+	 </files>
+</extension>

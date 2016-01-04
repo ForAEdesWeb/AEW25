@@ -1,0 +1,87 @@
+
+
+.glossary-nav {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 40px;
+}
+.glossary-nav nav {
+  padding: 0;
+}
+.glossary-nav nav.affix {
+  top: auto;
+  position: relative;
+}
+.glossary-nav nav .nav-pills {
+  background: #fff;
+}
+.glossary-nav nav .nav-pills > li {
+  display: block;
+  float: right;
+  margin: 0 0 10px 1px;
+}
+.glossary-nav nav .nav-pills > li > a {
+  background: #444444;
+  color: #eeeeee;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.glossary-nav nav .nav-pills > li > a:hover,
+.glossary-nav nav .nav-pills > li > a:active,
+.glossary-nav nav .nav-pills > li > a:focus {
+  background: #0077bb;
+  color: #fff;
+}
+@media screen and (min-width: 991px) {
+  .glossary-nav nav.affix {
+    top: 57px;
+    position: fixed;
+  }
+  .glossary-nav nav .nav-pills > li > a {
+    font-size: 24px;
+  }
+}
+.glossary-group {
+  margin-bottom: 40px;
+  position: relative;
+}
+.glossary-group a[name] {
+  position: absolute;
+  top: -120px;
+}
+.glossary-group-title {
+  background: #f7f7f7;
+  color: #222222;
+  font-weight: 600;
+  font-size: 35px;
+  margin: 0 0 20px;
+  padding: 15px;
+  text-transform: uppercase;
+}
+.glossary-group-items ul {
+  padding: 0;
+  margin: 0;
+}
+.glossary-group-items ul > li {
+  list-style: none;
+  padding: 0;
+}
+.glossary-group-items ul > li > a {
+  color: #444444;
+  display: block;
+  font-size: 18px;
+  padding: 5px 15px;
+}
+.glossary-group-items ul > li > a:hover,
+.glossary-group-items ul > li > a:active,
+.glossary-group-items ul > li > a:focus {
+  color: #0077bb;
+  text-decoration: none;
+}

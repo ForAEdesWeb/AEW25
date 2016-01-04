@@ -1,0 +1,225 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+.top-login {
+  float: right;
+  background: none;
+}
+
+.top-login  ul {
+  margin: 0;
+  position: relative;
+}
+
+.top-login ul li {
+  display: inline-block;
+  float: left;
+  position: relative;
+  z-index: 12;
+}
+
+.top-login ul li.first {
+  z-index: 13;
+}
+
+.top-login .login-switch #jabox-overlay,
+.top-login .register-switch #jabox-overlay {
+  display: none;
+}
+
+.top-login .login-switch.show + #jabox-overlay,
+.top-login .register-switch.show + #jabox-overlay {
+  display: block;
+}
+
+.top-login ul li a {
+  background: #111;
+  border-left: solid 1px @black;
+  color: @gray;
+  display: inline-block;
+  font-size: 92%;
+  font-weight: bold;
+  padding: 9px @baseLineHeight;
+  z-index: 1;
+}
+
+.top-login ul li a:hover,
+.top-login ul li a:focus,
+.top-login ul li a:active {
+  color: @grayLighter;
+}
+
+.top-login ul li a.show {
+  background: @grayDarker;
+  color: @grayLight;
+}
+
+.top-login ul li.first a {
+  border: none;
+}
+
+.top-login ul li a.show {
+  z-index: 3;
+}
+
+#ja-user-login ul {
+}
+
+#login-form {
+  margin: 0;
+}
+
+#login-form ul li a,
+#login-form ul li a:link,
+#login-form ul li a:visited {
+  background-image: url(../images/bullet-dark.png);
+  color: @gray;
+  font-weight: normal;
+  padding: 0 0 0 15px !important;
+}
+
+#login-form ul li a:hover,
+#login-form ul li a:focus,
+#login-form ul li a:active {
+  background-image: url(../images/bullet-hover.png);
+  color: @linkColorHover;
+}
+
+.login-greeting {
+  color: @white;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+ 
+.top-login .logout-button {
+  float: right;
+  margin: 5px 20px 5px 0;
+}
+
+#member-registration {
+  margin-bottom: 0;
+}
+
+#ja-user-register.hascaptcha {
+   width: 430px !important;
+}
+
+#ja-user-login,
+#ja-user-register {
+  background: @grayDarker;
+  border: 1px solid @grayDarker;
+  box-shadow: 5px 5px 5px rgba(0,0,0, .3);
+  display: none;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  top: 38px;
+}
+
+#ja-user-login label,
+#ja-user-register label {
+  color: @grayLight;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+#ja-user-login .inputbox,
+#ja-user-login #secretkey,
+#ja-user-register input[type="text"],
+#ja-user-register input[type="password"],
+#ja-user-register input[type="email"] {
+  background: darken(@grayDarker, 5%);
+  border: 1px solid lighten(@grayDarker, 5%);
+  box-shadow: none;
+  width: 230px;
+}
+
+#ja-user-login .inputbox:hover,
+#ja-user-login .inputbox:focus,
+#ja-user-login #secretkey:hover,
+#ja-user-login #secretkey:focus,
+#ja-user-register input[type="text"]:hover,
+#ja-user-register input[type="password"]:hover,
+#ja-user-register input[type="email"]:hover {
+  border: 1px solid @grayDark;
+  box-shadow: none;
+}
+
+#ja-user-login .invalid,
+#ja-user-register input[type="text"].invalid,
+#ja-user-register input[type="password"].invalid,
+#ja-user-register input[type="email"].invalid {
+  border-color: #cc3333;
+}
+#ja-user-login #modlgn-remember {
+  background: none;
+  border: none !important;
+  vertical-align: top;
+  width: auto;
+}
+
+#form-login-username,
+#form-login-password,
+#form-login-remember {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+#ja-user-register fieldset dl {
+  margin-bottom: 0;
+}
+
+#ja-user-register fieldset dt {
+  clear: none;
+  float: none;
+  padding: 0;
+}
+
+#ja-user-register fieldset dd {
+  padding: 0; 
+  margin-bottom: 5px;
+  margin-left: 0;
+}
+
+#ja-user-register fieldset + p {
+  color: @gray;
+  font-size: @T3smallFontSize;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.top-login input.button,
+.top-login button {
+  border: solid 1px darken(@grayDarker, 3%) !important;
+  .buttonBackground(lighten(@grayDarker, 10%), lighten(@grayDarker, 5%));
+  .border-radius(0px);
+  color: @grayLight;
+  font-weight: bold;
+  text-shadow: none;
+  padding: 6px 14px;
+}
+
+input.button:hover,
+input.button:focus,
+input.button:active,
+.top-login button:hover,
+.top-login button:focus,
+.top-login button:active {
+  .buttonBackground(lighten(@btnBackgroundHover, 10%), @btnBackgroundHover);
+  border-color: @btnBackgroundHover;
+  color: @white;
+}
+
+p#form-login-remember label {
+  display: inline-block;
+}
+
+.tip-wrap {
+ z-index: 9999;
+}

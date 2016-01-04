@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="search">
+		<field name="field"
+			type="hidden"
+			default="*"
+			label="JSEARCH_FILTER_LABEL"
+			labelclass="pull-left"
+			class="input-small"
+			>
+			<option value="*">JALL</option>
+			<option value="list.title">JGLOBAL_TITLE</option>
+			<option value="list.content">Content</option>
+		</field>
+
+		<field
+			name="index"
+			type="text"
+			label="JSEARCH_FILTER_LABEL"
+			hint="JSEARCH_FILTER"
+			/>
+
+		<!-- For multiple search
+		<fieldset name="multisearch">
+			<field
+				name="list.title"
+				type="text"
+				label="Title"
+				hint="JSEARCH_FILTER"
+				/>
+
+			<field
+				name="category.title"
+				type="text"
+				label="Category"
+				hint="JSEARCH_FILTER"
+				/>
+		</fieldset>
+		-->
+	</fields>
+
+	<!-- Filter -->
+	<fields name="filter">
+	</fields>
+
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="COM_CONTENT_LIST_FULL_ORDERING"
+			description="COM_CONTENT_LIST_FULL_ORDERING_DESC"
+			onchange="this.form.submit();"
+			default="a.title ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+			/>
+	</fields>
+</form>

@@ -1,0 +1,122 @@
+/* ASIKART EasySet Custom CSS */
+
+
+/* GLOBAL */
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/* BODY */
+
+
+/* TYPO */
+
+
+/* LAYOUT */
+
+
+/* HEADER */
+
+
+/* BANNER */
+
+
+/* MENU */
+
+
+/* MAIN CONTENT */
+.row-feature-content
+{
+    padding-top: 60px;
+}
+
+.aedesProject .active
+{
+    color: #fff;
+    background-color: #0067a2  !important;
+}
+
+#contact-map {
+  height: 600px;
+}
+#sr-contact {
+  padding: 0;
+  position: relative;
+}
+#sr-contact-body {
+  padding: 30px;
+  float: right;
+  background: white;
+  position: absolute;
+  right: 0;
+  top: -500px;
+  border: 1px solid #ccc;
+}
+#sr-contact-body article {
+  padding-left: 30px;
+}
+@media (max-width: 480px) {
+  #sr-contact-body  article {
+    padding-left: 0px;
+  }
+}
+#sr-footer {
+  padding: 40px 30px;
+}
+#sr-about article img {
+  position: relative;
+}
+
+
+    #contact-form
+    {
+        max-width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    #contact-form iframe
+    {
+        border: 0;
+        width: 500px;
+        max-width: 100%;
+        height: 300px;
+    }
+    
+    .modal-lg
+    {
+        width: 1200px;
+        max-width: 90%;
+    }
+    
+    .modal-lg iframe
+    {
+        width: 100%;
+        height: 800px;
+        border: 0px;
+    }
+    
+    #loadingTime:before
+    {
+        content: "緩衝";
+    }
+    
+    #loadingTime:after
+    {
+        content: "秒";
+    }
+/* LEFT COLUMN */
+
+
+/* RIGHT COLUMN */
+
+
+/* ARTICLE */
+
+
+/* TABLE */
+
+
+/* FOOTER */

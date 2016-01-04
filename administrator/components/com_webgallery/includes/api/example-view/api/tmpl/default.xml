@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="com_webgallery_api_title" option="com_webgallery_api_option">
+        <help
+            key = "COM_WEBGALLERY_API_MENU_MANAGER_HELP"
+        />
+        <message>
+            <![CDATA[COM_WEBGALLERY_API_MENU_MANAGER_DESC]]>
+        </message>
+    </layout>
+
+    <!-- Add fields to the request variables for the layout. -->
+    <fields name="request">
+        <fieldset name="request"
+            addfieldpath="/administrator/components/com_webgallery/models/fields">
+
+            <field name="format" type="text"
+                label="COM_WEBGALLERY_SELECT_ITEM"
+                required="true"
+                description="CCOM_WEBGALLERY_SELECT_ITEM_DESC"
+                default="json"
+            />
+        </fieldset>
+    </fields>
+</metadata>

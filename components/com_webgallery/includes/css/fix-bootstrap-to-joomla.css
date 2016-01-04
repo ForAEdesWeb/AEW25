@@ -1,0 +1,29 @@
+/* Fix Bluestork and Bootstrap Conflict */
+.toolbar-list {
+    float: right;
+}
+
+.toolbar-list li {
+    list-style: none ;
+}
+
+.toolbar-list li .btn {
+    float: left ;
+}
+
+.toolbar-list li.btn.btn-primary a,
+.toolbar-list li.btn.btn-info a,
+.toolbar-list li.btn.btn-danger a{
+    color: white;
+}
+
+
+
+#ak-panel-wrap ul {
+    padding: 0;
+    margin: 0;
+}
+
+#ak-panel-wrap ul li {
+    list-style: none ;
+}

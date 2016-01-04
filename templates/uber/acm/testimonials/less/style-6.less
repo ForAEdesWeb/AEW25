@@ -1,0 +1,94 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// -----------------
+// TESTIMONIAL STYLE
+// -----------------
+.acm-testimonials {
+
+	// TESTIMONIALS STYLE 6
+	// --------------------
+
+	// carousel intro text
+	&.style-6 {
+	  font-size: @font-size-base;
+	  font-weight: @font-weight-light;
+	  text-align: left;
+	  padding-left: @t3-global-padding;
+	  padding-right: @t3-global-padding;
+	  z-index: 1;
+
+	  // Control screen tablet/ desktop
+	  @media screen and (min-width: @screen-xs-min) {
+	    font-size: @font-size-h3;
+	    text-align: center;
+	    padding-left: 0;
+	    padding-right: 0;
+	  }
+
+	  b {
+	    color: @brand-primary;
+	    font-size: @font-size-large;
+
+	    // Control screen tablet/ desktop
+	    @media screen and (min-width: @screen-xs-min) {
+	      font-size: @font-size-h2;
+	    }
+	  }
+
+	  // Add width for carousel
+	  .word-wrap {
+	    display: inline-block;
+	    position: relative;
+	    height: 24px;
+	    z-index: 1;
+
+	    // Control screen tablet/mobile
+	    @media screen and (min-width: @screen-xs-min) {
+	      height: 52px;
+	    }
+	  }
+
+	  // carousel
+	  .carousel {
+	    display: inline-block;
+	    position: absolute;
+	    left: 0;
+	    z-index: 1;
+
+	    .carousel-inner {
+	      overflow: visible;
+	      width: auto;
+
+	      // Item
+	      .item {
+	        display: block;
+	        position: absolute;
+	        left: 0;
+	        top: 0;
+	        padding-left: 0;
+	        padding-right: 0;
+	        transform: rotateX(90deg);
+	          -webkit-transform: rotateX(90deg);
+	        .transition(transform 500ms);
+
+	        p {
+	          font-weight: bold;
+	          font-size: @font-size-large;
+
+	          // Control screen tablet/desktop
+	          @media screen and (min-width: @screen-xs-min) {
+	            font-size: @font-size-h2;
+	          }
+	        }
+
+	        &.active {
+	          transform: rotateX(0);
+	            -webkit-transform: rotateX(0);
+	        }
+	      }
+	    }
+	  }
+	}
+}

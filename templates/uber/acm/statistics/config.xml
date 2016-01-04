@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Statistics</title>
+	<sampledata><![CDATA[  
+		{"jatools-layout-statistics":["default"],"statistics[stats-sm-text]":["Statistics Style 1"],"statistics[stats-header]":["At this phase, we round up a collection of 12+ block types that feature typical content in Uber. Each block comes with multiple styles, giving you endless customisation possibility. "],"statistics[full-width]":["0"],"statistics[font-icon]":["fa fa-users","fa fa-pie-chart"],"statistics[stats-count]":["6+","7+"],"statistics[stats-name]":["hero blocks","testimonials"]}
+    ]]></sampledata>
+    <fields name="statistics">
+    	<fieldset name="statistics-header" label="STATISTICS_HEADER_SETTING_LABEL" description="STATISTICS_HEADER_SETTING_DESC">
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+  
+    	<field name="stats-title" type="text" default="" size="40" label="STATISTICS_TITLE_LABEL" description="STATISTICS_TITLE_DESC" ></field>
+			<field name="stats-description" type="textarea" default="" rows="5" cols="40" label="STATISTICS_DESCRIPTION_LABEL" description="STATISTICS_DESCRIPTION_DESC" />
+			<field name="acm-style" type="list" default="style-light"
+			  global="1"
+			  label="ACM_STYLE_LABEL"
+			  description="ACM_STYLE_DESC">
+				<option value="style-light">LAYOUT_STYLE_LIGHT</option>
+				<option value="style-dark">LAYOUT_STYLE_DARK</option>
+			</field>
+			<field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+      	<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+      
+      <field name="acm-col-offset" type="list" default="col-lg-offset-0"
+			  label="ACM_COL_OFFSET_LABEL"
+			  description="ACM_COL_OFFSET_DESC"
+				layouts="style-6">
+				<option value="col-lg-offset-0">col-lg-offset-0</option>
+				<option value="col-lg-offset-1">col-lg-offset-1</option>
+				<option value="col-lg-offset-2">col-lg-offset-2</option>
+				<option value="col-lg-offset-3">col-lg-offset-3</option>
+				<option value="col-lg-offset-4">col-lg-offset-4</option>
+				<option value="col-lg-offset-5">col-lg-offset-5</option>
+				<option value="col-lg-offset-6">col-lg-offset-6</option>
+				<option value="col-lg-offset-7">col-lg-offset-7</option>
+				<option value="col-lg-offset-8">col-lg-offset-8</option>
+				<option value="col-lg-offset-9">col-lg-offset-9</option>
+				<option value="col-lg-offset-10">col-lg-offset-10</option>
+				<option value="col-lg-offset-11">col-lg-offset-11</option>
+				<option value="col-lg-offset-12">col-lg-offset-12</option>
+			</field>
+		</fieldset>
+
+    <fieldset name="statistics-box" label="STATISTICS_BOX_LABEL" description="STATISTICS_BOX_DESC">
+    	<field name="data" type="jalist" layouts="style-1,style-3,style-4,style-5,style-6">
+				<item name="stats-count" type="text" default="" label="STATISTICS_COUNT_LABEL" description="STATISTICS_COUNT_DESC" required="1" />
+				<item name="stats-name" type="text" default="" label="STATISTICS_NAME_LABEL" description="STATISTICS_NAME_DESC" />
+				<item name="stats-color" type="text" default="" label="STATISTICS_COLOR_LABEL" description="STATISTICS_COLOR_DESC" />
+			</field>
+			
+			<field name="data-style-2" type="jalist" layouts="style-2" >
+				<item name="font-icon" type="text" default="" label="FONT_AWESOME_LABEL" description="FONT_AWESOME_DESC" />
+				<item name="stats-count" type="text" default="" label="STATISTICS_COUNT_LABEL" description="STATISTICS_COUNT_DESC" required="1" />
+				<item name="stats-name" type="text" default="" label="STATISTICS_NAME_LABEL" description="STATISTICS_NAME_DESC" />
+				<item name="stats-color" type="text" default="" label="STATISTICS_COLOR_LABEL" description="STATISTICS_COLOR_DESC" />
+			</field>
+			
+			<field name="data-style-7" type="jalist" layouts="style-7" >
+				<item name="stats-count" type="text" default="" label="STATISTICS_COUNT_LABEL" description="STATISTICS_COUNT_DESC" required="1" />
+				<item name="stats-name" type="text" default="" label="STATISTICS_NAME_LABEL" description="STATISTICS_NAME_DESC" />
+				<item name="stats-color" type="text" default="" label="STATISTICS_COLOR_LABEL" description="STATISTICS_COLOR_DESC" />
+				<item name="stats-shadow" type="text" default="" label="STATISTICS_SHADOW_COLOR_LABEL" description="STATISTICS_SHADOW_COLOR_DESC" />
+				<item name="stats-bg" type="text" default="" label="STATISTICS_BG_COLOR_LABEL" description="STATISTICS_BG_COLOR_DESC"  />
+			</field>
+    </fieldset>
+
+    </fields>
+</form>

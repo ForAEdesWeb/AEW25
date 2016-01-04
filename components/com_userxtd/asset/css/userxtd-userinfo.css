@@ -1,0 +1,41 @@
+/*!
+ * com_userxtd
+ *
+ * Copyright 2012 Asikart.com
+ * License GNU General Public License version 2 or later; see LICENSE.txt, see LICENSE.php
+ *
+ * Generator: AKHelper
+ * Author: Asika
+ */
+
+
+.ux-user-info-warp {
+	margin-top: 20px;
+}
+
+.ux-user-info-warp h2.ux-user-info-heading {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.ux-user-info-warp .ux-user-left img {
+	border-radius: 4px;
+}
+
+.ux-user-info-warp .ux-user-right-inner {
+	padding-left: 15px;
+}
+
+.ux-user-info-warp .ux-user-inner {
+	position: relative ;
+}
+
+.ux-user-info-warp .ux-user-about {
+	margin-bottom: 30px;
+}
+
+.ux-user-info-warp .more-about {
+	position: absolute ;
+	bottom: 1px;
+	right: 1px;
+}

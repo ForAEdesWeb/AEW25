@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" 
+				readonly="true" class="readonly" />
+		
+		<field name="name" type="text" class="inputbox"
+				size="40" label="COM_DJCATALOG2_NAME"
+				description="COM_DJCATALOG2_NAME" required="true" />
+		
+		<field name="alias" type="text" class="inputbox"
+			size="40" label="COM_DJCATALOG2_ALIAS"
+			description="COM_DJCATALOG2_ALIAS" />
+			
+		<field
+			name="published"
+			type="list"
+			label="COM_DJCATALOG2_PUBLISHED"
+			description="COM_DJCATALOG2_PUBLISHED"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">JPUBLISHED</option>
+			<option
+				value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field name="description" type="editor" class="inputbox"
+			label="COM_DJCATALOG2_DESCRIPTION" description="COM_DJCATALOG2_DESCRIPTION"
+			filter="JComponentHelper::filterText"
+			buttons="true" />
+		
+		<field name="metatitle" type="text" class="inputbox"
+				size="40" label="COM_DJCATALOG2_META_TITLE"
+				description="COM_DJCATALOG2_META_TITLE" />
+				
+		<field name="metakey" type="textarea"
+			label="COM_DJCATALOG2_META_KEY" description="COM_DJCATALOG2_META_KEY"
+			class="inputbox" rows="3" cols="30" />
+
+		<field name="metadesc" type="textarea"
+			label="COM_DJCATALOG2_META_DESCRIPTION" description="COM_DJCATALOG2_META_DESCRIPTION"
+			class="inputbox" rows="3" cols="30" />
+		<field name="created" type="calendar"
+			label="JGLOBAL_FIELD_CREATED_LABEL" description="JGLOBAL_FIELD_CREATED_DESC"
+			class="inputbox" size="22" format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc" />
+
+		<field name="created_by" type="user"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_Desc" />
+	</fieldset>
+</form>

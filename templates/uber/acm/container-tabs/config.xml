@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>[Container] Tabs</title>
+	<sampledata><![CDATA[  		
+	{"jatools-layout-container-tabs":["default"],"container-tabs[position]":["uber-container-tabs"]}
+    ]]></sampledata>
+  <fields name="container-tabs">
+  
+    <fieldset name="basic" label="CONTAINER_TABS_BASIC_LABEL" description="CONTAINER_TABS_BASIC_DESC" multiple="0">
+    	<field name="block-intro" type="textarea" default="" rows="5" cols="40"  label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="position" type="moduleposition"    
+        description="SLIDESHOW_POSITION_DESC"
+        label="SLIDESHOW_POSITION_LABEL"
+        default=""
+        maxlength="50" />
+    </fieldset>
+		
+  </fields>
+</form>

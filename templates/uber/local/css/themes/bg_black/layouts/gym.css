@@ -1,0 +1,76 @@
+@media screen and (max-width: 767px) {
+  .home-gym .acm-hero.style-5 .hero-content .hero-heading {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-gym .section-inner .section-title span {
+    font-size: 16px;
+  }
+}
+.home-gym .home-gym-schedule ul {
+  margin-left: -26px;
+  margin-right: -26px;
+}
+@media screen and (max-width: 767px) {
+  .home-gym .home-gym-schedule ul {
+    margin: 0;
+  }
+}
+.home-gym .home-gym-schedule li {
+  width: 25%;
+  display: block;
+  float: left;
+  padding: 0 26px;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .home-gym .home-gym-schedule li {
+    width: 100%;
+    float: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .home-gym .home-gym-schedule li {
+    width: 50%;
+  }
+}
+.home-gym .home-gym-schedule-featured .acm-menu .style-2.style-light {
+  background: #38b775;
+}
+.home-gym .home-gym-schedule-featured .acm-menu .style-2 .dish-item .item-inner {
+  background: none;
+  color: #ffffff;
+}
+.home-gym .home-gym-schedule-featured .acm-menu .style-2 .dish-item .item-inner .dish-name {
+  font-size: 16px;
+}
+.home-gym .acm-spotlight .t3-module .module-title span {
+  background: none;
+  padding-left: 0;
+}
+.home-gym .section-lighter .t3-module .module-title span {
+  color: #27292e;
+}
+.home-gym .acm-spotlight .acm-testimonials .carousel-inner .item {
+  text-align: left;
+}
+.home-gym .acm-spotlight .acm-testimonials .carousel-inner .item .testimonial-text {
+  font-size: 20px;
+}
+.home-gym .gym-timetable-menu {
+  padding-top: 0;
+}
+.home-gym .acm-menu .style-2 .dish-item .item-inner {
+  padding-right: 190px;
+}
+.home-gym .acm-menu .style-2 .dish-item .item-inner .dish-name {
+  font-size: 18px;
+}
+.home-gym .acm-menu .style-2 .dish-item .item-inner .dish-price {
+  font-size: 16px;
+  width: 180px;
+}
+.home-gym .acm-menu .style-2 .dish-item .item-inner .dish-description {
+  margin: 0;
+}

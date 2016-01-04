@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Call To Action</title>
+	<sampledata><![CDATA[
+        {"jatools-layout-cta":["default"],"cta[text-align]":["col-md-6 text-left"],"cta[style]":["light"],"cta[cta-heading]":["Call To Action Style 2"],"cta[cta-intro]":["The most powerful template framework at your fingertips. Take full control of your design masterpiece. "],"cta[img]":["images/joomlart/support-staff.png"],"cta[animation]":["moveFromBottom"],"cta[animation_speed]":[""],"cta[button]":["Ask us a question"],"cta[link]":["index.php?option=com_contact&view=contact&id=1&Itemid=499"],"cta[button_class]":["btn-rounded btn-primary btn-lg smooth-scroll"]}
+    ]]></sampledata>
+	<fields name="cta">
+         <fieldset name="basic" label="CTA_BASIC_LABEL" description="CTA_BASIC_DESC" multiple="0">
+         		<field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+         		<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+         		
+						<field name="text-align" type="list" default="col-md-6 text-left"
+									 global="1"
+									 label="CTA_TEXT_ALIGN_LABEL"
+									 description="CTA_TEXT_ALIGN_DESC" layouts="style-3">
+							<option value="col-md-6 text-left">Left</option>
+							<option value="col-md-6 text-right">Right</option>
+							<option value="col-md-12 text-center">Center</option>
+						</field>
+						
+						<field name="style" type="list" default="light"
+									 global="1"
+									 label="CTA_STYLE_LABEL"
+									 description="CTA_STYLE_DESC" layouts="style-3">
+							<option value="light">Light</option>
+							<option value="dark">Dark</option>
+						</field>
+						
+            <field name="img" type="media" default="" label="CTA_IMG_LABEL" description="CTA_IMG_DESC" layouts="style-1, style-2, style-3" />
+            
+            <field name="animation" type="list" default="fade"
+									 global="1"
+									 label="CTA_ANIMATION_LABEL"
+									 description="CTA_ANIMATION_DESC"
+									 layouts="style-1" >
+							<option value="fade">CTA_ANIMATION_FADE</option>
+							<option value="moveFromBottom">CTA_ANIMATION_MOVEFROMBOTTOM</option>
+						</field>
+						
+						<field name="animation_speed" type="number" default="" label="CTA_ANIMATION_SPEED_LABEL" description="CTA_ANIMATION_SPEED_DESC" layouts="style-1" />
+            
+						<field name="cta-bg" type="list" default="brand-primary"
+									 global="1"
+									 label="CTA_BACKGROUND_LABEL"
+									 description="CTA_BACKGROUND_DESC" layouts="style-4">
+							<option value="brand-primary">Brand Primary</option>
+							<option value="brand-secondary">Brand Secondary</option>
+							<option value="brand-success">Brand Success</option>
+              <option value="brand-warning">Brand Warning</option>
+              <option value="brand-danger">Brand Danger</option>
+              <option value="brand-info">Brand Info</option>
+              <option value="gray-light">Gray Light</option>
+              <option value="gray-dark">Gray Dark</option>
+						</field>
+            <field name="cta-icon" type="text" size="10" default="" label="CTA_ICON_LABEL" description="CTA_ICON_DESC" layouts="style-4"/>
+            <field name="link" type="text" default="" label="CTA_LINK_LABEL" description="CTA_LINK_DESC" required="1" layouts="style-4" />
+        </fieldset>
+    
+        <fieldset name="button" label="CTA_BUTTON_SETTING_LABEL" description="CTA_BUTTON_SETTING_DESC" layouts="style-1, style-2, style-3">
+        	<field name="data" type="jalist">
+            <item name="button" type="text" default="" label="CTA_BUTTON_LABEL" description="CTA_BUTTON_DESC" required="1" />
+            <item name="link" type="text" default="" label="CTA_LINK_LABEL" description="CTA_LINK_DESC" required="1" />
+            <item name="button_class" type="text" default="" label="CTA_BUTTON_CLASS_LABEL" description="CTA_BUTTON_CLASS_DESC" />
+          </field>
+        </fieldset>   
+         
+  </fields>
+</form>

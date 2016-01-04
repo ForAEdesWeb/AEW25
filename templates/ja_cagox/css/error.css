@@ -1,0 +1,87 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Jason Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+
+/* MAIN STYLE
+---------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #e7e7e7;
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+	line-height: 1.625;
+	margin: 0;
+}
+
+.error {
+    left: 0;
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    	-webkit-transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+/* ERROR CODE 
+--------------------*/
+.error-code {
+	font-size: 180px;
+	line-height: 1;
+}
+
+/* ERROR IMAGE
+---------------------*/
+#offline-img {
+	margin-bottom: 10px;
+}
+
+#offline-img img {
+	max-width: 100%;
+}
+
+/* ERROR MESSAGE
+--------------------*/
+#errorboxbody {
+	color: #818181;
+	font-family: Roboto;
+	font-size: 14px;
+}
+
+.error-message h2 {
+	border-bottom: 1px solid rgba(0,0,0,0.08);
+	display: inline-block;
+}
+
+/* BTN HOME PAGE 
+---------------------*/
+.button-home {
+	border: 2px solid #000;
+    color: #000;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.button-home:hover,
+.button-home:focus,
+.button-home:active {
+	background: rgba(0,0,0,0.1);
+	cursor: pointer;
+}

@@ -1,0 +1,38 @@
+// ------------------------------------------------
+// CONTAINER SLIDESHOW STYLE 4
+// ------------------------------------------------
+.acm-container-slide {
+  &.slide-4 {
+  	.mask-bottom {
+      background: url("../images/border.png") repeat-x left bottom;
+      padding-bottom: 5px;
+      bottom: 0;
+      left: 0;
+      padding-bottom: 5px;
+      position: absolute;
+      right: 0;
+
+      &:before {
+        background: url("../images/tree-snow.png") no-repeat right top;
+        bottom: -30px;
+        content: "";
+        height: 82px;
+        position: absolute;
+        right: @grid-gutter-width;
+        width: 960px;
+      }
+    }
+
+    .carousel-indicators li {
+      background: url("../images/thumb.png") no-repeat;
+      border: 0;
+      width: 14px;
+      height: 14px;
+
+      &.active {
+        background-image: url("../images/thumb-active.png");
+        margin: 1px;
+      }
+    }
+  }
+}

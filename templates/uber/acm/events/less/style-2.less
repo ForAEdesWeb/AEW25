@@ -1,0 +1,142 @@
+// -------------------------------
+// MENU STYLE 1
+// -------------------------------
+.acm-event {
+  .style-2 {
+    .clearfix();
+    position: relative;
+
+    &:after {
+      background: @gray-lighter;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 5px;
+
+      @media ( min-width: @screen-sm-max ) {
+        left: 50%;
+      }
+    }
+
+    .row {
+      margin-bottom: @t3-global-margin;
+
+      // Event date
+      .event-date {
+        font-size: @font-size-large;
+        font-weight: @font-weight-semibold;
+        padding-left: @t3-global-padding;
+        .transition(padding 0.35s);
+
+        @media ( min-width: @screen-sm-max ) {
+          text-align: right;
+          padding-right: @t3-global-padding;
+        }
+      }
+
+      // Event time
+      .event-time {
+        color: @gray-light;
+        font-size: @font-size-small;
+        padding-left: @t3-global-padding;
+        .transition(padding 0.35s);
+
+        @media ( min-width: @screen-sm-max ) {
+          font-size: @font-size-base;
+          padding-right: @t3-global-padding;
+          text-align: right;
+        }
+
+        .fa {
+          float: left;
+          margin-right: 5px;
+          margin-top: 5px;
+
+          @media ( min-width: @screen-sm-max ) {
+            float: none;
+            margin-top: 0;
+            margin-left: 5px;
+          }
+        }
+
+      }
+
+      // Event title
+      h4 {
+        margin-top: 0;
+        margin-bottom: 5px;
+
+        .fa {
+          margin-right: 5px;
+        }
+
+        a {
+          color: @gray;
+
+          &:hover, &:focus, &:active {
+            color: @link-hover-color;
+          }
+        }
+      }
+
+      // Event content
+      .event-content {
+        padding-left: @t3-global-padding;
+
+        &:before {
+          background: @brand-primary;
+          border-radius: 50%;
+          content: "";
+          display: block;
+          height: 16px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 8px 0 0 15px;
+          width: 16px;
+          z-index: 20;
+
+          @media ( min-width: @screen-sm-max ) {
+            margin: -9px 0 0 -5px;
+            top: 50%;
+          }
+        }
+
+        .event-description {
+          color: @gray-light;
+        }
+      }
+
+      &:hover {
+        .event-date,
+        .event-time {
+          padding-right: (@t3-global-padding / 2);
+        }
+
+      }
+
+    }
+
+    &.style-dark {
+      color: @white;
+
+      .event-content {
+        &:before {
+          background: @white;
+        }
+
+        h4 a {
+          color: @white;
+
+          &:hover, &:focus, &:active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+  }
+}

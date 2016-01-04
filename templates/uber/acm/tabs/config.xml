@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Tabs</title>
+	<sampledata><![CDATA[
+      {"jatools-layout-tabs":["default"],"tab[nav-tabs]":["Expertise","Selected Works"],"tab[img]":["images/joomlart/corporate/mk_1.png","images/joomlart/corporate/mk_2.png"],"tab[intro]":["We are a strategic consultant firm committed to building world-class brands through powerful, flexible strategies. We deliver comprehensive service in research and digital media.","With partners around the globe, we deliver specialised services from an international perspective "],"tab[link]":["#","#"],"tab[text-btn]":["Explore Our Works","Explore Our Works"],"tab[icon-btn]":["fa fa-angle-right","fa fa-angle-right"],"tab[class-btn]":["btn btn-border","btn btn-primary btn-border"],"tab[location]":["",""],"tab[address]":["",""],"tab[map]":["",""]}
+    ]]></sampledata>
+    <fields name="tab">
+		<fieldset name="block-basic" label="BLOCK_BASIC_LABEL" description="BLOCK_BASIC_LABEL">
+			<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+		</fieldset>
+		<fieldset name="basic" label="TAB_LABEL" description="TAB_DESC" multiple="1" layouts="style-1,style-2">
+			<field name="nav-tabs" type="text" default="" size="45" label="TAB_TITLE_LABEL" description="TAB_TITLE_DESC" layouts="style-1"></field>
+			<field name="img" type="media" default="" label="TAB_IMG_LABEL" description="TAB_IMG_DESC" layouts="style-1"></field>
+			<field name="intro" type="textarea" default="" label="TAB_INTRO_TEXT" description="TAB_INTRO_DESC" cols="40" rows="5" layouts="style-1"></field>
+			<field name="link" type="text" default="" label="TAB_LINK_LABEL" description="TAB_LINK_DESC" layouts="style-1"></field>
+			<field name="text-btn" type="text" default="" label="TAB_TEXTBTN_LABEL" description="TAB_TEXTBTN_DESC" layouts="style-1"></field>
+			<field name="icon-btn" type="text" default="" label="TAB_ICONBTN_LABEL" description="TAB_ICONBTN_DESC" layouts="style-1"></field>
+			<field name="class-btn" type="text" default="" label="TAB_CLASS_BTN_LABEL" description="TAB_CLASS_BTN_DESC" layouts="style-1"></field>
+			
+			<field name="location" type="text" label="TAB_LOCATION_LABEL" description="TAB_LOCATION_DESC" size="40" layouts="style-2"></field>
+			<field name="address" type="textarea" cols="40" rows="5" label="TAB_ADDRESS_LABEL" description="TAB_ADDRESS_DESC" layouts="style-2"></field>
+			<field name="map" type="textarea" cols="40" rows="5" label="TPL_MAP" description="TPL_MAP_DES" layouts="style-2"></field>
+			
+        </fieldset>
+    </fields>
+</form>

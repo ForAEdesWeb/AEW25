@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="search">
+		<field name="field"
+			type="sql"
+			default="*"
+			label="JSEARCH_FILTER_LABEL"
+			labelclass="pull-left"
+			class="input"
+			key_field="name"
+			value_field="value"
+			query="SELECT name, title, CONCAT(title, ' (' , name, ')') AS value FROM #__userxtd_fields ORDER BY ordering"
+			>
+			<option value="*">JALL</option>
+			<option value="user.name">COM_USERS_HEADING_NAME</option>
+			<option value="user.username">JGLOBAL_USERNAME</option>
+		</field>
+
+		<field
+			name="index"
+			type="text"
+			label="JSEARCH_FILTER_LABEL"
+			hint="JSEARCH_FILTER"
+			/>
+
+		<!-- For multiple search
+		<fieldset name="multisearch">
+			<field
+				name="profile.title"
+				type="text"
+				label="Title"
+				hint="JSEARCH_FILTER"
+				/>
+
+			<field
+				name="category.title"
+				type="text"
+				label="Category"
+				hint="JSEARCH_FILTER"
+				/>
+		</fieldset>
+		-->
+	</fields>
+
+	<!-- Filter -->
+	<fields name="filter">
+		<field
+			type="note"
+			label="COM_USERXTD_FILTER_NOTE_GENERAL"
+			class="filter-title"
+			/>
+
+		<field
+			name="user.block"
+			type="list"
+			default=""
+			onchange="this.form.submit();"
+			>
+			<option></option>
+			<option>COM_USERS_FILTER_STATE</option>
+			<option value="0">JENABLED</option>
+			<option value="1">JDISABLED</option>
+		</field>
+
+		<field
+			name="user.activation"
+			type="list"
+			default=""
+			onchange="this.form.submit();"
+			>
+			<option></option>
+			<option>COM_USERS_FILTER_ACTIVE</option>
+			<option value="0">COM_USERS_ACTIVATED</option>
+			<option value="1">COM_USERS_UNACTIVATED</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="COM_CONTENT_LIST_FULL_ORDERING"
+			description="COM_CONTENT_LIST_FULL_ORDERING_DESC"
+			onchange="this.form.submit();"
+			default="user.title ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+			/>
+	</fields>
+</form>

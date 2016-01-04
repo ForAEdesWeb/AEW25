@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Video</title>
+	<sampledata><![CDATA[  
+		{":type":"ja_march:video","video":{"jatools-layout-video":"style-1","video-style[full-screen]":[""],"video-style[block-title]":["Everything start from the style of choise"],"video-style[block-intro]":[""],"video-style[block-bg]":["images/joomlart/video-7.jpg"],"video-style[block-video]":["youtube=qr1znPlfOxc"],"video-style[acm-style]":["dark-style"]}}
+    ]]></sampledata>
+	
+  <fields name="video-style">
+    <fieldset name="video-basic" label="VIDEO_BASIC_LABEL" description="VIDEO_BASIC_DESC" >
+      <field name="full-screen" type="radio" default=""
+            label="FULL_SCREEN_LABEL"
+            description="FULL_SCREEN_DESC">
+          <option value="">No</option>
+          <option value="full-screen">Yes</option>
+      </field>
+    </fieldset>
+    <fieldset name="slideshow-content" label="VIDEO_CONTENT_LABEL" description="VIDEO_CONTENT_DESC">
+      <field name="block-title" type="textarea" default="" rows="5" cols="40"  label="VIDEO_BLOCK_TITLE_LABEL" description="VIDEO_BLOCK_TITLE_DESC" />
+      <field name="block-bg" type="media" default="" label="VIDEO_BACKGROUND_LABEL" description="VIDEO_BACKGROUND_DESC"/>
+      <field name="block-video" type="type" size="50" default="vimeo=" label="BLOCK_VIDEO_LABEL" description="BLOCK_VIDEO_DESC" required="1"></field>
+      <field name="acm-style" type="list" default="dark-style"
+          label="ACM_STYLE_LABEL"
+          description="ACM_STYLE_DESC">
+        <option value="dark-style">DARK_STYLE</option>
+        <option value="light-style">LIGHT_STYLE</option>
+      </field>
+    </fieldset>
+  </fields>
+</form>

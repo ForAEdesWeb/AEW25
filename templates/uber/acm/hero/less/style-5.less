@@ -1,0 +1,107 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// ----------------------------------------
+// HERO STYLE 5
+// ----------------------------------------
+.acm-hero {
+  &.style-5 {
+    background-size: cover !important;
+
+    .hero-content {
+      width: 100%;
+      .clearfix();
+
+      @media screen and (max-width: @screen-sm-max) {
+        width: auto;
+      }
+
+      @media (min-width: @screen-sm) and (max-width: @screen-md-max) {
+        padding-left: @grid-gutter-width*2;
+        padding-right: @grid-gutter-width *2;
+      }
+
+      .hero-heading  {
+        font-size: @font-size-h2;
+      }
+
+      .hero-intro {
+
+        // Specific style for slide items
+        .item:nth-child(3) & {
+           @media (min-width: @screen-sm) and (max-width: @screen-md-max) {
+            display: block;
+            background: @white;
+            background: rgba(255, 255, 255, 0.91);
+            padding: 10px;
+          }
+        }
+
+
+      }
+    }
+
+    .hero-img {
+      img {
+        max-width: 100%;
+
+      }
+
+      @media screen and (max-width: @screen-xs-max) {
+         text-align: center;
+         padding: 0;
+         float: none !important;
+      }
+    }
+
+    // Hero heading
+    // ------------
+    .hero-heading {
+      font-size: @font-size-h2;
+      margin: 0 0 @t3-global-margin;
+
+      @media screen and (max-width: @screen-xs-max) {
+        text-align: center;
+        line-height: 1.2;
+      }
+
+      &.lg {
+        font-size: @font-size-h2 * 2;
+
+        @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+          font-size: @font-size-h3;
+        }
+
+        @media screen and (max-width: @screen-xs-max) {
+          font-size: @font-size-h3;
+          text-align: center;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    &.style-dark .hero-heading {
+      text-transform: uppercase;
+      font-weight: @font-weight-bold;
+    }
+
+    // Buttons
+    // -------
+    .hero-btn-actions {
+      .fa {
+        margin-left: @t3-global-margin/4;
+      }
+
+      .btn {
+        @media screen and (max-width: @screen-xs-max) {
+          margin-bottom: @t3-global-margin;
+        }
+      }
+
+      @media screen and (max-width: @screen-xs-max) {
+        text-align: center;
+      }
+    }
+  }
+}

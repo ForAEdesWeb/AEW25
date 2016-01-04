@@ -1,0 +1,24 @@
+.home-corporate .acm-testimonials.style-6 {
+  font-size: 20px;
+}
+@media screen and (min-width: 480px) {
+  .home-corporate .acm-testimonials.style-6 {
+    font-size: 45px;
+  }
+}
+.home-corporate .acm-testimonials.style-6 b {
+  font-size: 20px;
+}
+@media screen and (min-width: 480px) {
+  .home-corporate .acm-testimonials.style-6 b {
+    font-size: 45px;
+  }
+}
+.home-corporate .acm-tabs .style-1 .tab-content img {
+  margin-top: -104px;
+}
+@media screen and (max-width: 991px) {
+  .home-corporate .acm-tabs .style-1 .tab-content img {
+    margin-top: 0;
+  }
+}

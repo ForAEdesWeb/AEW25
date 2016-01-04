@@ -1,0 +1,1102 @@
+// ---------------------------------------------------------
+// HEADER
+// ---------------------------------------------------------
+.ja-header .container {
+  background: url(../images/header-bg.gif) repeat left top;
+  padding-top: @baseLineHeight;
+  padding-bottom: 5px;
+  overflow: visible;
+}
+
+// Logo
+// ---------------------------------------------------------
+.logo {
+  float: left;
+
+  h1, h1 a {
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+  }
+
+}
+
+
+// Logo Image
+// ----------
+.logo-image {
+  margin-left: -10px;
+
+  a {
+    background-image: url("@{T3LogoImage}");
+    background-repeat: no-repeat;
+    width: @T3logoWidth;
+    height: @T3logoHeight;
+  }
+
+  //hide sitename and slogan
+  span, small {
+    display: none;
+  }
+
+  &.logo-control a {
+    background: none;
+  }
+
+}
+
+@media screen and (max-width: 979px) {
+  .logo-control .logo-img {
+    display: none;
+  }
+}
+
+
+// Logo Text
+// ----------
+.logo-text {
+  margin-left: @baseLineHeight*1.5;
+
+  h1 {
+    color: @white;
+  }
+
+  h1 a {
+    color: @white;
+    text-decoration: none;
+  }
+
+  &:hover h1 a,
+  h1 a:hover,
+  h1 a:active,
+  h1 a:focus {
+    color: @baseColor;
+    text-decoration: none;
+
+  }
+
+  // Taglines
+  .site-slogan {
+    display: block;
+    font-size: @baseFontSize;
+    margin-top: 5px;
+  }
+
+}
+
+// Head Search
+// ------------------------------------------------------
+.head-search {
+  float: left;
+  height: 49px;
+  width: 47%;
+}
+
+.head-search form {
+  margin: 0;
+}
+
+.head-search label {
+  display: none;
+}
+
+.head-search .input {
+  background: url(../images/ico/search-invert.png) no-repeat 95% center @black;
+  border-radius: none !important;
+  border: none;
+  border-left: solid 1px @grayDarker;
+  box-shadow: none;
+  color: @gray;
+  height: 49px;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+  width: 150px;
+}
+
+/* focus state */
+.head-search .input:focus,
+.head-search .input:hover,
+.head-search .input:active {
+  border: none;
+  border-left: solid 1px @grayDarker;
+  background-image: url(../images/ico/search-invert-hover.png);
+  color: @white;
+  width: 150px;
+}
+
+// ---------------------------------------------------------
+// SPOTLIGHTS
+// ---------------------------------------------------------
+
+.ja-sl {
+}
+
+// Spotlight 1
+// -----------}
+.ja-sl-1 .container {
+  background: @T3FooterMenuBackground;
+  border-top: solid 1px @grayDarker;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.ja-sl-1 .container .t3-module {
+  background: none;
+  border: none;
+  margin-bottom: 0;
+}
+
+.ja-sl-1 .container .t3-module .module-ct {
+  background: none;
+  padding-bottom: 0;
+}
+
+
+// ---------------------------------------------------------
+// MAIN BODY
+// ---------------------------------------------------------
+.ja-mainbody .container {
+  background: @bodyBackground;
+  padding-top: @baseLineHeight*1.5;
+  padding-bottom: @baseLineHeight*1.5;
+}
+
+.ja-mainbody .container {
+  background: @white;
+}
+
+// Content
+// -------
+.ja-content {
+}
+
+// Sidebars
+// --------
+.ja-sidebar {
+}
+
+.ja-sidebar-1 {
+}
+
+
+// ---------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------
+
+.ja-footer {
+  background: @black;
+  color: @T3FooterColor;
+  .clearfix();
+  // small
+  small {
+    display: block;
+    font-size: 100%; //Use global footer font size.
+  }
+}
+
+// links
+#ja-footer a {
+  color: @T3FooterLinkColor;
+}
+
+#ja-footer a:hover,
+#ja-footer a:active,
+#ja-footer a:focus {
+  color: @T3FooterLinkColorHover;
+}
+
+// Foot Nav
+// --------
+
+.ja-footer .container.ja-fn {
+  padding: @baseLineHeight * 1.5 0;
+}
+
+.ja-footnav {
+  padding: 0;
+  .clearfix();
+}
+
+.ja-footer .module,
+.ja-footer .t3-module   {
+  background: none;
+  border: none;
+  margin-bottom: 0;
+}
+
+.ja-footer .ja-fn .module,
+.ja-footer .ja-fn .t3-module   {
+  border: none;
+  background: url(../images/line.gif) repeat-y left top;
+}
+
+.ja-footer .ja-fn .item-first .module {
+  background: none !important;
+}
+
+.ja-footer .module-title {
+  color: @white;
+  font-size: @baseFontSize + 2;
+  margin-bottom: 5px;
+  padding-top: 0;
+}
+
+.ja-footer .module-title span {
+  background: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ja-footer .ja-fn .module-ct {
+  margin: 0 @baseLineHeight; 
+  padding: 0 0 @baseLineHeight;
+}
+
+.ja-footer .ja-fn ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.ja-footer .ja-fn li {
+  border: none;
+  background: none;
+  line-height: 24px;
+}
+
+.ja-footer .ja-fn ul.nav > li a {
+  background: none;
+  color: @gray;
+  padding: 0;
+  transition: none;
+}
+
+.ja-footer .ja-fn ul.nav > li {
+  margin-bottom: 5px;
+}
+
+.ja-footer .ja-fn ul.nav > li a:hover,
+.ja-footer .ja-fn ul.nav > li a:focus,
+.ja-footer .ja-fn ul.nav > li a:active,
+.ja-footer .ja-fn ul.nav > li.active a {
+  background: none;
+  color: @linkColorHover;
+  margin-left: 0;
+  text-shadow: none;
+}
+
+.ja-footer .ja-fn .readon {
+  color: @gray;
+}
+
+.ja-footer .ja-fn .readon:hover,
+.ja-footer .ja-fn .readon:focus,
+.ja-footer .ja-fn .readon:active {
+  color: @baseColor;
+}
+
+/* Social -----*/
+.social {
+  float: right;
+}
+
+.ja-footermenu .container .social ul {
+  margin: 0px !important;
+}
+
+.social ul {
+  .clearfix();
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.social ul li {
+  border-left: solid 1px @grayDarker;
+  float: left; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social ul li a {
+  background-image: url(../images/social-icon.png);
+  background-repeat: no-repeat;
+  color: gray;
+  font-size: 0px;
+  display: block;
+  line-height: 49px;
+  margin: 0px !important;
+  padding: 0px !important;
+  text-indent: -999em;
+  width: 49px;
+  height: 49px;
+}
+
+.social ul li a:hover,
+.social ul li a:focus,
+.social ul li a:active {
+  background-image: url(../images/social-icon.png) ;
+}
+.social ul li.facebook a {
+  background-position: 0 0;
+}
+
+.social ul li.facebook:hover a,
+.social ul li.facebook a:hover,
+.social ul li.facebook a:focus,
+.social ul li.facebook a:active {
+  background-position: -49px 0px ;
+}
+
+.social ul li.twitter a {
+  background-position: 0 -49px;
+}
+
+.social ul li.twitter:hover a,
+.social ul li.twitter a:hover,
+.social ul li.twitter a:focus,
+.social ul li.twitter a:active {
+  background-position: -49px -49px ;
+}
+
+.social ul li.feed a {
+  background-position: 0 -98px ;
+}
+.social ul li.feed:hover a,
+.social ul li.feed a:hover,
+.social ul li.feed a:focus,
+.social ul li.feed a:active {
+  background-position: -49px -98px ;
+}
+
+.ja-topbar .social ul li a,
+.ja-topbar .social ul li a:hover,
+.ja-topbar .social ul li a:focus,
+.ja-topbar .social ul li a:active {
+  background-image: url(../images/social-icon-top.png);
+}
+
+.ja-footer .ja-slidenews-item {
+  border-color: @grayDarker;
+}
+
+.ja-footer .ja-slidenews-item:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.ja-footer .ja-slidenews-item .ja-title {
+  color: @baseColor;
+}
+
+.ja-footer .ja-slidenews-item .ja-title:hover,
+.ja-footer .ja-slidenews-item .ja-title:focus,
+.ja-footer .ja-slidenews-item .ja-title:active {
+  text-decoration: underline;
+}
+
+/* Module About  ---*/
+.t3-module.about .module-ct img,
+.module.about .module-ct img {
+  display: block;
+  margin-bottom: @baseLineHeight / 2;
+}
+
+
+// Foot Menu
+// --------
+.ja-footermenu .container {
+  border-top: solid 1px @grayDarker;
+  border-bottom: solid 1px @grayDarker;
+}
+
+.ja-footermenu .t3-module {
+  border: none;
+  margin-bottom: 0;
+}
+
+.ja-footermenu .container .top-menu ul.nav{
+  text-align: left;
+  margin-top: 10px !important;
+}
+
+
+// Copyright
+// ---------
+.ja-copyright {
+  font-size: @T3smallerFontSize;
+  padding: @T3globalPadding  0;
+  .clearfix();
+}
+
+.copyright {
+  float: left;
+}
+
+.poweredby {
+  float: right;
+  text-align: right;
+  padding: @T3globalPadding  0;
+}
+
+.ja-footer small {
+  margin-left: @baseLineHeight ;
+}
+
+// ---------------------------------------------------------
+// MISC.
+// ---------------------------------------------------------
+// Top Header
+// -------
+.ja-topheader .container{
+  background: @black;
+  border-bottom: solid 1px @grayDarker;
+  overflow: visible;
+  position: relative;
+  z-index: 1000;
+}
+
+.top-menu .module-ct {
+  padding: 0;
+}
+
+.ja-topheader .top-menu {
+  float: left;
+}
+
+.ja-topheader .languageswitcherload {
+  float: left;
+  margin-top: 8px;
+
+  ul.lang-inline li {
+    display: inline-block;
+  }
+}
+
+.container .top-menu ul.nav,
+.top-menu ul {
+  margin: 5px 0 0 (@baseLineHeight) !important; 
+  padding: 0;
+  .clearfix();
+}
+
+.top-menu ul li {
+  display: inline-block;
+  float: left;
+  border: none;
+}
+
+.top-menu ul li a {
+  background: none;
+  color: @gray;
+  font-size: (@T3smallerFontSize - 1px) !important ;
+  list-style: none;
+  line-height: 30px;
+  padding: 0px (@baseLineHeight / 2);
+  text-align: center; 
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.top-menu ul li a:hover,
+.top-menu ul li a:focus,
+.top-menu ul li.active a {
+  background: none;
+  color: @white;
+  text-shadow: none;
+  margin: 0;
+}
+
+// Slideshow
+// -------------------
+.ja-slideshow .container {
+  background: @black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.ja-slideshow .main-siderbar .t3-module {
+  width: 100%;
+}
+
+.ja-slideshow .main-siderbar .t3-module:last-child {
+  margin-bottom: 0;
+}
+
+// Module Tabs
+// -------
+.t3-module.tabs,
+.module.tabs {
+  background: @white;
+}
+
+.ja-tabswrap .container {
+  margin: 0;
+  padding: 0;
+}
+
+.default .ja-tabs-title-top {
+  border: none !important;
+}
+
+.ja-tabs-title-top ul.ja-tabs-title {
+  top: @baseLineHeight !important;
+}
+
+.default .ja-tabs-title-top ul.ja-tabs-title li {
+  background: none !important; 
+  border: none !important;
+  margin: 0 5px 0 0 !important;
+}
+
+body .default .ja-tabs-title-top ul.ja-tabs-title li h3 {
+  background: none;
+  border: none !important;
+  border-bottom: solid 1px #d5d5d5 !important;
+  color: @TabsTextColor !important;
+  font-family: 'novecento_wide_lightbold', sans-serif;
+  font-size: @baseFontSize + 1 !important;
+  font-weight: normal !important;
+  text-transform: uppercase;
+}
+
+body .default .ja-tabs-title-top ul.ja-tabs-title li:hover h3,
+body .default .ja-tabs-title-top ul.ja-tabs-title li:focus h3,
+body .default .ja-tabs-title-top ul.ja-tabs-title li:active h3 {
+  border: none !important;
+  background: @TabsBackgroundActive;
+  color: @white !important;
+}
+
+body .default .ja-tabs-title-top ul li.active h3, 
+body .default .ja-tabs-title-top ul li.firstactive h3, 
+body .default .ja-tabs-title-top ul li.lastactive h3 {
+  border: none !important;
+  background: @TabsBackgroundActive;
+  color: @white !important;
+}
+
+.ja-tabswrap .ja-tab-content li {
+  list-style: none;
+  border: none;
+}
+
+.ja-tabswrap .container {
+  width: 100% !important;
+}
+
+.ja-tab-content .ja-tab-subcontent div:first-child {
+  padding-top: 0;
+}
+
+.tabs-list li {
+  float: left;
+  width: 33.3%;
+}
+
+.tabs-list li h3 {
+  font-size: 13px;
+  color: @grayDarker;
+  line-height: normal;
+  margin: 20px 0px 5px;
+}
+
+.tabs-list > li span {
+  font-size: 12px;
+}
+
+.ja-mastcol .ja-tabs-title-top {
+  margin-top: -20px;
+}
+
+.accordion .ja-slidenews-item img[align="left"] {
+  margin-bottom: 15px;
+}
+
+.ja-tab-subcontent .ja-slidenews-item {
+  border: none;
+  clear: none;
+  display: inline-block;
+  width: 33%;
+  .clearfix();
+  padding: 0;
+}
+
+.ja-tab-subcontent .ja-slidenews-item img {
+  margin-bottom: 15px;
+}
+
+.ja-tab-subcontent .ja-slidenews-item a.readon {
+  margin-top: 5px;
+}
+
+.ja-tab-subcontent .ja-slidenews-item .content-slidenews {
+  margin-right: 10px;
+}
+
+// Top Bar
+// -------
+.ja-topbar .container {
+  background: @T3FooterMenuBackground;
+  border-bottom: solid 1px @grayDarker;
+}
+
+.ja-topbar .head-search .input {
+  background-color: @TopBarBackground;
+}
+
+.ja-topbar .head-search .input:hover,
+.ja-topbar .head-search .input:focus,
+.ja-topbar .head-search .input:active {
+  color: @white;
+}
+
+.ja-headlines,
+.ja-headlines .ja-headlines-item {
+  height: 18px !important;
+}
+
+.ja-headlines .ja-headlines-item a {
+  color: gray;
+}
+
+.ja-headlines .ja-headlines-item a:hover,
+.ja-headlines .ja-headlines-item a:focus,
+.ja-headlines .ja-headlines-item a:active {
+  color: @baseColor;
+}
+
+
+// HeadLines
+// -------
+.ja-healineswrap {
+  .clearfix();
+  padding-left: @baseLineHeight;
+  em {
+    color: @white;
+    font-weight: bold;
+    float: left;
+    margin-right: @baseLineHeight / 2;
+    margin-top: 15px;
+  }
+}
+
+.ja-headlines {
+  margin-top: 15px
+}
+
+// Slideshow
+// -------
+.ja-slideshow .content-slide {
+  border-bottom: none;
+  margin-bottom: 0;
+  margin-right: 10px;
+  padding-bottom: 0;
+}
+
+.ja-slideshow .ja_slidetitle a {
+  color: @white;
+}
+
+.ja-slideshow .ja_slidetitle a:hover,
+.ja-slideshow .ja_slidetitle a:focus,
+.ja-slideshow .ja_slidetitle a:active {
+  color: @baseColor;
+}
+
+.ja-slideshow .ja_slidetitle a.readon {
+  color: @TabsTextColor;
+}
+
+.ja-slideshow .ja_slidetitle a.readon:hover,
+.ja-slideshow .ja_slidetitle a.readon:focus,
+.ja-slideshow .ja_slidetitle a.readon:active {
+  color: @baseColor;
+}
+
+.main-slideshow .t3-module, .main-slideshow .module {
+  background: none;
+}
+
+
+// Highslide Image
+// ---------------
+.highslide-img a {
+  margin: 3px !important;
+  float: left;
+}
+.highslide img {
+  border: none !important;
+}
+
+
+// List Userful
+// ------------
+.mod-views {
+  position: relative;
+  border: none;
+}
+
+.mod-views .module-title {
+  padding-left: 0;
+}
+
+.category-module li {
+  border-bottom: solid 1px #e5e5e5;
+  clear: both;
+  list-style: none;
+  margin-bottom: @baseLineHeight*1.5;
+  padding-bottom: @baseLineHeight;
+  position: relative;
+}
+
+.category-module > li .img-details img,
+.category-module > li .img-intro img{
+  margin-bottom: @baseLineHeight ;
+}
+
+.jacontent h5 {
+  margin-top: 0;
+}
+
+ul.category-module li a {
+  color: @grayDark;
+  display: inline-block;
+}
+
+ul.category-module li a:hover,
+ul.category-module li a:focus,
+ul.category-module li a:active,
+.jacontent a {
+  color: @linkColorHover;
+}
+
+.jacontent a:hover,
+.jacontent a:focus,
+.jacontent a:active {
+  color: @linkColorHover;
+}
+
+.jacontent h5 a {
+  color: @grayDark;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.jacontent h5 a:hover,
+.jacontent h5 a:focus,
+.jacontent h5 a:active {
+  color: @linkColorHover;
+}
+
+.jacontent .article-aside span {
+  color: @grayLight;
+  float: left;
+  margin: 0;
+  padding: 10px 5px 0 0;
+  white-space: nowrap;
+}
+
+.jacontent .article-aside span.first-child {
+  padding-left: 0;
+}
+
+.jacontent .article-aside span:last-child {
+  border-left: 1px solid @grayLighter;
+  margin-left: 5px;
+  padding-left: 10px;
+}
+
+.jacontent .article-aside > span strong {
+  color: @grayLight;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+p a.mod-articles-category-title,
+ul.category-module li p a.mod-articles-category-title  {
+  background: url(../images/readmore-bg.png) no-repeat left center;
+  color: @grayLight;
+  cursor: pointer;
+  display: block;
+  font-size: @baseFontSize - 1;
+  margin-top: @baseLineHeight / 2;
+  padding-left: 18px;
+}
+
+p a.mod-articles-category-title:hover,
+p a.mod-articles-category-title:focus,
+p a.mod-articles-category-title:active,
+ul.category-module li p a.mod-articles-category-title:hover {
+  background-image: url(../images/readmore-hover-bg.png);
+  color: @linkColorHover;
+}
+
+.vertical-layout li.no-images .showcategory {
+  padding-left: 0;
+}
+
+.vertical-layout .showcategory {
+  min-height: 200px;
+  padding: 0px 0 0 230px;
+  position: relative;
+}
+
+.vertical-layout .img-details {
+ display: none !important;
+}
+
+.vertical-layout li .img-intro {
+  left: 0px;
+  width: 200px;
+  position: absolute;
+}
+
+.horizontal-layout .img-intro {
+  display: none !important;
+}
+
+.horizontal-layout .jacontent {
+  display: block !important;
+  width: 100%;
+}
+
+#button {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0px;
+  top: 15px;
+}
+
+#button span {
+  background-image: url(../images/button-module.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0px;
+  line-height: 30px;
+  height: 30px;
+  margin: 0px 3px;
+  width: 30px;
+  vertical-align: top\9;
+  text-indent: -999em;
+}
+
+.btn-vertical {
+  background-position: 0 0;
+}
+
+.btn-vertical:hover,
+.btn-vertical:focus,
+.btn-vertical:active,
+.btn-vertical.active {
+  background-position: 0px -30px;
+}
+
+.btn-horizontal {
+  background-position: -30px 0;
+}
+
+.btn-horizontal:hover,
+.btn-horizontal:focus,
+.btn-horizontal:active,
+.btn-horizontal.active {
+  background-position: -30px -30px;
+}
+
+// Top Games
+// ---------
+.topgame .showcategory .img-intro {
+  display: none !important;
+}
+
+.topgame .vertical-layout .showcategory {
+  padding-left: 0;
+}
+
+
+// Back to Top
+// -----------
+#back-to-top {
+  cursor: pointer;
+  background: url(../images/back-top.png) no-repeat right center;
+  margin-right: 20px;
+  padding-right: 20px;
+  text-align: right;
+}
+
+#back-to-top:hover,
+#back-to-top:focus,
+#back-to-top:active {
+  background-image: url(../images/back-top-hover.png);
+  color: @white;
+}
+
+/* Readmore ---*/
+a.readmore {
+  background: url(../images/readmore-bg.png) no-repeat left center;
+  color: @grayDark;
+  cursor: pointer;
+  display: block;
+  font-size: @baseFontSize - 2;
+  margin-top: @baseLineHeight / 2;
+  padding-left: 18px;
+  text-indent: -999em;
+}
+
+a.readmore:hover,
+a.readmore:focus,
+a.readmore:active {
+  background-image: url(../images/readmore-hover-bg.png);
+  color: @linkColorHover;
+}
+
+a.video img {
+  display: block;
+  margin-bottom: 15px;
+}
+
+iframe.dark {
+  background: #444;
+}
+
+//Landing page
+//------------
+body.countdown-page {
+  background: url(../images/lp-bg.jpg) no-repeat center top #000;
+  padding-top: 0;
+}
+
+body.countdown-page .ja-footer {
+  background: transparent;
+}
+
+div.ja-countdown-page div.acymailing_module {
+  background: url(../images/trans-2.png);
+  margin: 30px auto 0 !important;
+  padding: 30px 0 !important;
+  text-align: center;
+  width: 840px;
+}
+
+div.ja-countdown-page .acymailing_introtext {
+  color: @white;
+}
+
+div.ja-countdown-page .acymailing_form {
+  float: left;
+  margin-left: 190px !important;
+  padding-top: 20px !important;
+}
+
+div.ja-countdown-page .acyfield_email .inputbox {
+  background: @black;
+  border: 1px solid @black;
+  margin-right: 5px;
+  padding: 9px 15px;
+  line-height: 1;
+  width: 300px !important;
+}
+
+div.ja-countdown-page .acyfield_email .inputbox:hover {
+  background: #222;
+  border-color: #222;
+}
+
+div.ja-countdown-page .acyfield_email .inputbox:focus {
+  background: @white;
+  color: @grayDarker;
+}
+
+div.ja-countdown-page .acymailing_form .acysubbuttons .button {
+  background: @linkColorHover;
+  border: 1px solid @linkColorHover;
+  height: 40px;
+  text-transform: uppercase;
+  .box-shadow(none);
+  .transition(0.5s);
+}
+
+div.ja-countdown-page .acymailing_form .acysubbuttons .button:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+//Layout 1
+.ja-countdown.layout1 {
+  background: none;
+}
+
+.ja-countdown.layout1 .custom-text {
+  margin: 0 auto;
+  width: 840px;
+}
+
+//Layout 2
+.ja-countdown.layout2 {
+  background-color: transparent;
+}
+
+.ja-countdown.layout2 .custom-text {
+  padding: 100px 50px 0;
+}
+
+.ja-countdown.layout2 .custom-text h1 {
+  color: @white;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.ja-countdown.layout2 .timer {
+  top: 42%;
+}
+
+//Layout 3
+.ja-countdown.layout3 .text {
+  top: 72px;
+}
+
+.ja-countdown.layout3 .text .val {
+  color: @white;
+  height: 38px;
+}
+
+//Layout 4
+.ja-countdown.layout4 {
+  width: 860px;
+  background: none;
+}
+
+.ja-countdown.layout4 .custom-text {
+  float: right;
+  padding-top: 70px;
+  text-align: left;
+  width: 60%;
+}
+
+.ja-countdown.layout4 .custom-text h1 {
+  clear: both;
+  display: block;
+  font-size: 46px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  width: 100%;
+}
+
+.ja-countdown.layout4 .custom-text div.custom-message {
+  padding: 0;
+  text-align: left;
+}
+
+.ja-countdown.layout4 .clock {
+  float: left;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+//Layout 5
+.ja-countdown.layout5 .val {
+  text-shadow: none;
+}
+

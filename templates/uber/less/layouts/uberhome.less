@@ -1,0 +1,123 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+.home {
+
+  // ---------------------------------------------------------
+  // UBER HOME STYLE
+  // ---------------------------------------------------------
+  // Used for Home Layout.
+
+  //
+  // GENERAL STYLES
+  // ------------------------
+  .uber-header {
+    background-color: @white;
+    background-color: rgba(255,255,255,.97);
+  }
+
+
+
+  //
+  // ACM
+  // ------------------------
+
+  // Main Intro
+  // ----------
+  .acm-features.style-6 {
+
+    .features-content {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .image {
+      height: 100px;
+      margin: @t3-global-margin auto;
+      img {
+        max-height: 100%;
+      }
+    }
+
+  }
+
+
+  // Testimonials
+  // ------------
+  .section-primary .acm-testimonials.style-2  {
+    .item {
+
+      .fa {
+        color: @white;
+      }
+
+      .testimonial-text {
+        color: @white;
+        font-family: @font-family-serif;
+      }
+
+      // Author information
+      // ------------------
+      .author-info {
+        color: @gray-light;
+        color: rgba(255,255,255,.7);
+
+        // Author info text
+        .author-info-text {
+          span.author-name {
+            color: @white;
+          }
+        }
+
+      }
+    }
+
+    // Indicators
+    .carousel-indicators {
+
+      li {
+        background: @gray-light;
+        background: rgba(255,255,255,.2);
+        border-color: transparent;
+        border-width: 8px;
+
+        &.active {
+          background: @white;
+          border-color: @white;
+        }
+      }
+    }
+
+  }
+
+
+  // Showcase
+  // ------------
+  .acm-cta.style-2 {
+    .cta-showcase-item:before {
+      content: "Proudly powered by";
+      display: inline-block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .3em;
+      background: @brand-success;
+      padding: 10px 15px 8px;
+      color: @white;
+      box-shadow: 4px 4px 0 1px rgba(0,0,0,.2);
+      margin-bottom: @t3-global-margin;
+      line-height: normal;
+    }
+    .cta-showcase-header {
+      font-size: @font-size-h2;
+      font-weight: @font-weight-bold;
+    }
+  }
+
+  //End
+}

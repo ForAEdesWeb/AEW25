@@ -1,0 +1,25 @@
+.uber-header {
+	&.header-2 {
+		&.light-color {
+			background-color: rgba(255, 255, 255, 0.3);
+			border-bottom: 0;
+		}
+
+		&.dark-color {
+			background-color: rgba(0, 0, 0, 0.3);
+			border-bottom: 0;
+		}
+
+		&.none-color {
+			top: @t3-global-margin * 2;
+		}
+	}
+
+	&.affix {
+		position: fixed;
+
+		&.none-color {
+			top: 0;
+		}
+	}
+}

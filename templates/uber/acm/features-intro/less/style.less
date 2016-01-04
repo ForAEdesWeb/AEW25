@@ -1,0 +1,98 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// FEATURES INTRO
+// ------------------------------------
+.acm-features {
+  // Font Icon
+  .font-icon {
+    color: @brand-primary;
+    font-size: 55px;
+    margin-bottom: @t3-global-margin;
+    line-height: 1;
+  }
+
+  // Img Icon
+  .img-icon {
+    display: block;
+    margin-bottom: @t3-global-margin*1.5;
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  // features description
+  .features-description {
+    font-weight: @font-weight-normal;
+    color: @gray-darker;
+    font-size: @font-size-h3;
+    margin: 0 0 (@t3-global-margin*3) 0;
+
+    @media screen and (min-width: @screen-sm) {
+      width: 65%;
+    }
+  }
+
+  // Title
+  h3 {
+    color: @gray-dark;
+    margin: 0 0 (@t3-global-margin / 2);
+    font-size: @font-size-large;
+    font-weight: @font-weight-bold;
+
+    // Control screen mobile
+    @media screen and (min-width: @screen-sm) {
+    }
+  }
+
+  h4 {
+    color: @gray-dark;
+  }
+
+  // Description
+  p {
+  }
+
+  // Style Dark
+  // ------------------
+  &.style-dark {
+    // Title
+    h3, h4 {
+      color: @white;
+    }
+
+    // Description
+    p,
+    .description {
+      color: @gray-lighter;
+      color: rgba(225,225,225,0.5);
+    }
+
+    // features description
+    .features-description {
+      color: @white;
+    }
+  }
+}
+
+
+
+// Import Style Less
+// --------------------------
+@import "style-1.less"; // Import file style-1.less
+@import "style-2.less"; // Import file style-2.less
+@import "style-3.less"; // Import file style-3.less
+@import "style-4.less"; // Import file style-4.less
+@import "style-5.less"; // Import file style-5.less
+@import "style-6.less"; // Import file style-6.less
+@import "style-7.less"; // Import file style-7.less
+@import "style-8.less"; // Import file style-8.less
+@import "style-9.less"; // Import file style-9.less
+@import "style-10.less"; // Import file style-10.less

@@ -1,0 +1,81 @@
+// ------------------------------------------------
+// SLIDESHOW STYLE 1
+// ------------------------------------------------
+.acm-slideshow {
+  .style-1 {
+    color: @white;
+    padding: @t3-global-padding * 5;
+    position: relative;
+    text-align: center;
+    min-height: unset;
+    width: 50%;
+    z-index: 2;
+
+    // Control screen tablet
+    @media screen and (max-width: @screen-sm-max) {
+      left: 0;
+      width: 100%;
+      .opacity(1);
+    }
+
+    // Control screen desktop
+    @media screen and (max-width: @screen-md-max) {
+      padding: @t3-global-padding * 2;
+    }
+
+    // Control screen wide desktop
+    @media screen and (min-width: 1400px) {
+      padding: @t3-global-padding * 7;
+      min-height: 605px;
+      min-height: initial \9; // Fix for IE 8
+    }
+
+    &:after {
+      content: "";
+      background-color: @brand-primary;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      .opacity(0.85);
+      z-index: -1;
+    }
+
+    h3 {
+      color: @white;
+      font-size: @font-size-h2;
+      position: relative;
+      margin-top: 0;
+      margin-bottom: @t3-global-margin * 2;
+
+      &:after {
+        background-color: @white;
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 50%;
+        bottom: -@t3-global-margin;
+        left: 25%;
+      }
+    }
+
+    p {
+      font-size: @font-size-h4;
+
+      // Control screen mobile
+      @media screen and (max-width: @screen-xs-max) {
+        font-size: @font-size-base;
+      }
+    }
+  }
+
+  // Backgroud slideshow
+  .bg-slideshow {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+
+

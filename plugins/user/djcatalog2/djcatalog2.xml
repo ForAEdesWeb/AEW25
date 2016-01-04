@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="plugin"
+	version="1.6.0"
+	client="site"
+	method="upgrade"
+	group="user">
+	<name>plg_user_djcatalog2</name>
+	<creationDate>October 2013</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.0</version>
+	<description>PLG_USER_DJCATALOG2_DESCRIPTION</description>
+	<files>
+		<filename plugin="djcatalog2">djcatalog2.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>forms</folder>
+	</files>
+	<config>
+	    <fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_djcatalog2/models/fields">
+			    <!-- <field type="djfieldspacer" class="djtitle" label="PLG_USER_DJCATALOG2_IMAGE_SETTINGS" />
+			    <field name="image_process" type="list"  default="2" label="PLG_USER_DJCATALOG2_IMAGE_PROCESS" description="PLG_USER_DJCATALOG2_IMAGE_PROCESS_DESC">
+					<option value="0">PLG_USER_DJCATALOG2_DONT_USE</option>
+					<option value="1">PLG_USER_DJCATALOG2_IMAGE_RESIZE</option>
+					<option value="2">PLG_USER_DJCATALOG2_IMAGE_RESIZECROP</option>
+				</field>
+				<field name="image_width" type="text" default="60" label="PLG_USER_DJCATALOG2_IMAGE_WIDTH" description="PLG_USER_DJCATALOG2_IMAGE_WIDTH_DESC" />
+				<field name="image_height" type="text" default="90" label="PLG_USER_DJCATALOG2_IMAGE_HEIGHT" description="PLG_USER_DJCATALOG2_IMAGE_HEIGHT_DESC" />
+				<field name="image_maxsize" type="text" default="2048" label="PLG_USER_DJCATALOG2_IMAGE_MAX_SIZE" description="PLG_USER_DJCATALOG2_IMAGE_MAX_SIZE_DESC" />
+				<field name="image_types" type="text" default="jpg,png,gif" label="PLG_USER_DJCATALOG2_IMAGE_ALLOWED_TYPES" description="PLG_USER_DJCATALOG2_IMAGE_ALLOWED_TYPES_DESC" />
+				-->
+				
+				<field name="field_firstname" type="list" default="2" label="PLG_USER_DJCATALOG2_FIRSTNAME" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_lastname" type="list" default="2" label="PLG_USER_DJCATALOG2_LASTNAME" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+				
+				<field name="field_company" type="list" default="1" label="PLG_USER_DJCATALOG2_COMPANY" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_position" type="list" default="0" label="PLG_USER_DJCATALOG2_POSITION" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_address" type="list" default="1" label="PLG_USER_DJCATALOG2_ADDRESS" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_city" type="list" default="1" label="PLG_USER_DJCATALOG2_CITY" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_postcode" type="list" default="1" label="PLG_USER_DJCATALOG2_POSTCODE" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_country_id" type="list" default="1" label="PLG_USER_DJCATALOG2_COUNTRY" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_vat_id" type="list" default="0" label="PLG_USER_DJCATALOG2_VATID" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_phone" type="list" default="1" label="PLG_USER_DJCATALOG2_PHONE" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_fax" type="list" default="0" label="PLG_USER_DJCATALOG2_FAX" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_www" type="list" default="0" label="PLG_USER_DJCATALOG2_WWW" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>
+			    
+			    <field name="field_customer_note" type="list" default="2" label="PLG_USER_DJCATALOG2_MESSAGE" description="PLG_USER_DJCATALOG2_FIELD_DESC">
+			        <option value="0">PLG_USER_DJCATALOG2_CONFIG_HIDE</option>
+			        <option value="1">PLG_USER_DJCATALOG2_CONFIG_OPTIONAL</option>
+			        <option value="2">PLG_USER_DJCATALOG2_CONFIG_REQUIRED</option>
+			    </field>			
+			</fieldset>
+		</fields>
+	</config>
+</extension>

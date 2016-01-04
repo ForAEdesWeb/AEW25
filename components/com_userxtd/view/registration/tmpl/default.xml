@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="com_userxtd_registration_view_default_title" option="com_userxtd_registration_view_default_option">
+		<message>
+			<![CDATA[com_userxtd_item_view_default_desc]]>
+		</message>
+	</layout>
+
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+
+		<!-- Basic options. -->
+		<fieldset name="basic"
+			label="COM_USERXTD_ITEM_SETTINGS">
+			
+			<field
+				name="captcha"
+				type="plugins"
+				folder="captcha"
+				default=""
+				label="COM_USERXTD_CONFIG_CAPTCHA"
+				description="COM_USERXTD_CONFIG_CAPTCHA_DESC"
+				filter="cmd" >
+				<option
+					value="">JOPTION_USE_DEFAULT</option>
+				<option
+					value="0">JOPTION_DO_NOT_USE</option>
+			</field>
+			
+		</fieldset>
+	</fields>
+</metadata>

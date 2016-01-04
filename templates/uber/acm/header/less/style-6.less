@@ -1,0 +1,145 @@
+.uber-header {
+	&.header-6 {
+		&.dark-color {
+			background-color: @gray-darker;
+			height: auto;
+			padding-top: @t3-global-padding;
+			border-bottom: 0;
+		}
+
+		.logo {
+			padding-bottom: @t3-global-padding;
+			height: auto;
+			line-height: 1;
+			border-right: 0;
+		}
+
+		.t3-mainnav {
+			width: 100%;
+			border-top: 1px solid @gray-dark;
+		}
+
+		.row {
+			position: relative;
+		}
+
+		// Navigation right
+    .site-navigation-right {
+      .right-menu {
+        ul li {
+          > a {
+            border: 0;
+            text-transform: none;
+          	font-weight: @font-weight-bold;
+          	background: @brand-secondary;
+          	padding: (@t3-global-padding / 2) @t3-global-padding;
+          	color: @white;
+          	height: auto;
+          	line-height: 1;
+          	border-radius: 2px;
+
+            &:hover, &:focus {
+              background: darken(@brand-secondary, 10%);
+              color: @white;
+            }
+
+            &.head-login:after {
+              top: 11px;
+              color: @white;
+              left: 20px;
+            }
+          }
+
+          &.active > a {
+            &, &:hover, &:focus, &:active {
+              background: darken(@brand-secondary, 10%);
+              color: @white;
+            }
+          }
+        }
+      }
+    }
+
+    .off-canvas-toggle {
+      border: 0;
+      text-transform: none;
+      font-weight: @font-weight-bold;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      @media (max-width: @screen-sm-max) {
+        right: @grid-gutter-width/4;
+      }
+
+      span {
+      	display: none;
+      }
+
+      .fa {
+      	margin-left: 0;
+      }
+
+      &:hover, &:focus, &:active {
+        color: @brand-primary;
+        background: transparent;
+      }
+    }
+
+    // Navigation
+    .navbar-default .navbar-nav {
+      > li {
+        border-right-color: @gray-dark;
+        .transition(all 0.2s);
+
+        > a {
+          text-transform: none;
+          font-weight: @font-weight-bold;
+          color: @gray;
+          .transition(all 0.2s);
+
+          &:hover,
+          &:focus {
+            color: @white;
+            background: none;
+          }
+        }
+
+        > .nav-header {
+        }
+      }
+
+      > .open > a {
+        &,
+        &:hover,
+        &:focus {
+          border: 0;
+          color: @white;
+          background: @black;
+        }
+      }
+
+      > .active > a,
+      > .alias-parent-active > a {
+        & {
+          color: @white;
+          background: none;
+        }
+
+        &:hover,
+        &:focus {
+          color: @white;
+          background: @black;
+        }
+      }
+
+      .dropdown-menu {
+      	border: 0;
+      }
+    }
+	}
+
+	&.affix {
+		position: fixed;
+	}
+}

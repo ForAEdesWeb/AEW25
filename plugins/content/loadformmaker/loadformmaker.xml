@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>Content - Load Form Maker</name>
+	<author>Web Dorado</author>
+	<creationDate>February 2012</creationDate>
+	<author>Web-Dorado</author>
+	<authorEmail>info@web-dorado.com</authorEmail>
+	<authorUrl>http://www.Web-Dorado.com</authorUrl>
+	<copyright>Copyright (C) 2014 Web-Dorado.com. All rights reserved.</copyright> 
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+		<version>3.5.4</version>
+	<description>	Form Maker is a modern and advanced tool for creating Joomla! forms easily and fast.
+</description>
+	<files>
+		<filename plugin="loadformmaker">loadformmaker.php</filename>
+		<filename plugin="loadformmaker">index.html</filename>
+
+	</files>
+</extension>

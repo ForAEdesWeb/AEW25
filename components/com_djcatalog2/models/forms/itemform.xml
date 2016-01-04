@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_djcatalog2/models/fields">
+		<field name="name" type="text" class="inputbox input"
+				size="40" label="COM_DJCATALOG2_FORM_NAME"
+				description="COM_DJCATALOG2_FORM_NAME_DESC" required="true" />
+		
+		<field name="alias" type="hidden" />
+		
+		<field name="group_id" type="djfieldgroup"
+			label="COM_DJCATALOG2_FORM_FIELDGROUP"
+			description="COM_DJCATALOG2_FORM_FIELDGROUP_DESC"
+			default=""
+			allowswitching="true"
+			class="inputbox input"
+		/>
+			
+		<field name="cat_id" type="djcategory" class="inputbox input"
+			label="COM_DJCATALOG2_FORM_CATEGORY"
+			description="COM_DJCATALOG2_FORM_CATEGORY_DESC"
+			required="true" default="" multiple="false" default_name="COM_DJCATALOG2_SELECT_CATEGORY" default_disable="false" parent="false" validate="djccategory" />
+		
+		<field name="categories" type="djcategory" class="inputbox"
+			label="COM_DJCATALOG2_FORM_ADDITIONAL_CATEGORIES"
+			description="COM_DJCATALOG2_FORM_ADDITIONAL_CATEGORIES_DESC"
+			required="false" size="10" default="" default_name="COM_DJCATALOG2_SELECT_CATEGORIES" multiple="true" parent="false" default_disable="true" validate="djccategory" />
+			
+		<field name="producer_id" type="djproducer" class="inputbox input"
+			label="COM_DJCATALOG2_FORM_PRODUCER"
+			description="COM_DJCATALOG2_FORM_PRODUCER_DESC" />
+		
+		<field
+			name="published"
+			type="list"
+			label="COM_DJCATALOG2_FORM_PUBLISHED"
+			description="COM_DJCATALOG2_FORM_PUBLISHED_DESC"
+			class="inputbox input"
+			size="1"
+			validate="options"
+			default="0">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		
+		<field name="price" type="text" class="inputbox input validate-price"
+			size="40" label="COM_DJCATALOG2_FORM_PRICE"
+			description="COM_DJCATALOG2_FORM_PRICE_DESC"  
+		/>
+		<field name="special_price" type="text" class="inputbox input validate-price"
+			size="40" label="COM_DJCATALOG2_FORM_SPECIAL_PRICE"
+			description="COM_DJCATALOG2_FORM_SPECIAL_PRICE_DESC"  
+		/>
+		
+		<field name="featured" type="list" label="COM_DJCATALOG2_FEATURED"
+			description="COM_DJCATALOG2_FEATURED" class="inputbox input" size="1"
+			default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="description" type="editor" class="inputbox input"
+			label="COM_DJCATALOG2_FORM_DESCRIPTION" description="COM_DJCATALOG2_FORM_DESCRIPTION_DESC"
+			filter="JComponentHelper::filterText"
+			buttons="false" />
+		
+		<field name="intro_desc" type="editor" class="inputbox input"
+			label="COM_DJCATALOG2_FORM_INTRO_DESCRIPTION" description="COM_DJCATALOG2_FORM_INTRO_DESCRIPTION_DESC"
+			filter="JComponentHelper::filterText"
+			buttons="false" />
+		
+		<field name="metatitle" type="text" class="inputbox input"
+				size="40" label="COM_DJCATALOG2_FORM_META_TITLE"
+				description="COM_DJCATALOG2_FORM_META_TITLE_DESC" />
+				
+		<field name="metakey" type="textarea"
+			label="COM_DJCATALOG2_FORM_META_KEY" description="COM_DJCATALOG2_FORM_META_KEY_DESC"
+			class="inputbox" rows="3" cols="30" />
+
+		<field name="metadesc" type="textarea"
+			label="COM_DJCATALOG2_FORM_META_DESCRIPTION" description="COM_DJCATALOG2_FORM_META_DESCRIPTION_DESC"
+			class="inputbox" rows="3" cols="30" />
+		
+		<field name="id" type="hidden" />
+		<field name="created" type="hidden" />
+		<field name="created_by" type="hidden" />
+	</fieldset>
+</form>

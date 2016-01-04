@@ -1,0 +1,135 @@
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base/less/megamenu-responsive.less";
+
+//
+// TABLET
+// -------------------------------------------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+  .ja-mainnav {
+    height: auto;
+  }
+}
+
+
+
+//
+// MOBILE
+// -------------------------------------------------------------
+@media (max-width: 767px) {
+
+  .hidden-collapse {
+      display: none !important;
+    }
+
+  .t3-megamenu {
+
+    // THE MEGAMENU
+    //--------------------------------------------
+
+    // Global Menu Inner padding
+    // -------------------------
+    .mega-inner {
+      //padding: (@baseLineHeight / 2) @baseLineHeight;
+    }
+
+    // Inner Padding for 1 column
+    .span12 .mega-inner {
+    }
+
+
+    // Menu Grids
+    // ----------
+    .row-fluid,
+    .mega-dropdown-menu,
+    .row-fluid [class*="span"] {
+    }
+
+    .row-fluid + .row-fluid  {
+      border-top: 1px solid @grayLight;
+    }
+
+    .row-fluid [class*="span"] {
+    }
+
+
+    // Nav in Megamenu
+    // ---------------
+    // Inner padding for nav in 1 column
+    .span12.mega-col-nav .mega-inner {
+      padding: 0;
+    }
+
+    // The Nav
+    .mega-nav,
+    .dropdown-menu .mega-nav {
+    }
+
+    .mega-nav > li,
+    .dropdown-menu .mega-nav > li {
+    }
+
+    .mega-nav > li a,
+    .dropdown-menu .mega-nav > li a {
+      padding: 5px @baseLineHeight;
+    }
+
+    .mega-nav li li a,
+    .dropdown-menu .mega-nav li li a {
+      padding-left: 30px !important;
+    }
+
+    .row-fluid + .row-fluid {
+      border: none !important;
+    }
+
+    .mega-nav li.active.dropdown-submenu > a:after,
+    .mega-nav li.dropdown-submenu:hover > a:after {
+      border-left-color: @linkColorHover;
+    }
+
+    .mega-nav li.active a,
+    .mega-nav li li.active a,
+    .mega-nav li.active li.active a
+    .dropdown-menu .mega-nav li.active a,
+    .dropdown-menu .mega-nav li li.active a,
+    .dropdown-menu .mega-nav li.active li.active a{
+      color: @linkColorHover;
+    }
+
+    .mega-nav li.active li a, 
+    .dropdown-menu .mega-nav li.active li a {
+      color: #666;
+    }
+
+    .mega-nav li.active li a:hover, 
+    .mega-nav li.active li a:focus,
+    .mega-nav li.active li a:active,
+    .dropdown-menu .mega-nav li.active li a:hover,
+    .dropdown-menu .mega-nav li.active li a:focus,
+    .dropdown-menu .mega-nav li.active li a:active {
+      background-color: #f5f5f5;
+    }
+
+    .nav > li > a,
+    .dropdown-menu li + li a {
+      margin-bottom: 0 !important;
+    }
+    
+    // Modules in Megamenu
+    // -------------------
+
+    // The module
+    .ja-module {
+      margin-bottom: 0;
+    }
+
+    // End
+  }
+
+  // End Megamenu Styling
+}

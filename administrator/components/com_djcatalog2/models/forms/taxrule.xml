@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" 
+				readonly="true" class="readonly" />
+		
+		<field name="name" type="text" class="inputbox"
+				size="40" label="COM_DJCATALOG2_NAME"
+				description="COM_DJCATALOG2_NAME" required="true" />
+		
+		<field name="country_id" type="sql" class="inputbox" label="COM_DJCATALOG2_COUNTRY" default="0"
+		    query="SELECT 0 as id, '*' as country_name UNION ALL SELECT id, country_name FROM #__djc2_countries ORDER BY country_name" key_field="id" value_field="country_name" />
+		
+		<field name="tax_rate_id" type="sql" class="inputbox" label="COM_DJCATALOG2_TAX_RATE" default=""
+		    query="SELECT id, concat(name, ' [', ROUND(value,2), ']') as name FROM #__djc2_tax_rates ORDER BY value desc" key_field="id" value_field="name" required="true" />
+		
+		<field name="client_type" type="list" default="A" label="COM_DJCATALOG2_TAX_RULE_CLIENT_TYPE" description="COM_DJCATALOG2_TAX_RULE_CLIENT_TYPE_DESC">
+		    <option value="A">COM_DJCATALOG2_TAX_RULE_CLIENT_TYPE_A</option>
+		    <option value="R">COM_DJCATALOG2_TAX_RULE_CLIENT_TYPE_R</option>
+		    <option value="W">COM_DJCATALOG2_TAX_RULE_CLIENT_TYPE_W</option>
+		</field>
+		
+	</fieldset>
+</form>

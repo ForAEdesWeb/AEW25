@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Slideshow</title>
+  <sampledata><![CDATA[ 
+	{"jatools-layout-slideshow":["default"],"slideshow[img-bg]":["images/joomlart/corporate/demo-9.jpg"],"slideshow[enable-controls]":["0"],"slideshow[img]":["images/joomlart/corporate/demo-11.jpg","images/joomlart/corporate/demo-12.jpg"],"slideshow[title]":["Different","Distinction"],"slideshow[description]":["We believe in focus. Our single most dedicated priority is to provide functional, aesthetic pleasing solution.","We service our clients in every industry, all over the world, thus give us chance to explore from distinct viewpoints. "]}
+   ]]></sampledata>
+  <fields name="slideshow">
+  
+    <fieldset name="basic" label="SLIDESHOW2_BASIC_LABEL" description="SLIDESHOW2_BASIC_DESC" multiple="0"> 
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />  
+				
+			<field name="img-bg" type="media" 
+				description="SLIDESHOW2_IMAGE_BACKGROUND_DES"
+				label="SLIDESHOW2_IMAGE_BACKGROUND_LABEL"
+				default="" layouts="style-1"/>
+			
+			<field name="enable-controls" type="radio" default="0" label="SLIDESHOW2_CONTROLS_LABEL" description="SLIDESHOW2_CONTROLS_DESC" >
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+				
+    </fieldset>
+		
+		<fieldset name="basic2" label="SLIDESHOW2_BASIC_2_LABEL" description="SLIDESHOW2_BASIC_2_DESC">
+			<field name="data" type="jalist" layouts="style-1">
+				<item name="title" type="text" 
+					description="SLIDESHOW2_TITLE_DES"
+					label="SLIDESHOW2_TITLE"
+					default=""
+					size="40"/>
+					
+				<item name="description" type="textarea" 
+					description="SLIDESHOW2_DESCRIPTIONS_DES"
+					label="SLIDESHOW2_DESCRIPTIONS_TITLE"
+					default=""
+					cols="40" rows="5"/>
+			</field>
+			
+			<field name="data-s2" type="jalist" layouts="style-2">
+				<item name="img" type="media" 
+					description="SLIDESHOW2_ITEMS_IMAGES_DES"
+					label="SLIDESHOW2_ITEMS_IMAGES"
+					default=""
+					required="1" />
+			</field>
+		</fieldset>
+  </fields>
+</form>

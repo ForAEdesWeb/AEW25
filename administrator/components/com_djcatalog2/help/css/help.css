@@ -1,0 +1,62 @@
+body {
+	font-family: verdana, arial, sans-serif;
+	font-size: 9pt;
+}
+
+h1 {
+	color: #6D9D2E;
+	font-size: 1.5em;
+	border-left: 25px solid #6D9D2E;
+	border-bottom: 1px solid #6D9D2E;
+	padding: 0 0 2px 5px;
+}
+
+h2 {
+	color: #6D9D2E;
+	font-size: 1.3em;
+	margin: 1ex 0;
+}
+
+pre {
+	text-align: left;
+	background-color: #fff;
+	border-left: 1px solid #aaa;
+	padding: 5px;
+}
+
+table {
+	width: 100%;
+	margin: 2em 0;
+	padding: 0;
+	border: none;
+}
+
+table td,
+table th {
+	border: 1px solid #6D9D2E;
+	padding: 0.5em 1em;
+}
+
+.col_name {
+	width: 15%;
+}
+
+.col_req {
+	width: 5%;	
+	text-align: center;
+}
+
+
+table.examples td,
+table.examples th {
+	font-size: 10px;
+	font-family: monospace;
+}
+
+table.examples th {
+	font-weight: bold;
+}
+
+table.examples .short {
+	width: 50px;
+}

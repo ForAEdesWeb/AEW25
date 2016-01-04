@@ -1,0 +1,103 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// -----------------
+// TESTIMONIAL STYLE
+// -----------------
+.section-inner {
+  background-size: cover;
+  background-position: center center;
+}
+
+.acm-testimonials {
+
+	// DEFAULT STYLE
+	// -------------
+	text-align: center;
+
+	.carousel-inner {
+		.item {
+			padding: 0 (@t3-global-margin * 4);
+
+			@media screen and (max-width: @screen-sm-max) {
+				padding: 0 (@t3-global-margin);
+			}
+		}
+	}
+
+	.fa {
+		color: @gray-dark;
+		font-size: @font-size-large * 2;
+		margin-bottom: @t3-global-margin;
+	}
+
+	.testimonial-text {
+		color: @gray-dark;
+		font-size: @font-size-large * 1.5;
+		margin-bottom: 0;
+		min-height: 120px;
+		line-height: @line-height-base;
+
+		@media screen and (max-width: @screen-xs-max) {
+			min-height: 0;
+			font-size: @font-size-base;
+		}
+
+		@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+			font-size: @font-size-large;
+			min-height: 140px;
+		}
+	}
+
+	.author-info {
+		color: @gray-light;
+		margin-top: @t3-global-margin;
+	}
+
+	// Control 
+	.carousel-control {
+		background: none;
+		width: auto;
+		bottom: auto;
+		top: 50%;
+		margin-top: -16px;
+		text-shadow: none;
+
+		.fa {
+			margin-bottom: 0;
+			border: 2px solid @gray-dark;
+			color: @gray-dark;
+			border-radius: 50%;
+			width: 32px;
+			height: 32px;
+			text-align: center;
+			line-height: 28px;
+			display: block;
+			font-size: @font-size-base;
+		}
+	}
+}
+
+
+// FIX BUG IE 8
+// ------------
+.ie8 .acm-testimonials.style-6 div.carousel .carousel-inner .item {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+// Import Styles Less
+@import "style-2.less";
+@import "style-3.less";
+@import "style-4.less";
+@import "style-5.less";
+@import "style-6.less";
+@import "style-7.less";

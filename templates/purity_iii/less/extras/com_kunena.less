@@ -1,0 +1,137 @@
+@import "../vars.less";
+
+// ---------------------------------------------------------
+// KUNENA COMPATIBLITY
+// ---------------------------------------------------------
+
+.com_kunena #Kunena {
+
+	// GENERAL ELEMENTS
+	// ---------------------------------------------------------
+
+	// Form elements
+	// -----------------------------
+  fieldset {
+    border: 1px solid lighten(@gray-light, 15%);
+
+    legend {
+    	margin: 0;
+    	padding: 0 (@t3-global-padding / 4);
+      width: inherit;
+    }
+
+  }
+
+  .kbutton,
+  .kbutton:hover,
+  .kbutton-container .kbutton {
+  	font-size: @font-size-base;
+  	font-weight: 600;
+  	margin: 0;
+  	padding: (@t3-global-padding / 4) (@t3-global-padding / 2);
+  }
+
+
+	// INDEX PAGE
+	// ---------------------------------------------------------
+
+	// Profile block
+	// -----------------------------
+	#kprofilebox {
+		.input span {
+			display: inline-block;
+			padding: (@t3-global-padding / 2) @t3-global-padding (@t3-global-padding / 2) 0;
+
+			.inputbox {
+				display: inline-block;
+			}
+		}
+	}
+
+
+	// Action block
+	// -----------------------------
+	.klist-actions,
+	.klist-bottom {
+		.inputbox {
+			display: inline-block;
+			padding: 4px 3px;
+		}
+
+		.kbutton {
+			display: inline-block;
+		}
+	}
+
+	.klist-bottom {
+		padding-bottom: 0 !important;
+		overflow: hidden;
+	}
+
+
+	// Block
+	// -----------------------------
+	div.kheader {
+		color: @white !important;
+		padding: (@t3-global-padding / 2) @t3-global-padding;
+
+		a {
+			color: @white !important;
+		}
+	}
+
+
+	// Who is online block
+	// -----------------------------
+	#kwhoisonline {
+
+		.kwhoonline {
+			border-width: 0;
+			border-bottom-width: 1px;
+		}
+
+		.kwholegend {
+			border-width: 0;
+			border-top-width: 1px;
+		}
+	}
+
+
+	// SEARCH PAGE
+	// ---------------------------------------------------------
+	.kadvsearch {
+		input {
+			margin-bottom: (@t3-global-margin / 2);
+		}
+
+		select {
+			background: @white !important;
+			margin-bottom: (@t3-global-margin / 2);	
+			padding: 4px 3px;
+		}
+	}
+
+
+	// PROFILE PAGE
+	// ---------------------------------------------------------
+	#kprofile-edit {
+    .tabs {
+      dt {
+        margin-right: 2px;
+        border-radius: 5px 5px 0 0;
+        font-weight: normal;
+      }
+
+      .open {
+        background: @blue;
+        color: @white;
+      }
+
+      .closed {
+        background: @gray;
+        color: @white;
+      }
+    }
+	}
+
+}

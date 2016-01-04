@@ -1,0 +1,88 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Slideshow Lite Module for J25 & J3.2
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+ */
+
+
+/*
+HRotate
+------------------------------------------------------------------*/
+.hrotate .ja-ss-items {
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		 -o-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			
+	-webkit-perspective: 1000px;
+	   -moz-perspective: 1000px;
+		-ms-perspective: 1000px;
+		 -o-perspective: 1000px;
+			perspective: 1000px;
+}
+
+.hrotate .ja-ss-thumbs-wrap,
+.hrotate .ja-ss-btns {
+	-webkit-transform: translateZ(1000px);
+}
+
+.hrotate .ja-ss-item.animate {
+	-webkit-transition: -webkit-transform 1s, opacity 1s;
+	   -moz-transition: -moz-transform 1s, opacity 1s;
+		-ms-transition: opacity 1s;
+		 -o-transition: -o-transform 1s, opacity 1s;
+			transition: transform 1s, opacity 1s;
+			
+	-webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+	-webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+	   -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+		-ms-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+		 -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+			transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+	-webkit-transform-origin: 0% 50%;
+	   -moz-transform-origin: 0% 50%;
+		-ms-transform-origin: 0% 50%;
+		 -o-transform-origin: 0% 50%;
+			transform-origin: 0% 50%;
+			
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		 -o-backface-visibility: hidden;
+			backface-visibility: hidden;
+}
+
+.hrotate .ja-ss-item.curr {
+	opacity: 1;
+	-webkit-transform: rotateY(0);
+	   -moz-transform: rotateY(0);
+		-ms-transform: rotateY(0);
+		 -o-transform: rotateY(0);
+			transform: rotateY(0);
+}
+
+.hrotate .ja-ss-item.next {
+	opacity: 0;
+	-webkit-transform: rotateY(180deg);
+	   -moz-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+		 -o-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+}
+
+.hrotate .ja-ss-item.prev {
+	opacity: 0;
+	-webkit-transform: rotateY(-180deg);
+	   -moz-transform: rotateY(-180deg);
+		-ms-transform: rotateY(-180deg);
+		 -o-transform: rotateY(-180deg);
+			transform: rotateY(-180deg);
+}
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="file"
+	version="1.6"
+	client="site"
+	method="upgrade"
+	>
+    <name>Chinese language pack for DJ-Catalog2</name>
+	<creationDate>September 2013</creationDate>
+    <author>Blue Constant Media LTD</author>
+    <copyright>2010 Blue Constant Media LTD</copyright>
+    <license>http://www.gnu.org/licenses GNU/GPL</license>
+    <authorUrl>dj-extensions.com</authorUrl>
+    <version>3.2.11</version>
+    <description>DJ-Catalog2 Chinese-traditional translation</description>
+	<fileset>
+		<files folder="administrator" target="administrator/language/zh-TW">
+			<filename>zh-TW.com_djcatalog2.ini</filename>
+			<filename>zh-TW.com_djcatalog2.sys.ini</filename>
+			<filename>zh-TW.plg_search_djcatalog2.sys.ini</filename>
+			<filename>zh-TW.plg_search_djcatalog2.ini</filename>
+			<filename>zh-TW.plg_djcatalog2_pagebreak.sys.ini</filename>
+			<filename>zh-TW.plg_djcatalog2_pagebreak.ini</filename>
+			<filename>zh-TW.plg_quickicon_djcatalog2.ini</filename>
+			<filename>zh-TW.plg_quickicon_djcatalog2.sys.ini</filename>
+			<filename>zh-TW.plg_xmap_com_djcatalog2.ini</filename>
+			<filename>zh-TW.plg_xmap_com_djcatalog2.sys.ini</filename>
+		</files>
+		<files folder="site" target="language/zh-TW">
+			<filename>zh-TW.com_djcatalog2.ini</filename>
+			<filename>zh-TW.mod_djc2search.ini</filename>
+			<filename>zh-TW.mod_djc2search.sys.ini</filename>
+			<filename>zh-TW.mod_djc2filters.ini</filename>
+			<filename>zh-TW.mod_djc2filters.sys.ini</filename>
+			<filename>zh-TW.mod_djc2relateditems.ini</filename>
+			<filename>zh-TW.mod_djc2relateditems.sys.ini</filename>
+			<filename>zh-TW.mod_djc2producers.ini</filename>
+			<filename>zh-TW.mod_djc2producers.sys.ini</filename>
+			<filename>zh-TW.mod_djc2items.ini</filename>
+			<filename>zh-TW.mod_djc2items.sys.ini</filename>
+			<filename>zh-TW.mod_djc2frontpage.ini</filename>
+			<filename>zh-TW.mod_djc2frontpage.sys.ini</filename>
+			<filename>zh-TW.mod_djc2categories.ini</filename>
+			<filename>zh-TW.mod_djc2categories.sys.ini</filename>
+		</files>
+	</fileset>
+</extension>

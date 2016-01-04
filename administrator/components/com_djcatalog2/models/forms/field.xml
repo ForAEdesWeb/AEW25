@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" 
+				readonly="true" class="readonly" />
+		
+		<field name="name" type="text" class="inputbox"
+				size="40" label="COM_DJCATALOG2_NAME"
+				description="COM_DJCATALOG2_NAME" required="true" />
+		
+		<field name="imagelabel" type="media" class="inputbox"
+			label="COM_DJCATALOG2_IMAGELABEL" description="COM_DJCATALOG2_IMAGELABEL_DESC" directory="" preview="tooltip" />
+		
+		<field name="alias" type="text" class="inputbox"
+			size="40" label="COM_DJCATALOG2_ALIAS"
+			description="COM_DJCATALOG2_ALIAS" />
+		
+		<field name="group_id" type="djfieldgroup"
+			label="COM_DJCATALOG2_FIELDGROUP"
+			description="COM_DJCATALOG2_FIELDGROUP_DESC"
+			default=""
+		/>
+		
+		<field name="type" type="djfieldtype" label="COM_DJCATALOG2_FIELD_TYPE" default="" required="true"  />
+		
+		<field
+			name="published"
+			type="list"
+			label="COM_DJCATALOG2_PUBLISHED"
+			description="COM_DJCATALOG2_PUBLISHED"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">JPUBLISHED</option>
+			<option
+				value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field
+			name="required"
+			type="list"
+			label="COM_DJCATALOG2_REQUIRED"
+			description="COM_DJCATALOG2_REQUIRED"
+			class="inputbox"
+			size="1"
+			default="0">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		
+		<field name="visibility" type="list" label="COM_DJCATALOG2_FIELD_VISIBILITY" 
+			description="COM_DJCATALOG2_FIELD_VISIBILITY_DESC" default="1">
+			<option
+				value="0">COM_DJCATALOG2_FIELD_VISIBILITY_NOWHERE</option>
+			<option
+				value="1">COM_DJCATALOG2_FIELD_VISIBILITY_ITEM</option>
+			<option
+				value="2">COM_DJCATALOG2_FIELD_VISIBILITY_LIST</option>
+			<option
+				value="3">COM_DJCATALOG2_FIELD_VISIBILITY_ITEM_N_LIST</option>
+		</field>
+		
+		<field name="separate_column" type="list" label="COM_DJCATALOG2_FIELD_SEPARATE_COLUMN" 
+			description="COM_DJCATALOG2_FIELD_SEPARATE_COLUMN_DESC" default="0">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		
+		<field name="filterable" type="list" label="COM_DJCATALOG2_FIELD_FILTERABLE" 
+			description="COM_DJCATALOG2_FIELD_FILTERABLE_DESC" default="0">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		
+		<field name="searchable" type="list" label="COM_DJCATALOG2_FIELD_SEARCHABLE" 
+			description="COM_DJCATALOG2_FIELD_SEARCHABLE_DESC" default="0">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		
+		<field name="sortable" type="list" label="COM_DJCATALOG2_FIELD_SORTABLE" 
+			description="COM_DJCATALOG2_FIELD_SORTABLE_DESC" default="0">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		
+	</fieldset>
+</form>

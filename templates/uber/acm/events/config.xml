@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Events</title>
+
+	<fields name="events">
+		<fieldset name="col" label="EVENT_COL_LABEL" description="EVENT_COL_DESC" >
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+  
+			<field name="number_col" type="list" label="EVENT_NUMBER_COL_LABEL" description="EVENT_NUMBER_COL_DESC" layouts="style-1">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</field>
+      <field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+      	<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+      
+      <field name="event-style" type="list" default="style-dark"
+          global="1"
+          label="EVENT_STYLE_LABEL"
+          description="EVENT_STYLE_DESC" layouts="style-1, style-2">
+        <option value="style-dark">LAYOUT_EVENT_DARK</option>
+        <option value="style-light">LAYOUT_EVENT_LIGHT</option>
+      </field>
+
+		</fieldset>
+		
+		<fieldset name="event_info" label="EVENT_INFO_LABEL" description="EVENT_INFO_DESC">
+			<field name="data" type="jalist">
+        <item name="event-date" type="text" size="10" default="" label="EVENT_DATE_LABEL" description="EVENT_DATE_DESC" required="1" />
+        <item name="event-month" type="text" size="10" default="" label="EVENT_MONTH_LABEL" description="EVENT_MONTH_DESC" required="1" />
+        <item name="event-year" type="text" size="10" default="" label="EVENT_YEAR_LABEL" description="EVENT_YEAR_DESC" required="1" />
+        <item name="event-time" type="text" size="10" default="" label="EVENT_TIME_LABEL" description="EVENT_TIME_DESC" />
+        <item name="event-title" type="text" size="40" default="" label="EVENT_TITLE_LABEL" description="EVENT_TITLE_DESC" required="1" />
+        <item name="event-description" type="text" size="40" default="" label="EVENT_DESCRIPTION_LABEL" description="EVENT_DESCRIPTION_DESC" />
+        <item name="event-link" type="text" size="20" default="" label="EVENT_LINK_LABEL" description="EVENT_LINK_DESC" />
+			</field>
+    </fieldset>
+	</fields>
+</form>

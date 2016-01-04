@@ -1,0 +1,63 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// -----------------
+// TESTIMONIAL STYLE
+// -----------------
+.acm-testimonials {
+
+	// DEFAULT STYLE
+	// -------------
+	text-align: center;
+	.item {
+		border-right: 1px solid @t3-border-color;
+		padding-left: @grid-gutter-width;
+		padding-right: @grid-gutter-width;
+
+		// Control screen mobile/tablet
+		@media screen and (max-width: @screen-sm-max) {
+			border-right: 0;
+			margin-bottom: @t3-global-margin * 2;
+		}
+
+		&:last-child,
+		&.last-child {
+			border-right: 0;
+		}
+
+		@media (max-width: @screen-sm-max) {
+			border-right: 0;
+		}
+	}
+
+	.testimonial-content > .row + .row {
+		margin-top: @t3-global-margin;
+	}
+
+	.testimonial-text {
+		font-size: @font-size-base;
+		margin-bottom: 0;
+		line-height: @line-height-base;
+	}
+
+	.author-avatar {
+		margin-bottom: @t3-global-margin;
+	}
+
+	.author-info {
+		color: @gray-darker;
+		margin-top: @t3-global-margin;
+		font-size: @font-size-small - 1px;
+		font-weight: @font-weight-bold;
+
+		// Control screen mobile/tablet
+		@media screen and (max-width: @screen-sm-max) {
+			margin-top: @t3-global-margin / 2;
+		}
+	}
+}

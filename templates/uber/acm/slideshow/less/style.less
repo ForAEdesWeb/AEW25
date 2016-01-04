@@ -1,0 +1,53 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// SLIDESHOW THUBAILS
+// ------------------
+.section-inner {
+  background-size: cover;
+  background-position: center center;
+}
+
+.acm-slideshow {
+  // navigation
+  .carousel-indicators {
+    bottom: @t3-global-margin / 3;
+    margin-bottom: 0;
+  }
+
+  .carousel-control {
+  	font-size: @font-size-h1;
+  	background: none;
+  	display: none;
+
+    // Control screen mobile
+    @media screen and (max-width: @screen-xs-max) {
+      display: block;
+    }
+
+  	.fa {
+  		position: absolute;
+  		top: 50%;
+  		margin-top: -(@font-size-h1/2);
+      @media screen and (max-width: @screen-xs-max) {
+        left: @t3-global-margin/2;
+      }
+  	}
+  }
+
+   &:hover {
+  	.carousel-control {
+  		display: block;
+  	}
+  }
+}
+
+// Import Style Less
+// --------------------------
+@import "style-1.less"; // Import file style-1.less
+

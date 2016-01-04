@@ -1,0 +1,96 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// -----------------
+// SPOTLIGHT STYLE
+// -----------------
+.acm-spotlight {
+
+	.t3-module {
+		padding: 0;
+
+    .module-title {
+      font-size: @font-size-small;
+      margin: 0 0 (@t3-global-margin /2);
+      text-align: left;
+
+      span {
+        background: @brand-primary;
+        color: @white;
+        display: inline-block;
+        padding: (@t3-global-padding / 4) (@t3-global-padding / 2);
+      }
+    }
+
+		.container {
+			padding: 0;
+		}
+
+		.section-title  {
+			display: none;
+		}
+
+		.section-inner {
+			padding: 0;
+		}
+	}
+
+	> .row > div > div {
+		margin-bottom: @t3-global-margin;
+	}
+
+	// Testimonials
+	.acm-testimonials {
+		.container {
+			.ie8 &{
+				width: auto;
+			}
+		}
+
+		.carousel-inner .item {
+			padding: 0;
+		}
+
+		&.style-3 .carousel-inner {
+			overflow: visible;
+
+			.item {
+				@media screen and (max-width:@screen-sm-max) {
+					padding-left: 60px;
+				}
+				
+				@media screen and (max-width:@screen-xs-max) {
+					padding-left: 0;
+				}
+			}
+
+			&:before {
+				left: -80px;
+
+				@media screen and (max-width: @screen-xs-max) {
+					left: -40px;
+				}
+
+				@media (min-width: @screen-sm) and (max-width: @screen-md-max) {
+					left: 0;
+				}
+
+				@media (max-width: (@container-lg + (86*2))) and (min-width: (@container-lg - (86*2))) {
+        	left: 0;
+      	}
+			}
+
+			@media (max-width: (@container-lg + (86*2))) and (min-width: (@container-lg - (86*2))) {
+				.testimonial-text {
+					padding-left: 80px;
+				}
+			}
+		}
+	}
+
+}

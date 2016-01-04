@@ -1,0 +1,51 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.uber-contact-info {
+
+	// Style Default
+	&.style-2,
+	&.style-1 {
+		.container {
+			position: relative;
+		}
+		
+		.info {
+			position: absolute;
+			width: auto;
+			background-color: @brand-primary;
+			padding: @t3-global-padding;
+			color: @white;
+
+			&.top-left {
+				top: @grid-gutter-width * 2;
+				left: @grid-gutter-width * 2;
+			}
+
+			&.bottom-right {
+				bottom: @grid-gutter-width * 2;
+				right: @grid-gutter-width * 2;
+			}
+
+			&.bottom-left {
+				bottom: @grid-gutter-width * 2;
+				left: @grid-gutter-width * 2;
+			}
+
+			&.top-right {
+				top: @grid-gutter-width * 2;
+				right: @grid-gutter-width * 2;
+			}
+		}
+
+		.info-list {
+			dd {
+				a {
+					color: @white;
+					border-bottom: 1px dotted @white;
+				}
+			}
+		}
+	}
+}

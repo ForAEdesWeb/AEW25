@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="3.2"
+	type="template"
+	method="upgrade" client="site">
+	<name>ja_mitius</name>
+	<version>1.1.1</version>
+	<creationDate>05 December 2014</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.joomlart.com</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<group>t3</group>
+	<description>	
+	<![CDATA[
+	<div align="left">
+		<div class="alert alert-success" style="background-color:#DFF0D8;border-color:#D6E9C6;color: #468847;padding: 1px 0;">
+				<a href="http://t3-framework.org/"><img src="http://joomlart.s3.amazonaws.com/images/jat3v3-documents/message-installation/mitius-logo.png" alt="some_text" width="357" height="60"></a>
+				<h4><a href="http://www.joomlart.com/forums/downloads.php?do=cat&id=472" title="">Download</a> | <a href="http://joomla-templates.joomlart.com/ja_mitius/" title="">Demo</a> | <a href="http://www.joomlart.com/documentation/joomla-templates/ja-mitius" title="">Document</a> | <a href="http://pm.joomlart.com/browse/JATCMITIUS" title="">Changelog</a></h4>
+		<p> </p>
+		<span style="color:#FF0000">Note: JA Mitius Template requires T3 plugin to be installed and enabled.</span><p></p>
+		<p>Copyright 2004 - 2014 <a href='http://www.joomlart.com/' title='Visit Joomlart.com!'>JoomlArt.com</a>.</p>
+		</div>
+     <style>table.adminform{width: 100%;}</style>
+	 </div>
+	]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateInfo.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>thememagic.xml</filename>
+		<folder>css</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>languages</folder>
+		<folder>less</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.tpl_ja_mitius.ini</language>
+		<language tag="en-GB">en-GB.tpl_ja_mitius.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>languageswitcherload</position>
+		<position>top-menu</position>
+		<position>top-login</position>
+		<position>top-newsticker</position>
+		<position>head-search</position>
+		<position>social</position>
+		<position>slideshow</position>
+		<position>slidenews</position>
+		<position>position-1</position>
+		<position>message</position>
+		<position>position-7</position>
+		<position>position-5</position>
+		<position>mast-col</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>navhelper</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footermenu</position>
+		<position>footer</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/jaT3/includes/depend">
+
+			<!-- Sample for add or disable template parameters -->
+			<!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+				<field name="group_disable" type="t3depend" function="@group">
+					<option for="menu_as_bg" value="no">menu_as_bg</option>
+				</field>
+			</fieldset-->
+			
+		</fields>
+
+    </config>
+
+	<updateservers>
+	   <server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>	
+
+</extension>

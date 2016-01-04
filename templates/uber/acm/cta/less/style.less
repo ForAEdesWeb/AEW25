@@ -1,0 +1,42 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.acm-cta {
+	.call-to-action-image {
+	  margin-top: @grid-gutter-width*2;
+	  margin-bottom: -(@t3-global-margin*4);
+
+	  img {
+			max-width: 100%;
+		}
+
+		@media screen and (max-width: @screen-xs-max) {
+			margin-bottom: -(@t3-global-margin*2);
+		}
+	}
+}
+
+
+// MISC
+// ----
+
+.section-user-showcase {
+	@media (max-width: @screen-sm-max) {
+		background-image: none !important;
+
+		.cta-2 { 
+			padding-top: @t3-global-padding*4;
+		}
+	}
+}
+
+// Import Styles Less
+@import "style-1.less";
+@import "style-2.less";
+@import "style-3.less";
+@import "style-4.less";

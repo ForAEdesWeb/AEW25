@@ -1,0 +1,213 @@
+// -------------------------------
+// MENU STYLE 1
+// -------------------------------
+.acm-event {
+  .style-3 {
+    .clearfix();
+    position: relative;
+
+    &:before {
+      background: @gray-lighter;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 5px;
+
+      @media (min-width: @screen-sm-max) {
+        left: 50%;
+      }
+    }
+
+    .event-item {
+      margin-bottom: @t3-global-margin;
+
+      @media (min-width: @screen-sm-max) {
+        margin-bottom: 0;
+      }
+
+      .item-inner {
+        background: @gray-lighter;
+        margin-left: 33px;
+        padding: (@t3-global-padding / 2) @t3-global-padding (@t3-global-padding / 2) @t3-global-padding;
+        position: relative;
+
+        @media (min-width: @screen-xs) {
+          padding-left: (@t3-global-padding + 150);
+        }
+
+        @media (min-width: @screen-sm-max) {
+          margin-left: (@t3-global-margin / 2);
+        }
+
+        &:before {
+          border-right: 10px solid @gray-lighter;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          content: "";
+          display: block;
+          height: 0;
+          position: absolute;
+          top: @t3-global-padding;
+          left: -10px;
+          width: 0;
+
+        }
+
+        &:after {
+          background: @gray-light;
+          display: block;
+          content: "";
+          height: 12px;
+          position: absolute;
+          left: -36px;
+          top: (@t3-global-padding + 5);
+          width: 12px;
+        }
+
+        .event-datetime {
+          position: relative;
+          overflow: hidden;
+          width: 150px;
+
+          @media (min-width: @screen-xs) {
+            position: absolute;
+            left: @t3-global-padding;
+            top: (@t3-global-padding / 2);
+            width: auto;
+          }
+
+          .date {
+            display: block;
+            float: left;
+            font-size: @font-size-base * 2.5;
+            font-weight: @font-weight-semibold;
+            line-height: 1;
+            margin-right: 8px;
+          }
+
+          .month, .year {
+            font-size: @font-size-small - 1;
+            font-weight: @font-weight-bold;
+            display: block;
+            float: left;
+            line-height: 1;
+            letter-spacing: 1.5;
+            width: 50%;
+          }
+
+          .month {
+            margin-top: 5px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+          }
+
+          .time {
+            clear: both;
+            display: block;
+            font-size: @font-size-small;
+            padding-top: 5px;
+            text-transform: uppercase;
+            width: 100%;
+
+            .fa {
+              color: @gray-light;
+              margin-right: 5px;
+            }
+          }
+        }
+
+        h4 {
+          margin-top: 0;
+          margin-bottom: 5px;
+
+          a {
+            color: @gray;
+
+            &:hover, &:focus, &:active {
+              color: @link-hover-color;
+            }
+          }
+        }
+
+        &:hover {
+          &:after {
+            background: @brand-primary;
+          }
+        }
+      }
+
+      .pull-left {
+        float: none !important;
+
+        @media (min-width: @screen-sm-max) {
+          float: left;
+          text-align: right;
+        }
+
+        .item-inner {
+          margin-left: 33px;
+
+          @media (min-width: @screen-sm-max) {
+            margin-left: 0;
+            margin-right: (@t3-global-margin / 2);
+            padding-left: @t3-global-padding;
+            padding-right: (@t3-global-padding + 150);
+          }
+
+          &:before {
+            @media (min-width: @screen-sm-max) {
+              border-left: 10px solid @gray-lighter;
+              border-right: 0;
+              left: auto;
+              right: -10px;
+            }
+          }
+
+          &:after {
+            @media (min-width: @screen-sm-max) {
+              left: auto;
+              right: -41px;
+            }
+          }
+
+          .event-datetime {
+            @media (min-width: @screen-sm-max) {
+              left: auto;
+              right: @t3-global-padding;
+              text-align: right;
+            }
+
+            .date {
+              @media (min-width: @screen-sm-max) {
+                float: right;
+                margin-right: 0;
+                margin-left: 10px;
+              }
+            }
+
+            .month, .year {
+              @media (min-width: @screen-sm-max) {
+                float: right;  
+              }         
+
+            }
+          }
+        }
+      }
+
+      .pull-right {
+        float: none !important;
+
+        @media (min-width: @screen-sm-max) {
+          float: right !important;
+        }
+
+      }
+
+    }
+
+  }
+}

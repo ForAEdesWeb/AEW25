@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>    
+    
+    <!-- Batch -->
+    <fieldset name="batch">
+        
+        <field name="item_id"
+            type="item_modal"
+            label="Item ID"
+            description=""
+            extension="com_webgallery"
+            labelclass="control-label"
+            class="input-large inputbox"
+            action="true"
+        >
+            <option>JOPTION_SELECT_CATEGORY</option>
+        </field>
+        
+        <field name="move_copy"
+            type="radio"
+            label="JLIB_RULES_ACTION"
+            description=""
+            labelclass="control-label"
+            class="combo btn-group"
+            default="m"
+        >
+            <option value="m">JLIB_HTML_BATCH_MOVE</option>
+            <option value="c">JLIB_HTML_BATCH_COPY</option>
+        </field>
+    </fieldset>
+    
+</form>

@@ -1,0 +1,436 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.uber-bar {
+  position: relative;
+  .clearfix();
+  .transition(all 0.3s);
+
+  &.affix {
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 23;
+    position: fixed;
+  }
+
+  &.light-color {
+    background-color: @gray-lightest;
+
+    .uber-social .fa {
+      color: @black;
+    }
+
+    .btn-close {
+      color: @black;
+
+      &:hover, &:focus, &:active {
+        color: @black;
+      }
+    }
+  }
+
+  &.dark-color {
+  	background-color: @gray-darker;
+  }
+
+  &.black-color {
+    background-color: @black;
+    color: @gray-light;
+  }
+
+  &.highlight-color {
+    background-color: @brand-primary;
+    color: @white;
+
+    .uber-social {
+      a {
+        height: 42px;
+        line-height: 42px;
+
+        .fa {
+          height: 20px;
+          line-height: 20px;
+          .transition(all 0.3s);
+        }
+
+        &:hover, &:focus, &:active {
+          .fa {
+            background: @white;
+            border-radius: 50%;
+            font-size: @font-size-small - 2px;
+          }
+        }
+      }
+    }
+
+    .nav li a {
+      color: @white;
+      .opacity(0.6);
+
+      &:hover, &:focus, &:active {
+        color: @white;
+        .opacity(1);
+      }
+    }
+  }
+
+  &.red-color {
+    background: @red;
+    color: @white;
+
+    .uber-social {
+      a {
+        height: 42px;
+        line-height: 42px;
+
+        .fa {
+          height: 20px;
+          line-height: 20px;
+          .transition(all 0.3s);
+        }
+
+        &:hover, &:focus, &:active {
+          .fa {
+            background: @white;
+            border-radius: 50%;
+            font-size: @font-size-small - 2px;
+          }
+        }
+      }
+    }
+
+    .nav li a {
+      color: @white;
+      .opacity(0.6);
+
+      &:hover, &:focus, &:active {
+        color: @white;
+        .opacity(1);
+      }
+    }
+  }
+
+  &.blue-color {
+    background: @blue;
+    color: @white;
+
+    .uber-social {
+      a {
+        height: 42px;
+        line-height: 42px;
+
+        .fa {
+          height: 20px;
+          line-height: 20px;
+          .transition(all 0.3s);
+        }
+
+        &:hover, &:focus, &:active {
+          .fa {
+            background: @white;
+            border-radius: 50%;
+            font-size: @font-size-small - 2px;
+          }
+        }
+      }
+    }
+
+    .nav li a {
+      color: @white;
+      .opacity(0.6);
+
+      &:hover, &:focus, &:active {
+        color: @white;
+        .opacity(1);
+      }
+    }
+  }
+
+  &.green-color {
+    background: @green;
+    color: @white;
+
+    .uber-social {
+      a {
+        height: 42px;
+        line-height: 42px;
+
+        .fa {
+          height: 20px;
+          line-height: 20px;
+          .transition(all 0.3s);
+        }
+
+        &:hover, &:focus, &:active {
+          .fa {
+            background: @white;
+            border-radius: 50%;
+            font-size: @font-size-small - 2px;
+          }
+        }
+      }
+    }
+
+    .nav li a {
+      color: @white;
+      .opacity(0.6);
+
+      &:hover, &:focus, &:active {
+        color: @white;
+        .opacity(1);
+      }
+    }
+  }
+
+  &.yellow-color {
+    background: @yellow;
+    color: @black;
+
+    .uber-social {
+      a {
+        height: 42px;
+        line-height: 42px;
+
+        .fa {
+          height: 20px;
+          line-height: 20px;
+          .transition(all 0.3s);
+        }
+
+        &:hover, &:focus, &:active {
+          .fa {
+            background: @black;
+            border-radius: 50%;
+            font-size: @font-size-small - 2px;
+          }
+        }
+      }
+    }
+
+    .nav li a {
+      color: @black;
+      .opacity(0.6);
+
+      &:hover, &:focus, &:active {
+        color: @black;
+        .opacity(1);
+      }
+    }
+  }
+
+  &.purple-color {
+    background: @purple;
+    color: @white;
+
+    .uber-social {
+      a {
+        height: 42px;
+        line-height: 42px;
+
+        .fa {
+          height: 20px;
+          line-height: 20px;
+          .transition(all 0.3s);
+        }
+
+        &:hover, &:focus, &:active {
+          .fa {
+            background: @white;
+            border-radius: 50%;
+            font-size: @font-size-small - 2px;
+          }
+        }
+      }
+    }
+  }
+
+  &.bar-open {
+    padding-right: @grid-gutter-width/2;
+  }
+
+  &.bar-close {
+    overflow: hidden;
+    height: 0;
+  }
+
+  .uber-social {
+  	.fa {
+  		background: none;
+  		font-size: @font-size-small;
+  		margin-right: 0;
+  		margin-left: 5px;
+      width: @grid-gutter-width/2;
+      .opacity(0.8);
+      .transition(all 0.3s);
+  	}
+
+  	a {
+  		margin-right: 0;
+
+      &:hover .fa {
+        background: none;
+        .opacity(1);
+      }
+
+      &:hover .fa-facebook {
+        color: #3b5998;
+      }
+
+      &:hover .fa-twitter {
+        color: #3a92c8;
+      }
+
+      &:hover .fa-google-plus {
+        color: #dd4b39;
+      }
+
+      &:hover .fa-pinterest {
+        color: #cb2027;
+      }
+
+      &:hover .fa-linkedin {
+        color: #287bbc;
+      }
+  	}
+  }
+
+  .bar-right {
+    float: right;
+  }
+
+  // Contact Info
+  .uber-contact-info {
+    .info-list {
+      margin-bottom: 0;
+      margin-top: 0;
+      dd, dt {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 0;
+        height: 42px;
+        line-height: 42px;
+        font-size: @font-size-small;
+        font-weight: @font-weight-normal;
+
+        .fa {
+          float: none;
+          margin-bottom: 0;
+          margin-top: 0;
+          margin-right: 2px;
+        }
+      }
+
+      dd {
+        margin-right: @t3-global-margin/2;
+      }
+    }
+  }
+
+  // Nav
+  .nav {
+    li {
+      display: inline-block;
+      height: 42px;
+      line-height: 42px;
+      font-size: @font-size-small;
+
+      a {
+        padding: 0;
+
+        &:hover, &:focus, &:active {
+          background: none;
+          color: @white;
+        }
+      }
+    }
+  }
+
+  .pull-left .nav li {
+    margin-right: @t3-global-margin/2;
+  }
+
+  .pull-right .nav li {
+    margin-left: @t3-global-margin/2;
+  }
+
+  // Switch Language
+  .lang-inline {
+    margin: 0 0 0 @t3-global-margin;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      height: 42px;
+      line-height: 42px;
+      font-size: @font-size-small;
+      margin-left: @t3-global-margin/4;
+    }
+  }
+
+  .bar-center {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: @t3-global-padding;
+    padding-bottom: @t3-global-padding;
+    float: none;
+  }
+}
+
+
+// MISC 
+.hspace {
+  display: block;
+  width: 100%;
+  .transition(all 0.3s);
+
+  &.hspace-close {
+    height: 0 !important;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  right: 10px;
+  height: 42px;
+  line-height: 36px;
+  top: 0;
+  padding: 0;
+  color: @white;
+  .opacity(0.5);
+
+  &:focus, &:hover, &:active {
+    outline: none;
+    .opacity(0.8);
+  }
+
+  .fa {
+    font-size: @font-size-small - 2;
+    border: 2px solid;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 16px;
+  }
+}
+
+
+// Responsive
+@media (max-width: @screen-xs-max) {
+  .uber-bar .col-sm-8 {
+    display: none;
+  }
+}
+
+// Fix for IE8
+.ie8 .uber-bar {
+  .btn-close {
+    padding: 0;
+  }
+}

@@ -1,0 +1,115 @@
+<PUBLIC:COMPONENT lightWeight="true">
+<PUBLIC:ATTACH EVENT="oncontentready" FOR="element" ONEVENT="init()" />
+<PUBLIC:ATTACH EVENT="ondocumentready" FOR="element" ONEVENT="init()" />
+<script type="text/javascript">
+var doc = element.document,
+	janim = window.janim;
+
+if( !janim ) {
+	janim = window.janim = {
+		ie: navigator.userAgent.match(/MSIE ([0-9]{1,}[\.0-9]{0,})/) ? parseFloat(navigator.userAgent.match(/MSIE ([0-9]{1,}[\.0-9]{0,})/)[1]) : 0,
+		
+		animFrame: (function() {
+				return window.requestAnimationFrame
+					|| window.msRequestAnimationFrame
+					|| function(callback) { return setTimeout(callback, 1); }
+			})(),
+	 
+		start: function (elm) {
+			clearTimeout(elm._janimsid);
+			
+			var cstyle = elm.currentStyle,
+				rstyle = elm.runtimeStyle;
+				
+			if (!cstyle['-ms-transition']){
+				return;
+			}
+			
+			var trans = cstyle['-ms-transition'].split(' '),
+				duration = trans[1],
+				delay = cstyle['-ms-transition-delay'],
+				prop = trans[0],
+				from = parseFloat(cstyle[prop]),
+				to = parseFloat(cstyle['-ms-'+prop]),
+				unit = '';
+				
+			duration = parseFloat(duration) * ((typeof duration != 'undefined' && duration.indexOf('ms') != -1) ? 1 : 1000);
+			delay = parseFloat(delay) * ((typeof delay != 'undefined' && delay.indexOf('ms') != -1) ? 1 : 1000);
+				
+			if (isNaN(from)){
+				from = 0;
+			}
+			
+			if (isNaN(to)){
+				to = 0;
+			}
+			
+			if (isNaN(duration)){
+				duration = 0;
+			}
+			
+			if (isNaN(delay)){
+				delay = 0;
+			}
+			
+			if (to) {
+				unit = (to == cstyle['-ms-' + prop]) ? '' : cstyle['-ms-' + prop].substr((to + '').length);
+			} else if (from) {
+				unit = (from == cstyle[prop]) ? '' : cstyle[prop].substr((from + '').length);
+			}
+			
+			if (prop == 'opacity' && !cstyle.hasLayout){
+				elm.style.zoom = 1;
+			}
+			
+			if (to == from || duration == 0) {
+				if (prop == 'opacity' && janim.ie < 9) {				
+					rstyle.filter = to == 1 ? '' : 'alpha(opacity=' + parseInt(to * 100) + ')';
+				}
+				rstyle[prop] = to + unit;			
+			} else {
+				
+				elm._janimsid = setTimeout(function(){
+				
+					var startTime = new Date().getTime(),
+						easeOut, now, cval,
+					
+						animate = function  () {
+							now = new Date().getTime();
+							
+							if (now >= startTime + duration) {
+								if (prop == 'opacity' && janim.ie < 9) {
+									rstyle.filter = to == 1 ? '' : 'alpha(opacity = ' + parseInt(to * 100) + ')';
+								}
+								rstyle[prop] = to + unit;
+								return false;
+							}
+							
+							now = (now - startTime) / duration;
+							cval = (to - from) * now + from;
+							
+							if (prop == 'opacity' && janim.ie < 9) {
+								rstyle.filter = 'alpha(opacity = ' + parseInt(cval * 100) + ')';
+							}
+							rstyle [prop] = cval + unit;
+							
+							elm._janimsid = janim.animFrame(animate);
+						};
+						
+					animate();
+				}, delay);
+			}
+		}	
+	};
+}
+
+function init() {
+    if ( doc.media !== 'print' ) {
+        var janim = window.janim;
+        if( janim ) {
+            janim.start(element);
+        }
+    }
+};
+</script>
+</PUBLIC:COMPONENT>

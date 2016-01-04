@@ -1,0 +1,138 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.uber-stats {
+
+	// Style 7
+	&.style-7 {
+		.stats-title {
+			font-size: @font-size-h3;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.stats-list {
+			.stats-asset {
+				// Control screen tablet / mobile
+				@media screen and (max-width: @screen-sm-max) {
+					margin-bottom: @t3-global-margin * 2;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.progress-pie-chart {
+			  width: 160px;
+			  height: 160px;
+			  border-radius: 50%;
+			  background-color: @gray-lighter;
+			  position: relative;
+			  border: 2px solid @white;
+			}
+
+			.progress-pie-chart.gt-50 {
+			  background-color: @brand-primary;
+			}
+
+			.ppc-progress {
+			  content: "";
+			  position: absolute;
+			  border-radius: 50%;
+			  left: calc(~"50% - "80px);
+			  top: calc(~"50% - "80px);
+			  left: -moz-calc(~"50% - "80px);
+			  top: -moz-calc(~"50% - "80px);
+			  width: 160px;
+			  height: 160px;
+			  clip: rect(0, 160px, 160px, 80px);
+			}
+
+			.ppc-progress .ppc-progress-fill {
+			  content: "";
+			  position: absolute;
+			  border-radius: 50%;
+			  left: calc(~"50% - "80px);
+			  top: calc(~"50% - "80px);
+			  left: -moz-calc(~"50% - "80px);
+			  top: -moz-calc(~"50% - "80px);
+			  width: 160px;
+			  height: 160px;
+			  clip: rect(0, 80px, 160px, 0);
+			  background: @brand-primary;
+			  transform: rotate(60deg);
+			  border: 2px solid @white;
+			}
+
+			.gt-50 .ppc-progress {
+			  clip: rect(0, 80px, 160px, 0);
+			}
+
+			.gt-50 .ppc-progress .ppc-progress-fill {
+			  clip: rect(0, 160px, 160px, 80px);
+			  background: @gray-lighter;
+			}
+
+			.ppc-percents {
+			  content: "";
+			  position: absolute;
+			  border-radius: 50%;
+			  left: calc(~"50% - "~"139.13043px"/2);
+			  top: calc(~"50% - "~"139.13043px"/2);
+			  left: -moz-calc(~"50% - "~"139.13043px"/2);
+			  top: -moz-calc(~"50% - "~"139.13043px"/2); // 139.13043px = 160 / 1.15
+			  width: 139.13043px;
+			  height: 139.13043px;
+			  background: #fff;
+			  text-align: center;
+			  display: table;
+			}
+
+			.ppc-percents span {
+			  display: block;
+			  font-size: @font-size-h3;
+			  color: @brand-primary;
+			}
+
+			.pcc-percents-wrapper {
+			  display: table-cell;
+			  vertical-align: middle;
+			}
+
+			.progress-pie-chart {
+			  margin: 0 auto @t3-global-margin;
+			}
+
+			span {
+				display: block;
+				text-align: center;
+
+				&.stats-subject {
+					font-weight: @font-weight-bold;
+					color: @black;
+				}
+			}
+		}
+
+		&.style-dark {
+			.stats-list {
+				.progress-pie-chart,
+				.progress-pie-chart.gt-50,
+				.ppc-progress .ppc-progress-fill {
+					border-color: #1f262b;
+				}
+
+				span.stats-subject {
+					color: @white;
+				}
+			}
+
+			.small-head {
+				color: @white;
+			}
+		}
+	}
+}

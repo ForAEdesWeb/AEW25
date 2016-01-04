@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="basic">
+        <fieldset name="information" align="left" horz="true">       
+        	
+        	<field name="id" 
+                type="text" 
+                default="0" 
+                label="JGLOBAL_FIELD_ID_LABEL"
+                readonly="true" 
+                class="readonly"
+                description="JGLOBAL_FIELD_ID_DESC"
+                labelclass=""
+            />
+            
+            <field name="item_id" 
+                type="item_modal" 
+                default="0" 
+                label="COM_WEBGALLERY_ITEM_ID"
+                class=""
+                description="COM_WEBGALLERY_ITEM_ID_DESC"
+                labelclass=""
+            />
+        	               
+            <field name="url"
+                type="text"
+                label="COM_WEBGALLERY_URL"
+                description="COM_WEBGALLERY_URL_DESC"
+                size="60"
+                labelclass=""
+            />
+            
+            <field name="path"
+                type="text"
+                label="COM_WEBGALLERY_THUMBNAIL_PATH"
+                description="COM_WEBGALLERY_THUMBNAIL_PATH_DESC"
+                size="60"
+                labelclass=""
+            />
+            
+            <field name="scanned"
+                type="list"
+                label="COM_WEBGALLERY_THUMBNAIL_SCANNED"
+                description="COM_WEBGALLERY_THUMBNAIL_SCANNED_DESC"
+                class="inputbox"
+                size="1"
+                default="0"
+                labelclass=""
+            >
+            	<option value="0">COM_WEBGALLERY_UNSCANNED</option>
+                <option value="1">COM_WEBGALLERY_SCANNED</option>
+            </field>
+            
+     
+            <field name="created"
+                type="calendar"
+                label="COM_WEBGALLERY_CREATED"
+                description="COM_WEBGALLERY_CREATED_DESC"
+                labelclass=""
+            />
+            
+        </fieldset>
+        
+        
+    </fields>
+    
+    
+</form>

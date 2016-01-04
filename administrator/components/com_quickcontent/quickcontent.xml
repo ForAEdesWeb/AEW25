@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component"
+	version="3.3"
+	method="upgrade">
+	<name>com_quickcontent</name>
+	<creationDate>2013-1-8</creationDate>
+	<copyright>Copyright (C) 2014. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>Asika</author>
+	<authorEmail>asika32764@gmail.com</authorEmail>
+	<authorUrl>http://asikart.com</authorUrl>
+	<version>2.0.1</version>
+	<description></description>
+
+	<scriptfile>install.php</scriptfile>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.sql</file>
+		  </sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql"
+				charset="utf8">sql/uninstall.sql
+			</file>
+		</sql>
+	</uninstall>
+
+	<administration>
+		<menu>COM_QUICKCONTENT</menu>
+
+		<files folder="admin">
+			<folder>asset</folder>
+			<folder>controller</folder>
+			<folder>etc</folder>
+			<folder>helper</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>language</folder>
+			<folder>layouts</folder>
+			<folder>model</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>table</folder>
+			<folder>view</folder>
+			<filename>access.xml</filename>
+			<filename>component.php</filename>
+			<filename>composer.json</filename>
+			<filename>config.xml</filename>
+			<filename>quickcontent.php</filename>
+			<filename>index.html</filename>
+			<filename>install.php</filename>
+		</files>
+	</administration>
+
+	<modules>
+		<!--<module>mod_quickcontent</module>-->
+	</modules>
+
+	<plugins>
+		<!--<plugin>plg_system_quickcontent</plugin>-->
+	</plugins>
+
+	<!--
+	<updateservers>
+		<server type="extension" priority="1" name="Asikart Quickcontent Component">http://update.asikart.com/component/com_quickcontent.xml</server>
+	</updateservers>
+	-->
+
+</extension>
+

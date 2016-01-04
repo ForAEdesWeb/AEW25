@@ -1,0 +1,29 @@
+@import "../vars.less";
+
+.landing-page {
+  #fp-nav {
+    z-index: 9999;
+    ul li a {
+      span {
+        background: none;
+        border: 2px solid @black;
+        .opacity(0.1);
+      }
+
+      &.active {
+        span {
+          background: none;
+          .opacity(1);
+        }
+      }
+    }
+
+    &.dark-style {
+      ul li a {
+        span {
+          border-color: @white;
+        }
+      }
+    }
+  }
+}

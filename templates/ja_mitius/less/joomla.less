@@ -1,0 +1,1536 @@
+// ---------------------------------------------------------
+// GENERIC ARTICLE STYLES
+// ---------------------------------------------------------
+
+
+// Articles Layout
+// ---------------------------------------------------------
+.blog {
+}
+
+// Home Blog
+.blog-featured {
+  margin-top: @baseLineHeight*1.5;
+}
+
+.atrticle-feature .pull-left.item-image {
+  float: right;
+}
+.atrticle-feature img[align="left"],
+.atrticle-feature img[align="right"],
+.atrticle-feature .pull-left.item-image {
+  margin: 0;
+  padding: 0;
+}
+
+.article-date {
+  font-size: @baseFontSize - 2;
+}
+
+.article-date >li {
+  list-style: none;
+}
+
+.atrticle-feature .article-intro img {
+  display: none;
+}
+
+// Leading Article Rows
+.items-leading {
+}
+
+.items-leading .leading {
+  margin-bottom: @baseLineHeight*2;
+}
+
+// Article Item
+.items-row .item  {
+  margin-bottom: @baseLineHeight;
+}
+
+
+// Article Page
+.item-page {
+  background: @white;
+}
+
+// Divider
+.divider-vertical {
+  margin: 0 0 (@baseLineHeight * 1.5);
+  border: 0;
+  border-top: 1px solid @hrBorder;
+  border-bottom: 1px solid @white;
+}
+
+
+// Article Aside
+// -------------
+.article-aside {
+	color: @grayLight;
+  border-top: solid 1px @grayLighter;
+	font-size: @T3smallerFontSize;
+  margin-bottom: 10px;
+}
+
+.article-info {
+  margin: 0;
+  width: 90%;
+}
+
+.article-info a {
+  color: @baseColor;
+}
+
+.article-info a:hover,
+.article-info a:active,
+.article-info a:focus {
+  color: @baseColor;
+  text-decoration: underline;
+}
+
+.article-info .article-info-term {
+  display: none;
+}
+
+.article-info dd {
+  border-right: solid 1px @grayLighter;
+  font-weight: bold;
+  float: left;
+  margin: 0;
+  padding: 10px 15px 0;
+  white-space: nowrap;
+}
+
+.article-info dd:first-child,
+.article-info dd.first-child{
+  padding-left: 1px;
+}
+
+.article-info dd span {
+  color: @grayDark;
+  display: block;
+  font-weight: 300;
+}
+
+.article-aside {
+  .btn-group {
+    margin-top: 10px;
+  }
+
+  .dropdown-menu {
+    border-top: solid 1px #ddd;
+  }
+}
+
+// Article Title 
+.article-title,
+.article-header h1 {
+  font-size: ((@baseFontSize * 2) + 2 );
+  line-height: @baseLineHeight * 2 !important;
+  margin: 0 !important;
+}
+
+.article-title a, 
+.article-header h1 a{
+  color: @grayDark;
+}
+
+.article-title a:hover,
+.article-title a:focus,
+.article-title a:active,
+.article-header h1 a:hover,
+.article-header h1 a:focus,
+.article-header h1 a:active {
+  color: @linkColorHover;
+}
+
+// Article Readmore 
+.readmore a.btn {
+  background: none; 
+  box-shadow: none;
+  .border-radius(0px);
+  border: none;
+  color: @grayLight;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); //remove filter in IE
+  padding-left: 0;
+  text-shadow: none;
+
+}
+
+.readmore a.btn:hover,
+.readmore a.btn:focus {
+  color: @linkColorHover;
+  background: none;
+}
+
+.readmore a.btn span{
+  background: url(../images/readmore-bg.png) no-repeat left center;
+  display: block;
+  font-weight: normal;
+  padding-left: @baseLineHeight;
+}
+
+.readmore a.btn:hover span,
+.readmore a.btn:focus span,
+.readmore a.btn:active span{
+  background-image: url(../images/readmore-hover-bg.png);
+}
+
+// Article Images
+// --------------
+article img[align=left],
+article .pull-left.item-image,
+.img_caption.left,
+.article-intro img[align=left],
+.article-intro .pull-left img{
+  margin: 0 @baseLineHeight @baseLineHeight 0;
+  max-width: 100%;
+}
+
+article img[align=right],
+article .pull-right.item-image,
+.img_caption.right,
+.article-intro img[align=right],
+.article-intro .pull-right img {
+  margin: 0 0 @baseLineHeight @gridGutterWidth;
+  max-width: 100%;
+}
+
+.img-intro-none,
+.img-intro-left,
+.img-intro-right,
+.img-fulltext-none,
+.img-fulltext-left,
+.img-fulltext-right,
+.img_caption {
+  position: relative;
+}
+
+.img-intro-none,
+.img-intro-left,
+.img-intro-right,
+.img-fulltext-none,
+.img-fulltext-left,
+.img-fulltext-right,
+.img_caption {
+  margin-bottom: @baseLineHeight;
+  max-width: 100%;
+}
+
+.img-fulltext-left {
+  float: left;
+  margin-right: @gridGutterWidth;
+}
+
+.img-fulltext-right {
+  float: right;
+  margin-left: @gridGutterWidth;
+}
+
+.img-intro-none img,
+.img-intro-left img,
+.img-intro-right img,
+.img-fulltext-none img,
+.img-fulltext-left img,
+.img-fulltext-right img {
+  margin: 0;
+}
+
+// Image caption
+.img_caption img {
+  margin-bottom: 1px !important;
+}
+
+.img_caption p.img_caption {
+  background: @grayLighter;
+  color: @gray;
+  font-size: @T3smallerFontSize;
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  .box-sizing(border-box);
+  clear: both;
+}
+
+// Article Actions
+// ---------------
+article aside .btn-group {
+}
+
+article aside .btn-group .dropdown-menu {
+}
+
+article aside .btn-group > .dropdown-toggle {
+  color: @grayDark;
+  background: @white !important;
+  border: 0;
+  padding: 0;
+  .box-shadow(none);
+}
+
+article aside .btn-group > .dropdown-toggle:hover,
+article aside .btn-group > .dropdown-toggle:focus,
+article aside .btn-group > .dropdown-toggle:active {
+  color: @grayDark;
+  background: #f5f5f5 !important;
+}
+
+article .btn-group.open .btn.dropdown-toggle {
+  background: @white !important;
+}
+
+// Features Article
+// -------------
+
+
+// ---------------------------------------------------------
+// COMMON JOOMLA STYLE
+// ---------------------------------------------------------
+
+// Login
+// ---------------------------------------------------------
+.login h1 {
+}
+
+.login_form fieldset,
+.login fieldset {
+  padding: 15px 0 0;
+}
+
+.login_form fieldset p,
+.login fieldset p {
+  margin: 0 0 5px;
+}
+
+.login_form label,
+.login label {
+  display: block;
+  font-weight: bold;
+}
+
+.login-fields {
+  margin: 0 0 10px;
+}
+
+.login_form .inputbox,
+.login-fields .required {
+  margin-left: 10px;
+  width: 150px;
+}
+
+.login_form .remember .inputbox {
+  width: 20px;
+}
+
+.ja-module #login-form ul,
+.module #login-form ul{
+  margin-left: 0;
+}
+
+#login-form ul li {
+  list-style: none;
+}
+
+#login-form ul li a {
+  background: url(../images/bullet.png) no-repeat left center;
+  color: @grayDark;
+  padding-left: (@baseLineHeight / 2 );
+}
+
+#login-form ul li a:hover,
+#login-form ul li a:focus,
+#login-form ul li a:active {
+  background-image: url(../images/bullet-hover.png);
+  color: @linkColorHover;
+}
+.login-wrap .other-links {
+  margin-bottom: 15px;
+}
+.login-wrap .other-links ul {
+  margin-left: 160px !important;
+}
+
+.login-wrap .other-links ul li {
+  list-style: none;
+}
+
+.login-wrap .other-links ul li a {
+  background: url(../images/bullet.png) no-repeat left center;
+  color: @grayDark;
+  padding-left: (@baseLineHeight / 2 );
+}
+
+.login-wrap .other-links ul li a:hover,
+.login-wrap .other-links ul li a:focus,
+.login-wrap .other-links ul li a:active {
+  background-image: url(../images/bullet-hover.png);
+  color: @linkColorHover;
+}
+// Register
+// ---------------------------------------------------------
+.form-register fieldset {
+  padding: 0 0 10px;
+}
+
+.form-register p {
+  margin: 0 0 5px;
+}
+
+.form-register p.form-des {
+  margin: 15px 0;
+}
+
+.form-register label {
+  display: block;
+  float: left;
+  font-weight: bold;
+  text-align: right;
+  width: 130px;
+}
+
+.form-register .inputbox {
+  margin-left: 10px;
+  width: 200px;
+}
+
+.form-register .button {
+  margin-left: 140px;
+}
+
+.registration fieldset dt {
+  margin-right: 5px;
+}
+
+.admintable textarea {
+  max-width: 90% !important;
+  resize: none;
+}
+
+ul.actions li,
+ul.whosonline li {
+  list-style: none;
+}
+
+ul.whosonline li {
+  background: url("../images/bullet.png") no-repeat left center;
+  color: @gray;
+  display: block;
+  padding-left: 17px;
+}
+
+div.weblink-category table.category ul.actions {
+  float: right;
+  list-style: none outside none;
+  margin: -30px 0 0 !important;
+  padding: 0;
+}
+
+div.weblink-category h2 {
+  border-bottom: 1px solid #ddd;
+}
+
+div.weblink-category ul.category {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div.weblink-category ul.category li {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+div.weblink-category ul.category li.cat-list-row1 {
+  background: transparent;
+}
+
+div.weblink-category ul.category li:hover {
+  background: transparent;
+}
+
+div.weblink-category ul.category .list-title {
+  font-size: @baseFontSize + 1;
+}
+
+div.weblink-category ul.category li p {
+  color: @grayLight;
+}
+
+// Mail to Windows
+// ---------------------------------------------------------
+#mailto-window {
+  background: #fff;
+  margin: 10px 0 20px;
+  padding: 0;
+  position: relative;
+}
+
+#mailto-window h2 {
+  font-size: 150%;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#mailto-window .mailto-close {
+  background: #FFF;
+  background: -moz-linear-gradient(bottom, #ccc, #f0f0f0);
+  background: -webkit-linear-gradient(bottom, #ccc, #f0f0f0);
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  color: #666;
+  font-size: 92%;
+  padding: 2px 5px;
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  text-shadow: 1px 1px 0 #f0f0f0;
+}
+
+#mailto-window .mailto-close a {
+  color: #666;
+}
+
+#mailto-window .mailto-close:hover {
+  border-color: #999;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+#mailtoForm .formelm {
+  padding: 5px 0;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+#mailtoForm .formelm label {
+  display: block;
+  float: left;
+  margin-top: 2px;
+  vertical-align: middle;
+  width: 100px;
+}
+
+#mailtoForm p {
+  margin-top: 20px;
+}
+
+#mailtoForm .inputbox {
+  width: 60%;
+}
+
+#mailtoForm .button {
+  box-shadow: none;
+  .buttonBackground(@btnBackgroundHighlight, @btnBackground, @textColor, 0 1px 1px rgba(255,255,255,.75));
+  border: solid 1px @btnBorder;
+  border-color: rgba(0,0,0,.15) rgba(0,0,0,.15) rgba(0,0,0,.25);
+  color: @white;
+  margin-right: 5px;
+  padding: 4px 14px;
+  text-shadow: none;
+}
+
+#mailtoForm .button:hover,
+#mailtoForm .button:focus,
+#mailtoForm .button:active {
+  .buttonBackground(lighten(@btnBackgroundHover, 10%), @btnBackgroundHover);
+  color: @white;
+  border-color: darken(@btnBackgroundHover, 10%);
+}
+
+// User
+// ---------------------------------------------------------
+.user-details {
+  padding: 10px 0;
+}
+
+.user-details p {
+  margin: 0 0 5px;
+}
+
+.user-details label {
+  display: block;
+  float: left;
+  font-weight: bold;
+  text-align: right;
+  width: 130px;
+}
+
+.user-details .inputbox {
+  margin-left: 10px;
+  width: 200px;
+}
+
+.user-details .button {
+  margin-left: 140px;
+}
+
+.user-details .paramlist .paramlist_key {
+  padding: 0 0 5px;
+  width: 130px;
+}
+
+.user-details .paramlist .paramlist_value {
+  padding: 0 0 5px;
+}
+
+.user-details .user_name span {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+
+// Reset & Remind
+// --------------
+.reset .form-validate p,
+.remind .form-validate p {
+  background: @grayLighter;
+  border: 1px solid @T3borderColor;
+  margin-bottom: @baseLineHeight;
+  padding: (@baseLineHeight / 2) @baseLineHeight;
+  .border-radius (@inputBorderRadius);
+}
+
+.reset .form-validate fieldset dl,
+.remind .form-validate fieldset dl {
+  margin: 0;
+}
+
+.reset .form-validate fieldset dt,
+.remind .form-validate fieldset dt {
+  margin: 4px 0 0 0;
+}
+
+
+// Profile
+//---------
+.profile .dl-horizontal dt {
+  width: 140px;
+  margin-bottom: 5px;
+}
+
+.profile .dl-horizontal dd {
+  margin-left: 150px;
+  margin-bottom: 5px;
+}
+
+
+// Search
+// ---------------------------------------------------------
+.search {
+}
+
+.searchintro {
+}
+
+// Search Form
+// -----------
+#searchForm {
+  padding: (@baseLineHeight / 2) @baseLineHeight;
+  border: 1px solid @T3borderColor;
+  background: @grayLighter;
+  .border-radius (@inputBorderRadius);
+  .clearfix();
+  fieldset {
+    margin: @baseLineHeight 0;
+  }
+
+  legend {
+    margin-bottom: @baseLineHeight / 2;
+  }
+
+}
+
+.phrases-box input,
+.phrases-box label,
+.form-limit input,
+.form-limit label,
+.only label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.phrases-box input {
+  margin: 0;
+}
+
+
+// Search Result
+// -------------
+.search-results {
+  margin-top: @baseLineHeight;
+
+  // Title
+  .result-title {
+    font-size: @T3biggerFontSize;
+    margin-top: @baseLineHeight;
+  }
+
+  // Category
+  .result-category {
+    font-size: @T3smallerFontSize;
+    color: @grayLight;
+  }
+
+  // Result Text
+  .result-text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  // Date
+  .result-created {
+    font-size: @T3smallerFontSize;
+    color: @grayLight;
+  }
+
+  // Higlight
+  .highlight {
+  }
+
+}
+
+#searchForm legend {
+  border-bottom: solid 1px #ddd;
+  margin-bottom: 10px;
+} 
+
+#searchForm .btn-toolbar .btn {
+  .border-radius(0px);
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.search .only label {
+  display: block;
+  float: left;
+  vertical-align: bottom;
+}
+
+.search .only input {
+  float: none;
+   vertical-align: top;
+}
+
+#finder-search input.inputbox {
+  margin-bottom: 0;
+}
+
+.search .form-limit label {
+  margin-top: 4px;
+  vertical-align: top;
+}
+
+a#advanced-search-toggle {
+  display: inline-block;
+  margin-top: @baseLineHeight / 2;
+}
+
+#finder-filter-window {
+  background: @DescBackground;
+  .border-radius(3px);
+  border: solid 1px @grayLighter;
+  width: auto !important;
+}
+
+ul#finder-filter-select-list {
+  margin-top: @baseLineHeight - 5;
+  padding: 15px !important;
+  border: solid 1px red;
+}
+
+#finder-filter-window ul li {
+  list-style: none;
+}
+
+#finder-filter-window ul li label {
+  display: inline-block;
+  margin: 3px 0 0 ;
+  vertical-align: top;
+  width: 220px;
+}
+
+
+#finder-search button.button{
+  .border-radius(0px);
+  border: solid 1px @btnBorder;
+  box-shadow: none;
+  .buttonBackground(@btnBackgroundHighlight, @btnBackground);
+  color: @btnTextColor;
+  font-weight: bold;
+  padding: 3px 14px;
+  text-shadow: none;
+}
+
+#advancedSearch #finder-filter-select-list {
+  padding: 15px;
+}
+
+#finder-search button.button:hover,
+#finder-search button.button:focus {
+  .buttonBackground(lighten(@btnBackgroundHover, 10%), @btnBackgroundHover);
+  border-color: darken(@btnBackgroundHover, 10%);
+  color: @white;
+  text-decoration: none;
+}
+
+#searchForm .phrases-box label, 
+#searchForm .phrases-box .radio {
+  padding: 0;
+}
+
+#searchForm .phrases-box input[type="radio"] {
+  float: none;
+  margin: 3px 3px 0;
+  vertical-align: top;
+  padding: 0;
+  line-height: normal;
+}
+// Contact
+// ---------------------------------------------------------
+.contact .accordion-heading .accordion-toggle {
+  font-weight: bold;
+}
+
+.contact input, .contact textarea {
+  width: 250px;
+}
+
+input#jform_contact_email_copy {
+  width: auto;
+  height: auto;
+  border: none;
+}
+.contact-links .nav-list,
+.contact-links .nav-tabs.nav-stacked {
+  margin-left: 120px !important;
+}
+.contact-links .nav-list > li > a,
+.contact-links .nav-tabs.nav-stacked > li > a {
+  background: url(../images/bullet.png) no-repeat left center;
+  border: none;
+  .border-radius(0px);
+  color: @grayDark;
+  padding: 4px 0 4px 12px;
+  transition: color 0.3s ease 0s;
+}
+
+.contact-links .nav-list > li > a:hover,
+.contact-links .nav-list > li > a:focus,
+.contact-links .nav-list > li > a:active,
+.contact-links .nav-tabs.nav-stacked > li > a:hover,
+.contact-links .nav-tabs.nav-stacked > li > a:focus {
+  background-image: url(../images/bullet-hover.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: left center;
+  color: @linkColorHover;
+}
+
+.accordion-group {
+  .border-radius(0px);
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.contact .accordion-heading .accordion-toggle {
+  background: #f5f5f5;
+  color: #aaaaaa;
+  font-size: 12px;
+  font-family: 'novecento_wide_ultralightbold';
+  line-height: 40px;
+  margin: 0;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+.accordion-group:last-child{
+  border-bottom: solid 1px #e5e5e5;
+}
+
+#slide-contact {
+  border-bottom: solid 1px #e5e5e5;
+}
+
+.contact .tab-content {
+  overflow: inherit;
+}
+
+.contact fieldset legend {
+  font-size: 14px;
+}
+
+.contact .tab-content {
+  padding-top: 15px;
+}
+
+.contact .nav-tabs > li > a {
+
+}
+.contact .nav-tabs > li > a:hover,
+.contact .nav-tabs > li > a:focus,
+.contact .nav > li > a:hover,
+.contact .nav > li > a:focus {
+  .border-radius(0px) !important;
+  background: @black;
+  border-color: @black;
+  color: @white;
+}
+
+.contact .nav-tabs > .active > a, 
+.contact .nav-tabs > .active > a:hover, 
+.contact .nav-tabs > .active > a:focus {
+  background: @baseColor;
+  .border-radius(0px); 
+  border-color: @baseColor;
+}
+// Archive
+// ---------------------------------------------------------
+#archive-items > li {
+  line-height: normal;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+}
+
+#archive-items div.intro {
+  clear: both;
+  overflow: hidden;
+}
+
+
+// Category List
+// ---------------------------------------------------------
+.categories-list > .category-desc,
+.category-list .cat-items {
+  background: @DescBackground;
+  .border-radius(3px) ;
+  border: solid 1px @grayLighter;
+  padding: ( @baseLineHeight - 5) @baseLineHeight;
+}
+
+.page-header .label,
+.page-header .badge.badge-info {
+  background: @baseColor;
+}
+// Sub Category List
+// -----------------
+.category-item,
+.cat-children > div{
+  margin-top: @baseLineHeight;
+  float: left;
+  width: 33.3%;
+  .clearfix();
+}
+
+.category-item div.sub-category,
+div.cat-children div.sub-children{
+    margin: 0 15px 30px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+div.sub-category:hover,
+div.cat-children .sub-category:hover {
+  border-color: #ccc;
+}
+
+.category-item div.sub-category .category-subdesc {
+  overflow: hidden;
+  width: 299px;
+}
+
+div.sub-category a.subCategoryImage img,
+div.sub-category a.subCategoryImage:hover img {
+  margin: 0;
+  padding: 0;
+}
+
+div.sub-category a.subCategoryImage,
+div.sub-category a.subCategoryImage:hover {
+  display: block;
+  text-align: center;
+}
+
+div.sub-category .page-header,
+div.cat-children .page-header {
+  background: @grayDarker;
+  border: none;
+  color: @white;
+  font-family: 'novecento_wide_lightbold', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  padding:  0;
+  line-height: 35px;
+  text-align: center;
+  width: 299px;
+}
+
+div.sub-category .category-desc,
+div.cat-children .category-desc {
+  display: block;
+  height: 350px;
+  position: relative;
+  width: 299px;
+}
+
+div.sub-category .subcategory-desc,
+div.cat-children .subcategory-desc {
+  background: url(../images/trans-dark.png);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  bottom: 0px;
+  display: none;
+  color: @grayLight;
+  font-size: @T3biggerFontSize;
+  left: -299px;
+  height: 350px;
+  position: absolute;
+  padding: 120px 30px 0 30px;
+  transition: all 0.3s ease-in;
+  text-align: center;
+  width: 299px;
+}
+
+div.sub-category .category-des,
+div.sub-category .subcategory-desc{
+  height: 338px;
+}
+
+div.sub-category:hover .subcategory-desc,
+div.sub-category .subcategory-desc:hover,
+div.cat-children .sub-children:hover .subcategory-desc,
+div.cat-children .subcategory-desc:hover {
+  display: block;
+  left: 0;
+}
+
+div.sub-category .category-desc img,
+div.cat-children .category-desc img {
+  display: block;
+  height: 100%;
+}
+
+// News Feeds
+// ---------------------------------------------------------
+.newsfeed-category > h2 {
+  border-bottom: 1px solid @T3borderColor;
+  margin-top: 0;
+  margin-bottom: @baseLineHeight;
+  padding-bottom: 5px;
+}
+
+.newsfeed-category ul.category li {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  .transition(0.5s);
+}
+
+.feed-description {
+  margin-bottom: @baseLineHeight * 2;
+}
+
+.newsfeed-category ul.category li:hover {
+  background: #f6f6f6 !important;
+  padding-left: 20px;
+}
+
+.newsfeed-category ul.category li.cat-list-row1 {
+  background: transparent;
+}
+
+.newsfeed-category ul.category li a {
+  color: @grayDarker;
+}
+
+.newsfeed-category ul.category li a:hover,
+.newsfeed-category ul.category li a:focus,
+.newsfeed-category ul.category li a:active {
+  color: @baseColor !important;
+}
+
+// Edit Content
+// ---------------------------------------------------------
+.edit fieldset {
+}
+
+.edit fieldset legend {
+}
+
+.edit textarea {
+  .box-sizing (border-box);
+}
+
+// Editor Buttons
+// --------------
+#editor-xtd-buttons {
+}
+
+.button2-left,
+.button2-left div {
+  float: left;
+}
+
+.button2-right,
+.button2-right div {
+  float: right;
+}
+
+.button2-left {
+  margin: 5px 5px 0 0;
+}
+
+.button2-right {
+  margin: 5px 0 0 5px;
+}
+
+.button2-left a,
+.button2-right a,
+.button2-left span,
+.button2-right span {
+  background: @grayLighter;
+  border: 1px solid darken(@grayLighter, 5%);
+  color: @grayLight;
+  cursor: pointer;
+  display: block;
+  float: left;
+  padding: 2px 10px;
+  border-radius: @inputBorderRadius;
+}
+
+.button2-left span,
+.button2-right span {
+  color: @grayLight;
+  cursor: default;
+}
+
+.button2-left .page a,
+.button2-right .page a,
+.button2-left .page span,
+.button2-right .page span {
+  padding: 0 6px;
+}
+
+.button2-left a:hover,
+.button2-right a:hover {
+  background: darken(@grayLighter, 5%);
+  color: @grayDark;
+  text-decoration: none;
+}
+
+.button2-left .image {
+}
+
+.button2-left .readmore {
+}
+
+.button2-left .pagebreak {
+}
+
+
+// Calendar Button
+// ---------------
+.controls img.calendar {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+// ---------------------------------------------------------
+// CONTENT NAVIGATIONS
+// ---------------------------------------------------------
+
+//  Pagebreak Nav
+// --------------
+.article-content .pagination ul {
+  border-left: 1px solid @T3borderColor;
+  box-shadow: none;
+}
+
+.article-content .pagination ul li {
+  float: left;
+  padding: (@baseLineHeight / 2) @baseLineHeight;
+  line-height: normal;
+  border: 1px solid @T3borderColor;
+  border-left: 0;
+}
+
+.article-content .pagination ul li:hover {
+}
+
+.article-content .pagination ul a {
+  border: 0;
+  text-decoration: none;
+  background-color: transparent;
+  line-height: normal;
+  padding: 0;
+}
+
+.article-content .pagination ul a:hover,
+.article-content .pagination ul a:active,
+.article-content .pagination ul a:focus {
+}
+
+.pagenavcounter {
+  margin: 0 0 @baseLineHeight;
+  font-weight: bold;
+}
+
+// PageBreak Index
+// ---------------
+#article-index {
+  float: right;
+  margin: 0 0 @baseLineHeight @baseLineHeight;
+  padding: 10px;
+  width: 30%;
+  border: 1px solid @T3borderColor;
+  .border-radius (@inputBorderRadius);
+}
+
+#article-index ul {
+  margin: 0 0 0 20px;
+}
+
+// Pagination
+// ----------
+.counter {
+  display: none;
+  float: right;
+  line-height: 1;
+  margin: (@baseLineHeight / 2) 0;
+  text-align: right;
+}
+
+div.pagination {
+  margin: -12px 0 20px;
+  line-height: 1;
+  text-align: center;
+}
+
+.pagination ul,
+div.pagination ul.pagination-list {
+  margin: 0 0 15px;
+  padding: 0;
+  text-align: center;
+  .border-radius(0);
+  box-shadow: none !important;
+}
+
+.pagination ul > li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+  .border-radius(0px);
+}
+
+.pagination ul > li > a,
+.pagination ul > li > span {
+  border: 1px solid @grayLighter;
+  color: @grayDark;
+  display: block;
+  font-size: @T3smallFontSize;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.pagination ul > li > a:hover {
+  background-color: @grayDark;
+  border-color: @grayDark;
+  color: @white;
+}
+
+.pagination ul > .disabled > span, 
+.pagination ul > .disabled > a {
+  background: lighten(@grayLighter, 5%);
+  border-color: #e5e5e5;
+  color: @grayLight;
+}
+
+.pagination ul > .disabled > a:hover {
+  background: lighten(@grayLighter, 5%);
+  border-color: lighten(@grayLighter, 5%);
+  color: @grayLight;
+}
+
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+  .border-radius(0px);
+}
+
+
+// Items More
+// -----------
+.items-more {
+}
+
+.items-more h3 {
+  margin: 0 0 5px;
+}
+
+.items-more ol {
+}
+
+
+// Back Buttons
+// -----------
+.back_button a,
+.back_button a:hover,
+.back_button a:active {
+  display: block;
+  margin: 10px 0;
+}
+
+
+// Form Control
+// ------------
+.filters {
+  margin: (@baseLineHeight / 2) 0 5px;
+}
+
+.display-limit {
+  margin: (@baseLineHeight / 2) 0 5px;
+}
+
+.filters .filter-search,
+.filters .display-limit {
+  float: left;
+  width: 50%;
+}
+
+.filters .display-limit {
+  float: right;
+  text-align: right;
+}
+
+
+
+// ---------------------------------------------------------
+// MESSAGES & NOTIFICATIONS
+// ---------------------------------------------------------
+
+// Messages
+// ---------------------------------------------------------
+#system-message {
+}
+
+#system-message dt {
+  font-weight: bold;
+}
+
+#system-message dd {
+  font-weight: bold;
+}
+
+
+#system-message dd.message ul,
+#system-message dd.error ul,
+#system-message dd.notice ul {
+  margin: 0;
+  padding: 0;
+}
+
+#system-message dd.message ul li,
+#system-message dd.error ul li,
+#system-message dd.notice ul li {
+  background: none;
+  margin: 0;
+  padding: 5px;
+}
+
+// System Standard Messages
+#system-message dd.message ul {
+}
+
+// System Error Messages
+.error {
+}
+
+.error h2 {
+}
+
+#system-message dd.error ul {
+}
+
+// System Notice Messages
+#system-message dd.notice ul {
+}
+
+
+// Tooltips
+// ---------------------------------------------------------
+.tip-wrap {
+  background: #fff6df;
+  border: 1px solid #fb3;
+  .border-radius (5px);
+  .box-shadow (0 0 3px rgba(0,0,0,.4));
+  max-width: 300px;
+  z-index: 999;
+}
+
+.tip-title {
+  border-bottom: 1px solid #fb3;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.tip-text {
+  font-size: @baseFontSize;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.hasTip img {
+  border: none;
+  margin: 0 5px 0 0;
+}
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+  color: @white !important;
+  border-bottom: none;
+}
+
+div#system-message-container div#system-message {
+  margin-bottom: 0 !important;
+}
+
+div#system-message-container div#system-message.alert-danger, 
+div#system-message-container div#system-message.alert-error {
+  margin-bottom: 20px !important;
+  padding: 8px 35px 8px 14px !important;
+}
+
+#searchForm legend {
+  float: left;
+  float: none\9;
+}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {  
+  #searchForm legend {
+    float: none;
+  }
+}  
+
+// Edit Page
+// -------------------
+
+.edit.item-page .control-group a.modal{
+  position: inherit;
+  width: auto !important; 
+  margin-left: 0 !important; 
+  top: auto !important;
+
+}
+
+.edit.item-page #images.tab-pane .control-group {
+  display: block;
+  float: left;
+  width: 90%;
+}
+
+.no-touch .t3-mainbody .t3-content .adminlist th a {
+  color: @gray !important;
+}
+
+.no-touch .t3-mainbody .t3-content ul.manager.thumbnails .thumbnail,
+.t3-mainbody .t3-content ul.manager.thumbnails .thumbnail {
+  display: inline-block !important;
+  padding: 4px 20px !important;
+}
+
+.no-touch .t3-mainbody .t3-content .table-condensed div.pagination {
+  margin-top: 0 !important;
+}
+
+.no-touch .t3-mainbody .t3-content fieldset.filter .btn-toolbar .btn-group.pull-left {
+  float: none !important;
+}
+
+.no-touch .t3-mainbody .t3-content fieldset.filter .btn-toolbar .btn-group.pull-left button.btn {
+  .border-radius(0px) !important;
+}
+
+/* Tags Page ----*/
+.blog .tags {
+  background: @white;
+  border-bottom: solid 1px #e5e5e5;
+  padding: 0 0 15px;
+}
+
+.tags span {
+  margin-bottom: 3px;
+}
+
+.tags .label-info[href] {
+  background: @baseColor;
+  font-weight: normal;
+  font-size: @T3smallFontSize;
+  padding: 4px 6px;
+  text-shadow: none;
+}
+.tags .label-info[href]:hover,
+.tags .label-info[href]:focus,
+.tags .label-info[href]:active {
+  background: darken(@baseColor, 5%);
+}
+
+.item-page .tags {
+  margin-bottom: 15px;
+}
+
+.tag-category {
+  background: @white;
+  padding: 20px 0;
+}
+
+.tag-category h2 {
+  line-height: normal;
+  margin-top: 0;
+}
+
+.tag-category ul.category {
+  margin: 10px 0 20px;
+  display: block;
+}
+
+.tag-category ul.category li {
+  list-style: none;
+  padding: 10px 20px;
+  border-bottom: solid 1px #e5e5e5;
+}
+
+.tag-category ul.category li h3 {
+  line-height: normal;
+}
+
+.tag-category ul li.pagination-list{
+  border-bottom: none;
+  padding: 0s;
+}
+
+.tag-category ul li img {
+  margin-bottom: 10px;
+}
+
+.mod-preview-info {
+  z-index: 1000;
+}
+
+#page-site a.modal.btn {
+  position: relative;
+  top: 0;
+  left: auto;
+  right: 0;
+  z-index: 10;
+  width: auto;
+  .border-radius(0);
+  box-shadow: none;
+}
+
+.mce-btn button {
+  text-transform: none;
+  background: none;
+}

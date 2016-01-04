@@ -1,0 +1,9 @@
+.home-clean .clean .back {
+  display: block;
+  margin-bottom: 52px;
+}
+.home-clean .clean .back:hover,
+.home-clean .clean .back:focus,
+.home-clean .clean .back:active {
+  outline: none;
+}

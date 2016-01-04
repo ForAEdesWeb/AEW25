@@ -1,0 +1,96 @@
+// -------------------------------
+// TEAMS STYLE 4
+// -------------------------------
+.acm-teams {
+  .style-4 {
+    .item {
+      margin-bottom: @t3-global-margin * 2;
+
+      .item-inner {
+        position: relative;
+        overflow: hidden;        
+
+
+        .member-image {
+          border-radius: 50%;
+          overflow: hidden;
+          position: relative;
+
+          // &:before {
+          //   border: 1px solid rgba(255, 255, 255, 0.8);
+          //   border-radius: 50%;
+          //   content: "";
+          //   display: block;
+          //   height: 100%;
+          //   position: absolute;
+          //   top: 0;
+          //   left: 0;
+          //   margin: 20px;
+          //   width: 100%;
+          //   z-index: 100;
+          //   .opacity(0);
+          //   .transition( all 0.35s);
+          // }
+
+          img {
+            border-radius: 50%;
+            width: 100%;
+            .transition( all 0.35s);
+          }
+        }
+
+        h4 {
+          color: @gray-dark;
+          font-size: @font-size-large;
+          font-weight: @font-weight-bold;
+          text-align: center;
+        }
+
+        .member-title {
+          text-align: center;
+        }
+
+        .social-links {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+
+          li {
+            display: inline-block;
+            margin: 0 2px;
+
+            a {
+              background: @gray-lighter;
+              border-radius: 16px;
+              color: @gray;
+              display: block;
+              height: 32px;
+              line-height: 32px;
+              text-align: center;
+              width: 32px;
+
+              &:hover, &:focus, &:active {
+                background: @brand-primary;
+                color: @white;
+              }
+            }
+          }
+        }
+
+      }
+
+      &:hover {
+        .member-image {
+          // &:before {
+          //   .opacity(1);
+          // }
+
+          img {
+            .opacity(0.8);
+          }
+        }
+      }
+    }
+  }
+}

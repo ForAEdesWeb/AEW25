@@ -1,0 +1,81 @@
+// RTL STYLES
+// ------------------------------------------------------
+
+
+
+/* --- k2ArchivesBlock  --- */
+div.k2ArchivesBlock {
+  ul li a {
+    background-position: right center;
+    //Link States
+    &:hover, &:focus, &:active {
+      background-position: right 11px;
+    }
+  }
+}
+
+/* --- k2LoginBlock  --- */
+div.k2LoginBlock {
+  ul li a {
+    background-position: right center;
+  }
+}
+
+div.itemRelated ul li a, div.itemAuthorLatest ul li a {
+  background-position: right 8px;
+  padding-left: 0;
+  padding-right: @T3globalPadding;
+}
+
+div.userItemReadMore a,
+div.catItemReadMore a,
+.tagItemReadMore a {
+  background-position: right 0;
+  padding-left: @T3globalPadding;
+  paddign-righ: 0;
+}
+
+.latestView .latestItemReadMore {
+  background-position: right 2px;
+  padding-left: @T3globalPadding;
+  paddign-righ: 0;
+}
+
+div.k2UserBlock ul li a, 
+div.k2UserBlock ul li a.modal {
+  background-position: right 9px;
+  padding-left: 0;
+  padding-right: 17px;
+}
+
+div.itemCommentsForm form textarea.inputbox {
+  width: 98%;
+}
+
+div.k2LatestCommentsBlock ul li a.lcComment, 
+div.k2TopCommentersBlock ul li a.tcLatestComment {
+  direction: ltr;
+  .lcComment {
+    display: block;
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+div.k2LatestCommentsBlock ul li a.lcComment .arrow, 
+div.k2TopCommentersBlock ul li a.tcLatestComment .arrow {
+  background-image: url(../../images/arrow-left_rtl.png);
+}
+
+div.comment-wrap span.arrow {
+  background-image: url(../../images/arrow-l2_rtl.gif);
+}
+
+div.comment-wrap {
+  direction: ltr;
+}
+
+div.comment-wrap .comment-meta {
+  direction: rtl;
+  text-align: right;
+}

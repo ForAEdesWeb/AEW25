@@ -1,0 +1,106 @@
+// ------------------------------------------------
+// CONTAINER SLIDESHOW STYLE 1
+// ------------------------------------------------
+.acm-container-slide {
+  &.slideshow-thumbs {
+
+    // Navigation
+    // ----------
+    .carousel-indicators {
+      background: @gray-lightest;
+      border-bottom: 1px solid @t3-border-color;
+      bottom: auto;
+      clear: both;
+      display: block;
+      height: 70px;
+      left: auto;
+      margin: 0;
+      position: relative;
+      text-align: left;
+      width: 100%;
+      z-index: 9;
+
+      @media (max-width: @screen-xs-max) {
+        display: none;
+      }
+
+      li {
+        background: @gray-lightest;
+        border-right: 1px solid @t3-border-color;
+        border-bottom: 0;
+        border-radius: 0;
+        color: @gray;
+        cursor: pointer;
+        display: block;
+        float: left;
+        font-size: 12px;
+        font-weight: @font-weight-light;
+        height: 69px;
+        margin: 0;
+        padding: 0 0 0 80px;
+        position: relative;
+        text-indent: 0;
+        vertical-align: middle;
+
+        .number {
+          background: @gray-lighter;
+          border-radius: 50%;
+          font-size: 12px;
+          font-style: normal;
+          height: 32px;
+          left: 30px;
+          line-height: 34px;
+          position: absolute;
+          text-align: center;
+          top: 18px;
+          width: 32px;
+        }
+
+        @media (max-width: @screen-sm-max) {
+          padding-left: @grid-gutter-width;
+
+          .number {
+            display: none;
+          }
+        }
+
+        &.active {
+          &:before {
+            border-color: @gray-lightest transparent;
+            border-style: solid;
+            border-width: 0 8px 8px;
+            content: "";
+            left: 50%;
+            margin-left: -6px;
+            position: absolute;
+            top: -8px;
+          }
+
+          .number {
+            background-color: @brand-primary;
+            color: @white;
+          }
+        }
+
+        .title {
+          display: block;
+          margin-top: 14px;
+
+          strong {
+            display: block;
+            font-size: 16px;
+            font-weight: @font-weight-bold;
+            text-transform: uppercase;
+
+            @media (min-width:@screen-sm) and (max-width:@screen-sm-max) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

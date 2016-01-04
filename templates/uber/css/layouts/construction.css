@@ -1,0 +1,48 @@
+.home-construction .home-ft .acm-features.style-1 .features-item {
+  margin-top: -120px;
+  z-index: 15;
+}
+@media screen and (max-width: 991px) {
+  .home-construction .home-ft .acm-features.style-1 .features-item {
+    margin-top: 26px;
+  }
+}
+.home-construction .home-ft .acm-features.style-1 .features-item .img-icon {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 991px) {
+  .home-construction .home-ft .acm-features.style-1 .features-item .img-icon img {
+    width: 100%;
+  }
+}
+.home-construction .home-ft .acm-features.style-1 .features-item h3 {
+  background: #ffffff;
+  margin-bottom: 0;
+  padding: 26px;
+}
+.home-construction .home-ft .acm-features.style-1 .features-item p {
+  background: #ffffff;
+  margin-bottom: 0;
+  padding: 0 26px 52px 26px;
+}
+.home-construction .acm-testimonials.style-6 {
+  color: #ffffff;
+}
+.home-construction .service-bt .acm-hero.style-5 {
+  padding: 52px 0;
+}
+.home-construction .service-bt .acm-hero.style-5 .hero-heading {
+  margin-bottom: 0;
+}
+.home-construction .service-bt .acm-hero.style-5 .hero-intro {
+  color: #ffffff;
+  font-size: 56px;
+}
+.home-construction .acm-testimonials .carousel-control .fa {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.home-construction .acm-gallery.style-2.style-lily .item-details h4 {
+  color: #ffffff;
+  font-size: 20px;
+}

@@ -1,0 +1,114 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// ----------------------------------------
+// HERO STYLE 4
+// ----------------------------------------
+.acm-hero {
+  &.style-4 {
+    overflow: hidden;
+
+    &.full-screen {
+
+      // Control screen tablet/mobile
+      @media screen and (max-width: @screen-md-max) {
+        height: auto !important;
+
+        .hero-content {
+          padding-top: 0 !important;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50%;
+          -webkit-transform: translate(0px, -50%);
+                  transform: translate(0px, -50%);
+        }
+      }
+    }
+    
+    .video-wrapper {
+      height: 0;
+      padding-bottom: 56.25%;
+      padding-top: 0;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background-color: @brand-primary;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        .opacity(0.6);
+        .transition(opacity 0.5s);
+
+        @media screen and (max-width: @screen-xs-max) {
+          display: none;
+        }
+      }
+    }
+
+    &.mask-off {
+      .video-wrapper:before {
+        .opacity(0);
+        display: none;
+      }
+
+      .hero-content {
+        .opacity(0);
+      }
+    }
+
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero-content {
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      padding-right: @t3-global-padding;
+      padding-left: @t3-global-padding;
+      .transition(opacity 0.5s);
+
+      .hero-heading {
+        font-size: @font-size-h3;
+        font-weight: @font-weight-normal;
+
+        // Tablet view
+        @media screen and (min-width: @screen-md-min) {
+          font-size: @font-size-h2;
+        }
+
+        // Desktop view
+        @media screen and (min-width: @screen-lg-min) {
+          font-size: @font-size-h1;
+        }
+      }
+
+      .btn-rounded {
+        border-radius: 50%;
+        height: 52px;
+        line-height: 48px;
+        padding: 0 !important;
+        width: 52px;
+        border-width: 3px;
+        opacity: .7;
+        &:hover {
+          box-shadow: none;  
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

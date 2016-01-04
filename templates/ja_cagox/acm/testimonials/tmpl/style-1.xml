@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Testimonials Style 1</title>
+	<sampledata></sampledata>
+	<fields name="testimonials">
+		<fieldset name="basic" label="TESTIMONIAL_BASIC_LABEL" description="TESTIMONIAL_BASIC_DESC">
+			<field name="columns" type="list" label="ACM_COLUMNS_LABEL" description="ACM_COLUMNS_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+				<option value="12">12</option>
+			</field>
+			
+			<field name="acm-style" type="list" default="style-light"
+			  global="1"
+			  label="ACM_STYLE_LABEL"
+			  description="ACM_STYLE_DESC">
+				<option value="light-style">LAYOUT_STYLE_LIGHT</option>
+				<option value="dark-style">LAYOUT_STYLE_DARK</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="testimonial-box" label="TESTIMONIALS_BOX_LABEL" description="TESTIMONIALS_BOX_DESC">
+			<field name="data" type="jalist">
+				<item name="testimonial-text" type="textarea" cols="40" rows="5" default="" label="TESTIMONIAL_TEXT_LABEL" description="TESTIMONIAL_TEXT_DESC" />
+				<field name="author-avatar" type="media" default="" label="TESTIMONIAL_IMG_LABEL" description="TESTIMONIAL_IMG_DESC" />
+				<item name="author-name" type="text" size="50" default="" label="TESTIMONIAL_NAME_LABEL" description="TESTIMONIAL_NAME_DESC" />
+			</field>
+		</fieldset>
+	</fields>
+</form>

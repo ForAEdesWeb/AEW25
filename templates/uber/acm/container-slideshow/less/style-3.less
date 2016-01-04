@@ -1,0 +1,147 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// ------------------------------------------------
+// CONTAINER SLIDESHOW STYLE 3
+// ------------------------------------------------
+.acm-container-slide {
+  &.slide-3 {
+    .section-inner {
+      padding: 0;
+    }
+
+    // Control screen mobile/tablet
+    @media screen and (max-width: @screen-sm-max) {
+      padding-top: @grid-gutter-width;
+    }
+
+    .acm-features.style-6 .features-content {
+      padding-top: @grid-gutter-width * 2;
+
+      // Control screen medium screen
+      @media screen and (min-width: @screen-md-min) {
+        padding-top: (@grid-gutter-width * 3);
+      }
+
+      // Control large screen / wide desktop
+      @media screen and (min-width: @screen-lg-min) {
+        padding-top: (@grid-gutter-width * 3);
+      }
+    }
+
+    // Speed slideshow
+    .carousel-inner > .item {
+      .transition(left 400ms);
+    }
+
+    // Style Control Button default
+    .carousel-ctrl {
+      left: @grid-gutter-width;
+      position: absolute;
+      top: 0;
+
+      // Control screen medium screen
+      @media screen and (min-width: @screen-md-min) {
+        top: @grid-gutter-width;
+      }
+
+      // Control screen large screen
+      @media screen and (min-width: @screen-lg-min) {
+        left: @grid-gutter-width * 2;
+      }
+
+    
+
+      // menu
+      .indicators-menu {
+        color: @gray-light;
+        position: relative;
+        float: left;
+        letter-spacing: 2px;
+
+        &:hover {
+          color: @gray-dark;
+          cursor: pointer;
+        }
+      }
+
+      .carousel-indicators {
+        bottom: 0;
+        display: block;
+        float: left;
+        left: auto;
+        margin-left: @t3-global-margin / 2;
+        position: relative;
+        width: auto;
+
+        li {
+          color: rgba(0,0,0,0.3);
+          border-radius: 0;
+          border-width: 2px;
+          border-color: @gray-light;
+          height: 12px;
+          line-height: 30px;
+          margin: 0 10px 0 0;
+          overflow: hidden;
+          text-indent: -30px;
+          transition: text-indent 350ms, color 600ms;
+          width: 12px;
+
+            &:hover {
+              background-color: @gray-dark;
+              border-color: @gray-dark;
+            }
+
+            &.active {
+              background-color: @brand-primary;
+              border-color: @brand-primary;
+              font-weight: @font-weight-bold;
+            }
+        }
+
+        // Show menu
+        &.show-menu {
+          top: 0;
+
+          li {
+            border: 0;
+            color: @gray-light;
+            line-height: inherit;
+            text-indent: 0;
+            height: auto;
+            transform: rotate(0deg);
+              -webkit-transform: rotate(0deg);
+            width: auto;
+
+            &:hover, &:active, &:focus, &.active {
+              color: @gray-dark;
+              background: none;
+            }
+          }
+        }
+      }
+    }
+
+    // Style control button content right
+    &.ft-right {
+      .carousel-ctrl {
+
+        // Control screen medium
+        @media screen and (min-width: @screen-md-min) {
+          left: 50%;
+          margin-left: @grid-gutter-width;
+        }
+
+        // Control screen large
+        @media screen and (min-width: @screen-lg-min) {
+          left: 50%;
+          margin-left: @grid-gutter-width * 2;
+        }
+      }
+    }
+  }
+}
+
+
+

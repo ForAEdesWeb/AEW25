@@ -1,0 +1,98 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package   T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license   GNU General Public License; http://www.gnu.org/licenses/gpl.html
+ * @author    JoomlArt, JoomlaBamboo 
+ *            If you want to be come co-authors of this project, please follow 
+ *            our guidelines at http://t3-framework.org/contribute
+ *------------------------------------------------------------------------------
+ */
+
+// Template-Responsive.less
+// For phone and tablet devices
+// -------------------------------------------------------------
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+@import "../../../plugins/system/t3/base/less/off-canvas.less";
+.off-canvas #off-canvas-nav {
+  z-index: 100;
+}
+#off-canvas-nav {
+  .t3-mainnav {
+    background: @white;
+    border-right: 1px solid #E5E5E5
+  }
+
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    color: #666;
+    border-bottom: 1px solid #E5E5E5;
+    font-family: 'novecento_wide_lightbold',sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .nav-collapse .nav > li > a:hover,
+  .nav-collapse .nav > li > a:focus,
+  .nav-collapse .nav > li > a:active {
+    background: #f5f5f5;
+    color: @linkColor;
+    .border-radius(0px);
+  }
+
+  .mega-nav > li a:hover,
+  .mega-nav > li a:focus,
+  .mega-nav > li a:active,
+  .dropdown-menu .mega-nav > li a:hover,
+  .dropdown-menu .mega-nav > li a:focus,
+  .dropdown-menu .mega-nav > li a:active {
+     background: #f5f5f5;
+    color: @linkColor;
+    .border-radius(0px);
+  }
+
+  .nav-collapse .nav li li.active > a,
+  .nav-collapse .nav li li.active > a:hover,
+  .nav-collapse .nav li li.active > a:focus,
+  .nav-collapse .nav li li.active > a:active {
+    color: @linkColor;
+  }
+
+  .nav-collapse .nav li li.active > a:hover,
+  .nav-collapse .nav li li.active > a:focus,
+  .nav-collapse .nav li li.active > a:active {
+    color: @linkColor;
+    background: #f5f5f5;
+  }
+
+  // Menu active
+  // -----------
+  .nav li.dropdown.open > .dropdown-toggle,
+  .nav li.dropdown.active > .dropdown-toggle,
+  .nav li.dropdown.open.active > .dropdown-toggle,
+  .nav > li.dropdown.open.active > a:hover {
+    background: @white;
+    color: @linkColor;
+    .border-radius(0px);
+  }
+
+  .nav li.dropdown.open > .dropdown-toggle .caret,
+  .nav li.dropdown.active > .dropdown-toggle .caret,
+  .nav li.dropdown.open.active > .dropdown-toggle .caret {
+    border-bottom-color: @grayDark;
+    border-top-color: @grayDark;
+  }
+
+  .nav-collapse .dropdown-menu a {   
+    color: #666;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    text-transform: none;
+  }
+}

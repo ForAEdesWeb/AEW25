@@ -1,0 +1,27 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+.home-demo {
+
+  // Utility Bar
+  .section-inner + script + .section-inner,
+  .section-inner + .section-inner {
+    max-width: @container-large-desktop;
+    margin: 0 auto @t3-global-margin;
+  }
+
+  script + .section-inner {
+    margin: @t3-global-margin auto;
+    max-width: @container-large-desktop;
+  }
+
+  .uber-header.header-5 {
+    z-index: 20;
+  }
+}

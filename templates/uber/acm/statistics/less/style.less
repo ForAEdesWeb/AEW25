@@ -1,0 +1,111 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.section-inner {
+  background-size: cover;
+  background-position: center center;
+}
+
+.uber-stats {
+	.stats-header {
+		margin-bottom: @grid-gutter-width;
+		.stats-title {
+			margin: 0 0 (@t3-global-margin * 2);
+			font-size: @font-size-h3;
+			font-weight: @font-weight-light;
+			color: @gray-dark;
+      line-height: 1.75;
+		}
+
+		.stats-description {
+			margin-top: 0;
+			font-weight: @font-weight-light;
+			line-height: @line-height-base;
+		}
+	}
+
+	.stats-list { 
+		margin-bottom: 0;
+		padding: 0;
+		list-style: none;
+		.clearfix();
+
+		li {
+			padding: 0 @grid-gutter-width/2;
+      border-top: 0;
+		}
+	}
+
+	&.style-dark {
+		color: @white;
+
+		.stats-title {
+			color: @white;
+		}
+
+		.stats-subject {
+			color: @white;
+			.opacity(0.3);
+		}
+	}
+
+	// Control screen tablet
+	@media screen and (max-width: @screen-sm-max) {
+		.container {
+			overflow: hidden;
+		}
+	}
+}
+
+// IE8
+
+.ie8 {
+	.uber-stats {
+		.container {
+			width: auto;
+		}
+	}
+}
+
+
+// Animation
+@-webkit-keyframes progressBar {
+  0% {
+     width: 0;
+  }
+
+  100% {
+     width: 100%;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+     width: 0;
+  }
+  
+  100% {
+     width: 100%;
+  }
+}
+
+.inview .uber-stats .stats-list span.stats-item-counter .progressbar span {
+	-webkit-animation: progressBar 900ms ease 0.15s forwards;
+     -moz-animation: progressBar 900ms ease 0.15s forwards;
+          animation: progressBar 900ms ease 0.15s forwards;
+}
+
+
+// Import Styles Less
+@import "style-1.less";
+@import "style-2.less";
+@import "style-3.less";
+@import "style-4.less";
+@import "style-5.less";
+@import "style-6.less";
+@import "style-7.less";

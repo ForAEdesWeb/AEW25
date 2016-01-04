@@ -1,0 +1,56 @@
+.home .uber-header {
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.97);
+}
+.home .acm-features.style-6 .features-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.home .acm-features.style-6 .image {
+  height: 100px;
+  margin: 26px auto;
+}
+.home .acm-features.style-6 .image img {
+  max-height: 100%;
+}
+.home .section-primary .acm-testimonials.style-2 .item .fa {
+  color: #ffffff;
+}
+.home .section-primary .acm-testimonials.style-2 .item .testimonial-text {
+  color: #ffffff;
+  font-family: Cambria, Georgia, "Times New Roman", Times, serif;
+}
+.home .section-primary .acm-testimonials.style-2 .item .author-info {
+  color: #96a1a3;
+  color: rgba(255, 255, 255, 0.7);
+}
+.home .section-primary .acm-testimonials.style-2 .item .author-info .author-info-text span.author-name {
+  color: #ffffff;
+}
+.home .section-primary .acm-testimonials.style-2 .carousel-indicators li {
+  background: #96a1a3;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+  border-width: 8px;
+}
+.home .section-primary .acm-testimonials.style-2 .carousel-indicators li.active {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.home .acm-cta.style-2 .cta-showcase-item:before {
+  content: "Proudly powered by";
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  background: #38b775;
+  padding: 10px 15px 8px;
+  color: #ffffff;
+  box-shadow: 4px 4px 0 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 26px;
+  line-height: normal;
+}
+.home .acm-cta.style-2 .cta-showcase-header {
+  font-size: 45px;
+  font-weight: 700;
+}

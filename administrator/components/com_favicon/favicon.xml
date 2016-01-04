@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>COM_FAVICON</name>
+	<author>Michael Richey</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>(C) 2005 - 2011 Michael Richey. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>favicon@richeyweb.com</authorEmail>
+	<authorUrl>www.richeyweb.com</authorUrl>
+	<version>1.16</version>
+	<description>COM_FAVICON_XML_DESC</description>
+	<media folder="media" destination="com_favicon">
+		<folder>assets</folder>
+		<folder>icons</folder>
+		<folder>temp</folder>
+                <file>index.html</file>
+	</media>
+	<administration>
+		<menu img="../media/com_favicon/assets/images/favicon16.png">COM_FAVICON</menu>
+		<files folder="admin">
+			<filename>favicon.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>controllers</folder>
+		</files>
+		<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.com_favicon.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_favicon.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

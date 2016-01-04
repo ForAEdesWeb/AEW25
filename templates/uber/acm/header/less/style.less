@@ -1,0 +1,747 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// Logo
+// --------------
+.logo {
+  width: auto;
+  padding-right: 0;
+  text-align: center;
+  height: @navbar-height;
+  line-height: @navbar-height;
+  z-index: 2;
+
+  @media screen and (min-width: @screen-sm) {
+    border-right: 1px solid @t3-border-color;
+    text-align: left;
+  }
+
+  a {
+    display: block;
+    height: @navbar-height;
+    line-height: @navbar-height;
+    margin: 0;
+  }
+
+  .dropdown-toggle {
+  	padding-left: @grid-gutter-width/4;
+  	padding-right: @grid-gutter-width/4;
+  	margin-left: -(@grid-gutter-width/4);
+  	background: none;
+  	color: @gray-dark;
+  	border: 0;
+  	height: @navbar-height;
+  	margin-top: -4px;
+
+  	.fa {
+  		font-weight: @font-weight-bold;
+  		color: @navbar-default-color;
+  	}
+
+  	&:hover, &:focus, &:active {
+  		color: @brand-primary;
+  		background: none;
+  		border: 0;
+  		outline: none;
+  		box-shadow: none;
+  	}
+  }
+
+  &.open .dropdown-toggle {
+		color: @white;
+		background:  @gray-darker;
+
+		.fa {
+			color: @white;
+		}
+	}
+}
+
+// Logo Image
+// ----------
+div.logo-image {
+  padding-right: @grid-gutter-width/2;
+  padding-left: @grid-gutter-width/2;
+  min-width: 0;
+  float: left;
+
+  @media (max-width: 320px) {
+  }
+
+  .container & {
+    padding-left: 0;
+  }
+
+  // Hide sitename and slogan
+  span, small {
+    display: none;
+  }
+
+  img {
+    max-height: @navbar-height;
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: ceil(@font-size-base * 2);
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+    color: @gray-dark;
+    font-size: @font-size-large;
+    white-space: nowrap;
+    line-height: 1;
+  }
+}
+
+
+// Logo Text
+// ----------
+.logo-text {
+  padding-right: @grid-gutter-width/2;
+  padding-left: @grid-gutter-width/2;
+  min-width: 130px;
+  float: left;
+
+  @media (max-width: 320px) {
+    min-width: none;
+  }
+
+  .container & {
+    padding-left: 0;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: ceil(@font-size-base * 2);
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+    color: @gray-dark;
+    font-size: @font-size-large;
+    white-space: nowrap;
+  }
+
+  // Taglines
+  .site-slogan {
+    display: block;
+    font-size: 12px;
+    margin-top: -16px;
+    line-height: normal;
+    color: @gray-light;
+  }
+}
+
+// Site Navigation Right
+// ---------------------
+.site-navigation-right {
+  text-align: right;
+
+  // Control screen mobile
+  @media screen and (max-width: @screen-xs) {
+    width: auto;
+  }
+
+  .off-canvas-toggle {
+    float: right;
+  }
+}
+
+
+// Head Search
+// -----------
+.head-search {
+  .clearfix();
+  margin-right: @t3-global-margin*2;
+
+  form {
+    margin: 0;
+  }
+  
+  label {
+    display: none;
+  }
+  
+  .search {
+    position: relative;
+    padding-top: 0;
+
+    // Place a search icon
+    &:before {
+      font-family: "FontAwesome";
+      content: "\f002";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: @gray-lighter;
+      z-index: 0;
+    }
+  }
+  
+  .form-control {
+    background: none;
+    border: 0;
+    color: @gray-lightest;
+    font-size: @t3-font-size-smaller;
+    margin: 0;
+    padding-left: @t3-global-padding;
+    height: 32px;
+    .placeholder(@gray-lighter);
+    
+
+    // focus state
+    &:focus {
+      box-shadow: none;
+    }
+
+  }
+
+}
+
+
+// Right menu
+// -----------
+.right-menu {
+  float: right;
+  .clearfix();
+
+  .nav li {
+    line-height: @navbar-height;
+
+    > a {
+      border-left: 1px solid @navbar-default-border;
+      color: @navbar-default-link-color;
+      height: @navbar-height;
+      display: block;
+      text-transform: uppercase;
+      padding: 0 @t3-global-padding/2;
+      overflow: hidden;
+
+      @media screen and (min-width: @screen-lg) {
+        padding: 0 20px;
+      }
+    }
+
+    &.active > a {
+      &, &:hover {
+        background: @navbar-default-link-active-bg;
+        color: @navbar-default-link-active-color;
+      }
+    }
+
+    // Primary Item
+    > a.item-primary {
+      background: @brand-warning;
+      color: @white;
+      &:hover, &:active, &:focus {
+        background: darken(@brand-warning,5%);
+        color: @white;
+      }
+    }
+
+    > a.button-responsive {
+      @media screen and (max-width: @screen-xs-max) {
+        font-size: @font-size-small - 1;
+        text-transform: none;
+        padding-left: @t3-global-padding/2 !important;
+        padding-right: @t3-global-padding/2 !important;
+        margin-top: 5px;
+      }
+    }
+
+  }
+}
+
+// Head Login
+.head-login {
+  text-indent: 999em;
+  width: 40px;
+
+  @media screen and (min-width: @screen-sm) {
+    width: 52px;
+  }
+
+  @media screen and (min-width: @screen-md) {
+    text-indent: inherit;
+    width: auto;
+  }
+
+  @media screen and (max-width: @screen-sm-max) {
+    &:after {
+      font-family: "FontAwesome";
+      content: "\f007";
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 0;
+      color: @gray;
+      text-indent: 0;
+      z-index: 0;
+    }
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    &:after {
+      left: 13px;
+    }
+  }
+}
+
+
+
+// ---------------------------------------------------------
+// HEADER
+// ---------------------------------------------------------
+.uber-header-wrap {
+	position: relative;
+	z-index: 21;
+
+  &.has-affix {
+    z-index: 22;
+  }
+
+  a:focus {
+    outline: none;
+  }
+}
+
+.uber-header {
+  background-color: @navbar-default-bg;
+  border-bottom: 1px solid @navbar-default-border;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 22;
+  position: relative;
+  .transition(top 0.3s);
+
+  &[data-spy='affix'] {
+
+    > .row {
+      margin-right: 0;
+
+      .site-navigation-right {
+        padding-right: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: @screen-sm) {
+    height: @navbar-height;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    .row {
+      margin: 0;
+
+      > #t3-mainnav,
+      > .site-navigation-right,
+      > .logo {
+        padding: 0;
+      }
+
+      > .site-navigation-right {
+        position: static;
+      }
+
+      // logo
+      .logo {
+        .logo-text {
+          text-align: left;
+        }
+
+        .list-brands {
+          left: 0;
+          text-align: left;
+        }
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+
+  &.affix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 23;
+
+    .affixbar-show & {
+      top: 42px;
+    }
+  }
+
+
+  // Dark Style
+  // ---------------------
+  &.dark-color,
+  &.none-color.affix {
+    background: @gray-darker;
+    border-color: darken(@gray, 15%);
+
+    // logo
+    .logo {
+      border-right: 1px solid darken(@gray, 15%);
+
+      .logo-text {
+        padding-right: @grid-gutter-width/2;
+      }
+
+      .logo-text > a {
+        color: @gray-lighter;
+      }
+
+      &.open .dropdown-toggle {
+        background-color: @white;
+        color: @gray;
+
+        .fa {
+          color: @gray;          
+        }
+      }
+    }
+
+    // Navigation
+    .navbar-default .navbar-nav {
+      > li {
+        border-right: 1px solid darken(@gray, 15%);
+
+        > a {
+          color: darken(@white,20%);
+          padding-left: @t3-global-padding;
+          padding-right: @t3-global-padding;
+
+          &:hover,
+          &:focus {
+            color: @gray-lighter;
+            background-color: @black;
+          }
+        }
+
+        > .nav-header {
+          color: @gray-light;
+        }
+      }
+
+      > .open > a {
+        &,
+        &:hover,
+        &:focus {
+          border-color: @gray;
+          color: @gray-lighter;
+          background-color: @black;
+        }
+      }
+
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @gray-lighter;
+          background-color: @black;
+        }
+      }
+
+      .dropdown-menu {
+        background-color: @black;
+        border-color: #404040;
+        border-top: 0;
+
+        .mega-nav > li > a {
+          color: @gray-light;
+
+          &:hover, &:focus, &:active {
+            color: @white;
+          }
+        }
+
+        .mega-nav > li.current a {
+          color: @brand-primary;
+
+          &:hover, &:focus, &:active {
+            color: @white;
+          }
+        }
+
+        .dropdown-header {
+          border-bottom-color: #404040;
+        }
+      }
+    }
+
+    // Navigation Right
+    .site-navigation-right {
+      .off-canvas-toggle {
+        border-left-color: darken(@gray, 15%);
+        color: darken(@white,20%);
+
+        &:hover, &:focus, &:active {
+          color: @gray-lighter;
+          background-color: @black;
+          border-color: darken(@gray, 15%);
+        }
+      }
+
+      .right-menu {
+
+        ul li {
+
+          > a {
+            border-color: darken(@gray, 15%);
+            color: darken(@white,20%);
+            &:hover, &:active, &:focus {
+              background: @black;
+              color: @gray-lighter;
+            }
+          }
+
+          &.active > a {
+            &, &:active, &:hover {
+              background: @black;
+              color: @gray-lighter;
+            }
+          }
+
+          .head-login:after {
+            color: @gray-lighter;
+          }
+        }
+      }
+    }
+  // End dark style
+  }
+
+
+  // Highlight Style
+  // ---------------------
+  &.highlight-color {
+    background: @brand-primary;
+    border-color: @brand-primary;
+
+    // Logo
+    .logo {
+      border-color: darken(@link-color, 10%);
+
+      &:hover, &:active, &:focus {
+      }
+
+      .logo-text > a {
+        color: @gray-lightest;
+      }
+    }
+
+    // Navigation
+    .navbar-default .navbar-nav {
+      > li {
+        border-right-color: darken(@link-color, 10%);
+
+        > a {
+          color: @gray-lightest;
+
+          &:hover,
+          &:focus {
+            color: @white;
+            background-color: @link-hover-color;
+          }
+        }
+
+        > .nav-header {
+          color: @gray-lightest;
+        }
+      }
+
+      > .open > a {
+        &,
+        &:hover,
+        &:focus {
+          border-color: darken(@link-color, 10%);
+          color: @white;
+          background-color: @link-hover-color;
+        }
+      }
+
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @white;
+          background-color: @link-hover-color;
+        }
+      }
+    }
+
+    // Navigation right
+    .site-navigation-right {
+      .off-canvas-toggle {
+        border-left-color: darken(@link-color, 10%);
+        color: @gray-lightest;
+
+        &:hover, &:focus, &:active {
+          color: @white;
+          background-color: @link-hover-color;
+          border-color: darken(@link-color, 10%);
+        }
+      }
+
+      .right-menu {
+
+        ul li {
+          > a {
+            border-color: darken(@link-color, 10%);
+            color: @gray-lightest;
+
+            &:hover, &:focus {
+              background: @link-hover-color;
+              color: @white;
+            }
+          }
+
+          &.active > a {
+            &, &:hover {
+              background: @link-hover-color;
+              color: @white;
+            }
+          }
+
+          .head-login:after {
+            color: @gray-lightest;
+          }
+        }
+      }
+    }
+  // End highlight style
+  }
+
+  // None Style
+  // ---------------------
+  &.none-color {
+    background: none;
+    border: 0;
+    .transition(all 0.2s);
+
+    // Logo
+    .logo {
+      border-right: 0;
+      .transition(all 0.2s);
+
+      .logo-text,
+      .logo-image {
+        padding-left: 0;
+        padding-right: @grid-gutter-width;
+        .transition(all 0.2s);
+      }
+
+      .logo-image > a {
+        line-height: 1;
+      }
+
+      .logo-text > a {
+        color: @gray-lightest;
+      }
+    }
+
+    // Navigation
+    .navbar-default .navbar-nav {
+      > li {
+        border-right: 0;
+        .transition(all 0.2s);
+
+        > a {
+          color: @gray-lightest;
+          text-transform: none;
+          padding-left: 0;
+          padding-right: @t3-global-padding * 2;
+          .transition(all 0.2s);
+
+          &:hover,
+          &:focus {
+            color: @link-hover-color;
+            background: none;
+          }
+        }
+
+        > .nav-header {
+          color: @gray-lightest;
+        }
+      }
+
+      > .open > a {
+        &,
+        &:hover,
+        &:focus {
+          border: 0;
+          color: @white;
+          background: none;
+        }
+      }
+
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: @link-hover-color;
+          background: none;
+        }
+      }
+    }
+
+    // Navigation right
+    .site-navigation-right {
+      .off-canvas-toggle {
+        border: 0;
+        color: @gray-lightest;
+        text-transform: none;
+
+        &:hover, &:focus, &:active {
+          color: @link-hover-color;
+          background: transparent;
+        }
+      }
+
+      .right-menu {
+
+        ul li {
+          > a {
+            border: 0;
+            color: @gray-lightest;
+            text-transform: none;
+
+            &:hover, &:focus {
+              background: transparent;
+              color: @link-hover-color;;
+            }
+          }
+
+          &.active > a {
+            &, &:hover {
+              background: transparent;
+              color: @link-hover-color;
+            }
+          }
+
+          .head-login:after {
+            color: @gray-lightest;
+          }
+        }
+      }
+    }
+  // End highlight style
+  }
+}
+
+// Import Styles Less
+@import "style-2.less";
+@import "style-3.less";
+@import "style-4.less";
+@import "style-5.less";
+@import "style-6.less";
+@import "style-7.less";
+@import "style-8.less";

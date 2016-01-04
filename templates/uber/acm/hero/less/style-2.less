@@ -1,0 +1,136 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+// HERO STYLE 2
+  // ----------------------------------------
+.acm-hero {
+
+  &.style-2 {
+    padding: 0;
+    position: relative;
+
+    .hero-content {
+      background-size: cover;
+      padding: (@grid-gutter-width * 2) 0;
+      width: 100%;
+
+      // Control screen mobile
+      @media screen and (max-width: @screen-xs-max) {
+        padding: (@grid-gutter-width * 4) 0;
+      }
+
+      // Control screen tablet
+      @media screen and (max-width: @screen-sm-max) {
+        overflow: hidden;
+      }
+    }
+
+    // Description
+    .hero-description {
+      color: @white;
+      padding: @t3-global-padding * 2;
+      position: relative;
+      margin: auto;
+      text-align: center;
+      width: 450px;
+
+      // Control screen mobile
+      @media screen and (max-width: @screen-xs-max) {
+        display: none;
+      }
+
+      // carousel index
+      .hero-quote {
+        border-bottom: 1px solid;
+        display: inline-block;
+        font-size: @font-size-small * 3;
+        padding-bottom: @t3-global-padding - 4;
+
+        // Control screen tablet/mobile
+        @media screen and (max-width: @screen-md-max) {
+          border: 0;
+          padding-bottom: @t3-global-padding / 2;
+        }
+      }
+
+      .hero-index {
+        font-size: @font-size-large * 4;
+        font-weight: @font-weight-semibold;
+        margin: @t3-global-margin * 2 -100%;
+        text-transform: uppercase;
+
+        // Control screen medium screen
+        @media screen and (max-width: 1400px) {
+          margin: @t3-global-margin -100%;
+        }
+
+        // Control screen tablet/mobile
+        @media screen and (max-width: @screen-md-max) {
+          font-size: @font-size-large * 3;
+          margin: 0 -50%;
+        }
+      }
+
+      .hero-des {
+        font-size: @font-size-h4;
+        margin-bottom: 0;
+        padding-top: (@t3-global-padding - 4);
+
+        // Control screen tablet/mobile
+        @media screen and (max-width: @screen-md-max) {
+          padding-top: @t3-global-padding / 2;
+        }
+      }
+
+      // Border top
+      &:before {
+        border-width: 10px 10px 0 10px;
+        border-style: solid;
+        border-color: @white;
+        content: "";
+        height: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        // Control screen tablet/mobile
+        @media screen and (max-width: @screen-md-max) {
+          display: none;
+        }
+      }
+
+      // Border bottom
+      &:after {
+        border-width: 0px 10px 10px 10px;
+        border-style: solid;
+        border-color: @white;
+        bottom: 0;
+        content: "";
+        height: 30%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+
+        // Control screen tablet/mobile
+        @media screen and (max-width: @screen-md-max) {
+          display: none;
+        }
+      }
+    }
+
+    // Style Light
+    &.style-light {
+      // Description
+      .hero-description {
+        color: @gray-dark;
+
+        &:after,&:before {
+          border-color: @gray-dark;
+        }
+      }
+    }
+  }
+}

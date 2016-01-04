@@ -1,0 +1,103 @@
+// -------------------------------
+// MENU STYLE 2
+// -------------------------------
+.acm-menu {
+  .style-2 {
+    .dish-item {
+
+      .item-inner {
+        background-color: @gray-lightest;
+        border: 0;
+        margin-bottom: @t3-global-margin;
+        padding: (@t3-global-padding / 2) (@t3-global-padding * 2) (@t3-global-padding / 2) (@t3-global-padding / 2);
+        position: relative;
+        overflow: hidden;
+
+        .dish-name {
+          font-size: @font-size-base * 1.5;
+          margin-top: 0;
+          margin-bottom: (@t3-global-margin / 4);
+          margin-right: (@t3-global-margin / 2);
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          z-index: 20;
+
+          span {
+            display: inline-block;
+            position: relative;
+
+            &:after {
+              border-bottom: 1px dashed @gray-light;
+              content: "";
+              position: absolute;
+              bottom: 5px;
+              left: 100%;
+              width: 500px;
+            }
+          }
+        }
+
+        .dish-description {
+          max-width: 100%;
+          min-height: 10px;
+          position: relative;
+          width: 100%;
+        }
+
+        .dish-price {
+          font-size: @font-size-base * 1.5;
+          font-weight: bold;
+          position: absolute;
+          top: 10px;
+          right: 0;
+          text-align: left;
+          width: (@t3-global-padding * 2);
+          z-index: 20;
+        }
+      }
+
+      &.has-image {
+        .item-inner {
+          background-color: @gray-lightest;
+          background-position: center top;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: 0;
+          color: @white;
+          position: relative;
+
+          &:before {
+            background: #000;
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            .opacity(0.8);
+          }
+
+          .dish-name {
+            font-size: @font-size-base * 1.5;
+            width: 100%;
+            position: relative;
+            z-index: 20;
+          }
+
+          .dish-description {
+            color: @gray-light;
+            z-index: 20;
+            position: relative;
+            width: 100%;
+          }
+
+        }
+
+      }
+    }
+
+  }
+}

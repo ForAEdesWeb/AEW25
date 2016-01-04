@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 
+	version="2.5" 
+	type="plugin" 
+	group="content"
+	method="upgrade">
+
+	<name>Content - JA Bookmark</name>
+	<author>JoomlArt.com</author>
+	<creationDate>01 Jul 2014</creationDate>
+	<copyright>J.O.O.M Solutions Co., Ltd.</copyright>
+	<license>GNU/GPL V2 for PHP files. Read Terms of Service for details</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>2.5.8</version>
+	<description>
+	<![CDATA[<span style="color: #008000;"><strong>JA Bookmark Plugin for Joomla 2.5 and Joomla 3.x</strong></span><br /><p><img alt="JA Bookmark Logo" src="http://joomlart.s3.amazonaws.com/images/mis/JA_Bookmark_logo.jpg" /></p><p>JA Bookmark Plugin for Joomla! 2.5. Help your visitors to promote your site and allows visitors to bookmark your pages easily with many popular services.</p>
+	<p style="clear:both"><span style="color: #ff6600;"><strong>Features:</strong></span></p>
+	<ul>
+		<li>Allows the integration of <a target="_blank" href="http://www.addthis.com/">Addthis</a> and <a target="_blank" href="http://www.disqus.com/">AddToAny</a> online Bookmark Services. </li>
+		<li>Easy to use. Install and configure.</li>
+		<li>Option to enable JA Bookmark Plugin for all. 
+		Enable for limited categories or individual articles OR disable for individual articles too.</li>
+	</ul>
+	<strong><span>Links:</span></strong><br />
+	<ul><li><a target="_blank" href="http://www.joomlart.com/forums/showthread.php?51733">JA Bookmark  - General Userguide</a></li>
+	<li><a target="_blank" href="http://update.joomlart.com/">Updates &amp; Versions</a></li></ul>
+	   <p>Copyright 2004 - 2014 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+	]]>
+	</description>
+	
+	<files>	
+		<filename plugin="jabookmark">jabookmark.php</filename>
+		<filename plugin="jabookmark">index.html</filename>
+		<folder>assets</folder>		
+		<folder>tmpl</folder>		
+	</files>
+	
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_jabookmark.ini</language>
+	</languages>
+	
+	<config>
+		<fields 
+			name="params"
+			addfieldpath="/plugins/content/jabookmark/assets/elements">	
+			<fieldset 
+				name="BASIC_SETTINGS" 
+				label="BASIC_SETTINGS">			
+				<field 
+					name="mode" 
+					type="list"
+					default="auto"
+					label="DISPLAY_MODE" 
+					description="DISPLAY_MODE_DESC">
+						<option value="auto">Auto</option>
+						<option value="manual">Manual</option>
+						<option value="turnoff">Turn Off</option>
+				</field>
+				<field 
+					name="source" 
+					type="list" 
+					default="both"
+					label="ENABLE_THE_PLUGIN_FOR" 
+					description="ENABLE_THE_PLUGIN_FOR_DESC">
+					<option value="both">Both</option>
+					<option value="com_k2">K2</option>
+					<option value="com_content">Joomla Content</option>
+				</field>
+				<field
+					name="mode-auto-category" 
+					type="category" 
+					default=""
+					class="mselect"
+					multiple="true"
+					size="10"
+					extension="com_content"					
+					label="CATEGORIES_SELECTION"  
+					description="CATEGORIES_SELECTION_DESC">
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>							
+				<field 
+					name="mode-automatic-k2catsid" 
+					type="K2category"
+					multiple="multiple" 
+					size="10" 
+					class="mselect"
+					default="" 
+					label="SELECT_K2_CATEGORIES"
+					description="SELECT_K2_CATEGORIES_DESC" />
+				<field 
+					name="location"
+					type="list"
+					class="mselect"
+					default="onAfterDisplayContent" 
+					label="LOCATION" description="LOCATION_DESC">
+						<option value="onContentBeforeDisplay">Before Display Content</option>
+						<option value="onContentAfterDisplay">After Display Content</option>
+						<option value="onContentAfterTitle">After Display Title</option>
+						<!--<option value="BeforeContent">Before Content</option>
+						<option value="AfterContent">After Content</option>-->
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field 
+					name="system" 
+					type="list"
+					default="addthis"
+					label="BOOKMARK_SERVICE"
+					description="BOOKMARK_SERVICE_DESC">
+						<option value="addthis">AddThis</option>
+						<option value="addtoany">AddToAny</option>
+				</field>
+
+				<field 
+					name="system-addthis-brand_name" 
+					type="text" 
+					default="joomlart.com" 
+					label="BRAND_NAME" 
+					description="BRAND_NAME_DESC" />
+					
+				<field 
+					name="system-addthis-account"
+					type="text" 
+					default="joomlart"
+					label="ADDTHIS_ACCOUNT" 
+					description="ADDTHIS_ACCOUNT_DESC" />	
+					
+				<field 
+					name="system-addthis-language_code"
+					type="list" 
+					default="en"
+					class="mselect"
+					label="LANGUAGE_CODE"
+					description="LANGUAGE_CODE_DESC">
+						<option value="auto">Auto - Detect</option>
+						<option value="en">English</option>
+						<option value="zh">Chinese</option>
+						<option value="da">Danish</option>
+						<option value="nl">Dutch</option>	
+						<option value="fi">Finnish</option>	
+						<option value="fr">French</option>	
+						<option value="de">German</option>	
+						<option value="he">Hebrew</option>	
+						<option value="is">Icelandic</option>	
+						<option value="it">Italian</option>		
+						<option value="ja">Japanese</option>		
+						<option value="ko">Korean</option>		
+						<option value="no">Norwegian</option>		
+						<option value="pl">Polish</option>		
+						<option value="pt">Portuguese</option>		
+						<option value="ru">Russian</option>		
+						<option value="sl">Slovenian</option>		
+						<option value="es">Spanish</option>		
+						<option value="sv">Swedish</option>	
+						<option value="tr">Turkish</option>	
+						<option value="cy">Welsh</option>	
+					</field>
+					<field 
+						name="system-addthis-services_exclude" 
+						type="textarea"
+						default="" 
+						rows="5" 
+						cols="30" 
+						label="SYSTEM_SERVICES_EXCLUDE" 
+						description="SYSTEM_SERVICES_EXCLUDE_DESC" />
+					<field 
+						name="system-addthis-services_compact" 
+						type="textarea"
+						default="" 
+						rows="5" 
+						cols="30" 
+						label="SYSTEM_SERVICES_COMPACT" 
+						description="SYSTEM_SERVICES_COMPACT_DESC" />
+					<field 
+						name="system-addthis-services_expanded" 
+						type="textarea"
+						default="" 
+						rows="5" 
+						cols="30" 
+						label="SYSTEM_SERVICES_EXPANDED" 
+						description="SYSTEM_SERVICES_EXPANDED_DESC" />
+					<field 
+					name="used_custom_button" 
+					type="radio" 
+					default="0"
+					class="btn-group"
+					label="USING_CUSTOM_BUTTON"
+					description="USING_CUSTOM_BUTTON_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+				
+					<field
+						name="custom_button"
+						type="textarea"
+                        default=""
+                        rows="5"
+                        cols="30"
+                        filter="raw"
+                        label="CUSTOM_BUTTON"
+						description="CUSTOM_BUTTON_DESC" />
+					
+					<field 
+						name="system-addthis-button" 
+						type="jaaddthis"
+						default="tb21" 
+						label="BUTTON_STYLE"
+						description="BUTTON_STYLE_DESC" />
+					
+
+					<field 
+						name="system-addtoany-language" 
+						type="list" 
+						default="en-US" 
+						label="LANGUAGE_CODE"
+						class="mselect"
+						description="LANGUAGE_CODE_ADDTOANY_DESC">
+							<option value="ar" lang="ar"><![CDATA[العربية]]></option>
+							<option value="id" lang="id"><![CDATA[Bahasa Indonesia]]></option>
+							<option value="bg" lang="bg"><![CDATA[Български]]></option>
+							<option value="ca-ES" lang="ca-ES"><![CDATA[Català]]></option>
+							<option value="cs" lang="cs"><![CDATA[Čeština]]></option>
+							<option value="da" lang="da"><![CDATA[Dansk]]></option>
+							<option value="de" lang="de"><![CDATA[Deutsch]]></option>
+							<option value="el" lang="el"><![CDATA[Ελληνικά]]></option>
+							<option value="et" lang="et"><![CDATA[Eesti]]></option>
+							<option value="es" lang="es"><![CDATA[Español]]></option>
+							<option value="es-AR" lang="es-AR"><![CDATA[Español argentino]]></option>
+							<option value="es-VE" lang="es-VE"><![CDATA[Español venezolano]]></option>
+							<option value="eo" lang="eo"><![CDATA[Esperanto]]></option>
+							<option value="en-US" selected="selected" lang="en-US"><![CDATA[English]]></option>
+							<option value="fa" lang="fa"><![CDATA[فارسی]]></option>
+							<option value="fr" lang="fr"><![CDATA[Français]]></option>
+							<option value="fr-CA" lang="fr-CA"><![CDATA[Français canadien]]></option>
+							<option value="he-IL" lang="he-IL"><![CDATA[עברית]]></option>
+							<option value="hr" lang="hr"><![CDATA[Hrvatski]]></option>
+							<option value="is" lang="is"><![CDATA[Íslenska]]></option>
+							<option value="it" lang="it"><![CDATA[Italiano]]></option>
+							<option value="ja" lang="ja"><![CDATA[日本語]]></option>
+							<option value="ko-KR" lang="ko-KR"><![CDATA[한국어]]></option>
+							<option value="lv" lang="lv"><![CDATA[Latviešu Valoda]]></option>
+							<option value="lt" lang="lt"><![CDATA[Lietuvių]]></option>
+							<option value="hu" lang="hu"><![CDATA[Magyar]]></option>
+							<option value="mk" lang="mk"><![CDATA[Makedonski]]></option>
+							<option value="nl" lang="nl"><![CDATA[Nederlands]]></option>
+							<option value="no" lang="no"><![CDATA[Norsk]]></option>
+							<option value="pl-PL" lang="pl-PL"><![CDATA[Polski]]></option>
+							<option value="pt" lang="pt"><![CDATA[Português (internacional)]]></option>
+							<option value="pt-BR" lang="pt-BR"><![CDATA[Português Brasileiro]]></option>
+							<option value="pt-PT" lang="pt-PT"><![CDATA[Português (Portugal)]]></option>
+							<option value="ro" lang="ro"><![CDATA[Româna]]></option>
+							<option value="ru" lang="ru"><![CDATA[Pyccĸий]]></option>
+							<option value="sr" lang="sr"><![CDATA[Српски]]></option>
+							<option value="fi" lang="fi"><![CDATA[Suomi]]></option>
+							<option value="sk" lang="sk"><![CDATA[Slovenčina]]></option>
+							<option value="sl" lang="sl"><![CDATA[Slovenščina]]></option>
+							<option value="sv-SE" lang="sv-SE"><![CDATA[Svenska]]></option>
+							<option value="ta" lang="ta"><![CDATA[தமிழ்]]></option>
+							<option value="tr-TR" lang="tr-TR"><![CDATA[Türkçe]]></option>
+							<option value="uk" lang="uk"><![CDATA[Українська]]></option>
+							<option value="vi" lang="vi"><![CDATA[Tiếng Việt]]></option>
+							<option value="zh-CN" lang="zh-CN"><![CDATA[中文]]></option>
+							<option value="zh-TW" lang="zh-TW"><![CDATA[正體中文]]></option>
+				</field>	
+
+				<field 
+					name="system-addtoany-button" 
+					type="jaaddtoany" 
+					default="share_save_106_16.gif"
+					label="BUTTON_STYLE" 
+					description="BUTTON_STYLE_DESC" />
+				
+				<field 
+					name="system-addtoany-showpagetitle" 
+					type="radio"
+					default="1" 
+					label="SHOW_PAGE_TITLE"
+					description="SHOW_PAGE_TITLE_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				
+				<field 
+					name="system-addtoany-orientation" 
+					type="list" 
+					default="automatic" 
+					label="ORIENTATION"
+					description="ORIENTATION_DESC">
+						<option value="automatic"> Automatic </option>
+						<option value="up"> Up </option>
+						<option value="down"> Down </option>
+				</field>
+				<field 
+					name="widget_text" 
+					type="textarea"
+					default=""
+                    filter="raw"
+                    rows="5"
+                    cols="30"
+					label="WIDGET_TEXT"   
+					description="WIDGET_TEXT_DESC" />
+
+				<field 
+					name="header_color"
+					type="jacolorpicker" 
+					default="47AA0E" 
+					label="Header color"   
+					description="HEADER_COLOR_DESC" />
+					
+				<field 
+					name="system-addthis-header_background"
+					type="jacolorpicker"
+					default="999999"
+					label="HEADER_BACKGROUND"
+					description="HEADER_BACKGROUND_DESC" />
+					
+				<field 
+					name="system-addthis-vertical_offset"
+					type="text" 
+					default="" 
+					label="VERTICAL_OFFSET_PX"   
+					description="VERTICAL_OFFSET_DESC" />
+					
+				<field 
+					name="system-addthis-horizontal_offset" 
+					type="text" 
+					default="" 
+					label="HORIZONTAL_OFFSET_PX" 
+					description="HORIZONTAL_OFFSET_DESC" />	
+
+				<field 
+					name="system-addtoany-maincolor" 
+					type="jacolorpicker" 
+					default="D7E5ED" 
+					label="MAIN_COLOR"
+					description="MAIN_COLOR_DESC" />
+				
+				<field 
+					name="system-addtoany-border"
+					type="jacolorpicker"
+					default="414c53" 
+					label="BORDER_COLOR" 
+					description="BORDER_COLOR_DESC" />	
+					
+				<field 
+					name="system-addtoany-linktext"
+					type="jacolorpicker"
+					default="333333" 
+					label="LINK_TEXT" 
+					description="LINK_TEXT_DESC" />	
+					
+				<field 
+					name="system-addtoany-linktext_hover"
+					type="jacolorpicker" 
+					default="333333"
+					label="LINK_TEXT_HOVER" 
+					description="LINK_TEXT_HOVER" />	
+					
+				<field 
+					name="system-addtoany-background" 
+					type="jacolorpicker" 
+					default="FFFFFF" 
+					label="BACKGROUND"
+					description="BACKGROUND_DESC" />
+					
+				<field type="japanel" path="/plugins/content/jabookmark/assets/elements/" />				
+				<field 
+					name="systemmode" 
+					type="japanel" 
+					hidden="true"
+					function="depend">
+						<option for="mode" value="auto" hideRow="true">mode-auto-category,mode-automatic-k2catsid,location,source</option>
+						<option for="source" value="both" hideRow="true">mode-auto-category,mode-automatic-k2catsid
+						</option>
+						<option for="source" value="com_k2" hideRow="true">mode-automatic-k2catsid
+						</option>
+						<option for="source" value="com_content" hideRow="true">mode-auto-category
+						</option>
+						
+						<option for="system" value="addthis" hideRow="true">system-addthis-brand_name,system-addthis-account,system-addthis-language_code,system-addthis-services_exclude,system-addthis-services_compact,system-addthis-services_expanded,system-addthis-button,header_color,system-addthis-header_background,system-addthis-vertical_offset,system-addthis-horizontal_offset,class_sfx</option>
+						<option for="system" value="addtoany" hideRow="true">system-addtoany-language,system-addtoany-button,system-addtoany-showpagetitle,system-addtoany-orientation,system-addtoany-maincolor,system-addtoany-border,system-addtoany-linktext,system-addtoany-linktext_hover,system-addtoany-background</option>
+						<option for="used_custom_button" value="1" hideRow="true">custom_button,widget_text</option>
+						<option for="used_custom_button" value="0" hideRow="true">system-addthis-button,system-addtoany-button,system-addthis-services_exclude,system-addthis-services_compact,system-addthis-services_expanded,header_color,system-addthis-header_background,system-addthis-vertical_offset,system-addthis-horizontal_offset</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

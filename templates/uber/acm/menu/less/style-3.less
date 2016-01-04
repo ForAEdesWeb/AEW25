@@ -1,0 +1,70 @@
+// -------------------------------
+// MENU STYLE 2
+// -------------------------------
+.acm-menu {
+  .style-3 {
+    .dish-item {
+
+      .item-inner {
+        background: @gray-lightest;
+        margin-bottom: @t3-global-margin;
+        min-height: (@t3-global-margin * 3);
+        padding: 0 (@t3-global-padding / 2) 0;
+        position: relative;
+
+        .dish-name {
+          font-size: @font-size-large;
+          margin: 0 0 (@t3-global-margin / 4);
+          padding: (@t3-global-padding / 2) 0 0 0;
+        }
+
+        .dish-image {
+          background: @gray-lighter;
+          display: block;
+          float: left;
+          height: @t3-global-margin * 3;
+          position: absolute;
+          left: 0;
+          top: 0;
+          overflow: hidden;
+          width: @t3-global-margin * 3;
+
+          img {
+            width: 100%;
+            .transition(all 0.35s);
+          }
+        }
+
+        .dish-price {
+          font-size: @font-size-base * 1.5;
+          line-height: 1;
+          position: absolute;
+          right: (@t3-global-margin / 2);
+          top: (@t3-global-margin / 2);
+        }
+
+        .dish-description {
+          font-size: @font-size-small;
+        }
+
+        &:hover {
+          .dish-name {
+            color: @brand-primary;
+          }
+          
+          .dish-image img {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      &.has-image {
+        .item-inner {
+          padding: 0 0 0 (@t3-global-margin * 3) + (@t3-global-padding / 2);
+        }
+      }
+
+    }
+
+  }
+}

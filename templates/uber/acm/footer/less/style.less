@@ -1,0 +1,496 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.uber-footer {
+  background: @t3-footer-background;
+  color: @t3-footer-text-color;
+  .clearfix();
+
+  &.affix {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  // small
+  small {
+    display: block;
+    font-size: 100%; //Use global footer font size.
+  }
+
+  // links
+  a {
+    // Link States
+    &:hover, &:active, &:focus {
+    }
+  }
+
+
+  // Light Background
+  // -----------------------------------
+  &.light-color,
+  &.white-color {
+    background: @gray-lightest;
+    color: @gray;
+
+    // Footer Left
+    .footer-left {
+      > h2 {
+        color: @gray-darker;
+      }
+
+      a {
+        color: @link-color;
+        border-bottom-color: @link-color;
+
+        &:hover, &:active, &:focus {
+          color: @link-hover-color;
+          border-bottom-color: @link-hover-color;
+        }
+      }
+    }
+
+    // Social
+    .uber-social .fa {
+      background: rgba(0,0,0,0.5);
+    }
+
+    // Footer Right
+    .footer-right {
+      background: rgba(0,0,0,0.05);
+
+      .acymailing_module_form .acymailing_introtext {
+        color: @gray;
+      }
+    }
+
+    // Brand Name
+    h2.brand-name {
+      text-align: right;
+      margin-top: 0;
+    }
+
+    // Footer Spotlight
+    .uber-spotlight {
+      .t3-module {
+        background: none;
+
+        ul > li > a {
+          &:hover, &:focus, &:active {
+            color: @brand-primary;
+          }
+        }
+      }
+
+      .uber-contact-info.style-1 .info-list dd {
+        a:hover, a:focus, a:active {
+          color: @brand-primary;
+          border-color: @brand-primary;
+        }
+      }
+    }
+
+
+    // Light Background
+  }
+
+  // White Background
+  // -----------------------------------
+  &.white-color {
+    background: @white;
+
+    .uber-spotlight .uber-contact-info.style-1 .info-list dd {
+      a:hover, a:focus, a:active {
+        color: @brand-primary;
+        border-color: @brand-primary;
+      }
+    }
+  }
+
+
+  // Highlight Background
+  // -----------------------------------
+  &.highlight-color {
+    background: @brand-primary;
+    color: @gray-lighter;
+
+    // Footer Left
+    .footer-left {
+      > h2 {
+        color: @white;
+      }
+
+      a {
+        color: @white;
+        border-bottom-color: @white;
+
+        &:hover, &:active, &:focus {
+          color: @link-hover-color;
+          border-bottom-color: @link-hover-color;
+        }
+      }
+    }
+
+    // Social
+    .uber-social .fa {
+      background: rgba(0,0,0,0.1);
+    }
+
+    // Footer Right
+    .footer-right {
+      background: rgba(0,0,0,0.1);
+
+      .acymailing_module_form .acymailing_introtext {
+        color: @gray-lighter;
+      }
+    }
+
+    // Highlight Background
+  }
+
+}
+
+
+// Back to top
+// ------------
+.back-to-top {
+  position: fixed;
+  right: @t3-global-margin;
+  top: auto;
+  z-index: 999;
+  display: none;
+  bottom: -60px;
+
+  @media (min-width: @screen-sm-min) {
+    display: block;
+  }
+
+  .btn {
+    background: @gray-lighter;
+    background: rgba(255, 255, 255, 0.9);
+    border: 0;
+    color: @brand-primary;
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+    line-height: 1;
+    padding: 0;
+    text-align: center;
+    font-size: 22px;
+    .box-shadow(0 0 7px rgba(0, 0, 0, 0.15));
+    .opacity(0.7);
+    .transition(0.2s);
+
+    &:hover, &:active, &:focus {
+      background: @brand-primary;
+      color: @white;
+      outline: none;
+      .opacity(1);
+    }
+  }
+
+  &.affix,
+  &.affix-top {
+    bottom: @t3-global-margin * 3;
+  }
+
+  a {
+    outline: none;
+  }
+
+  i {
+    font-size: @font-size-large;
+    line-height: 16px;
+  }
+}
+
+
+// Footer Spotlight
+// ----------------
+.uber-spotlight {
+  .clearfix();
+  font-size: @font-size-small;
+  padding: 0;
+  overflow: hidden;
+
+  .container {
+    padding-top: @t3-global-padding;
+    padding-bottom: @t3-global-padding;
+    position: relative;
+  }
+
+  // Larger padding on Tablet / Desktop
+  @media screen and (min-width: @screen-sm) {
+    .container {
+      padding-top: (@t3-global-padding * 2);
+      padding-bottom: (@t3-global-padding * 2);
+    }
+  }
+
+  hr {
+    background: @gray-light;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
+    bottom: 0;
+    height: 1px;
+    margin: 0;
+    left: @grid-gutter-width/2;
+    position: absolute;
+    right: @grid-gutter-width/2;
+  }
+
+  // Footnav Modules
+  .t3-module {
+    background: @t3-footer-module-background;
+    color: @t3-footer-module-text-color;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+
+    + .t3-module {
+      margin-top: @line-height-computed;
+    }
+
+    .module-title {
+      color: @t3-footer-module-title-color;
+      font-size: @font-size-large;
+      margin-bottom: @line-height-computed / 2;
+      text-transform: none;
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+
+      > li {
+        line-height: 24px;
+
+        // links
+        > a {
+          color: @t3-footer-module-text-color;
+
+          // Link States
+          &:hover, &:active, &:focus {
+            color: @white;
+          }
+        }
+
+        &.active a {
+          font-weight: @font-weight-normal;
+        }
+      }
+    }
+  }
+
+  .section-title {
+    display: none;
+  }
+
+  // Contact Info 
+  .uber-contact-info.style-1,
+  .uber-contact-info.style-2 {
+    .info-list {
+      dt span {
+        display: none;
+      }
+
+      dd {
+        margin-bottom: @t3-global-margin/4;
+
+        a {
+          color: inherit;
+          border-color: inherit;
+
+          &:hover, &:focus, &:active {
+            color: @white;
+            border-color: @white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Footer Inner
+// -----------
+.uber-footer-inner {
+  padding: (@t3-global-padding * 2) 0;
+  .clearfix();
+  small {
+    margin-bottom: 5px;
+    font-size: @t3-font-size-small;
+  }
+}
+
+.footer-left {
+  margin-bottom: @t3-global-margin*2;
+
+  @media (min-width: @screen-md-min) {
+    margin-bottom: 0;
+  }
+  
+  > h2 {
+    margin-top: 0;
+    font-size: @font-size-h3;
+    text-transform: uppercase;
+  }
+
+  // links
+  a {
+    color: @t3-footer-text-color;
+    border-bottom: 1px solid @t3-footer-text-color;
+
+    // Link States
+    &:hover, &:active, &:focus {
+      color: @white;
+      border-bottom: 1px solid @white;
+    }
+  }
+
+  .uber-social {
+    margin-top: @t3-global-margin;
+    text-align: left;
+  }
+}
+
+.footer-right {
+	padding: @t3-global-padding;
+	background: rgba(255,255,255,0.05);
+
+	.acymailing_module_form .acymailing_introtext {
+    font-size: @t3-font-size-small;
+    line-height: @line-height-base;
+    color: @gray-light;
+    text-align: left;
+    margin-bottom: @t3-global-margin !important;
+  }
+
+  .acymailing_form {
+    width: 100%;
+
+    .acyfield_email {
+      width: 72%;
+    }
+
+    .btn {
+      font-size: 16px;
+      font-weight: @font-weight-normal;
+      text-transform: none;
+      margin-bottom: 5px;
+    }
+  }
+
+  .acyterms {
+    font-size: @t3-font-size-smaller;
+    padding: 5px;
+
+    .checkbox {
+      display: inline-block;
+      min-height: 14px;
+      vertical-align: top;
+    }
+  }
+
+  .acysubbuttons {
+    text-align: left;
+  }
+
+  .acyfield_html {
+    label {
+      font-size: @t3-font-size-smaller;
+      font-weight: @font-weight-normal;
+    }
+  }
+
+  .acymailing_mootoolsbutton {
+
+    > p {
+      margin: 0;
+    }
+
+    .modal {
+      position: static;
+      padding: 10px 20px;
+      .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+    }
+  }
+}
+
+.poweredby {
+  .clearfix();
+
+  // Align right on Tablet / Desktop
+  @media screen and (min-width: @screen-sm-max) {
+    text-align: left;
+  }
+
+  .t3-logo,
+  .t3-logo-small {
+    display: inline-block;
+    .opacity(0.8);
+  }
+}
+
+
+// Ja Social
+// -----------------------
+.uber-social {
+  text-align: right;
+  a {
+    display: inline-block;
+    border: none;
+    margin-right: 5px;
+
+    &:hover, &:active, &:focus {
+      border: none;
+    }
+  }
+
+  .fa {
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 0 none;
+    border-radius: 50%;
+    color: @white;
+    font-size: 22px;
+    height: 42px;
+    line-height: 42px;
+    margin: 0 5px 0 0;
+    text-align: center;
+    width: 42px;
+
+    &.fa-facebook:hover {
+      background: #3b5998;
+    }
+
+    &.fa-twitter:hover {
+      background: #3a92c8;
+    }
+
+    &.fa-google-plus:hover {
+      background: #dd4b39;
+    }
+
+    &.fa-pinterest:hover {
+      background: #cb2027;
+    }
+
+    &.fa-linkedin:hover {
+      background: #287bbc;
+    }
+  }
+}
+
+
+// Import Styles Less
+@import "style-2.less";
+@import "style-4.less";
+@import "style-5.less";

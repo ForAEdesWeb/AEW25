@@ -1,0 +1,32 @@
+.home-lawyer .acm-features.style-6 .features-content {
+  padding: 104px 0;
+}
+.home-lawyer .item-grid-view {
+  margin-bottom: 0;
+}
+.home-lawyer .item-grid-view .item-image {
+  display: block;
+}
+.home-lawyer .section-primary .acm-testimonials.style-2 .item .fa {
+  color: #fff;
+}
+.home-lawyer .section-primary .acm-testimonials.style-2 .item .testimonial-text {
+  color: #fff;
+}
+.home-lawyer .section-primary .acm-testimonials.style-2 .item .author-info {
+  color: #96a1a3;
+  color: rgba(255, 255, 255, 0.7);
+}
+.home-lawyer .section-primary .acm-testimonials.style-2 .item .author-info .author-info-text span.author-name {
+  color: #fff;
+}
+.home-lawyer .section-primary .acm-testimonials.style-2 .carousel-indicators li {
+  background: #96a1a3;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+  border-width: 8px;
+}
+.home-lawyer .section-primary .acm-testimonials.style-2 .carousel-indicators li.active {
+  background: #fff;
+  border-color: #fff;
+}

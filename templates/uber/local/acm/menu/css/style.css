@@ -1,0 +1,192 @@
+.section-inner {
+  background-size: cover;
+  background-position: center center;
+}
+.acm-menu .style-1:before,
+.acm-menu .style-1:after {
+  content: " ";
+  display: table;
+}
+.acm-menu .style-1:after {
+  clear: both;
+}
+.acm-menu .style-1 .dish-item {
+  margin-bottom: 26px;
+}
+.acm-menu .style-1 .dish-item .item-inner {
+  border-bottom: 1px dashed #96a1a3;
+}
+.acm-menu .style-1 .dish-item .item-inner:before,
+.acm-menu .style-1 .dish-item .item-inner:after {
+  content: " ";
+  display: table;
+}
+.acm-menu .style-1 .dish-item .item-inner:after {
+  clear: both;
+}
+.acm-menu .style-1 .dish-item .dish-name {
+  font-size: 18px;
+  float: left;
+  margin: 0 0 6.5px;
+  width: 78%;
+}
+.acm-menu .style-1 .dish-item .dish-price {
+  float: right;
+  font-weight: 700;
+  text-align: right;
+  width: 20%;
+}
+.acm-menu .style-1 .dish-item .dish-description {
+  font-size: 14px;
+  float: left;
+  max-width: 78%;
+  min-height: 46px;
+}
+.acm-menu .style-1.style-dark {
+  color: #ffffff;
+}
+.ie8 .team-items .item .img-intro p {
+  display: none;
+}
+.ie8 .team-items .item:hover .img-intro p {
+  display: block;
+}
+.ie8 .team-items .item:hover .img-intro p:after {
+  background: #039be5;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.acm-menu .style-2 .dish-item .item-inner {
+  background-color: #f4f6f7;
+  border: 0;
+  margin-bottom: 26px;
+  padding: 13px 52px 13px 13px;
+  position: relative;
+  overflow: hidden;
+}
+.acm-menu .style-2 .dish-item .item-inner .dish-name {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 6.5px;
+  margin-right: 13px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 20;
+}
+.acm-menu .style-2 .dish-item .item-inner .dish-name span {
+  display: inline-block;
+  position: relative;
+}
+.acm-menu .style-2 .dish-item .item-inner .dish-name span:after {
+  border-bottom: 1px dashed #96a1a3;
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 100%;
+  width: 500px;
+}
+.acm-menu .style-2 .dish-item .item-inner .dish-description {
+  max-width: 100%;
+  min-height: 10px;
+  position: relative;
+  width: 100%;
+}
+.acm-menu .style-2 .dish-item .item-inner .dish-price {
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  text-align: left;
+  width: 52px;
+  z-index: 20;
+}
+.acm-menu .style-2 .dish-item.has-image .item-inner {
+  background-color: #f4f6f7;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0;
+  color: #ffffff;
+  position: relative;
+}
+.acm-menu .style-2 .dish-item.has-image .item-inner:before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.acm-menu .style-2 .dish-item.has-image .item-inner .dish-name {
+  font-size: 24px;
+  width: 100%;
+  position: relative;
+  z-index: 20;
+}
+.acm-menu .style-2 .dish-item.has-image .item-inner .dish-description {
+  color: #96a1a3;
+  z-index: 20;
+  position: relative;
+  width: 100%;
+}
+
+.acm-menu .style-3 .dish-item .item-inner {
+  background: #f4f6f7;
+  margin-bottom: 26px;
+  min-height: 78px;
+  padding: 0 13px 0;
+  position: relative;
+}
+.acm-menu .style-3 .dish-item .item-inner .dish-name {
+  font-size: 20px;
+  margin: 0 0 6.5px;
+  padding: 13px 0 0 0;
+}
+.acm-menu .style-3 .dish-item .item-inner .dish-image {
+  background: #ecf0f1;
+  display: block;
+  float: left;
+  height: 78px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 78px;
+}
+.acm-menu .style-3 .dish-item .item-inner .dish-image img {
+  width: 100%;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.acm-menu .style-3 .dish-item .item-inner .dish-price {
+  font-size: 24px;
+  line-height: 1;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+}
+.acm-menu .style-3 .dish-item .item-inner .dish-description {
+  font-size: 14px;
+}
+.acm-menu .style-3 .dish-item .item-inner:hover .dish-name {
+  color: #039be5;
+}
+.acm-menu .style-3 .dish-item .item-inner:hover .dish-image img {
+  transform: scale(1.2);
+}
+.acm-menu .style-3 .dish-item.has-image .item-inner {
+  padding: 0 0 0 91px;
+}

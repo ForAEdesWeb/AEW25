@@ -1,0 +1,21 @@
+{
+	"register" : {
+		"pattern": "registration",
+		"view" : "registration"
+	},
+
+	"user": {
+		"pattern": "user",
+		"view" : "user"
+	},
+
+	"user_layout": {
+		"pattern": ":layout/:id",
+		"view" : "user"
+	},
+
+	"user_id": {
+		"pattern": ":id",
+		"view" : "user"
+	}
+}

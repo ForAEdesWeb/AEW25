@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+  <name>COM_M2C</name>
+  <creationDate>21-Jun-2013</creationDate>
+  <author>Douglas Machado</author>
+  <authorEmail>admin@fok.com.br</authorEmail>
+  <authorUrl>http://idealextensions.com</authorUrl>
+  <copyright>2006 - 2013 - Ideal Extensions for Joomla - All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>3.0</version>
+  <description>Module to Component - Loads a Module position in the component area of the site (template)</description>
+  <scriptfile/>
+  <install>
+    <sql/>
+  </install>
+  <uninstall>
+    <sql/>
+  </uninstall>
+  <update>
+    <schemas/>
+  </update>
+  <files folder="site">
+    <folder>language</folder>
+    <folder>models</folder>
+    <folder>views</folder>
+    <filename>controller.php</filename>
+    <filename>index.html</filename>
+    <filename>m2c.php</filename>
+  </files>
+  <administration>
+    <menu img="../media/com_m2c/images/com_m2c-16x16.png">M2C</menu>
+    <files folder="admin">
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>language</folder>
+      <folder>models</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>index.html</filename>
+      <filename>m2c.php</filename>
+    </files>
+  </administration>
+  <media destination="com_m2c" folder="media">
+    <folder>images</folder>
+    <filename>index.html</filename>
+  </media>
+</extension>

@@ -1,0 +1,100 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// CONTAINER TABS
+// ------------------
+.acm-container-tabs {
+  padding: @t3-global-padding*3 0;
+
+  .container-tabs-nav {
+    margin-bottom: @t3-global-padding;
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-small;
+    text-transform: uppercase;
+
+    .nav-tabs {
+      border: 0;
+
+      li {
+        width: 100%;
+
+        @media (min-width: @screen-xs) {
+          margin-right: @t3-global-margin;
+          width: auto;
+        }
+
+        a {
+          border: 0;
+          border-bottom: 2px solid @gray-darker;
+          color: @gray-darker;
+          font-weight: @font-weight-bold;
+          outline: none;
+          letter-spacing: 1px;
+          margin: 0;
+          padding-left: 0;
+          padding-right: 0;
+          position: relative;
+
+          @media (min-width: @screen-sm) {
+            border: 0;
+          }
+
+          &:after {
+            background: @gray-darker;
+            bottom: -2px;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 0;
+            position: absolute;
+            width: 0px;
+            .transition(width 0.35s);
+          }
+
+          &:hover,&:focus,&:active {
+            background-color: transparent;
+
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+        
+        &.active a {
+          background: transparent;
+          border-bottom: 2px solid @brand-primary;
+          color: @brand-primary;
+
+          &:after {
+            display: none;
+          }
+        }  
+      }      
+    }
+  }
+
+  .tab-content {
+    .width25 {
+      width: 100%;
+      @media screen and (min-width: @screen-sm) {
+        width: 25%;
+      }
+    }
+  }
+
+  .tab-pane {
+  	.section-inner {
+  		padding: (@t3-global-padding * 3) 0 0;
+  	}
+  }
+}
+
+
+// Import Styles Less
+@import "style-2.less";

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>com_modulesmanagerck</name>
+	<creationDate>April 2013</creationDate>
+	<copyright>Copyright (C) 2013. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<author>Cedric Keiflin</author>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>1.0.1</version>
+	<description>COM_MODULESMANAGERCK_DESC</description>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>modulesmanagerck.php</filename>
+		<filename>controller.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_modulesmanagerck.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.com_modulesmanagerck.ini</language>
+	</languages>
+	<administration>
+		<menu img="components/com_modulesmanagerck/images/logo_modulesmanagerck_16.png">COM_MODULESMANAGERCK</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>modulesmanagerck.php</filename>
+			<filename>controller.php</filename>
+			<folder>language</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_modulesmanagerck.ini</language>
+			<language tag="fr-FR">language/fr-FR/fr-FR.com_modulesmanagerck.ini</language>
+		</languages>
+	</administration>
+</extension>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Cta Style 1</title>
+  <sampledata><![CDATA[
+        {":type":"uber:cta","cta":{"jatools-layout-cta":"style-1","cta[block-intro]":["Choose an option that suits your needs. 100% satisfaction guaranteed. "],"cta[block-extra-class]":[" text-center section-primary"],"cta[img]":[""],"cta[animation]":["fade"],"cta[animation_speed]":["0"],"cta[data]":{"cta[data][button]":["Sign Up Today"],"cta[data][link]":["index.php?option=com_users&view=registration&Itemid=551"],"cta[data][button_class]":[" btn-rounded btn-rounded-inverse btn-lg open-login-modal sign-up"],"rows":1,"cols":4,"type":"list"}}}
+    ]]></sampledata>
+  <fields name="cta">
+    <fieldset name="basic" label="CTA_BASIC_LABEL" description="CTA_BASIC_DESC" multiple="0">
+      <field name="img" type="media" default="" label="CTA_IMG_LABEL" description="CTA_IMG_DESC" />
+      <field name="acm-style" type="list" default="style-light"
+        global="1"
+        label="ACM_STYLE_LABEL"
+        description="ACM_STYLE_DESC">
+        <option value="style-light">LAYOUT_STYLE_LIGHT</option>
+        <option value="style-dark">LAYOUT_STYLE_DARK</option>
+      </field>
+
+      <field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+        <option value="0" class="off">JNO</option>
+        <option value="1" class="on">JYES</option>
+      </field>
+      <field name="columns" type="list" label="ACM_COLUMNS_LABEL" description="ACM_COLUMNS_DESC">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="6">6</option>
+        <option value="12">12</option>
+      </field>
+    </fieldset>
+
+    <fieldset name="button" label="CTA_BUTTON_SETTING_LABEL" description="CTA_BUTTON_SETTING_DESC">
+    <field name="data" type="jalist">
+      <item name="button" type="text" default="" label="CTA_BUTTON_LABEL" description="CTA_BUTTON_DESC" required="1" />
+      <item name="link" type="text" default="" label="CTA_LINK_LABEL" description="CTA_LINK_DESC" required="1" />
+      <item name="button_class" type="text" default="" label="CTA_BUTTON_CLASS_LABEL" description="CTA_BUTTON_CLASS_DESC" />
+    </field>
+    </fieldset>   
+         
+  </fields>
+</form>

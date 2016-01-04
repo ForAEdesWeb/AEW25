@@ -1,0 +1,101 @@
+// -------------------------------
+// MENU STYLE 1
+// -------------------------------
+.acm-event {
+  .style-1 {
+    .clearfix();
+
+    .row {
+      @media (min-width: @screen-sm ) {
+        margin-bottom: @t3-global-margin * 1.5;  
+      }      
+    }
+
+    .event-item {
+      margin-bottom: @t3-global-margin * 1.5;
+
+      @media (min-width: @screen-sm ) {
+        margin-bottom: 0;
+      }      
+      
+
+      .item-inner {
+        min-height: 70px;
+        padding-left: 85px;
+        position: relative;
+        .clearfix();
+
+        .event-datetime {
+          border: 3px solid lighten(@gray-light, 25%);
+          float: left;
+          left: 0;
+          padding: (@t3-global-padding / 4) (@t3-global-padding / 2);
+          position: absolute;
+          text-align: center;
+          top: 0;
+
+          .date {
+            color: @brand-primary;
+            display: block;
+            font-size: @font-size-base * 2;
+            font-weight: @font-weight-bold;
+            line-height: 1;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+          }
+
+          .month {
+            background: lighten(@gray-light, 25%);
+            color: @gray-darker;
+            display: block;
+            font-size: @font-size-small - 2;
+            margin-top: -5px;
+            line-height: 1;
+            letter-spacing: 2px;
+            padding: 6px 0 3px;
+            margin: 0 -(@t3-global-padding / 2) -(@t3-global-padding / 4);
+            text-transform: uppercase;
+          }
+
+          &:before, &:after {
+            background: lighten(@gray-light, 25%);
+            content: "";
+            display: block;
+            height: 5px;
+            left: 10px;
+            position: absolute;
+            top: -6px;
+            width: 5px;
+          }
+
+          &:after {
+            left: auto;
+            right: 10px;
+          }
+        }
+
+        h4 {
+          margin: 0 0 (@t3-global-margin / 4);
+          font-size: @font-size-base;
+          @media (min-width: @screen-sm) {
+            font-size: @font-size-large;  
+          }        
+
+          a {
+            color: @gray-dark;
+
+            &:hover, &:focus, &:active {
+              color: @link-hover-color;
+            }
+          }
+        }
+
+        .event-description {
+        }
+      }
+
+    }
+
+
+  }
+}

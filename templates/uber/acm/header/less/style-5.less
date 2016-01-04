@@ -1,0 +1,176 @@
+.uber-header {
+	&.header-5 {
+		height: 100px;
+		padding-top: @t3-global-padding;
+		padding-bottom: @t3-global-padding;
+		border-bottom: 1px solid @black;
+
+		&.dark-color {
+			background-color: @gray-darker;
+
+			// Logo
+	    .logo {
+	      border-right: 0;
+	      .transition(all 0.2s);
+
+	      .logo-text {
+	        padding-left: 0;
+	        padding-right: @grid-gutter-width;
+	        .transition(all 0.2s);
+	      }
+
+	      .logo-text > a {
+	        color: @gray-lightest;
+	      }
+
+	      .logo-image a {
+	      	// Control screen mobile
+	      	@media screen and (max-width: @screen-xs-max) {
+	      		text-align: left;
+	      	}
+	      }
+	    }
+
+	    // Navigation
+	    .navbar-collapse {
+	    	border-top: 0;
+	    }   
+
+	    .navbar-default .navbar-toggle {
+	    	border: 0;
+	    	background: none;
+
+	    	&:hover, &:focus, &:active {
+				border: 0;
+	    		background: none;	    		
+	    		color: @white;
+	    	}
+	    }
+
+	    .navbar-default .t3-navbar-collapse .navbar-nav > li > a {
+	    	padding-left: @t3-global-padding;
+	    }
+	    
+	    .navbar-default .navbar-nav {
+	      > li {
+	        border-right: 0;
+	        .transition(all 0.2s);
+
+	        > a {
+	          text-transform: none;
+	          padding-left: 0;
+	          padding-right: @t3-global-padding * 2;
+	          font-weight: @font-weight-bold;
+	          .transition(all 0.2s);
+
+	          &:hover,
+	          &:focus {
+	            color: @brand-primary;
+	            background: none;
+	          }
+	        }
+
+	        > .nav-header {
+	        }
+	      }
+
+	      > .open > a {
+	        &,
+	        &:hover,
+	        &:focus {
+	          border: 0;
+	          color: @brand-primary;
+	          background: none;
+	        }
+	      }
+
+	      > .active > a {
+	        &,
+	        &:hover,
+	        &:focus {
+	          color: @brand-primary;
+	          background: none;
+	        }
+	      }
+
+	      .dropdown-menu {
+	      	border: 0;
+	      }
+	    }
+
+	    // Navigation right
+	    .site-navigation-right {
+	    	padding-right: @grid-gutter-width/2;
+
+	    	// Control screen tablet
+	    	@media screen and (max-width: @screen-md-max) {
+	    		padding-right: @t3-global-padding * 2;
+	    	}
+
+	    	// Control screen mobile
+	    	@media screen and (max-width: @screen-xs-max) {
+	    		padding-right: @grid-gutter-width * 0.75;
+	    	}
+
+	      .off-canvas-toggle {
+	        border: 0;
+	        text-transform: none;
+	        font-weight: @font-weight-bold;
+	        position: absolute;
+	        right: 0;
+
+	        @media (max-width: @screen-sm-max) {
+        		right: @grid-gutter-width/4;
+      		}
+
+	        span {
+	        	display: none;
+	        }
+
+	        .fa {
+	        	margin-left: 0;
+	        }
+
+	        &:hover, &:focus, &:active {
+	          color: @brand-primary;
+	          background: transparent;
+	        }
+	      }
+
+	      .right-menu {
+	        ul li {
+	          > a {
+	            border: 0;
+	            text-transform: none;
+	          	font-weight: @font-weight-bold;
+	          	background: @brand-secondary;
+	          	padding: @t3-global-padding/2 @t3-global-padding;
+	          	color: @white;
+	          	height: auto;
+	          	line-height: 1;
+	          	border-radius: 2px;
+
+	            &:hover, &:focus {
+	              background: darken(@brand-secondary, 10%);
+	              color: @white;
+	            }
+
+	            &.head-login:after {
+	            	top: 11px;
+	            	color: @white;
+	            	left: 20px;
+	            }
+	          }
+
+	          &.active > a {
+	            &, &:hover {
+	              background: darken(@brand-secondary, 10%);
+	              color: @white;
+	            }
+	          }
+	        }
+	      }
+	    }
+		}
+	}
+}

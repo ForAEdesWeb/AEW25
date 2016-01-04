@@ -1,0 +1,454 @@
+/**
+ * @name		Modules Manager CK
+ * @package		com_modulesmanagerck
+ * @copyright	Copyright (C) 2013. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @author		Cedric Keiflin - http://www.template-creator.com - http://www.joomlack.fr
+ */
+
+.clr {
+	clear : both;
+}
+
+.clearfix:after {
+    content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	font-size: 0;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+html, body {
+	height: inherit !important;
+}
+
+.ckmodule {
+	background: #fff;
+	border: #ccc 1px dotted;
+	margin: 5px 0 0 0;
+	padding: 5px;
+	font-family: Segoe UI !important;
+	font-size: 1em !important;
+	line-height: 1.3em;
+	position:relative;
+	z-index: 100;
+}
+
+.ckmodule .ckhandler {
+	float: left;
+	width: 20px;
+	height: 20px;
+	cursor: move;
+	background: url("../images/move.png") center center no-repeat;
+}
+
+.cktitle {
+	float: left;
+	margin: 0 0 0 5px;
+}
+
+.cktitle input {
+	max-width: 100px;
+	padding: 2px;
+}
+
+.ckcount, .ckid {
+	float: right;
+}
+
+.ckid {
+	font-size: 0.8em;
+	margin: 0 2px;
+	color: #336699;
+}
+
+.cktype {
+	clear: both;
+	float: left;
+	font-size: 10px;
+	margin: 0 2px;
+	color: #919191;
+}
+
+.ckcontrols {
+	float: right;
+}
+
+.ckcontrols > div {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.ckremove {
+	/*float: right;*/
+	font-size: 16px;
+	/*margin: 0 2px;*/
+	color: #919191;
+	line-height: 0.6em;
+	cursor: pointer;
+	background: url("../images/cancel.png") center center no-repeat;
+}
+
+.ckremove:hover {
+	color: #d7391f;
+	background: url("../images/cancel_hover.png") center center no-repeat;
+}
+
+/*.ckcount {
+	padding: 0px 3px 3px 3px;
+	margin: 0 2px;
+	border-radius: 3px;
+	background: #c3c3c3;
+	color: #fff;
+	text-shadow: #888 1px 0px 1px;
+}*/
+
+.ckoptions {
+	/*float: right;*/
+	/*width: 14px;
+	height: 14px;*/
+	background: #e7e7e7;
+	/*margin: 4px;
+	padding: 0;*/
+	cursor: pointer;
+	background: url("../images/tool.png") center center no-repeat;
+}
+
+.ckoptions:hover {
+	background: url("../images/tool_hover.png") center center no-repeat;
+}
+
+.ckpublish {
+	/*float: right;*/
+	/*width: 16px;
+	height: 16px;*/
+	background: #e7e7e7;
+	/*margin: 4px;
+	padding: 0;*/
+	cursor: pointer;
+	background: url("../images/tick.png") center center no-repeat;
+}
+
+.ckmodule[ckpublished="0"] .ckpublish {
+	background: url("../images/publish_x.png") center center no-repeat;
+}
+
+.ckmodule.ckwait .ckpublish {
+	background: url(../images/mini-loader.gif) center center no-repeat !important;
+}
+
+.options_description {
+	float: left;
+	width: 50%;
+	/*margin: 10px 5%;*/
+}
+
+.options_description h4, .options_description hr {
+	margin: 10px 0;
+}
+
+.options_description span.label {
+	color: #336699;
+}
+
+.options_description h4 span.label {
+	float: right;
+	font-weight: normal;
+}
+
+.options_details {
+	float: left;
+	width: 50%;
+	/*margin: 10px 5%;*/
+}
+
+.ckmodules {
+	padding: 5px;
+	border: 1px solid #ccc;
+	background: #fff;
+	font-family: Segoe UI !important;
+	font-size: 13px !important;
+	line-height: 13px;
+}
+
+.ckmodulesinner {
+	min-height: 30px;
+	padding:3px;
+	max-width:250px;
+}
+
+#ckoverlay {
+    position: absolute;
+	z-index: 1000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+	opacity: 0.7;
+	display: none;
+}
+
+#moduleeditor {
+	position: relative;
+	width: 100%;
+}
+
+#moduleeditor input[type=text], #moduleeditor select {
+	color: #333;
+	border: 1px solid #bbb;
+	padding: 4px;
+	min-width: 150px;
+}
+
+#moduleeditor input[type=radio] + label {
+	padding: 5px;
+}
+
+
+#moduleeditor .control-label {
+	font-weight:bold;
+	float: left;
+	width: 180px;
+	text-align: left;
+}
+
+.control-group {
+	padding:5px;
+}
+
+/* for main tabs */
+.optionslinks {
+	height: 50px;
+	background: #333;
+	background-image: linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 67%);
+	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 67%);
+	background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 67%);
+	background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 67%);
+	background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 0%, rgb(51,51,51) 67%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(0,0,0)),
+		color-stop(0.67, rgb(51,51,51))
+		);
+	border: 1px solid #666;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+}
+
+.optionslink {
+	height: 50px;
+	float: left;
+	color: #f4f4f4;
+	font-size: 1.2em;
+	line-height: 2.8em;
+	padding: 0 20px;
+	cursor: pointer;
+	border-right: 1px solid #444;
+	-webkit-box-shadow: 3px 0px 2px -2px #000;
+	-moz-box-shadow: 3px 0px 2px -2px #000;
+	box-shadow: 3px 0px 2px -2px #000;
+}
+
+.optionslink:hover, .optionslink.current {
+	color: #B0CBE5;
+}
+
+.optionstabs {
+	padding: 15px 2%;
+}
+
+/* for options tab */
+.optionlinkbar {
+	border-bottom: 1px solid #333;
+}
+
+.optionlink {
+	float: left;
+	color: #919191;
+	font-size: 1em;
+	line-height: 2.8em;
+	padding: 0 10px;
+	cursor: pointer;
+	border-right: 1px solid transparent;
+}
+
+.optionlink:hover, .optionlink.current {
+	background: #333;
+	color: #fff;
+	border-right: 1px solid #444;
+}
+
+/* for sortable ui */
+.ui-sortable-placeholder {
+	background: #B0CBE5 !important;
+	visibility: visible !important;
+}
+
+.ckmoduledrag {
+	background: #f1f1f1 !important;
+}
+
+.ckmodulescontrols {
+	padding: 3px;
+	min-height: 20px;
+	background: #336699;
+	color: #fff;
+}
+
+.ckmodulescontrolposition {
+	float: left;
+	font-size: 13px !important;
+	line-height: 15px !important;
+}
+
+.ckmodulescontroladd {
+	float: right;
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	font-size: 25px !important;
+	line-height:13px !important;
+	text-align: center;
+}
+
+.ckmodulescontroladd:hover {
+	cursor: pointer;
+	background: #B0CBE5;
+}
+
+.cktooltip
+{
+	font-size: 12px !important;
+	text-align: left !important;
+	padding: 8px !important;
+	max-width: 200px;
+	background: #111 !important;
+	opacity: 0.9 !important;
+	color: #fff !important;
+	border-radius: 5px !important;
+	z-index: 100000 !important;
+	left: 0;
+}
+
+.popover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1010;
+	display: none;
+	width: 236px;
+	padding: 3px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.2);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	background: #111;
+	opacity: 0.9;
+	color: #fff;
+	border-radius: 5px;
+}
+
+#ckmoduleslist {
+	position: absolute;
+	z-index: 1000000;
+	display: none;
+	top: 0;
+	left: 0;
+	background: #fff;
+	width: 96%;
+	margin: 0;
+	padding: 0 2%;
+	border-bottom: 1px solid #aaa;
+	text-align: left;
+	/*-webkit-box-shadow: 0 0px 10px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 0px 10px rgba(0,0,0,0.5);
+	box-shadow: 0 0px 10px rgba(0,0,0,0.5);*/
+}
+
+#ckmoduleslistclose {
+	float: right;
+	margin: 10px;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#ckmoduleoptions {
+	position: absolute;
+	z-index: 1000000;
+	display: none;
+	top: 0;
+	left: 0;
+	background: #fff;
+	width: 96%;
+	margin: 0;
+	padding: 0 2%;
+	border-bottom: 1px solid #aaa;
+}
+
+#ckmessagebox {
+	position: fixed;
+	z-index: 1000000;
+	display: none;
+	top: 10px;
+	right: 10px;
+	background: #fff;
+	width: 200px;
+	min-height: 50px;
+	margin: 0;
+	padding: 5px 5px 5px 50px;
+	-webkit-box-shadow: 0 0px 10px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 0px 10px rgba(0,0,0,0.5);
+	box-shadow: 0 0px 10px rgba(0,0,0,0.5);
+	line-height: 2.5em;
+	font-size: 1.5em;
+}
+
+#ckmessagebox.ckwait {
+	background: #fff url("../images/ajax-loader.gif") 15px center no-repeat;
+}
+
+#ckmessagebox.cksuccess {
+	background: #fff url("../images/success.png") 15px center no-repeat;
+}
+
+#ckmessagebox.ckerror {
+	background: #fff url("../images/error.png") 15px center no-repeat;
+}
+
+/* ---------- overlay -----------*/
+#ckmodulesoverlay {
+	position: absolute;
+	background: rgba(255,0,255, 0.5);
+	width: 100%;
+	height: 101%;
+	top: 0;
+	left: 0;
+}
+
+/** beez3 override **/
+#contentarea, #contentarea2, #header {
+	overflow: visible !important;
+}

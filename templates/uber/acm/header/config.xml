@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Header</title>
+    <sampledata><![CDATA[
+        {"jatools-layout-header":["style-6"],"header[header-background]":["dark-color"],"header[enable-sticky]":["0"],"header[full-width]":["0"],"header[header-hero-position]":["header-3"],"header[logo-image]":["images/joomlart/uber/logo/logo-2.png"]}
+    ]]></sampledata>
+    <fields name="header">
+        <fieldset name="basic" label="ACM_HEADER_BASIC_LABEL" description="ACM_HEADER_BASIC_DESC">
+        	<field name="header-background" type="list" default="dark-color"
+						 global="1"
+						 label="HEADER_BACKGROUND_LABEL"
+						 description="HEADER_BACKGROUND_DESC"
+						 layouts="style-1, style-2">
+						<option value="dark-color">DARK_COLOR</option>
+						<option value="light-color">LIGHT_COLOR</option>
+						<option value="highlight-color">HIGHLIGHT_COLOR</option>
+					</field>
+					
+					<field name="enable-sticky" type="radio" default="0" label="ACM_ENABLE_STICKY_LABEL" description="ACM_ENABLE_STICKY_DESC" >
+		      	<option value="0" class="off">JNO</option>
+						<option value="1" class="on">JYES</option>
+		      </field>
+		      
+		      <field name="full-width" type="radio" default="0" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+		      	<option value="0" class="off">JNO</option>
+						<option value="1" class="on">JYES</option>
+		      </field>
+		      
+		      <field name="header-hero-position" type="moduleposition"    
+					        description="HEADER_HERO_POSITION_DESC"
+					        label="HEADER_HERO_POSITION_LABEL"
+					        default=""/>
+					<field name="logo-image" type="media" default="" label="T3_THEME_LOGOIMAGE_LABEL" description="T3_THEME_LOGOIMAGE_DESC" ></field>
+        </fieldset>
+        
+        <fieldset name="menu-items" label="MENU_ITEM_LABEL" description="MENU_ITEM_DESC" layouts="style-8">
+		    	<field name="data" type="jalist">
+						<item name="menu-name" type="text" default="" label="MENU_ITEM_NAME_LABEL" description="MENU_ITEM_NAME_DESC" required="1" />
+						<item name="menu-link" size="50"  type="text" default="" label="MODULE_LINK_LABEL" description="MODULE_LINK_DESC" />
+						<item name="module-id" size="50"  type="text" default="" label="MODULE_ID_LABEL" description="MODULE_ID_DESC" />
+					</field>
+		    </fieldset>
+    </fields>
+</form>

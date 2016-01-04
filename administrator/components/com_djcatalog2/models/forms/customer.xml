@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+		<fieldset label="COM_DJCATALOG2_USER_PROFILE">
+		    <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" 
+				readonly="true" class="readonly" />
+		    
+		    <field
+				name="firstname"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_FIRSTNAME"
+				class="inputbox input"
+				required="true"
+			/>
+			<field
+				name="lastname"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_LASTNAME"
+				class="inputbox input"
+				required="true"
+			/>
+			<field
+				name="company"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_COMPANY"
+				class="inputbox input"
+			/>
+			
+			<field
+				name="position"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_POSITION"
+				class="inputbox input"
+			/>
+			
+			<field
+				name="address"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_ADDRESS"
+				class="inputbox input"
+			/>
+			<field
+				name="city"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_CITY"
+				class="inputbox input"
+			/>
+			<field
+				name="postcode"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_POSTCODE"
+				class="inputbox input"
+			/>
+			
+			<field name="country_id"
+			    type="sql"
+			    default=""
+			    query="SELECT '' as id, '' as country_name, 1 as is_default UNION SELECT id, country_name, is_default FROM #__djc2_countries ORDER BY is_default DESC, country_name ASC"
+			    label="COM_DJCATALOG2_UP_COUNTRY"
+			    key_field="id" value_field="country_name"
+			    class="inputbox input"
+			/>
+			<field
+				name="vat_id"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_VATID"
+				class="inputbox input"
+			/>
+			<field
+				name="phone"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_PHONE"
+				class="inputbox input"
+			/>
+			<field
+				name="fax"
+				type="text"
+				filter="string"
+				label="COM_DJCATALOG2_UP_FAX"
+				class="inputbox input"
+			/>
+			<field
+				name="www"
+				type="text"
+				label="COM_DJCATALOG2_UP_WWW"
+				class="inputbox input"
+				filter="url"
+			/>
+			<field name="customer_group_id"
+			    type="sql"
+			    default=""
+			    query="SELECT id, name FROM #__djc2_customer_groups ORDER BY is_default desc, name asc"
+			    label="COM_DJCATALOG2_UP_CUSTOMERGROUP"
+			    key_field="id" value_field="name"
+			    class="inputbox input"
+			/>
+			<!-- <field name="client_type" type="list" default="R" label="COM_DJCATALOG2_UP_CLIENT_TYPE">
+			    <option value="R">COM_DJCATALOG2_TAX_RULE_CLIENT_TYPE_R</option>
+			    <option value="W">COM_DJCATALOG2_TAX_RULE_CLIENT_TYPE_W</option>
+			</field>
+			 -->
+			 
+			<field name="user_id" type="user" default=""
+			label="COM_DJCATALOG2_JUSER_ID" description="COM_DJCATALOG2_JUSER_ID_DESC" required="true" />
+		</fieldset>
+</form>

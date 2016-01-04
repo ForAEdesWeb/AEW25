@@ -1,0 +1,170 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Slideshow Lite Module for J25 & J3.2
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+ */
+
+
+
+.ja-ss-item.animate {
+	z-index: 15;
+}
+.ja-ss-item.animate.curr {
+	z-index: 16;
+}
+/* slide */
+.slide .ja-ss-item {
+	-ms-transition: left 0.9s;
+}
+/* reset */
+.slide .ja-ss-item {
+	left: auto;
+}
+/* use for animate.htc */
+.slide .ja-ss-item.curr {
+	-ms-left: 0;
+}
+.slide .ja-ss-item.next {
+	-ms-left: 100%;
+}
+.slide .ja-ss-item.prev {
+	-ms-left: -100%;
+}
+
+/* fade */
+.fade .ja-ss-item {
+	-ms-transition: opacity 0.9s;
+}
+/* reset */
+.fade .ja-ss-item, 
+.fade .ja-ss-item.curr, 
+.fade .ja-ss-item.prev, 
+.fade .ja-ss-item.next {
+	opacity: 1;
+}
+/* use for animate.htc */
+.fade .ja-ss-item.curr {
+	-ms-opacity: 1;
+}
+.fade .ja-ss-item {
+	-ms-opacity: 0;
+}
+
+/*
+Backward compactible
+------------------------------------------------------------------*/
+.vrotate .ja-ss-item,
+.hrotate .ja-ss-item,
+.crotate .ja-ss-item {
+	-ms-transition: opacity 0.9s;
+}
+/* reset */
+.vrotate .ja-ss-item, 
+.vrotate .ja-ss-item.curr, 
+.vrotate .ja-ss-item.prev, 
+.vrotate .ja-ss-item.next,
+.hrotate .ja-ss-item, 
+.hrotate .ja-ss-item.curr, 
+.hrotate .ja-ss-item.prev, 
+.hrotate .ja-ss-item.next,
+.crotate .ja-ss-item, 
+.crotate .ja-ss-item.curr, 
+.crotate .ja-ss-item.prev, 
+.crotate .ja-ss-item.next {
+	opacity: 1;
+}
+/* use for animate.htc */
+.vrotate .ja-ss-item.curr,
+.hrotate .ja-ss-item.curr,
+.crotate .ja-ss-item.curr {
+	-ms-opacity: 1;
+}
+.vrotate .ja-ss-item,
+.hrotate .ja-ss-item,
+.crotate .ja-ss-item {
+	-ms-opacity: 0;
+}
+
+
+/*
+Backward compactible
+------------------------------------------------------------------*/
+.custom .ja-ss-item {
+	-ms-transition: opacity 1s;
+}
+/* reset */
+.custom .ja-ss-item, 
+.custom .ja-ss-item.curr, 
+.custom .ja-ss-item.prev, 
+.custom .ja-ss-item.next,
+.custom .ja-ss-sprite,
+.custom .ja-ss-desc {
+	opacity: 1;
+}
+/* use for animate.htc */
+.custom .ja-ss-item.curr {
+	-ms-opacity: 1;
+}
+.custom .ja-ss-item {
+	-ms-opacity: 0;
+}
+
+.custom .ja-ss-item.animate.active {
+	-ms-transition-delay: 400ms;
+}
+
+.custom .ja-ss-items .ja-ss-item {
+	left: -200%;
+	top: 0;
+}
+
+.custom .ja-ss-item.animate {
+	left: 0 !important;
+	top: 0;
+}
+
+.custom .ja-ss-item.animate .first {
+	left: 45% !important;
+	bottom: -30px !important;
+}
+.custom .ja-ss-item.animate .second {
+	left: 63% !important;
+	bottom: -30px !important;
+}
+
+.custom .ja-ss-desc.animate {
+	left: 20% !important;
+}
+
+/* .custom .ja-ss-item img {
+	filter: inherit;
+} */
+
+.delay500  {	-ms-transition-delay: 500ms; }
+.delay1000 {	-ms-transition-delay: 1000ms; }
+.delay1500 {	-ms-transition-delay: 1500ms; }
+.delay2000 {	-ms-transition-delay: 2000ms; }
+.delay2500 {	-ms-transition-delay: 2500ms; }
+.delay3000 {	-ms-transition-delay: 3000ms; }
+.delay3500 {	-ms-transition-delay: 3500ms; }
+.delay4000 {	-ms-transition-delay: 4000ms; }
+.delay4500 {	-ms-transition-delay: 4500ms; }
+.delay5000 {	-ms-transition-delay: 5000ms; }
+.delay5500 {	-ms-transition-delay: 5500ms; }
+.delay6000 {	-ms-transition-delay: 6000ms; }
+.delay6500 {	-ms-transition-delay: 6500ms; }
+.delay7000 {	-ms-transition-delay: 7000ms; }
+.delay7500 {	-ms-transition-delay: 7500ms; }
+.delay8000 {	-ms-transition-delay: 8000ms; }
+.delay8500 {	-ms-transition-delay: 8500ms; }
+.delay9000 {	-ms-transition-delay: 9000ms; }
+.delay9500 {	-ms-transition-delay: 9500ms; }
+.delay10000 {	-ms-transition-delay: 10000ms; }
+.delay10500 {	-ms-transition-delay: 10500ms; }
+.delay11000 {	-ms-transition-delay: 11000ms; }
+.delay11500 {	-ms-transition-delay: 11500ms; }

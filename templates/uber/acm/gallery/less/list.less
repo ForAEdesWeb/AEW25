@@ -1,0 +1,139 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+ .gallery-category {
+  margin-left: -@t3-global-margin/2;
+  margin-right: -@t3-global-margin/2;
+ }
+
+.filter {
+  padding: 0;
+  margin: @t3-global-margin 0;
+  li {
+    display: inline-block;
+
+    @media screen and (max-width: @screen-xs) {
+      display: block;
+    }
+    a {
+      text-transform: uppercase;
+      font-size: @t3-font-size-small;
+      padding: 5px @t3-global-padding;
+      color: @gray-darker;
+
+      @media screen and (max-width: @screen-xs) { 
+        display: block;
+        border-bottom: 1px solid @t3-border-color;
+      }
+    }
+    &:hover,
+    &:focus,
+    &.active {
+      a {
+        color: @link-color;
+      }
+    }
+  }
+}
+
+.row-gallery {
+  .clearfix();
+}
+
+
+
+.gallery-item {
+  margin-bottom: @t3-global-margin;
+  position: relative;
+
+  .btn-play {
+    position: absolute;
+    padding: @t3-global-padding;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .photo-media {
+    img {
+      .transition(all .2s linear);
+      -webkit-backface-visibility: hidden;
+      width: 100%;
+    }
+  }
+
+  .photo-main {
+    padding: @t3-global-padding;
+    background: @gray-lightest;
+    .post-title,
+    .category-name {
+      margin: 0;
+      text-transform: uppercase;
+      line-height: 1;
+
+      a {
+        color: @gray-darker;
+        font-size: @font-size-h4;
+
+        &:hover,
+        &:focus {
+          color: @link-color;
+        }
+      }
+
+      .fa {
+        display: none;
+      }
+    }
+
+    .post-title{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .category-name {
+      font-family: @headings-font-family;
+      a {
+        color: @gray-light;
+        font-size: @font-size-base;
+
+        &:hover,
+        &:focus {
+          color: @gray-darker;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .photo-media {
+      img {
+        .opacity(.8);
+      }
+    }
+  }
+}
+
+.blueimp-gallery {
+  .modal-content {
+    border-radius: 0;
+  }
+
+  .modal-footer,
+  .modal-header {
+    border: 0;
+  }
+}

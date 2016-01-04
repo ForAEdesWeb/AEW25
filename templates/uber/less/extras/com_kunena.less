@@ -1,0 +1,200 @@
+@import "../vars.less";
+
+// ---------------------------------------------------------
+// KUNENA COMPATIBLITY
+// ---------------------------------------------------------
+
+.com_kunena body #Kunena {
+
+  a {
+    color: @brand-primary !important;
+
+    &:hover, &:focus, &:active {
+      color: @black !important;
+      text-decoration: none;
+    }
+  }
+
+  .kwho-admin,
+  .kwho-admin:hover,
+  .kwho-admin:focus,
+  .kwho-admin:active {
+    color: #f00 !important;
+  }
+
+  .kwho-globalmoderator,
+  .kwho-globalmoderator:hover,
+  .kwho-globalmoderator:focus,
+  .kwho-globalmoderator:active {
+    color: #800000 !important
+  }
+
+  .kwho-moderator,
+  .kwho-globalmoderator:hover,
+  .kwho-globalmoderator:focus,
+  .kwho-globalmoderator:active {
+    color: #00f !important
+  }
+
+  .kwho-banned,
+  .kwho-banned:hover,
+  .kwho-banned:focus,
+  .kwho-banned:active {
+    color: #a39d49 !important
+  }
+
+  .kwho-user,
+  .kwho-user:hover,
+  .kwho-user:focus,
+  .kwho-user:active {
+    color: #5388b4 !important
+  }
+
+  .kwho-guest,
+  .kwho-guest:hover,
+  .kwho-guest:focus,
+  .kwho-guest:active {
+    color: #666 !important
+  }
+
+  #ktab ul.menu li a:hover,
+  #ktab ul.menu li a:focus{
+    background: @brand-primary !important;
+  }
+
+  #ktab ul.menu li.active a,
+  #ktab li#current.selected a{
+    background-color: @brand-primary !important;
+  }
+
+  #ktop {
+    border-bottom: 3px solid @brand-primary !important;
+  }
+
+
+  .kprofileboxcnt .k_guest b {
+    color: @brand-primary;
+  }
+
+  .button:hover,
+  .button:focus,
+  .button:active,
+  .kbutton:hover,
+  .kbutton:focus,
+  .kbutton:active,
+  #kbutton_addvideo1:hover,
+  #kbutton_addvideo1:focus,
+  #kbutton_addvideo1:active,
+  #kbutton_addvideo2:hover,
+  #kbutton_addvideo2:focus,
+  #kbutton_addvideo2:active,
+  #kbbcode-link-options input[type="button"]:hover,
+  #kbbcode-image-options input[type="button"]:hover{
+    background-color: @brand-primary;
+    border: solid 1px @brand-primary !important;
+  }
+
+  .ja-announcement-field #kanncreated_img{
+    background-color: @brand-primary;
+  }
+
+  .ja-announcement-field #kanncreated_img:hover{
+    background-color: @brand-primary;
+  }
+
+  .kbuttononline-yes span.online-yes{
+    color: @brand-primary;
+  }
+
+  .kbuttononline-yes span.online-yes span{
+    color: @brand-primary;
+  }
+
+  .kfile-input:hover,
+  .kfile-input:active,
+  .kfile-input:focus{
+    background: @brand-primary;
+  }
+
+  .kheader h2,
+  .kheader h3 {
+    background: @brand-primary;
+  }
+
+  .kblock div.kheader,div#Kunena div.kblock>div.kheader {
+    background: @gray-lighter !important; 
+  }
+
+  .kicon-button:hover span,
+  .kicon-button:focus span,
+  .kicon-button:active span {
+    color: @brand-primary;
+  }
+
+
+  .kpagination a:link,
+  .kpagination a:visited,
+  .kpagination a,
+  .kpagination span{
+    color: @brand-primary;
+  }
+
+  .kpagination a:hover,#Kunena .kpagination span{
+    background: @brand-primary;
+    border-color: @brand-primary;
+  }
+
+  .kwho-admin{
+    color: @brand-primary;
+  }
+
+  div#khistory tr.ksth a{
+    color: @brand-primary;
+  }
+
+  div.kthead-title a:hover,
+  div.kthead-title a:focus,
+  div.kthead-title a:active {
+    color: @brand-primary;
+  }
+
+  dl.tabs dt.open{
+    color: @brand-primary !important;
+  }
+
+  dl.tabs dt.open:hover,
+  dl.tabs dt.open:focus,
+  dl.tabs dt.open:active {
+    background: @white;
+    color: @brand-primary !important;
+  }
+
+  dl.tabs dt:hover{
+    background: @brand-primary;
+    border-color: @brand-primary;
+  }
+
+  span.kheadbtn a:hover{
+    background: @brand-primary !important;
+    border-color: @brand-primary !important;
+  }
+
+  table.kprofilebox .kprofileboxcnt .klink-block a:hover,
+  table.kprofilebox .kprofileboxcnt .klink-block a:focus,
+  table.kprofilebox .kprofileboxcnt .klink-block a:active{
+    color: @brand-primary;
+  }
+
+  .button:hover .kbutton-back {
+    color: @brand-primary;
+  }
+
+  .kforum-pathway .path-element, 
+  .kforum-pathway-bottom .path-element {
+    background: url("@{t3-image-sub-path}/system/arrow.png") no-repeat left center;
+  }
+
+  .kheader h2, .kheader h2 a, .kheader h3, .kheader h3 a {
+    color: @white !important;
+  }
+}

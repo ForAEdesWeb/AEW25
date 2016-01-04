@@ -1,0 +1,53 @@
+CREATE TABLE IF NOT EXISTS `#__userxtd_fields` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `asset_id` int(11) NOT NULL,
+  `catid` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `label` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `attrs` text NOT NULL,
+  `field_type` char(20) NOT NULL,
+  `required` int(1) NOT NULL,
+  `element` mediumtext NOT NULL,
+  `created` datetime NOT NULL,
+  `created_by` int(11) NOT NULL,
+  `modified` datetime NOT NULL,
+  `modified_by` int(11) NOT NULL,
+  `ordering` int(11) NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT '1',
+  `publish_up` datetime NOT NULL,
+  `publish_down` datetime NOT NULL,
+  `checked_out` int(11) NOT NULL,
+  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `access` int(10) unsigned NOT NULL,
+  `language` char(7) NOT NULL,
+  `params` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_access` (`access`),
+  KEY `idx_createdby` (`catid`),
+  KEY `idx_language` (`language`),
+  KEY `idx_checkout` (`checked_out`),
+  KEY `cat_index` (`published`,`access`,`catid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+
+CREATE TABLE IF NOT EXISTS `#__userxtd_profiles` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `key` varchar(255) NOT NULL,
+  `value` varchar(255) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  `ordering` int(11) NOT NULL,
+  `access` int(10) unsigned NOT NULL,
+  `language` char(7) NOT NULL,
+  `params` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_access` (`access`),
+  KEY `idx_language` (`language`),
+  KEY `cat_index` (`access`),
+  KEY `idx_value` (`value`),
+  KEY `user_id` (`user_id`),
+  KEY `key` (`key`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

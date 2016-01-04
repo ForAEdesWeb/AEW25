@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="plugin"
+	version="1.6.0"
+	client="site"
+	method="upgrade"
+	group="search">
+	<name>plg_search_djcatalog2</name>
+	<creationDate>January 2011</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>2.4</version>
+	<description>PLG_SEARCH_DJCATALOG2_DJPLGSEARCHDESC</description>
+	<files>
+		<filename plugin="djcatalog2">djcatalog2.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="search_limit" type="text" size="5" default="50" label="PLG_SEARCH_DJCATALOG2_SEARCHLIMIT" description="PLG_SEARCH_DJCATALOG2_SEARCHLIMIT_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DJCATALOG2_PRODUCER_VIEW">
+	</layout>
+	<fields name="request">
+		<fieldset name="request"
+		addfieldpath="/administrator/components/com_djcatalog2/models/fields"
+		 >
+			<field name="pid" type="djproducer" default="" label="COM_DJCATALOG2_PRODUCER" required="true" extension="com_djcatalog2"/>
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Teams</title>
+	<sampledata><![CDATA[	{"jatools-layout-teams":["default"],"team_about[number_col]":["4"],"team_about[full-width]":["0"],"team_about[member-image]":["images/joomlart/teams/mem-3.jpg","images/joomlart/teams/mem-4.jpg"],"team_about[member-slogan]":["",""],"team_about[member-desc]":["As a CEO, O'NEIL uses his 30 years of experience to bring everything and every together, at the right time. ","“Chris has been part of us since Day 1 and is a living breathing embodiment of our spirit. He is our product hero. "],"team_about[member-name]":["Dewey Hall","Lorenzo Pope"],"team_about[member-position]":["CEO, Co-Founder","Director"],"team_about[member-bg-color]":["",""],"team_about[member-link-icon1]":["fa fa-facebook",""],"team_about[member-link1]":["https://www.facebook.com/joomlart",""],"team_about[member-link-icon2]":["",""],"team_about[member-link2]":["",""],"team_about[member-link-icon3]":["",""],"team_about[member-link3]":["",""],"team_about[member-link-icon4]":["",""],"team_about[member-link4]":["",""],"team_about[member-link-icon5]":["",""],"team_about[member-link5]":["",""]}
+    ]]></sampledata>
+	<fields name="team_about">
+		<fieldset name="col" label="TEAM_COL_LABEL" description="TEAM_COL_DESC" >
+			<field name="block-intro" type="textarea" default="" rows="5" cols="40"  label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+      
+			<field name="number_col" type="list" label="TEAM_NUMBER_COL_LABEL" description="TEAM_NUMBER_COL_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</field>
+      <field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+      	<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+		</fieldset>
+		
+		<fieldset name="member_info" label="TEAM_MEMBER_INFO_LABEL" description="TEAM_MEMBER_INFO_DESC" multiple="1">
+			<field name="member-image" type="media" default="" label="TEAM_MEMBER_LABEL" description="TEAM_MEMBER_DESC"></field>
+			<field name="member-slogan" type="textarea" cols="40" rows="5" default="" label="TEAM_MEMBER_SLOGAN_LABEL" description="TEAM_MEMBER_SLOGAN_DESC" layouts="style-1, style-2"></field>
+      <field name="member-desc" type="textarea" cols="40" rows="5" default="" label="TEAM_MEMBER_TEXT_LABEL" description="TEAM_MEMBER_TEXT_DESC" layouts="style-2, style-4"></field>
+			<field name="member-name" type="text" size="40" default="" label="TEAM_MEMBER_NAME_LABEL" description="TEAM_MEMBER_NAME_DESC" required="1"></field>
+			<field name="member-position" type="text" size="40" default="" label="TEAM_MEMBER_POSITION_LABEL" description="TEAM_MEMBER_POSITION_DESC"></field>
+			<field name="member-bg-color" type="text" default="" label="TEAM_MEMBER_BG_COLOR_LABEL" description="TEAM_MEMBER_BG_COLOR_DESC" layouts="style-1"></field>
+      
+      <field name="member-link-icon1" type="text" default="" label="TEAM_MEMBER_LINK_ICON1_LABEL" description="TEAM_MEMBER_LINK_ICON1_DESC" layouts="style-4"></field>
+      <field name="member-link1" type="text" default="" label="TEAM_MEMBER_LINK1_LABEL" description="TEAM_MEMBER_LINK1_DESC" layouts="style-4"></field>
+      <field name="member-link-icon2" type="text" default="" label="TEAM_MEMBER_LINK_ICON2_LABEL" description="TEAM_MEMBER_LINK_ICON2_DESC" layouts="style-4"></field>
+      <field name="member-link2" type="text" default="" label="TEAM_MEMBER_LINK2_LABEL" description="TEAM_MEMBER_LINK2_DESC" layouts="style-4"></field>
+      <field name="member-link-icon3" type="text" default="" label="TEAM_MEMBER_LINK_ICON3_LABEL" description="TEAM_MEMBER_LINK_ICON3_LABEL" layouts="style-4"></field>
+      <field name="member-link3" type="text" default="" label="TEAM_MEMBER_LINK3_LABEL" description="TEAM_MEMBER_LINK3_LABEL" layouts="style-4"></field>
+      <field name="member-link-icon4" type="text" default="" label="TEAM_MEMBER_LINK_ICON4_LABEL" description="TEAM_MEMBER_LINK_ICON4_LABEL" layouts="style-4"></field>
+      <field name="member-link4" type="text" default="" label="TEAM_MEMBER_LINK4_LABEL" description="TEAM_MEMBER_LINK4_LABEL" layouts="style-4"></field>
+      <field name="member-link-icon5" type="text" default="" label="TEAM_MEMBER_LINK_ICON5_LABEL" description="TEAM_MEMBER_LINK_ICON5_LABEL" layouts="style-4"></field>
+      <field name="member-link5" type="text" default="" label="TEAM_MEMBER_LINK5_LABEL" description="TEAM_MEMBER_LINK5_LABEL" layouts="style-4"></field>
+		</fieldset>
+	</fields>
+</form>

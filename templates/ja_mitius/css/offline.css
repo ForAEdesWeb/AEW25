@@ -1,0 +1,254 @@
+/**
+ * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+@import url(../fonts/novecentowide1/stylesheet.css);
+
+body {
+	background: url(../images/body_bg.jpg) no-repeat center top black;
+	background-color: black;
+	color: #444444;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 0;
+	padding-top: 150px;
+}
+
+img {
+	border: 0 none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* -- id styles ------------------------------------- */
+
+#frame {
+	margin: 0px auto;
+	padding: 20px 20px 40px;
+	width: 55%;
+	max-width: 500px;
+}
+
+#frame form {
+	text-align: left;
+}
+
+/* -- class styles ---------------------------------- */
+
+.outline {
+	background: url(../images/bkg-offline.png) repeat left top;
+	border: 1px solid #222;
+	color: #fff;
+}
+
+.wrap-offline-message {
+	font-size: 14px;
+	text-align: center;
+}
+
+.wrap-offline-message h1 {
+	color: #fff;
+	display: block;
+	font-size: 36px;
+	line-height: normal;
+	margin: 0 0 10px;
+	padding: 0;
+	text-shadow: 1px 1px 0 #000;
+}
+
+.wrap-offline-message p {
+	color: #999;
+}
+
+/* -- form styles ----------------------------------- */
+#frame #form-login {
+	background: url(../images/bkg-offline.png) repeat left top;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
+	margin: 0 -20px;
+	padding: 20px;
+}
+
+form {
+	margin: auto;
+}
+
+form p {
+	margin: 0;
+	padding: 0;
+}
+
+form fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+label {
+	color: #666;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+form p {
+	margin-bottom: 15px;
+}
+
+form br {
+	display: none;
+}
+
+.wrap-input {
+	overflow: hidden;
+}
+
+#form-login-username,
+#form-login-remember {
+	float: left;
+}
+
+#form-login-password,
+input.button {
+	float: right;
+}
+
+#form-login-username input.inputbox,
+#form-login-password input.inputbox {
+	background: #151515;
+	border: 1px solid #2F2F2F;
+	border-radius: 0px  !important;
+	-webkit-border-radius: 0px !important;
+	color: #666666;
+	font-size: 13px;
+	height: 20px;
+	padding: 4px 6px;
+	width: 180px;
+}
+
+#form-login-username input.inputbox:focus,
+#form-login-password input.inputbox:focus {
+	border-color: #666;
+}
+
+#form-login-remember label {
+	display: inline;
+	font-weight: normal;
+	-webkit-border-radius: 0px !important;
+}
+
+#form-login-remember input.inputbox {
+	display: inline;
+	-webkit-border-radius: 0px !important;
+	border: none;
+	margin: 0;
+}
+
+input.button {
+  border: solid 1px #1a1a1a !important;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  background-color: #363636;
+  background-image: -moz-linear-gradient(top,#3c3c3c,#2f2f2f);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#3c3c3c),to(#2f2f2f));
+  background-image: -webkit-linear-gradient(top,#3c3c3c,#2f2f2f);
+  background-image: -o-linear-gradient(top,#3c3c3c,#2f2f2f);
+  background-image: linear-gradient(to bottom,#3c3c3c,#2f2f2f);
+  background-repeat: repeat-x;
+  border-radius: 0px  !important;
+	-webkit-border-radius: 0px !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b3b3b', endColorstr='#ff2e2e2e', GradientType=0);
+  border-color: #2f2f2f #2f2f2f #090909;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  *background-color: #2f2f2f;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  color: #999;
+  font-weight: bold;
+  text-shadow: none;
+  padding: 6px 14px;
+  
+}
+
+input.button:active,
+input.button:focus,
+input.button:hover {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  background-color: #fc721a;
+  background-image: -moz-linear-gradient(top,#ff7d2b,#f76000);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#ff7d2b),to(#f76000));
+  background-image: -webkit-linear-gradient(top,#ff7d2b,#f76000);
+  background-image: -o-linear-gradient(top,#ff7d2b,#f76000);
+  background-image: linear-gradient(to bottom,#ff7d2b,#f76000);
+  background-repeat: repeat-x;
+  border-radius: none !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff7d2b', endColorstr='#fff76000', GradientType=0);
+  border-color: #f76000 #f76000 #ab4200;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  *background-color: #f76000;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #f76000;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Style for Message */
+#system-message {
+	margin-bottom: 0;
+	margin-top: 15px;
+}
+
+#system-message dt {
+	font-weight: bold;
+}
+
+#system-message dd {
+	margin: 0 0 0 10px;
+}
+
+#system-message .error {
+	color: #cc3300;
+}
+
+#system-message ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#system-message ul li {
+	background: url(../images/error.png) no-repeat left 4px;
+	padding: 0px 0px 0px 20px;
+}
+
+div#system-message .alert  a {
+  float: left;
+  margin-right: 10px;
+}
+
+#frame img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+html[dir="rtl"] #frame form {
+  text-align: inherit;
+}
+
+html[dir="rtl"] #form-login-username,
+html[dir="rtl"] #form-login-remember {
+  float: right;
+}
+
+html[dir="rtl"] #form-login-password, 
+html[dir="rtl"] input.button {
+  float: left;
+}
+
+html[dir="rtl"] div#system-message .alert  a {
+  float: right; 
+  margin-right: 0;
+  margin-left: 10px;
+}

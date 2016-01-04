@@ -1,0 +1,202 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ----------------------------------------
+// SLIDESHOW STYLE
+// ----------------------------------------
+.block-slideshow {
+  &.style-2 {
+    position: relative;
+    .clearfix();
+
+    &.full-screen { 
+      overflow: hidden;
+
+      @media (max-width: @screen-xs-max) {
+        height: auto !important;
+      }
+
+      .slick-slider {
+        height: 100%;
+
+        .slick-list {
+          height: 100%;
+        }
+
+        .slick-track {
+          height: 100%;
+        }
+
+        .slick-slide {
+          height: 100%;
+
+          img {
+            max-height: 100%;
+          }
+        }
+
+        .slick-dots {
+          bottom: @t3-global-margin;
+        }
+      }
+    }
+    
+    .carousel {
+      width: 100% !important;
+      overflow: hidden;
+    }
+
+    .slideshow-content {
+      background: @black;
+      color: @gray-light-lv2;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      right: auto;
+      z-index: 3;
+      padding: @t3-global-padding * 4;
+
+      @media (max-width: 1589px) {
+        padding-right: @t3-global-padding * 2;
+        padding-left: @t3-global-padding * 2;
+      }
+
+      @media (max-width: @screen-sm-max) { 
+        left: 0;
+        position: static;
+      }
+
+      .block-title {
+        color: @white; 
+        margin-bottom: @line-height-computed;
+        margin-top: 0;
+        text-align: left;
+        font-weight: @font-weight-semibold;
+        margin-top: 0;
+        font-size: @font-size-large;
+        font-family: @font-family-serif;
+
+        // Tablet view
+        @media screen and (min-width: @screen-xs-max) {
+          font-size: @font-size-large * 1.5;
+        }
+
+        // Desktop view
+        @media screen and (min-width: @screen-md) {
+          font-size: @font-size-h1*1.5;
+          line-height: 1.3;
+        }
+      }
+
+      .slideshow-btn-actions {
+        margin-top: @t3-global-margin;
+      }
+
+      .btn {
+        &.btn-border {
+          border-color: @white;
+          color: @white;
+
+          &:hover, &:focus, &:active {
+            border-color: @white;
+            color: @black;
+            background-color: @white;
+          }
+        }
+      }
+    }
+
+    .slick-slider {
+      background-color: @gray-light-lv4;
+
+      @media (max-width: @screen-sm-max) {
+        display: none;
+      }
+
+      .slick-prev,
+      .slick-next {
+        position: absolute;
+        left: @grid-gutter-width;
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        margin-top: -25px;
+        text-indent: -999em;
+        overflow: hidden;
+        border: 0;
+        background: url("../../@{t3-image-path}/ico/prev.png") no-repeat;
+        z-index: 100;
+
+        // Control screen mobile
+        @media screen and (max-width: @screen-md-max) {
+          left: @grid-gutter-width / 2;
+        }
+      }
+
+      .slick-next {
+        left: auto;
+        right: @grid-gutter-width;
+        background-image: url("../../@{t3-image-path}/ico/next.png");
+
+        // Control screen medium desktop
+        @media screen and (max-width: @screen-md-max) {
+          right: @grid-gutter-width / 2;
+        }
+      }
+
+      .slick-disabled {
+        display: none !important;
+      }
+
+      .slick-active {
+        cursor: pointer;
+      }
+
+      .slick-dots {
+        position: absolute;
+        bottom: @t3-global-padding * 4;
+        left: 50%;
+        margin-bottom: 0;
+        padding-left: @t3-global-padding * 4;
+        z-index: 5;
+
+        @media (max-width: 1589px) {
+          padding-left: @t3-global-padding * 2;
+        }
+
+        li {
+          display: inline-block;
+          overflow: hidden;
+          margin: 5px 3px;
+          text-align: center;
+          vertical-align: bottom;
+          cursor: pointer;
+          line-height: 1;
+          background: transparent;
+          .opacity(0.1);
+
+          button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: transparent;
+            border: 2px solid @white;
+            padding: 0;
+            text-indent: -999em;
+          }
+
+          &.slick-active {
+            .opacity(1);
+          }
+        }
+      }
+    }
+  }
+}

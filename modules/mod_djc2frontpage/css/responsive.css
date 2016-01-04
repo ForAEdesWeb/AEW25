@@ -1,0 +1,35 @@
+.djf_mod img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+.djf_mod .djf_img,
+.djf_mod .djf_left {
+	max-width: 100%;
+}
+
+.djf_mod .djf_gal {
+	width: 100%;
+}
+
+.djf_mod .djf_gal .djf_row {
+	clear: none;
+	float: left;
+}
+
+.djf_mod .djf_text {
+	clear: both;
+}
+
+.djf_mod .djf_img {
+	padding: 0;
+	border: none;
+}
+
+.djf_mod .djf_img img {
+	max-width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}

@@ -1,0 +1,265 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ----------------------------------------
+// HERO STYLE
+// ----------------------------------------
+.acm-hero {
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: (@t3-global-padding * 2) 0;
+
+  // Tablet view
+  @media screen and (min-width: @screen-xs-min) {
+    padding: (@t3-global-padding * 4) 0;
+  }
+
+  // Desktop view
+  @media screen and (min-width: @screen-md) {
+    background-size: cover;
+    background-position: center center;
+    padding: (@t3-global-padding * 10) 0;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    background-size: auto;
+  }
+
+  &.full-screen {
+    padding: 0;
+    
+    @media screen and (max-width: @screen-sm-max) {
+      height: auto !important;
+
+      .hero-content { 
+        padding-top: @grid-gutter-width !important;
+        padding-bottom: @grid-gutter-width
+      }
+    }
+
+    // Control screen mobile
+    @media screen and (max-width: @screen-xs-max) {
+      .hero-content {
+        display: none;
+      }
+    }
+
+    // Font size heading when full screen
+    .hero-heading {
+      font-size: @font-size-h1;
+
+      // Control screen tablet / mobile
+      @media screen and (max-width: @screen-sm-max) {
+        font-size: @font-size-h3;
+        margin-bottom: 0;
+        //padding: (@t3-global-padding * 2) 0;
+      }
+    }
+
+  }
+
+  .hero-content {
+    width: 80%;
+
+    // Effect
+    &.effect {
+      animation: effect-top 5s;
+        -webkit-animation: effect-top 5s;
+    }
+
+    // Tablet view
+    @media screen and (min-width: @screen-xs-max) {
+      width: 70%;
+    }
+
+    @media screen and (min-width: @screen-md) {
+      width: 50%;
+    }
+  }
+
+  .hero-intro {
+    font-weight: @font-weight-light;
+  }
+
+  .hero-btn-actions {
+    margin-top: @t3-global-margin * 2;
+  }
+
+
+
+  // HERO STYLE 1
+  // ----------------------------------------
+  // Content center
+  &.position-center {
+
+    .hero-content {
+      @media screen and (min-width: @screen-md) {
+        width: 75%;
+      }
+    }
+
+    .hero-content {
+      margin: 0 auto;
+
+      // Tablet view
+      @media screen and (min-width: @screen-md) {
+        margin: 0 auto;
+      }
+    } 
+  }
+
+  // Content right
+  &.position-right {
+    .hero-content {
+      float: none;
+      margin: 0 auto;
+
+      // Tablet view
+      @media screen and (min-width: @screen-md) {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  // Hero heading
+  // ------------
+  .hero-heading {
+    color: @white;
+    font-size: @font-size-large;
+    margin-bottom: @t3-global-margin;
+
+    // Tablet view
+    @media screen and (min-width: @screen-xs-max) {
+      font-size: @font-size-large * 1.5;
+    }
+
+    // Desktop view
+    @media screen and (min-width: @screen-md) {
+      font-size: @font-size-large * 2;
+      line-height: 1.3;
+    }
+  }
+
+  .hero-intro {
+    color: @gray-lightest;
+    color: rgba(255, 255, 255, 0.6);
+
+    a {
+      color: inherit;
+      border-bottom: 2px solid;
+
+      &:hover, &:focus, &:active {
+        color: @white;
+      }
+    }
+  }
+
+  &.show-intro .hero-heading {
+  }
+
+  .hero-intro {
+    display: none;
+    font-size: @font-size-base;
+    margin-bottom: @t3-global-margin * 1.5;
+
+    @media screen and (min-width: @screen-md) {
+      display: block;
+      font-size: @font-size-large;
+    }
+  }
+
+  .ft-info & .hero-intro {
+    display: block;
+  }
+
+  // Buttons
+  // -------
+  .hero-btn-actions {
+    .btn {
+      margin-right: (@t3-global-margin / 2);
+      text-transform: none;
+
+      &.btn-border {
+        border: 2px solid @white;
+        color: @white;
+
+        // Hover
+        &:hover, &:focus, &:active {
+          background-color: @white;
+          color: @gray-dark;
+        }
+      }
+
+      @media screen and (max-width: @screen-xs-max) {
+        margin-bottom: @t3-global-margin;
+      }
+    }
+  }
+
+  // Style light
+  // -----------
+  &.style-light {
+
+    .hero-heading {
+      color: @gray-dark;
+    }
+
+    .hero-content {
+      @media screen and (max-width: @screen-xs-max) {
+        width: auto;
+        text-align: center;
+      }
+
+      .item:nth-child(4) & {
+         @media (min-width: @screen-sm) and (max-width: @screen-md) {
+          width: 60%;
+        }
+      }
+    }
+
+    .hero-intro {
+      color: @gray;
+    }
+
+    .btn {
+      &.btn-border {
+        border-color: @brand-secondary;
+        color: @brand-secondary;
+
+        &:hover, &:focus, &:active {
+          background: @brand-secondary;
+          color: @white;
+        }
+      }
+    }
+  }
+}
+
+
+// Effect
+// ------------------------------
+@keyframes effect-top {
+  0%{transform: translateY(-15%);.opacity(0.3);}
+  100%{transform: translateY(0);.opacity(1);}
+}
+
+@-webkit-keyframes effect-top {
+  0%{-webkit-transform: translateY(-15%);.opacity(0.3);}
+  100%{-webkit-transform: translateY(0);.opacity(1);}
+}
+
+
+// Import Style Files
+@import "style-2.less";
+@import "style-4.less";
+@import "style-5.less";
+@import "../fonts/edo/stylesheet.css";
+@import "style-6.less";
+@import "style-7.less";

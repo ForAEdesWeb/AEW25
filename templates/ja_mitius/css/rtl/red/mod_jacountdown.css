@@ -1,0 +1,25 @@
+#countdown-page-inner {
+  background: url(../../../images/trans-cd.png);
+  border-bottom: 1px solid #222;
+  padding-bottom: 30px;
+}
+div.countdown-page {
+  padding-top: 100px;
+}
+.countdown-page h1 {
+  font-family: 'novecento_wide_lightbold', sans-serif;
+  font-size: 50px;
+  font-weight: normal;
+  margin: 0 0 30px;
+  padding: 0;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
+}
+.ja-countdown div.custom-message {
+  color: #ccc;
+  font-size: 16px;
+  padding: 0;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
+}

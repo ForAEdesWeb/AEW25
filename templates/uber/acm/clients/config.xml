@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Clients</title>
+	<sampledata></sampledata>
+    <fields name="clients">
+    	<fieldset name="clients-basic" label="CLIENTS_BASIC_LABEL" description="CLIENTS_BASIC_DESC">
+    	<field name="block-intro" type="textarea" default="" rows="5" cols="40"  label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+      <field name="columns" type="list" label="ACM_COLUMNS_LABEL" description="ACM_COLUMNS_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+		<field name="acm-style" type="list" default="style-light"
+		  global="1"
+		  label="ACM_STYLE_LABEL"
+		  description="ACM_STYLE_DESC">
+			<option value="style-light">LAYOUT_STYLE_LIGHT</option>
+			<option value="style-dark">LAYOUT_STYLE_DARK</option>
+		</field>
+			
+		<field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+      	<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+      
+      <field name="img-gray" type="radio" default="1" label="CLIENTS_IMG_GRAY_LABEL" description="CLIENTS_IMG_GRAY_DESC" >
+      	<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+      
+      <field name="img-opacity" size="50"  type="text" default="30" label="CLIENTS_IMG_OPACITY_LABEL" description="CLIENTS_IMG_OPACITY_DESC" />
+      
+		</fieldset>
+
+    <fieldset name="client-items" label="CLIENT_ITEM_LABEL" description="CLIENT_ITEM_DESC">
+    	<field name="client-item" type="jalist" label="CLIENT_ITEM_LABEL" description="CLIENT_ITEM_DESC">
+				<item name="client-logo" type="media" default="" label="CLIENT_ITEM_LOGO_LABEL" description="CLIENT_ITEM_LOGO_DESC" required="1" />
+				<item name="client-name" size="50"  type="text" default="" label="CLIENT_ITEM_NAME_LABEL" description="CLIENT_ITEM_NAME_DESC" />
+				<item name="client-link" size="50" type="text" default="" label="CLIENT_ITEM_LINK_LABEL" description="CLIENT_ITEM_LINK_DESC" />
+			</field>
+    </fieldset>
+
+    </fields>
+</form>

@@ -1,0 +1,32 @@
+// ------------------------------------
+// FEATURES INTRO STYLE 8
+// ------------------------------------
+.acm-features {
+	&.style-8 {
+    .features-image {
+      text-align: center;
+    }
+
+    // features description
+    .features-description {
+      margin: 0 auto (@t3-global-margin*3);
+      text-align: center;
+    }
+
+    .features-content {
+      @media screen and (min-width: @screen-md) {
+        padding-top: @t3-global-padding*2;
+      }
+
+      .features-item {
+        margin-bottom: @t3-global-margin;
+
+        @media screen and (min-width: @screen-sm) {
+          margin-bottom: @t3-global-margin*2;
+        }
+      }
+    }
+  }
+}
+
+

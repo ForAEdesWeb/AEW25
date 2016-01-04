@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="search">
+		<field name="field"
+			type="hidden"
+			default="*"
+			label="JSEARCH_FILTER_LABEL"
+			labelclass="pull-left"
+			class="input-small"
+			>
+			<option value="*">JALL</option>
+			<option value="profile.user_id">COM_USERXTD_USER_ID </option>
+			<option value="user.username">COM_USERXTD_USER_USERNAME</option>
+			<option value="user.name">COM_USERXTD_USER_NAME</option>
+			<option value="category.title">JCATEGORY</option>
+			<option value="field.value">LIB_WINDWALKER_FIELD_ATTR_VALUE</option>
+			<option value="field.name">LIB_WINDWALKER_FIELD_ATTR_NAME</option>
+			<option value="field.title">LIB_WINDWALKER_FIELD_ATTR_TITLE</option>
+		</field>
+
+		<field
+			name="index"
+			type="text"
+			label="JSEARCH_FILTER_LABEL"
+			hint="JSEARCH_FILTER"
+			/>
+
+		<!-- For multiple search
+		<fieldset name="multisearch">
+			<field
+				name="profile.title"
+				type="text"
+				label="Title"
+				hint="JSEARCH_FILTER"
+				/>
+
+			<field
+				name="category.title"
+				type="text"
+				label="Category"
+				hint="JSEARCH_FILTER"
+				/>
+		</fieldset>
+		-->
+	</fields>
+
+	<!-- Filter -->
+	<fields name="filter">
+		<field
+			type="note"
+			label="COM_USERXTD_FILTER_NOTE_GENERAL"
+			class="filter-title"
+			/>
+
+		<field
+			name="field.name"
+			type="sql"
+			onchange="this.form.submit();"
+			key_field="name"
+			value_field="value"
+			query="SELECT name, title, CONCAT(title, ' (' , name, ')') AS value FROM #__userxtd_fields ORDER BY ordering"
+			>
+			<option></option>
+			<option>COM_USERXTD_SELECT_FILTER_FIELD_NAME</option>
+		</field>
+
+		<field
+			name="profile.catid"
+			type="category"
+			default=""
+			label="JCATEGORY"
+			extension="com_userxtd"
+			onchange="this.form.submit();"
+			>
+			<option></option>
+			<option>JOPTION_SELECT_CATEGORY</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="COM_CONTENT_LIST_FULL_ORDERING"
+			description="COM_CONTENT_LIST_FULL_ORDERING_DESC"
+			onchange="this.form.submit();"
+			default="user.title ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+		</field>
+
+		<field
+			name="limit"
+			type="limitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+			/>
+	</fields>
+</form>

@@ -1,0 +1,120 @@
+.home-spa .sections-wrap .bg-dark {
+  background-color: #27292e;
+  color: #96a1a3;
+  padding: 52px 0;
+}
+@media screen and (max-width: 767px) {
+  .home-spa .img-responsive {
+    margin: 13px auto;
+  }
+}
+.home-spa .open-time {
+  font-size: 14px;
+}
+.home-spa .open-time h2 {
+  color: #f4f6f7;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 0 13px;
+  padding: 0;
+  text-transform: uppercase;
+}
+.home-spa .open-time h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 6.5px;
+  padding: 0;
+}
+.home-spa .open-time time {
+  color: #ffffff;
+}
+.home-spa .open-time .bubble {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 13px;
+}
+.home-spa .open-time .bubble:before,
+.home-spa .open-time .bubble:after {
+  content: " ";
+  display: table;
+}
+.home-spa .open-time .bubble:after {
+  clear: both;
+}
+@media (max-width: 768px) and (max-width: 991px) {
+  .home-spa .open-time .bubble {
+    margin-bottom: 26px;
+  }
+}
+.home-spa .open-time .bubble img {
+  box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.2) inset;
+  border-radius: 3px;
+  display: block;
+  float: left;
+  margin-right: 13px;
+  width: 46px;
+}
+.home-spa .open-time .bubble h4 {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 5px;
+  padding: 0;
+  text-transform: uppercase;
+}
+.home-spa .open-time .bubble .phone {
+  color: #ffffff;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+.home-spa .spa-gridview h2.section-title {
+  text-align: center;
+}
+.home-spa .spa-gridview h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.home-spa .spa-gridview .inner img {
+  border-radius: 3px;
+}
+.home-spa .sbg-image .item-grid-view .item-inner {
+  padding: 0 26px 26px;
+}
+.home-spa .sbg-image .item-grid-view .item-image {
+  display: block;
+  margin-left: -26px;
+  margin-right: -26px;
+}
+.home-spa .sbg-image.image-dark .section-title {
+  color: #ffffff;
+}
+.home-spa .sbg-image.image-dark .section-title .section-intro {
+  color: #ffffff;
+}
+.home-spa .offer {
+  color: #ffffff;
+}
+.home-spa .offer .big-number {
+  background: #3d4045;
+  border-radius: 3px;
+  color: #ffffff;
+  display: block;
+  font-size: 48px;
+  line-height: 1;
+  padding: 26px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+.home-spa .offer .big-number small {
+  display: block;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.home-spa .offer h2 {
+  margin: 0;
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>mod_djc2producers</name>
+	<creationDate>January 2011</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>3.4</version>
+	<description>MOD_DJC2PRODUCERS_DESC</description>
+	<files>
+		<filename module="mod_djc2producers">mod_djc2producers.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="filter" type="list" default="1"
+					label="MOD_DJC2PRODUCERS_ISFILTER" description="MOD_DJC2PRODUCERS_ISFILTER_DESC">
+					<option value="0">MOD_DJC2PRODUCERS_FILTER_CATEGORY</option>
+					<option value="1">MOD_DJC2PRODUCERS_SHOW_FROM_ALL</option>
+				</field>
+				
+				<field name="type" type="list" default="0" label="MOD_DJC2PRODUCERS_LIST_TYPE" description="MOD_DJC2PRODUCERS_LIST_TYPE_DESC">
+				    <option value="0">MOD_DJC2PRODUCERS_LIST_TYPE_LIST</option>
+				    <option value="1">MOD_DJC2PRODUCERS_LIST_TYPE_PRODUCER</option>
+				</field>
+				
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

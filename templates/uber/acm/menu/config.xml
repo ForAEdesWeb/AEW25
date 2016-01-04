@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Menu</title>
+	<sampledata><![CDATA[
+        {"jatools-layout-menu":["style-2"],"menu[number_col]":["2"],"menu[full-width]":["0"],"menu[menu-style]":["style-light"],"menu[data]":{"menu[data][dish-name]":["Chili Chicken","Yam Fries & Truffle Lemon Aioli"],"menu[data][dish-description]":["tempura style, cool cucumbers, chili sauce","grated Grana Padano, truffle lemon aioli"],"menu[data][dish-price]":["$30","$30"],"menu[data][dish-image]":["images/joomlart/restaurant/blog/sam-1.jpg",""],"rows":2,"cols":5,"type":"list"},"menu[dish-image]":[""]}
+    ]]></sampledata>
+	<fields name="menu">
+		<fieldset name="col" label="MENU_COL_LABEL" description="MENU_COL_DESC" >
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+  
+			<field name="number_col" type="list" label="MENU_NUMBER_COL_LABEL" description="MENU_NUMBER_COL_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</field>
+      <field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+      	<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+      
+      <field name="menu-style" type="list" default="style-dark"
+          global="1"
+          label="MENU_STYLE_LABEL"
+          description="MENU_STYLE_DESC">
+        <option value="style-dark">LAYOUT_MENU_DARK</option>
+        <option value="style-light">LAYOUT_MENU_LIGHT</option>
+      </field>
+		</fieldset>
+		
+		<fieldset name="menu_info" label="MENU_INFO_LABEL" description="MENU_INFO_DESC">
+			<field name="data" type="jalist">
+				<item name="dish-name" type="text" size="40" default="" label="DISH_NAME_LABEL" description="DISH_NAME_DESC" required="1" />
+				<item name="dish-description" type="text" size="40" default="" label="DISH_DESCRIPTION_LABEL" description="DISH_DESCRIPTION_DESC" />
+				<item name="dish-price" type="text" size="40" default="" label="DISH_MEMBER_PRICE_LABEL" description="DISH_MEMBER_PRICE_DESC" />
+        <field name="dish-image" type="media" default="" label="DISH_IMAGE_LABEL" description="DISH_IMAGE_DESC"></field>
+			</field>
+    </fieldset>
+	</fields>
+</form>

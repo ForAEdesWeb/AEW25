@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="basic">
+        <fieldset name="information" align="left" horz="true">
+        	 
+            <field name="id" 
+                type="text" 
+                default="0" 
+                label="JGLOBAL_FIELD_ID_LABEL"
+                readonly="true" 
+                class="readonly"
+                description="JGLOBAL_FIELD_ID_DESC"
+                labelclass=""
+            />
+            
+            <field name="item_id" 
+                type="text" 
+                default="0" 
+                label="COM_WEBGALLERY_ITEM_ID"
+                readonly="true" 
+                class="readonly"
+                description="COM_WEBGALLERY_ITEM_ID_DESC"
+                labelclass=""
+            />
+            
+            <field name="created"
+                type="calendar"
+                label="COM_WEBGALLERY_CREATED"
+                description="COM_WEBGALLERY_CREATED_DESC"
+                labelclass=""
+            />
+        	     	
+            <field name="status"
+                type="list"
+                label="COM_WEBGALLERY_QUEUE_STATUS"
+                description="COM_WEBGALLERY_QUEUE_DESC"
+                class="inputbox"
+                size="1"
+                default="0"
+                labelclass=""
+            >
+            	<option value="0">COM_WEBGALLERY_QUEUE_STATUS_UNDO</option>
+                <option value="1">COM_WEBGALLERY_QUEUE_STATUS_IN_PROCCESS</option>
+                <option value="2">COM_WEBGALLERY_QUEUE_STATUS_DONE</option>
+            </field>
+        </fieldset>        
+       
+    </fields>
+      
+    <fields name="rules">
+        <fieldset name="rules">
+            <field name="rules"
+                type="rules"
+                label=""
+                translate_label="false"
+                class="inputbox"
+                filter="rules"
+                component="com_webgallery"
+                section="queue"
+                validate="rules"
+            />
+        </fieldset>
+    </fields>
+    
+</form>

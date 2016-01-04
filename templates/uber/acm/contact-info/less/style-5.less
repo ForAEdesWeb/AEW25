@@ -1,0 +1,69 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.uber-contact-info {
+
+	// Style 5
+	&.style-5 {
+		.clearfix();
+		.container {
+			position: relative;
+		}
+
+		.info-wrap {
+			position: relative;
+			overflow: hidden;
+
+			.info {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding-top: @t3-global-padding * 2;
+
+				&:before {
+					position: absolute;
+					content: "";
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;					
+					background-color: darken(@brand-primary, 30%);
+					z-index: 0;
+					.opacity(0.8);
+				}
+
+				h4, .info-list {
+					margin-right: @t3-global-margin;
+					position: relative;
+					text-align: right;
+					z-index: 1;
+
+					@media (min-width: @screen-xs) {
+						margin-right: @t3-global-margin * 4;
+					}
+					
+				}
+
+				h4 {
+					margin-top: 0;
+				}
+
+				dd {
+					font-size: @font-size-large;
+
+					@media (min-width: @screen-xs) {
+						font-size: @font-size-h1;
+					}
+
+					a:hover, a:focus, a:active {
+						color: @white;
+						border-bottom-color: @white;
+					}
+				}
+			}
+		}
+	}
+}

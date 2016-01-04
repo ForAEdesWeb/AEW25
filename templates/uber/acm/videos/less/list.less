@@ -1,0 +1,214 @@
+//
+// MAGAZINE FEATURED
+// --------------------------------------------------------
+.magazine-featured {
+  .row-articles {
+    margin-bottom: 0;
+
+    .magazine-item {
+      margin-bottom: @grid-gutter-width;
+
+      @media (max-width: @screen-sm-max) {
+        &.col-sm-6:nth-child(3n) {
+          clear: both;
+        }
+      }
+    }
+
+    @media (min-width: @screen-md-min) {
+      margin-bottom: @grid-gutter-width;
+
+      .magazine-item {
+        margin-bottom: 0;
+      }
+    }
+
+    &.last-row {
+      margin-bottom: 0;
+    }
+  }
+
+  // Article Media 
+  .magazine-item-media {
+    margin: 0;
+  }
+
+  // Article Leading
+  .magazine-featured-leading {
+    background: @white;
+    border-radius: @border-radius-small;
+    margin-bottom: @t3-global-margin;
+    overflow: hidden;
+    padding: @t3-global-padding;
+    .box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+  }
+
+  // Article Intro
+  .magazine-featured-intro {
+    .magazine-item {
+      article {
+        background: @white;
+        border-radius: @border-radius-small;
+        margin-bottom: @t3-global-margin;
+        overflow: hidden;
+        padding: 0;
+        margin-bottom: 0;
+
+        @media (max-width: @screen-xs-max) {
+        }
+      }
+
+      // Article Meta
+      .article-aside {
+        margin: 0;
+
+        &.article-aside-bottom {
+          float: left;
+        }
+      }
+
+      .category-name a {
+        color: @brand-warning;
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+      }
+
+      // Article Readmore
+      .readmore {
+        float: right;
+
+        .btn {
+          padding: 0;
+          border: 0;
+          background: none;
+          color: @link-color;
+
+          &:hover, &:focus, &:active {
+            background: none;
+            color: @link-hover-color;
+          }
+        }
+      }
+
+      // Article Title
+      .article-title {
+        margin-bottom: @t3-global-margin/2;
+        
+        h3 {
+          font-size: @font-size-h4;
+          line-height: @line-height-base;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          a {
+            color: @headings-color;
+
+            // Link states
+            &:hover, &:focus, &:active {
+              color: @link-color;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      // Article Intro
+      .magazine-item-ct {
+        margin-top: @t3-global-margin/2;
+      }
+
+      // Article Image
+      .item-image {
+        float: none !important;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .magazine-item-main {
+      margin-top: @t3-global-margin;
+    }
+  }
+
+  // Section Leading
+  .magazine-featured-intro .magazine-section-heading {
+    article {
+      background: @brand-primary;
+      color: @white;
+      height: 100%;
+      padding: @t3-global-padding;
+      border-radius: @border-radius-small;
+      position: relative;
+      .box-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+
+      .section-title {
+        color: @white;
+        font-size: @font-size-h5;
+        margin-top: 0;
+      }
+
+      .section-info {
+        color: @white;
+        font-size: @font-size-h2;
+        font-weight: @font-weight-lighter;
+        line-height: 1.2;
+      }
+
+      .btn {
+        position: absolute;
+        right: @t3-global-padding;
+        bottom: @t3-global-padding;
+      }
+    }
+  }
+
+  // Load more
+  .load-more {
+    text-align: center;
+    margin-top: @t3-global-margin * 2;
+  }
+
+  // In Sidebar 
+  // --------------
+  .t3-sidebar & {
+    .magazine-featured-intro .magazine-item article {
+      background: none;
+      padding: 0;
+      border-radius: 0;
+      border-bottom: 1px dashed @t3-border-color;
+      .box-shadow(none);
+    }
+
+    .magazine-featured-intro .magazine-item-main {
+      margin-top: @t3-global-margin/2;
+    }
+
+    .magazine-item-media {
+      margin: 0;
+    }
+
+    // Load more
+    .load-more {
+      margin-top: @t3-global-margin;
+      
+      .btn {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  // logo
+  .logo-text a {
+    &,
+    &:hover, &:focus, &:active {
+      color: @white;
+    }
+  }
+}

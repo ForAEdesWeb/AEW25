@@ -1,0 +1,47 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.uber-stats {
+
+	// Style 2
+	&.style-2 {
+		.stats-list {
+			.stats-asset {
+				// Control screen tablet / mobile
+				@media screen and (max-width: @screen-sm-max) {
+					margin-bottom: @t3-global-margin * 2;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			span {
+				display: block;
+				text-align: center;
+
+				&.stats-item-icon {
+					border: 1px solid @gray-lighter;
+			    border-radius: 80px;
+			    color: @brand-primary;
+			    font-size: 24px;
+			    height: 80px;
+			    line-height: 80px;
+			    text-align: center;
+			    width: 80px;
+			    margin: 0 auto;
+				}
+
+				&.stats-item-counter {
+					font-size: @font-size-h1;
+					color: @black;
+				}
+			}
+		}
+
+		&.style-dark .stats-list span.stats-item-counter {
+			color: @white;
+		}
+	}
+}

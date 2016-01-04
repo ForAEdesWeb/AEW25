@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>JA System Social Feed plugin</name>
+	<author>JoomlArt</author>
+	<creationDate>13 Dec 2013</creationDate>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.joomlart.com</authorUrl>
+	<version>1.1.3</version>
+	<description>
+	 <![CDATA[
+		<div style='text-align: left;'>
+			<span style="color: #008000;"><strong>JA Social Feed Plug-in for Joomla 2.5 and Joomla 3.2</strong></span><br />
+			<p><img alt="JA Social Feed plugin" src="http://www.joomlart.com/images/stories/extensions/joomla/ja_social.png" /></p>
+			<div style='font-weight:normal'>
+			<p style="border:1px solid #F29A3C; padding: 10px 15px; background:#F7E6D4;">
+			<strong><span style='color: #ff0000;'>NOTE: update OAuth information to get new version worked!</span></strong><br /><br />
+			Since 2013-06-11, Twitter has stopped supporting API v1 and fully moved to API v1.1<br />In API v1.1, Twitter deny non-Authorized request, that means you need to provide the information below to authorize your request.<br />
+			<a target="_blank" href="http://www.joomlart.com/forums/showthread.php?50154-Joomla-1.6-JA-Twitter-Module-Installation-Guide">Check how to get OAuth information now</a>
+			</p>
+			<p>The JA Social Feed Plug-in imports content automatically from popular Social media sites (Facebook, Twitter and Youtube) and adds to the Joomla or K2 category as articles.
+			<p>The Plug-in has been developed for JA Wall Bundle. Please read the Tooltips for each function to understand the usages.</p>
+			<p style="clear:both"><span style="color: #ff6600;"><strong>Features:</strong></span></p>
+			<ol><li>Imports content automatically from Facebook, Twitter, Youtube</li>
+			<li>Support multiple profiles for each social feed.</li>
+			<li>Store the imported items as Joomla or K2 articles.</li></ol>
+			
+			<p><strong><span style="color: #ff0000;">Upgrade Methods:</span><br /></strong></p>
+			<ol><li>You can install the new version directly over this version. Uninstallation is not required. Backup any customized files before upgrading. OR</li>
+			<li>Use <strong><a href="http://extensions.joomla.org/extensions/core-enhancements/installers/12077" target="_blank">JA Extensions Manager</a></strong> Component for easy upgrades and rollbacks. <strong><a href="http://www.youtube.com/user/JoomlArt#p/c/BC9B0C0BFE98657E/2/mNAuJRmifG8" target="_blank">Watch Video..</a></strong></li></ol>
+			<p>Copyright 2004 - 2013 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+			</div>
+		</div>
+	 ]]>
+	</description>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_jasocial_feed.ini</language>
+	</languages>
+	<files>
+		<filename plugin="jasocial_feed">jasocial_feed.php</filename>
+		<filename>admin.php</filename>
+		<filename>helpers.php</filename>
+		<filename>TwitterAPIExchange.php</filename>
+		<filename>index.html</filename>
+		<folder>cache</folder>
+		<folder>elements</folder>
+		<folder>assets</folder>
+		<folder>tables</folder>
+		<folder>profiles</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/jasocial_feed/elements">
+			
+			<fieldset name="basic" label="Profile Settings">
+				<field name="profilemanager" type="jadepend" function="@cpnel" />
+			</fieldset>
+			
+			<fieldset name="facebook" label="Facebook">
+				<field name="facebook_profiles" type="jadepend" function="@profiles" hidden="true" source="facebook" />
+				<field name="facebook_status" type="list" default="1" label="PROFILE_STATUS" description="PROFILE_STATUS_DESC">
+					<option value="1">ENABLED</option>
+					<option value="0">DISABLED</option>
+				</field>
+				<field name="facebook_account" type="socialid" social="facebook" default="123144964369587" label="FACEBOOK_ID" description="FACEBOOK_ID_DESC" />
+				
+				<field name="facebook_article_spacer" type="spacer" class="text" label="Article Settings" />
+				<field name="facebook_created_by" type="jauser" default="42" label="CREATED_BY" description="CREATED_BY_DESC" />
+				<field name="facebook_target" type="list" default="joomla" label="TARGET_COM" description="TARGET_COM_DESC">
+					<option value="joomla">Content</option>
+					<option value="k2">K2</option>
+				</field>
+				<field name="facebook_joomla_catid" type="category" extension="com_content" default="" label="FACEBOOK_CAT_ID" description="FACEBOOK_CAT_ID_DESC" />
+				<field name="facebook_k2_catid" type="categoryk2" subtype="getCategory" default="" label="K2 category" description="FACEBOOK_CAT_ID_DESC" />
+				
+				<field name="facebook_title_type" type="list" default="author" label="FACEBOOK_TITLE_TYPE" description="FACEBOOK_TITLE_TYPE_DESC">
+					<option value="author">FACEBOOK_TITLE_AUTHOR</option>
+					<option value="custom">FACEBOOK_TITLE_CUSTOM</option>
+				</field>
+				<field name="facebook_title_txt" type="text" default="Facebook" label="FACEBOOK_TITLE" description="FACEBOOK_TITLE_DESC" />
+				<field name="facebook_sourcetxt" type="text" default="(Source Facebook)" label="SOURCE_TXT" description="SOURCE_TXT_DESC" />
+				
+				<field name="facebook_advanced_spacer" type="spacer" class="text" label="Advanced Settings" />
+				<field name="facebook_update_article" type="list" default="0" label="UPDATE_ARTICLE" description="UPDATE_ARTICLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="facebook_getimg" type="list" default="1" label="GET_TWEET_IMG" description="GET_TWEET_IMG_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="facebook_valid_img_width" type="text" default="360" label="VALID_IMG_WIDTH" description="VALID_IMG_WIDTH_DESC" />
+				<field name="facebook_valid_img_height" type="text" default="180" label="VALID_IMG_HEIGHT" description="VALID_IMG_HEIGHT_DESC" />
+				<field name="facebook_save_image" type="list" default="0" label="SAVE_IMAGE" description="SAVE_IMAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="facebook_limit_post" type="text" default="20" label="LIMIT_POST" description="LIMIT_POST_DESC"/>
+				
+				<field name="btn_save_facebook_profile" type="jadepend" function="@profile_button" source="facebook" class="jabutton" value="Save Profile" hidden="true" />
+				<!--form controller-->
+				<field name="facebook_controller" type="jadepend" function="@group" level="3" label=" ">
+					<option for="facebook_target" value="joomla" hideRow="true">facebook_joomla_catid</option>
+					<option for="facebook_target" value="k2" hideRow="true">facebook_k2_catid</option>
+					<option for="facebook_title_type" value="custom" hideRow="true">facebook_title_txt</option>
+					<option for="facebook_getimg" value="1" hideRow="false">facebook_valid_img_width,facebook_valid_img_height,facebook_save_image</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="twitter" label="Twitter">
+				<field name="twitter_profiles" type="jadepend" function="@profiles" hidden="true" source="twitter" />
+				<field name="twitter_status" type="list" default="1" label="PROFILE_STATUS" description="PROFILE_STATUS_DESC">
+					<option value="1">ENABLED</option>
+					<option value="0">DISABLED</option>
+				</field>
+				<field name="twitter_account" type="socialid" social="twitter" default="@joomlart" label="TWITTER_ID" description="TWITTER_ID_DESC" />
+				
+				<field name="twitter_article_spacer" type="spacer" class="text" label="Article Settings" />
+				<field name="twitter_created_by" type="jauser" default="42" label="CREATED_BY" description="CREATED_BY_DESC" />
+				<field name="twitter_target" type="list" default="joomla" label="TARGET_COM" description="TARGET_COM_DESC">
+					<option value="joomla">Content</option>
+					<option value="k2">K2</option>
+				</field>
+				<field name="twitter_joomla_catid" type="category" extension="com_content" default="" label="TWITTER_CAT_ID" description="TWITTER_CAT_ID_DESC" />
+				<field name="twitter_k2_catid" type="categoryk2" subtype="getCategory" default="" label="K2 category" description="TWITTER_CAT_ID_DESC" />
+				
+				<field name="twitter_fetch_retweet" type="list" default="0" label="FETCH_RETWEET" description="FETCH_RETWEET_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="twitter_title_type" type="list" default="author" label="TWITTER_TITLE_TYPE" description="TWITTER_TITLE_TYPE_DESC">
+					<option value="author">TWITTER_TITLE_AUTHOR</option>
+					<option value="custom">TWITTER_TITLE_CUSTOM</option>
+				</field>
+				<field name="twitter_title_txt" type="text" default="Twitter" label="TWITTER_TITLE" description="TWITTER_TITLE_DESC" />
+				<field name="twitter_sourcetxt" type="text" default="(Source Twitter)" label="SOURCE_TXT" description="SOURCE_TXT_DESC" />
+				
+				<field name="twitter_advanced_spacer" type="spacer" class="text" label="Advanced Settings" />
+				<field name="twitter_update_article" type="list" default="0" label="UPDATE_ARTICLE" description="UPDATE_ARTICLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="twitter_getimg" type="list" default="1" label="GET_TWEET_IMG" description="GET_TWEET_IMG_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="twitter_valid_img_width" type="text" default="360" label="VALID_IMG_WIDTH" description="VALID_IMG_WIDTH_DESC" />
+				<field name="twitter_valid_img_height" type="text" default="180" label="VALID_IMG_HEIGHT" description="VALID_IMG_HEIGHT_DESC" />
+				<field name="twitter_save_image" type="list" default="0" label="SAVE_IMAGE" description="SAVE_IMAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="twitter_limit_post" type="text" default="20" label="LIMIT_POST" description="LIMIT_POST_DESC"/>
+				<field name="btn_save_twitter_profile" type="jadepend" function="@profile_button" source="twitter" class="jabutton" value="Save Profile" hidden="true" />
+				
+				<!--form controller-->
+				<field name="twitter_controller" type="jadepend" function="@group" level="3" label=" ">
+					<option for="twitter_target" value="joomla" hideRow="true">twitter_joomla_catid</option>
+					<option for="twitter_target" value="k2" hideRow="true">twitter_k2_catid</option>
+					<option for="twitter_title_type" value="custom" hideRow="true">twitter_title_txt</option>
+					<option for="twitter_getimg" value="1" hideRow="false">twitter_valid_img_width,twitter_valid_img_height,twitter_save_image</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="youtube" label="Youtube">
+				<field name="youtube_profiles" type="jadepend" function="@profiles" hidden="true" source="youtube" />
+				<field name="youtube_status" type="list" default="1" label="PROFILE_STATUS" description="PROFILE_STATUS_DESC">
+					<option value="1">ENABLED</option>
+					<option value="0">DISABLED</option>
+				</field>
+				<field name="youtube_account" type="socialid" social="youtube" default="joomlart" label="YOUTUBE_ID" description="YOUTUBE_ID_DESC" />
+				
+				<field name="youtube_article_spacer" type="spacer" class="text" label="Article Settings" />
+				<field name="youtube_created_by" type="jauser" default="42" label="CREATED_BY" description="CREATED_BY_DESC" />
+				<field name="youtube_target" type="list" default="joomla" label="TARGET_COM" description="TARGET_COM_DESC">
+					<option value="joomla">Content</option>
+					<option value="k2">K2</option>
+				</field>
+				<field name="youtube_joomla_catid" type="category" extension="com_content" default="" label="YOUTUBE_CAT_ID" description="YOUTUBE_CAT_ID_DESC" />
+				<field name="youtube_k2_catid" type="categoryk2" subtype="getCategory" default="" label="K2 category" description="YOUTUBE_CAT_ID_DESC" />
+				
+				<field name="youtube_sourcetxt" type="text" default="(Source Youtube)" label="SOURCE_TXT" description="SOURCE_TXT_DESC" />
+				
+				<field name="youtube_video_spacer" type="spacer" class="text" label="Video Settings" />
+				<field name="youtube_video_width" type="text" default="480" size="4" label="YOUTUBE_VIDEO_WIDTH" description="YOUTUBE_VIDEO_WIDTH_DESC" />
+				<field name="youtube_video_height" type="text" default="360" size="4" label="YOUTUBE_VIDEO_HEIGHT" description="YOUTUBE_VIDEO_HEIGHT_DESC" />
+				<field name="youtube_show_suggested" type="list" default="1" label="YOUTUBE_SHOW_SUGGESTED" description="YOUTUBE_SHOW_SUGGESTED_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="youtube_use_https" type="list" default="0" label="YOUTUBE_USE_HTTPS" description="YOUTUBE_USE_HTTPS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="youtube_privacy_enhanced_mode" type="list" default="0" label="YOUTUBE_PRIVACY_ENHANCED_MODE" description="YOUTUBE_PRIVACY_ENHANCED_MODE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="youtube_use_old_code" type="list" default="0" label="YOUTUBE_USE_OLD_CODE" description="YOUTUBE_USE_OLD_CODE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="youtube_advanced_spacer" type="spacer" class="text" label="Advanced Settings" />
+				<field name="youtube_update_article" type="list" default="0" label="UPDATE_ARTICLE" description="UPDATE_ARTICLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="youtube_getimg" type="list" default="1" label="GET_TWEET_IMG" description="GET_TWEET_IMG_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!--<field name="youtube_valid_img_width" type="text" default="360" label="VALID_IMG_WIDTH" description="VALID_IMG_WIDTH_DESC" />
+				<field name="youtube_valid_img_height" type="text" default="180" label="VALID_IMG_HEIGHT" description="VALID_IMG_HEIGHT_DESC" />-->
+				<field name="youtube_save_image" type="list" default="0" label="SAVE_IMAGE" description="SAVE_IMAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="youtube_limit_post" type="text" default="20" label="LIMIT_POST" description="LIMIT_POST_DESC"/>
+				<field name="btn_save_youtube_profile" type="jadepend" function="@profile_button" source="youtube" class="jabutton" value="Save Profile" hidden="true" />
+				
+				<!--form controller-->
+				<field name="youtube_controller" type="jadepend" function="@group" level="3" label=" ">
+					<option for="youtube_target" value="joomla" hideRow="true">youtube_joomla_catid</option>
+					<option for="youtube_target" value="k2" hideRow="true">youtube_k2_catid</option>
+					<option for="youtube_getimg" value="1" hideRow="false">youtube_save_image</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="vimeo" label="Vimeo">
+				<field name="vimeo_profiles" type="jadepend" function="@profiles" hidden="true" source="vimeo" />
+				<field name="vimeo_status" type="list" default="1" label="PROFILE_STATUS" description="PROFILE_STATUS_DESC">
+					<option value="1">ENABLED</option>
+					<option value="0">DISABLED</option>
+				</field>
+				<field name="vimeo_account_type" type="list" default="user" label="VIMEO_ACCOUNT_TYPE" description="VIMEO_ACCOUNT_TYPE_DESC">
+					<option value="user">VIMEO_USERNAME</option>
+					<option value="album">VIMEO_ALBUM</option>
+					<option value="group">VIMEO_GROUP</option>
+					<option value="channel">VIMEO_CHANNEL</option>
+				</field>
+				<field name="vimeo_account" type="socialid" social="vimeo" default="" label="VIMEO_ID" description="VIMEO_ID_DESC" />
+				
+				<field name="vimeo_article_spacer" type="spacer" class="text" label="Article Settings" />
+				<field name="vimeo_created_by" type="jauser" default="42" label="CREATED_BY" description="CREATED_BY_DESC" />
+				<field name="vimeo_target" type="list" default="joomla" label="TARGET_COM" description="TARGET_COM_DESC">
+					<option value="joomla">Content</option>
+					<option value="k2">K2</option>
+				</field>
+				<field name="vimeo_joomla_catid" type="category" extension="com_content" default="" label="VIMEO_CAT_ID" description="VIMEO_CAT_ID_DESC" />
+				<field name="vimeo_k2_catid" type="categoryk2" subtype="getCategory" default="" label="K2 category" description="VIMEO_CAT_ID_DESC" />
+				
+				<field name="vimeo_sourcetxt" type="text" default="(Source Vimeo)" label="SOURCE_TXT" description="SOURCE_TXT_DESC" />
+				
+				<field name="vimeo_video_spacer" type="spacer" class="text" label="Video Settings" />
+				<field name="vimeo_video_width" type="text" default="500" size="4" label="VIMEO_VIDEO_WIDTH" description="VIMEO_VIDEO_WIDTH_DESC" />
+				<field name="vimeo_video_height" type="text" default="281" size="4" label="VIMEO_VIDEO_HEIGHT" description="VIMEO_VIDEO_HEIGHT_DESC" />
+				<field name="vimeo_autoplay" type="list" default="0" label="VIMEO_AUTOPLAY" description="VIMEO_AUTOPLAY_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="vimeo_loop" type="list" default="0" label="VIMEO_LOOP" description="VIMEO_LOOP_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!--<field name="vimeo_show_text_link" type="list" default="1" label="VIMEO_SHOW_TEXT_LINK" description="VIMEO_SHOW_TEXT_LINK_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>-->
+				<field name="vimeo_use_old_code" type="list" default="0" label="VIMEO_USE_OLD_CODE" description="VIMEO_USE_OLD_CODE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="vimeo_advanced_spacer" type="spacer" class="text" label="Advanced Settings" />
+				<field name="vimeo_update_article" type="list" default="0" label="UPDATE_ARTICLE" description="UPDATE_ARTICLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="vimeo_getimg" type="list" default="1" label="GET_TWEET_IMG" description="GET_TWEET_IMG_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!--<field name="vimeo_valid_img_width" type="text" default="360" label="VALID_IMG_WIDTH" description="VALID_IMG_WIDTH_DESC" />
+				<field name="vimeo_valid_img_height" type="text" default="180" label="VALID_IMG_HEIGHT" description="VALID_IMG_HEIGHT_DESC" />-->
+				<field name="vimeo_save_image" type="list" default="0" label="SAVE_IMAGE" description="SAVE_IMAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="vimeo_limit_post" type="text" default="20" label="LIMIT_POST" description="LIMIT_POST_DESC"/>
+				<field name="btn_save_vimeo_profile" type="jadepend" function="@profile_button" source="vimeo" class="jabutton" value="Save Profile" hidden="true" />
+				
+				<!--form controller-->
+				<field name="vimeo_controller" type="jadepend" function="@group" level="3" label=" ">
+					<option for="vimeo_target" value="joomla" hideRow="true">vimeo_joomla_catid</option>
+					<option for="vimeo_target" value="k2" hideRow="true">vimeo_k2_catid</option>
+					<option for="vimeo_getimg" value="1" hideRow="false">vimeo_save_image</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="instagram" label="Instagram">
+				<field name="instagram_profiles" type="jadepend" function="@profiles" hidden="true" source="instagram" />
+				<field name="instagram_status" type="list" default="1" label="PROFILE_STATUS" description="PROFILE_STATUS_DESC">
+					<option value="1">ENABLED</option>
+					<option value="0">DISABLED</option>
+				</field>
+				<field name="instagram_account" type="socialid" social="instagram" default="joomlart" label="INSTAGRAM_ID" description="INSTAGRAM_ID_DESC" />
+				
+				<field name="instagram_article_spacer" type="spacer" class="text" label="Article Settings" />
+				<field name="instagram_created_by" type="jauser" default="42" label="CREATED_BY" description="CREATED_BY_DESC" />
+				<field name="instagram_target" type="list" default="joomla" label="TARGET_COM" description="TARGET_COM_DESC">
+					<option value="joomla">Content</option>
+					<option value="k2">K2</option>
+				</field>
+				<field name="instagram_joomla_catid" type="category" extension="com_content" default="" label="INSTAGRAM_CAT_ID" description="INSTAGRAM_CAT_ID_DESC" />
+				<field name="instagram_k2_catid" type="categoryk2" subtype="getCategory" default="" label="K2 category" description="INSTAGRAM_CAT_ID_DESC" />
+				
+				<field name="instagram_sourcetxt" type="text" default="(Source Instagram)" label="SOURCE_TXT" description="SOURCE_TXT_DESC" />
+				
+				<field name="instagram_advanced_spacer" type="spacer" class="text" label="Advanced Settings" />
+				<field name="instagram_update_article" type="list" default="0" label="UPDATE_ARTICLE" description="UPDATE_ARTICLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<!--<field name="instagram_getimg" type="list" default="1" label="GET_TWEET_IMG" description="GET_TWEET_IMG_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>-->
+				<field name="instagram_save_image" type="list" default="0" label="SAVE_IMAGE" description="SAVE_IMAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="instagram_limit_post" type="text" default="20" label="LIMIT_POST" description="LIMIT_POST_DESC"/>
+				<field name="btn_save_instagram_profile" type="jadepend" function="@profile_button" source="instagram" class="jabutton" value="Save Profile" hidden="true" />
+				
+				<!--form controller-->
+				<field name="instagram_controller" type="jadepend" function="@group" level="3" label=" ">
+					<option for="instagram_target" value="joomla" hideRow="true">instagram_joomla_catid</option>
+					<option for="instagram_target" value="k2" hideRow="true">instagram_k2_catid</option>
+					<!--<option for="instagram_getimg" value="1" hideRow="false">instagram_save_image</option>-->
+				</field>
+			</fieldset>
+			
+			<fieldset name="flickr" label="Flickr">
+				<field name="flickr_profiles" type="jadepend" function="@profiles" hidden="true" source="flickr" />
+				<field name="flickr_status" type="list" default="1" label="PROFILE_STATUS" description="PROFILE_STATUS_DESC">
+					<option value="1">ENABLED</option>
+					<option value="0">DISABLED</option>
+				</field>
+				<field name="flickr_account" type="socialid" social="flickr" default="joomlart" label="FLICKR_ID" description="FLICKR_ID_DESC" />
+				<field name="flickr_get_favorite_photos" type="list" default="1" label="FLICKR_GET_FAVORITE_PHOTOS" description="FLICKR_GET_FAVORITE_PHOTOS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="flickr_article_spacer" type="spacer" class="text" label="Article Settings" />
+				<field name="flickr_created_by" type="jauser" default="42" label="CREATED_BY" description="CREATED_BY_DESC" />
+				<field name="flickr_target" type="list" default="joomla" label="TARGET_COM" description="TARGET_COM_DESC">
+					<option value="joomla">Content</option>
+					<option value="k2">K2</option>
+				</field>
+				<field name="flickr_joomla_catid" type="category" extension="com_content" default="" label="FLICKR_CAT_ID" description="FLICKR_CAT_ID_DESC" />
+				<field name="flickr_k2_catid" type="categoryk2" subtype="getCategory" default="" label="K2 category" description="FLICKR_CAT_ID_DESC" />
+				
+				<field name="flickr_sourcetxt" type="text" default="(Source Flickr)" label="SOURCE_TXT" description="SOURCE_TXT_DESC" />
+				
+				<field name="flickr_advanced_spacer" type="spacer" class="text" label="Advanced Settings" />
+				<field name="flickr_update_article" type="list" default="0" label="UPDATE_ARTICLE" description="UPDATE_ARTICLE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<!--<field name="flickr_getimg" type="list" default="1" label="GET_TWEET_IMG" description="GET_TWEET_IMG_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>-->
+				<field name="flickr_save_image" type="list" default="0" label="SAVE_IMAGE" description="SAVE_IMAGE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="flickr_limit_post" type="text" default="20" label="LIMIT_POST" description="LIMIT_POST_DESC"/>
+				<field name="btn_save_flickr_profile" type="jadepend" function="@profile_button" source="flickr" class="jabutton" value="Save Profile" hidden="true" />
+				
+				<!--form controller-->
+				<field name="flickr_controller" type="jadepend" function="@group" level="3" label=" ">
+					<option for="flickr_target" value="joomla" hideRow="true">flickr_joomla_catid</option>
+					<option for="flickr_target" value="k2" hideRow="true">flickr_k2_catid</option>
+					<!--<option for="flickr_getimg" value="1" hideRow="false">flickr_save_image</option>-->
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="get_url_service" type="list" default="untiny.com" label="GET_URL_SERVICE" description="GET_URL_SERVICE_DESC">
+					<option value="untiny.com">www.untiny.com</option>
+					<option value="realurl.org">realurl.org</option>
+				</field>
+				<field name="cache_time" type="cron" default="3600" label="JA_CRON_TIME" description="JA_CRON_TIME_DESC"/>
+				
+				<field name="twitter_oauth_spacer" type="spacer" class="text" label="TWITTER_OAUTH_SETTINGS" description="TWITTER_OAUTH_SETTINGS_DESC" />
+				<field name="consumer_key" type="password" default="" size="40"
+					label="CONSUMER_KEY" description="CONSUMER_KEY_DESC" />
+				<field name="consumer_secret" type="password" default="" size="40"
+					label="CONSUMER_SECRET" description="CONSUMER_SECRET_DESC" />
+				<field name="oauth_access_token" type="password" default="" size="40"
+					label="OAUTH_ACCESS_TOKEN" description="OAUTH_ACCESS_TOKEN_DESC" />
+				<field name="oauth_access_token_secret" type="password" default="" size="40"
+					label="OAUTH_ACCESS_TOKEN_SECRET" description="OAUTH_ACCESS_TOKEN_SECRET_DESC" />
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

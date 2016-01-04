@@ -1,0 +1,580 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+// ---------------------------------------------------------
+// MAIN TEMPLATE STYLES
+// ---------------------------------------------------------
+
+// 
+// HEADER
+// ---------------------------------------------------------
+
+.t3-header {
+  .clearfix();
+  padding-top: @t3-global-padding;
+  padding-bottom: @t3-global-padding;
+  border-bottom: 1px solid @t3-border-color;
+  background: @white;
+  position: relative;
+  z-index: @zindex-navbar;
+  .transition(background 0.3s);
+
+  .has-slideshow & {
+    background: @gray-light-lv4;
+    border-bottom-color: transparent;
+
+    &:hover {
+      background: @white;
+    }
+  }
+
+  .landing-page & {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: none;
+    border-bottom: 0;
+
+    @media (max-width: @screen-sm-max) {
+      background-color: @white;
+
+      &.dark-style {
+        background-color: @black;
+      }
+    }
+  }
+}
+
+
+// Logo
+// ----
+.logo {
+  text-align: center;
+  line-height: 1;
+
+  a {
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+// Logo Image
+// ----------
+.logo-image {
+  // Hide sitename and slogan
+  span, small {
+    display: none;
+  }
+}
+
+// Logo Text
+// ----------
+.logo-text {
+
+  a {
+    text-decoration: none;
+    font-size: ceil(@font-size-base * 2);
+    font-weight: bold;
+  }
+
+  &:hover a,
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: none;
+  }
+
+  // Taglines
+  .site-slogan {
+    display: block;
+    font-size: @font-size-base;
+    margin-top: 5px;
+  }
+
+}
+
+// Head Right
+// -----------
+.head-right {
+  min-height: @navbar-height; 
+  padding-top: @t3-global-padding/2;
+  padding-bottom: @t3-global-padding/2;
+}
+
+// Head search
+.head-search {
+
+  margin-top: @t3-global-margin;
+  .clearfix();
+
+  form {
+    margin: 0;
+  }
+  
+  label {
+    display: none;
+  }
+  
+  .search {
+    position: relative;
+    // Place a search icon
+    &:before {
+      font-family: "FontAwesome";
+      content: "\f002";
+      display: block;
+      position: absolute;
+      left: 10px;
+      top: 6px;
+      color: @gray;
+    }
+    // Float to right on Tablets / Desktop
+    @media screen and (min-width: @screen-sm) {
+      float: right;
+    }
+  }
+  
+  .form-control {
+    width : 100%;
+    padding-left: 30px;
+
+    // Width Control on Tablets / Desktop
+    @media screen and (min-width: @screen-sm) {
+      width: 150px;
+      // focus state
+      &:focus {
+        width: 200px;
+      }
+    }
+
+  }
+
+}
+
+
+
+// ---------------------------------------------------------
+// SPOTLIGHTS
+// ---------------------------------------------------------
+
+.t3-sl {
+  padding-bottom: @t3-global-padding * 2;
+  padding-top: @t3-global-padding * 2;
+  // Larger padding in Tablet / Desktop
+  @media screen and (min-width: @screen-sm) {
+    padding-bottom: @t3-global-padding * 3;
+    padding-top: @t3-global-padding * 3;
+  }
+}
+
+// Spotlight 1
+// -----------
+.t3-sl-1 {
+}
+
+// Spotlight 2
+// -----------
+.t3-sl-2 {
+}
+
+// Spotlight 3
+// -----------
+.t3-sl-3 {
+}
+
+// Spotlight 4
+// -----------
+.t3-sl-4 {
+}
+
+
+// ---------------------------------------------------------
+// SLIDESHOW
+// ---------------------------------------------------------
+.t3-slideshow {
+  background: @gray-light-lv4;
+  position: relative;
+  z-index: 1;
+
+  .landing-page & {
+    background-color: @white;
+
+    @media (max-width: @screen-sm-max) {
+      padding-top: 120px;
+    }
+  }
+}
+
+
+// ---------------------------------------------------------
+// SECTIONS
+// ---------------------------------------------------------
+.t3-section {
+
+}
+
+.t3-section-1 {
+  .vmgroup {
+    .vmproduct {
+      padding: 0;
+      margin: 0 -(@t3-global-margin/2) @t3-global-margin !important;
+      .clearfix();
+
+      &:last-child {
+        margin-bottom:  0 !important;
+      }
+
+      li, .slick-slide {
+        padding: 0 @t3-global-padding/2;
+        text-align: center;
+      }
+
+      .featuredProductImage {
+        width: 100%;
+      }
+
+      // No Padding
+      &.no-padding {
+        margin: 0 0 @t3-global-margin*3 !important;
+
+        @media (max-width: @screen-sm-max) {
+          margin-bottom: 0 !important;
+        }
+
+        li, .slick-slide {
+          padding: 0;
+
+          &.odd {
+            margin-top: 80px;
+
+            @media (max-width: @screen-sm-max) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.block-slick-list {
+      position: relative;
+      margin-top: -80px;
+      z-index: 2;
+
+      @media (max-width: @screen-sm-max) {
+        margin-top: 0;
+      }
+
+      .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
+
+      .block-image {
+        background: darken(@gray-lighter, 8%);
+      }
+    }
+  }
+}
+
+
+// ---------------------------------------------------------
+// MAIN BODY
+// ---------------------------------------------------------
+.t3-mainbody {
+  padding-top: @line-height-computed ;
+  padding-bottom: @line-height-computed;
+}
+
+// Mod Preview 
+// ------------
+.mod-preview-info {
+  z-index: 1001; 
+}
+
+// Content
+// -------
+.t3-content {
+  padding-top: @line-height-computed ;
+  padding-bottom: @line-height-computed;
+}
+
+// Sidebars
+// --------
+.t3-sidebar {
+  padding-top: @line-height-computed;
+  padding-bottom: @line-height-computed;
+}
+
+.t3-sidebar-1 {
+}
+
+.t3-sidebar-2 {
+}
+
+
+
+// ---------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------
+.t3-footer {
+  background: @t3-footer-background;
+  color: @t3-footer-text-color;
+  .clearfix();
+
+  .logo {
+    padding-top: @t3-global-padding*4;
+  }
+
+  // small
+  small {
+    display: block;
+    font-size: 100%; //Use global footer font size.
+  }
+
+  // links
+  a {
+    // Link States
+    &:hover, &:active, &:focus {
+    }
+  }
+
+}
+
+// Foot Nav
+// --------
+.t3-footnav {
+  padding: @t3-global-padding 0;
+  .clearfix();
+
+  // Larger padding on Tablet / Desktop
+  @media screen and (min-width: @screen-md-min) {
+    padding: (@t3-global-padding * 2) 0;
+  }
+
+  > div {
+    padding-left: @grid-gutter-width/2;
+    padding-right: @grid-gutter-width/2;
+    text-align: center;
+
+    @media (max-width: @screen-sm-max) {
+      min-height: 0 !important;
+      margin-bottom: @t3-global-margin;
+      padding-bottom: @t3-global-padding;
+      border-bottom: 1px solid @gray-dark-lv3;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: @screen-sm-min) {
+      padding-left: @grid-gutter-width;
+      padding-right: @grid-gutter-width;
+
+      &:last-child {
+        border-right: 0;
+        padding-right: 0;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    @media (min-width: @screen-md-min) {
+      padding-left: @grid-gutter-width * 2;
+      padding-right: @grid-gutter-width * 2;
+      border-right: 1px solid @gray-dark-lv3;
+
+      &:last-child {
+        border-right: 0;
+        padding-right: 0;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    @media (min-width: @screen-lg-min) {
+      padding-left: @grid-gutter-width * 3;
+      padding-right: @grid-gutter-width * 3;
+      border-right: 1px solid @gray-dark-lv3;
+
+      &:last-child {
+        border-right: 0;
+        padding-right: 0;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+  // Footnav Modules
+  .t3-module {
+    background: @t3-footer-module-background;
+    color: @t3-footer-module-text-color;
+    margin-top: @line-height-computed / 2;
+    margin-bottom: @line-height-computed / 2;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .module-title {
+      color: @t3-footer-module-title-color;
+      font-size: @font-size-large;
+      margin-bottom: @line-height-computed / 2;
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+
+      > li {
+        line-height: @line-height-computed;
+
+        // links
+        > a {
+          color: @white;
+          // Link States
+          &:hover, &:active, &:focus {
+            color: @t3-footer-module-text-color;
+          }
+        }
+      }
+    }
+
+  }
+
+  // About
+  // ------
+  .about {
+    font-size: @font-size-small;
+  }
+
+  // Address
+  // ---------
+  .address {
+    color: @white;
+    text-transform: uppercase;
+    font-size: @font-size-small + 1px;
+    font-family: @font-family-sans-serif;
+  }
+
+  // Social
+  // ---------
+  .social {
+    color: @white;
+    text-transform: uppercase;
+    font-size: @font-size-small + 1px;
+    font-family: @font-family-sans-serif;
+
+    @media (max-width: @screen-sm-max) {
+      & > li {
+        display: inline-block;
+        margin-right: @t3-global-margin/2;
+      }
+    }
+
+    a {
+      color: @white;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+}
+
+
+// Copyright
+// ---------
+.t3-copyright {
+  font-size: @font-size-small;
+  padding: 0 0 @t3-global-padding;
+  .clearfix();
+  small {
+    margin-bottom: 5px;
+  }
+
+  .row {
+    padding-top: @t3-global-padding;
+  }
+}
+
+.copyright {
+}
+
+.poweredby {
+  .clearfix();
+
+  // Align right on Tablet / Desktop
+  @media screen and (min-width: @screen-sm-max) {
+    text-align: right;
+  }
+
+  .t3-logo,
+  .t3-logo-small {
+    opacity: .8;
+    display: inline-block;
+  }
+}
+
+// FontAwesome Old Icons Replace
+// -----------------------------
+
+.icon-cog {
+  position: relative;
+
+  &:before {
+    content: "\f013";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+  }
+}
+
+.icon-remove {
+  &:before {
+    content: "\f00d";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+  }
+}
+
+.icon-drag {
+  background: @gray-dark-lv3;
+  border-radius: 50%;
+  color: @white;
+  display: none;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  width: 50px;
+  z-index: 999;
+  font-size: @font-size-small;
+}

@@ -1,0 +1,389 @@
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base/less/megamenu.less";
+
+
+// BASIC STYLE FOR MEGAMENU
+// -------------------------
+.t3-megamenu {
+
+  // THE MEGAMENU
+  //--------------------------------------------
+
+  // Global Menu Inner padding
+  // -------------------------
+  .mega-inner {
+    padding: @baseLineHeight;
+  }
+
+  // Inner Padding for 1 column
+  .span12 .mega-inner {
+  }
+
+  .mega-caption {
+    font-size:11px ;
+    font-family: Arial,Helvetica,sans-serif;
+    text-transform: none;
+  }
+
+  // Menu Grids
+  // ----------
+  .row-fluid {
+  }
+
+  .row-fluid + .row-fluid  {
+    border: none;
+    padding-top: 0;
+  }
+
+  .row-fluid [class*="span"] {
+  }
+
+
+  // The Dropdown
+  // ------------
+  .mega-dropdown-menu {
+  }
+
+
+  // The Group
+  // ---------
+  .mega-group {
+  }
+
+  // Group Title
+  .mega-nav .mega-group > span,
+  .dropdown-menu .mega-nav .mega-group > span {
+    background: @T3moduleTitleBackground;
+    color: @white;
+    font-size: 14px;
+    font-family: 'novecento_wide_lightbold', sans-serif;
+    font-weight: normal;
+    margin-bottom: 15px;
+    padding: 8px 10px;
+    line-height: 1;
+
+    &:hover, &:active, &:focus {
+      background: @T3moduleTitleBackground;
+      color: @white;
+    }
+
+  }
+  .mega-nav .mega-group a.mega-group-title,
+  .mega-nav .mega-group > .mega-group-title, 
+  .dropdown-menu .mega-nav .mega-group > .mega-group-title, 
+  .dropdown-menu .active .mega-nav .mega-group > .mega-group-title {
+    background: @T3moduleTitleBackground;
+    color: @white;
+    font-size: 14px;
+    font-family: 'novecento_wide_lightbold', sans-serif;
+    font-weight: normal;
+    padding: 8px 10px;
+    line-height: 1;
+    text-shadow: none;
+    display: inline-block;
+  }
+  
+  .mega-nav .mega-group a.mega-group-title:hover,
+  .mega-nav .mega-group > .mega-group-title:hover, 
+  .dropdown-menu .mega-nav .mega-group > .mega-group-title:hover, 
+  .dropdown-menu .active .mega-nav .mega-group > .mega-group-title:hover {
+    background: @T3moduleTitleBackground;
+    color: @white;
+  }
+
+  ul.mega-nav > li.mega-group {
+    padding-top: 20px;
+  }
+
+  ul.mega-nav > li.mega-group:first-child {
+    padding-top: 0;
+  }
+
+  // Group Content
+
+  .mega-group-ct > .row-fluid > [class*="span"] > .mega-inner {
+  }
+
+
+  // Nav in Megamenu
+  // ---------------
+  .mega-col-nav {
+  }
+
+  // Inner padding
+  .mega-col-nav .mega-inner {
+  }
+
+  // Inner padding for nav in 1 column
+  .span12.mega-col-nav .mega-inner {
+  }
+
+  // The Nav
+  .mega-nav {
+    margin: 0;
+  }
+
+  .mega-nav .mega-inner,
+  .dropdown-menu .mega-nav .mega-inner {
+    background: transparent !important;
+  }
+
+  .mega-nav > li,
+  .dropdown-menu .mega-nav > li {
+    border-bottom: 1px solid @grayLighter;
+    list-style: none;
+  }
+
+  .mega-nav > li:last-child,
+  .dropdown-menu .mega-nav > li:last-child {
+    border: 0;
+  }
+
+  .mega-nav > li a,
+  .dropdown-menu .mega-nav > li a {
+    display: block;
+    padding: 5px 10px;
+  }
+
+  .mega-nav > li a:hover,
+  .mega-nav > li a:focus,
+  .mega-nav > li a:active,
+  .dropdown-menu .mega-nav > li a:hover,
+  .dropdown-menu .mega-nav > li a:focus,
+  .dropdown-menu .mega-nav > li a:active {
+    color: @baseColor;
+  }
+
+  .mega-group-ct .mega-nav > li a,
+  .mega-group-ct .dropdown-menu .mega-nav > li a {
+    border: none;
+    padding: 5px 0;
+  }
+
+  // Nav in Group
+  .mega-group > .mega-nav,
+  .dropdown-menu .mega-group > .mega-nav {
+  }
+
+  .mega-group > .mega-nav > li,
+  .dropdown-menu .mega-group > .mega-nav > li {
+  }
+
+  .mega-group .mega-nav > li a,
+  .dropdown-menu .mega-group .mega-nav > li a {
+  }
+
+  // The caret
+  .mega-nav .dropdown-submenu > a::after {
+    margin-right: 0;
+    direction: ltr;
+  }
+
+
+  // Modules in Megamenu
+  // -------------------
+  .mega-col-module {
+  }
+
+  // Inner padding
+  .mega-inner {
+    padding-left: 0;
+  }
+
+  .row-fluid .span6.mega-col-nav:first-child .mega-inner,
+  .row-fluid .span4.mega-col-nav:first-child .mega-inner,
+  .row-fluid .span3.mega-col-nav:first-child .mega-inner,
+  .row-fluid .span2.mega-col-nav:first-child .mega-inner,
+  .row-fluid .span6.mega-col-module:first-child .mega-inner,
+  .row-fluid .span4.mega-col-module:first-child .mega-inner,
+  .row-fluid .span3.mega-col-module:first-child .mega-inner,
+  .row-fluid .span2.mega-col-module:first-child .mega-inner {
+    padding-left: 20px;
+  }
+
+  .row-fluid .span12.mega-col-nav:first-child .mega-inner {
+    padding-left: 0;
+  }
+
+  // Inner padding for module in 1 column
+  .row-fluid .span12.mega-col-nav .mega-inner,
+  .row-fluid .span12.mega-col-module .mega-inner {
+    padding-left: 20px;
+  }
+
+  .row-fluid .no-padding .mega-inner {
+    padding-top: 0;
+  }
+
+  // The module
+  .t3-module {
+    border: none;
+  }
+
+  // Module Title
+  .t3-module .module-title {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  .t3-module .module-title span,
+  .t3-module .module-title:hover span{
+    background: @T3moduleTitleBackground;
+    color: @white;
+    font-weight: normal;
+    margin-bottom: 15px;
+    padding: 8px 10px;
+  }
+
+  .title-yellow .ja-module .module-title span{
+    background: @baseColor;
+  }
+
+  // Module Content
+  .t3-module .module-ct {
+    .clearfix();
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // List in Module
+  .t3-module ul,
+  .t3-module ul.nav {
+    background: none ;
+    height: auto ;
+    margin: 0;
+  }
+
+  .t3-module li,
+  .t3-module .nav li,
+  .t3-module ul li {
+    list-style: none ;
+    background: none;
+  }
+
+  .t3-module li:first-child,
+  .t3-module .nav li:first-child {
+    margin: 0;
+  }
+
+  .t3-module ul li a,
+  .t3-module .nav li a,{
+    text-transform: none;
+    padding: 5px 0; 
+    display: block;
+  }
+
+  .t3-module ul li a:hover,
+  .t3-module ul li a:active,
+  .t3-module ul li a:focus,
+  .t3-module ul li a:visited,
+  .t3-module .nav li a:hover,
+  .t3-module .nav li a:focus,
+  .t3-module .nav li a:active {
+    color: @baseColor;
+  }
+
+  .t3-module ul li.active > a, 
+  .t3-module ul li.active > a:hover, 
+  .t3-module ul li.active > a:focus,
+  .t3-module .nav li.active > a, 
+  .t3-module .nav li.active > a:hover, 
+  .t3-module .nav li.active > a:focus {
+    background: none;
+    color: @baseColor;
+    padding-bottom: 5px;
+  }
+
+  .navigation .custom a {
+    border: none;
+    padding: 0;
+  }
+  // End
+
+  //Custom typo in module
+  .t3-module a.custom-link {
+    border-bottom: 1px dotted @grayLight;
+    padding: 0;
+  }
+
+  .t3-module a.custom-link:hover {
+    border-bottom: 1px dotted @linkColorHover;
+  }
+  // End
+
+  // Style for JA Sidenews in mega menu
+  .t3-module a {
+    padding: 0;
+  }
+
+  .t3-module .ja-slidenews-item {
+    padding: 8px 0;
+  }
+
+  .t3-module .ja-slidenews-item img {
+    margin: 5px 10px 0 0 !important;
+  }
+
+  .t3-module .ja-slidenews-item .ja-title {
+    color: @grayDarker;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .t3-module .ja-slidenews-item .ja-title:hover {
+    color: @linkColorHover;
+    text-decoration: underline;
+  }
+  // End
+
+  //Style for Banner
+  .t3-module .banneritem {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+
+//  MEGAMENU (Inverted)
+// -------------------------------------------------------
+
+.T3Navbar() when (@T3NavbarInverted = 1) {
+
+  // The Group
+  // ---------
+  // Group Title
+  .mega-nav .mega-group > span,
+  .dropdown-menu .mega-nav .mega-group > span {
+    color: @white;
+
+    &:hover, &:active, &:focus {
+      color: @white;
+    }
+  }
+
+  // Modules in Megamenu
+  // -------------------
+  // Module Title
+  .t3-module .module-title {
+    color: @white;
+  }
+
+  // End Mixin
+}
+
+.T3Navbar() when (@T3NavbarInverted = 0) {
+  // Leave blank here because we will use the default style.
+}
+
+// Calling the styles
+.t3-megamenu {
+  .T3Navbar();
+}

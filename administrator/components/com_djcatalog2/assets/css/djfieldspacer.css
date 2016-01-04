@@ -1,0 +1,54 @@
+
+.djsep {
+	display: inline-block;
+	border-top: 1px solid #ccc;
+	width: 100%;
+	margin-top: 10px;
+}
+.djtitle {
+	display: inline-block;
+	background: #f7f7f7;
+	color: #2678CD;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: auto;
+	min-width: 380px;
+	margin: 5px 0;
+}
+.djinfo {
+	display: inline-block;
+	background: #C3D2E5;
+	color: #0055BB;
+	border: 1px solid #84A7DB;
+	width: 98%;
+	margin: 5px 0;
+}
+.djnotice {
+	display: inline-block;
+	background: #fcc;
+	color: #c00;
+	border: 1px solid #c00;
+	width: 98%;
+	margin: 5px 0;
+}
+.djtitle label,
+.djinfo label,
+.djnotice label {
+	width: auto;
+	text-align: left;
+	padding: 5px 10px;
+	
+}
+
+div.plgParams {
+	background: #f5f5f5;
+	border: 1px solid #ccc;
+	padding: 15px 20px 1px 20px;
+	margin: 10px 0;
+	clear:both;
+}
+div.plgParams.msg {
+	border:0;
+	padding:0;
+	background: none;
+}

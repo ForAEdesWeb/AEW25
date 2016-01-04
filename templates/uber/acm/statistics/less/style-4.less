@@ -1,0 +1,65 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.uber-stats {
+
+	// Style 4
+	&.style-4 {
+		.stats-title {
+			font-size: @font-size-h3;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media screen and (max-width: @screen-sm-max) {
+				font-size: @font-size-h4;
+				width: 90%;
+			}
+		}
+
+		.stats-list {
+			.stats-asset {
+				// Control screen tablet / mobile
+				@media screen and (max-width: @screen-sm-max) {
+					margin-bottom: @t3-global-margin * 2;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			span {
+				display: block;
+				text-align: center;
+
+				&.stats-item-counter {
+					border: 5px solid @brand-primary;
+			    color: @brand-primary;
+			    font-size: @font-size-h2;
+			    text-align: center;
+			    margin: 0 auto @t3-global-margin;
+			    width: 160px;
+			    line-height: 158px;
+			    height: 160px;
+			    border-radius: 160px;
+				}
+
+				&.stats-subject {
+					font-weight: @font-weight-bold;
+					color: @black;
+				}
+			}
+		}
+
+		&.style-dark {
+			.stats-list span.stats-subject {
+				color: @white;
+			}
+
+			.small-head {
+				color: @white;
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Pricing Table</title>
+    <sampledata><![CDATA[
+        {"jatools-layout-pricing":["default"],"pricing[pricing-style]":["style-dark"],"pricing[pricing-col-name]":["Personal","Portfolio"],"pricing[pricing-col-price]":["((sup))$((/sup))34((sup)).99((/sup))","((sup))$((/sup))54((sup)).99((/sup))"],"pricing[pricing-col-featured]":["0","1"],"pricing[pricing-col-button]":["Sign Up","Sign Up"],"pricing[pricing-col-buttonlink]":["index.php?option=com_users&view=registration&Itemid=551","index.php?option=com_users&view=registration&Itemid=551"],"pricing[pricing-row-name]":["Unlimited bandwidth","Unlimited products"],"pricing[pricing-row-supportfor]":["3","3"]}
+    ]]></sampledata>
+    <fields name="pricing">
+        <fieldset name="pricing-basic" label="PRICING_BASIC_LABEL" description="PRICINGBASIC_DESC" multiple="0">
+            <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+         		<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+            <field name="block-bg" type="media" default="" global="1" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+            
+            <field name="pricing-style" type="list" default="style-light" global="1" label="PRICING_STYLE_LABEL"
+                   description="PRICING_STYLE_DESC">
+                <option value="style-dark">LAYOUT_PRICING_DARK</option>
+                <option value="style-light">LAYOUT_PRICING_LIGHT</option>
+            </field>
+        </fieldset>
+
+        <fieldset name="pricing-col" size="50" label="PRICING_COLUMN_LABEL" description="PRICING_COLUMN_DESC">
+            <field name="data" type="jatable">
+                <item name="pricing-col-name" size="50" type="text" default="" label="PRICING_COLNAME_LABEL"
+                      description="PRICING_COLNAME_DESC" required="1"/>
+                <item name="pricing-col-price" size="50" type="text" default="" label="PRICING_COLPRICE_LABEL"
+                      description="PRICING_COLPRICE_DESC"/>
+                <item name="pricing-col-featured" type="radio" default="0" label="PRICING_FEATURED_LABEL"
+                      description="PRICING_FEATURED_DESC">
+                    <option value="0" class="off">JNO</option>
+                    <option value="1" class="on">JYES</option>
+                </item>
+                <item name="pricing-col-button" size="50" type="text" default="" label="PRICING_BUTTON_LABEL"
+                      description="PRICING_BUTTON_DESC"/>
+                <item name="pricing-col-buttonlink" size="50" type="text" default="" label="PRICING_BUTTON_LINK_LABEL"
+                      description="PRICING_BUTTON_LINK_DESC"/>
+            </field>
+        </fieldset>
+
+    </fields>
+</form>

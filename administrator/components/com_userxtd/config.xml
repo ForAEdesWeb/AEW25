@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="component"
+		label="COM_USERXTD_COMPONENT_LABEL"
+		description="COM_USERXTD_COMPONENT_DESC"
+		addfieldpath="administrator/components/com_userxtd/model/field"
+		>
+
+		<field
+			name="CoreRegistration_Redirect"
+			type="radio"
+			label="COM_USERXTD_CONFIG_CORE_REGISTRATION_REDIRECT"
+			description="COM_USERXTD_CONFIG_CORE_REGISTRATION_REDIRECT_DESC"
+			default="0"
+			class="btn-group"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="captcha"
+			type="plugins"
+			folder="captcha"
+			default=""
+			label="COM_USERXTD_CONFIG_CAPTCHA"
+			description="COM_USERXTD_CONFIG_CAPTCHA_DESC"
+			filter="cmd" >
+			<option value="">JOPTION_USE_DEFAULT</option>
+			<option value="0">JOPTION_DO_NOT_USE</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="UserProfile_GuestSeeProfile"
+			type="radio"
+			label="COM_USERXTD_CONFIG_USER_PROFILE_GUEST_SEE_PROFILE"
+			description="COM_USERXTD_CONFIG_USER_PROFILE_GUEST_SEE_PROFILE_DESC"
+			class="btn-group"
+			default="1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="UserProfile_CanEdit"
+			type="radio"
+			label="COM_USERXTD_CONFIG_USER_PROFILE_CAN_EDIT"
+			description="COM_USERXTD_CONFIG_USER_PROFILE_CAN_EDIT_DESC"
+			class="btn-group"
+			default="1"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field name="CoreRegistration_Categories"
+			type="category"
+			default="*"
+			extension="com_userxtd"
+			label="COM_USERXTD_CONFIG_CORE_REGISTRATION_CATEGORIES"
+			description="COM_USERXTD_CONFIG_CORE_REGISTRATION_CATEGORIES_DESC"
+			multiple="true"
+			>
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="CoreRegistration_Categories_InUserInfo"
+			type="category"
+			default="*"
+			extension="com_userxtd"
+			label="COM_USERXTD_CONFIG_CORE_REGISTRATION_CATEGORIES_SHOW"
+			description="COM_USERXTD_CONFIG_CORE_REGISTRATION_CATEGORIES_SHOW_DESC"
+			multiple="true"
+			>
+			<option value="*">JALL</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="content_integrate">
+
+		<field
+			name="UserInfo"
+			type="radio"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_USER_INFORMATION"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_USER_INFORMATION_DESC"
+			default="1"
+			class="btn-group"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="UserInfo_ImageField"
+			type="field_list"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_AVATAR"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_AVATAR_DESC"
+			default="BASIC_AVATAR"
+			>
+			<option>JNONE</option>
+		</field>
+
+		<field
+			name="UserInfo_TitleField"
+			type="field_list"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_USERTITLE"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_USERTITLE_DESC"
+			default="name"
+			>
+			<option>JNONE</option>
+			<option value="name">COM_USERXTD_CONTENTINTEGRATE_USERTITLE_OPT_NAME</option>
+		</field>
+
+		<field
+			name="UserInfo_AboutField"
+			type="field_list"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_ABOUT"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_ABOUT_DESC"
+			default="BASIC_ABOUT"
+			>
+			<option>JNONE</option>
+		</field>
+
+		<field
+			name="UserInfo_WebiteField"
+			type="field_list"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_WEBSITE"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_WEBSITE_DESC"
+			default="BASIC_WEBSITE"
+			>
+			<option>JNONE</option>
+		</field>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="UserInfo_ImageCrop"
+			type="radio"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_IMAGE_CROP"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_IMAGE_CROP_DESC"
+			size="3"
+			default="1"
+			class="btn-group"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="UserInfo_ImageWidth"
+			type="text"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_IMAGE_WIDTH"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_IMAGE_WIDTH_DESC"
+			size="3"
+			default="150"
+			/>
+
+		<field
+			name="UserInfo_ImageHeight"
+			type="text"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_IMAGE_HEIGHT"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_IMAGE_HEIGHT_DESC"
+			size="3"
+			default="150"
+			/>
+
+		<field type="spacer" hr="true" />
+
+		<field
+			name="UserInfo_IncludeCSS_Article"
+			type="radio"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_INCLUDECSS_ARTICLE"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_INCLUDECSS_ARTICLE_DESC"
+			size="3"
+			default="1"
+			class="btn-group"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field
+			name="UserInfo_IncludeCSS_Component"
+			type="radio"
+			label="COM_USERXTD_CONFIG_CONTENTINTEGRATE_INCLUDECSS_COMPONENT"
+			description="COM_USERXTD_CONFIG_CONTENTINTEGRATE_INCLUDECSS_COMPONENT_DESC"
+			size="3"
+			default="1"
+			class="btn-group"
+			>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		>
+
+		<field name="rules" type="rules"
+			component="com_userxtd"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	</fieldset>
+
+</config>

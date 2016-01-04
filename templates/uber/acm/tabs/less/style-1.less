@@ -1,0 +1,101 @@
+// ------------------------------------------------
+// TAB STYLE 1
+// ------------------------------------------------
+.acm-tabs {
+  .style-1 {
+    background: none;
+    position: relative;
+    min-height: 380px;
+    z-index: 1;
+
+    // Control screen mobile
+    @media screen and (max-width: @screen-xs-max) {
+      min-height: unset;
+    }
+
+    // Tab control
+    .nav-tabs {
+      border: 0;
+      margin-bottom: @grid-gutter-width * 2;
+
+      // Control screen mobile
+      @media screen and (max-width: @screen-xs-max) {
+        margin-bottom: @grid-gutter-width;
+      }
+
+      li {
+        margin-right: @t3-global-margin;
+
+        // Control screen mobile
+        @media screen and (max-width: @screen-xs-max) {
+          margin-bottom: @t3-global-margin / 2;
+          width: 100%;
+        }
+
+        a {
+          background:transparent;
+          border: 0;
+          border-bottom: 1px solid transparent;
+          border-radius: 0;
+          color: @gray;
+          font-weight: bold;
+          font-size: @t3-font-size-bigger;
+          padding: 0;
+
+          // Control screen mobile
+          @media screen and (max-width: @screen-xs-max) {
+            display: inline-block;
+            font-size: @t3-font-size-smaller;
+          }
+
+          &:hover, &:focus, &:active {
+            border-bottom: 1px solid;
+            color: @gray-darker;
+            outline: 0;
+          }
+        }
+
+        &.active {
+          a {
+            border-bottom: 1px solid;
+            color: @gray-darker;
+
+            &:hover,
+            &:focus,
+            &:active {
+              outline: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // Tab Content
+    .tab-content {
+      // Image
+      img {
+        max-width: 100%;
+      }
+
+      // Intro Text
+      p {
+        margin-bottom: (@t3-global-margin * 2);
+      }
+
+      // Icon button
+      .btn-border {
+        .fa {
+          margin-right: (@t3-global-margin / 4);
+        }
+
+        // Control screen mobile
+        @media screen and (max-width: @screen-xs-max) {
+          margin-bottom: @t3-global-margin;
+        }
+      }
+    }
+  }
+}
+
+
+  

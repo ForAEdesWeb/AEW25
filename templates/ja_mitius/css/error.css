@@ -1,0 +1,97 @@
+
+@import url(../fonts/novecentowide1/stylesheet.css);
+
+body {
+	background: #000;
+	color: #333;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+
+.page-error {
+	background: url(../images/error.jpg) no-repeat center top #000;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div.error {
+  color: #fff;
+  margin: 200px auto 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+div#errorboxoutline {
+	position: relative;
+}
+
+div.error h1 {
+	font-family: 'novecento_wide_ultralightbold';
+	font-size: 320px;
+	font-weight: bold;
+	line-height: 260px;
+	margin: 0;
+	padding: 0;
+}
+
+div.error .error-message {
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 100px;
+	width: 100%;
+}
+
+div.error .error-message h2 {
+	background: #ff7600;
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: 'novecento_wide_ultralightbold';
+	font-size: 30px;
+	font-weight: bold;
+	line-height: normal;
+	margin: 0;
+	padding: 5px 20px;
+}
+
+div.error #errorboxbody {
+  color: #986f73;
+}
+
+div.error #errorboxbody a {
+  color: #fff;
+}
+
+div.error #errorboxbody a:hover,
+div.error #errorboxbody a:focus, 
+div.error #errorboxbody a:active {
+  color: #F76000;
+}
+
+
+@media (max-width: 767px) {
+  div.error h1{
+    font-size: 60px;
+    line-height: 60px;
+   }
+   
+   div.error .error-message h2 {
+    font-size: 20px;
+   }
+   
+   div.error {
+     margin-top: 10%;
+   }
+    
+}

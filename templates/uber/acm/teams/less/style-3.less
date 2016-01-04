@@ -1,0 +1,65 @@
+// -------------------------------
+// TEAMS STYLE 3
+// -------------------------------
+.acm-teams {
+  .style-3 {
+    .item {
+      margin-bottom: @t3-global-margin * 2;
+
+      .item-inner {
+        position: relative;
+        overflow: hidden;        
+
+
+        .member-image {
+          img {
+            width: 100%;
+            .transition( all 0.35s);
+          }
+        }
+
+        .member-info {
+          background: @gray-dark;
+          box-sizing: border-box;
+          color: @gray-lightest;
+          position: absolute;
+          bottom: -34px;
+          width: 100%;
+          .transition( bottom 0.35s);
+
+          h4 {
+            font-size: @font-size-base;
+            font-weight: @font-weight-bold;
+            height: 40px;
+            line-height: 40px;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            text-align: center;
+          }
+
+          .member-title {
+            font-size: @font-size-small - 2;
+            letter-spacing: 0.5px;
+            padding: 0 @t3-global-padding;
+            text-align: center;
+            text-transform: uppercase;
+            .opacity(0.8);
+          }
+        }
+      }
+
+      &:hover {
+        .member-image img {
+          transform: scale(1.1);
+        }
+
+        .member-info {
+          background: @brand-primary;
+          color: @white;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

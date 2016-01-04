@@ -1,0 +1,186 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// FEATURES INTRO
+// ------------------------------------
+.acm-features {
+  // Font Icon
+  .font-icon {
+    color: @brand-primary;
+    font-size: 55px;
+    margin-bottom: @t3-global-margin;
+    line-height: 1;
+  }
+
+  // Img Icon
+  .img-icon {
+    display: block;
+    margin-bottom: @t3-global-margin*1.5;
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  // features description
+  .features-description {
+    font-weight: @font-weight-normal;
+    color: @gray-darker;
+    font-size: @font-size-h3;
+    margin: 0 0 (@t3-global-margin*3) 0;
+
+    @media screen and (min-width: @screen-sm) {
+      width: 65%;
+    }
+  }
+
+  // Title
+  h3 {
+    color: @gray-dark;
+    margin: 0 0 (@t3-global-margin / 2);
+    font-size: @font-size-large;
+    font-weight: @font-weight-bold;
+
+    // Control screen mobile
+    @media screen and (min-width: @screen-sm) {
+    }
+  }
+
+  h4 {
+    color: @gray-dark;
+  }
+
+  // Description
+  p {
+  }
+
+  // Style Dark
+  // ------------------
+  &.style-dark {
+    // Title
+    h3, h4 {
+      color: @white;
+    }
+
+    // Description
+    p,
+    .description {
+      color: @gray-lighter;
+      color: rgba(225,225,225,0.5);
+    }
+
+    // features description
+    .features-description {
+      color: @white;
+    }
+  }
+}
+
+.acm-features {
+  margin-right: 0;
+  margin-left: 0;
+
+  .col-md-6 {
+    padding: 0;
+  }
+
+  // Features Image
+  .features-image {
+    overflow: hidden;
+  }
+  
+  // Features Content
+  .features-content {
+    padding: @grid-gutter-width;
+
+    // Control screen medium screen
+    @media screen and (min-width: @screen-md-min) {
+    }
+
+    // Control large screen / wide desktop
+    @media screen and (min-width: @screen-lg-min) {
+      padding: (@grid-gutter-width * 2);
+    }
+
+    // Features top
+    .ft-top {
+      h3 {
+        font-size: @font-size-base;
+        margin-bottom: @t3-global-margin/2;
+        padding-bottom: @t3-global-padding;
+        font-weight: @font-weight-bold;
+        text-transform: uppercase;
+        background: url("../../@{t3-image-path}/ico/divider.png") no-repeat center bottom;
+      }
+
+      .intro {
+        font-family: @font-family-serif;
+        margin-bottom: @t3-global-margin/2;
+      }
+
+      .readmore {
+        text-align: center;
+        a {
+          color: @gray-darker;
+          position: relative;
+          display: inline-block;
+
+          &:after {
+            border-bottom: 2px solid @brand-secondary;
+            width: 0;
+            content: "";
+            height: 0;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            .transition(width 0.2s);
+          }
+
+          &:hover, &:focus, &:active {
+            &:after {
+              width: 100%;
+            } 
+          }
+        }
+      }
+    }
+
+    // Features bottom
+    .ft-bottom {
+
+      .col-sm-4 {
+        margin-top: @t3-global-margin * 2;
+      }
+
+      // Control screen mobile
+      @media screen and (max-width: @screen-xs-max) {
+        .col-sm-4 {
+          margin-bottom: @t3-global-margin;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      // Title
+      h4 {
+        font-size: @font-size-large;
+        font-weight: @font-weight-bold;
+        margin-top: @t3-global-margin;
+        margin-bottom: @t3-global-margin / 2;
+      }
+
+      // Description
+      .description {
+      }
+    }
+  }
+}
+
+@import "style-2.less";

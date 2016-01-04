@@ -1,0 +1,85 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+.home-construction {
+
+  // ---------------------------------------------------------
+  // CONSTRUCTION STYLE
+  // ---------------------------------------------------------
+  // Used for Construction Layout.
+
+  // Override Style Module ACM
+  .home-ft {
+    .acm-features.style-1 {
+      .features-item {
+        margin-top: -(@grid-gutter-width * 3);
+        z-index: 15;
+
+        // Control screen mobile/tablet
+        @media screen and (max-width: @screen-sm-max) {
+          margin-top: @t3-global-margin;
+        }
+
+        .img-icon {
+          margin-bottom: 0;
+
+          // Control screen mobile/tablet
+          @media screen and (max-width: @screen-sm-max) {
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        h3 {
+          background: @white;
+          margin-bottom: 0;
+          padding: @t3-global-padding;
+        }
+
+        p {
+          background: @white;
+          margin-bottom: 0;
+          padding: 0 @t3-global-padding (@t3-global-padding * 2) @t3-global-padding;
+        }
+      }
+    }
+  }
+
+  .acm-testimonials.style-6 {
+    color: @white;
+  }
+
+  .service-bt {
+    .acm-hero.style-5 {
+      padding: @t3-global-padding * 2 0;
+
+      .hero-heading {
+        margin-bottom: 0;
+      }
+
+      .hero-intro {
+        color: @white;
+        font-size: @font-size-h1;
+      }
+    }
+  }
+
+  .acm-testimonials .carousel-control .fa {
+    color: @white;
+    border-color: @white;
+  }
+
+  .acm-gallery.style-2.style-lily .item-details h4 {
+    color: @white;
+    font-size: @font-size-large;
+  }
+  
+// End
+}

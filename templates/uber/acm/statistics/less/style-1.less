@@ -1,0 +1,39 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.uber-stats {
+
+	// Style 1
+	&.style-1 {
+		.stats-list {
+
+			li {
+				display: inline-block;
+				width: 48%;
+				border: none;
+				padding: 0 0 2px 0;
+				font-size: @font-size-base;
+				color: @gray-light;
+
+				@media screen and (max-width: @screen-xs) {
+					width: auto;
+					display: block;
+				}
+
+				span {
+					display: inline-block;
+					margin-right: 5px;
+				}
+
+				.stats-item-counter {
+					background: @brand-primary;
+					color: @white;
+					font-weight: @font-weight-normal;
+					width: 44px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

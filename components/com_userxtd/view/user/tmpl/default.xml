@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="com_userxtd_user_view_default_title" option="com_userxtd_user_view_default_option">
+		<message>
+			<![CDATA[com_userxtd_item_view_default_desc]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_userxtd/models/fields">
+
+			<field name="id" type="user"
+				label="COM_USERXTD_SELECT_USER"
+				description="COM_USERXTD_SELECT_USER_DESC"
+				/>
+		</fieldset>
+	</fields>
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+
+		<!-- Basic options. -->
+		<fieldset name="basic"
+			label="COM_USERXTD_ITEM_SETTINGS">
+
+			<!--<field name="CoreRegistration_Categories_ShowOption"
+				 type="list"
+				 default=""
+				 label="COM_USERXTD_CONFIG_CORE_REGISTRATION_CATEGORIES_SHOW_OPTION"
+				 description="COM_USERXTD_CONFIG_CORE_REGISTRATION_CATEGORIES_SHOW_OPTION_DESC"
+			>
+				<option value="">JOPTION_USE_DEFAULT</option>
+				<option value="1">JOPTION_OPTIONAL</option>
+			</field>-->
+
+			<field name="CoreRegistration_Categories_InUserInfo"
+				type="category"
+				default="global"
+				extension="com_userxtd"
+				label="COM_USERXTD_CONFIG_CORE_REGISTRATION_CATEGORIES_SHOW"
+				description="COM_USERXTD_CONFIG_CORE_REGISTRATION_CATEGORIES_SHOW_DESC"
+				multiple="true"
+				>
+				<option value="global">JGLOBAL_USE_GLOBAL</option>
+				<option value="*">JALL</option>
+			</field>
+
+		</fieldset>
+	</fields>
+</metadata>

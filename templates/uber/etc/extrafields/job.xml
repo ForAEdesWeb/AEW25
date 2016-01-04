@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="attribs">
+    <fieldset name="extra-fields_1" label="TPL_GROUP_EXTRA_FIELDS_LABEL" description="" group="extrafields">
+		    <field name="icon" type="text" label="TPL_ICON_AWESOME" description="TPL_ICON_AWESOME_DESC"/>
+			<field name="position" type="text" label="TPL_POSITION_JOBS" description="TPL_POSITION_JOBS_DESC"/>
+		    <field name="location" type="text" label="TPL_LOCATION" description="TPL_LOCATION_DESC"/>
+			<field name="employment" type="text" label="TPL_EMPLOTMENT" description="TPL_EMPLOTMENT_DESC"/>
+			<field name="job" type="text" label="TPL_JOBLEVEL" description="TPL_JOBLEVEL_DESC"/>
+			<field name="salary" type="text" label="TPL_SALARY" description="TPL_SALARY_DESC"/>
+			<field name="closing" type="text" label="TPL_CLOSING_DATE" description="TPL_CLOSING_DATE_DESC"/>
+			<field name="soft" type="textarea" label="TPL_SOFT_SKILL" description="TPL_SOFT_SKILL_DESC" cols="40" rows="5" filter="RAW"/>
+			<field name="link_1" type="text" label="TPL_LINK_SOCIAL_1" description="TPL_LINK_SOCIAL_DESC" size="40" filter="RAW"/>
+			<field name="link_2" type="text" label="TPL_LINK_SOCIAL_2" description="TPL_LINK_SOCIAL_DESC" size="40" filter="RAW"/>
+			<field name="link_3" type="text" label="TPL_LINK_SOCIAL_3" description="TPL_LINK_SOCIAL_DESC" size="40" filter="RAW"/>
+			<field name="link_4" type="text" label="TPL_LINK_SOCIAL_4" description="TPL_LINK_SOCIAL_DESC" size="40" filter="RAW"/>
+			<field name="link_5" type="text" label="TPL_LINK_BUTTON" description="TPL_LINK_BUTTON_DESC" size="40" filter="RAW"/>
+    </fieldset>
+</fields>
+</form>

@@ -1,0 +1,83 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// -----------------
+// TESTIMONIAL STYLE
+// -----------------
+.acm-testimonials {
+
+	// TESTIMONIAL STYLE 2
+	// -------------------
+	&.style-2 {
+	  .item {
+	    margin: 0 auto;
+	    text-align: center;
+
+	    .fa {
+	      margin: 0 (@t3-global-margin / 2) 0 0;
+	    }
+
+	    .testimonial-text {
+	      font-size: (@font-size-large * 1.5);
+
+	      @media screen and (max-width: @screen-xs-max) {
+					font-size: @font-size-large;
+				}
+	    }
+
+	    // Author information
+	    // ------------------
+	    .author-info {
+
+	    	// Author image
+	      .author-image {
+	        border-radius: 50%;
+	        display: inline-block;
+	        height: 64px;
+	        margin-bottom: @t3-global-margin / 2;
+	        overflow: hidden;
+	        width: 64px;
+
+	        img {
+	          border-radius: 50%;
+	          height: 64px;
+	          width: 64px;
+	        }
+	      }
+
+	      // Author info text
+		    .author-info-text {
+		      font-size: @font-size-small;
+		      letter-spacing: 1px;
+		      text-transform: uppercase;
+
+		      span.author-name {
+		        font-weight: @font-weight-bold;
+		      }
+		    }
+
+	    }
+	  }
+
+	  // Indicators
+	  .carousel-indicators {
+	    bottom: auto;
+	    margin-top: @t3-global-margin * 2;
+	    margin-bottom: 0;
+	    position: relative;
+	    z-index: 0;
+
+	    li {
+	      background: @gray-light;
+	      border-color: @gray-light;
+	      margin: 0 5px;
+
+	      &.active {
+	        background: @brand-primary;
+	        border-color: @brand-primary;
+	      }
+	    }
+  	}
+	}
+}

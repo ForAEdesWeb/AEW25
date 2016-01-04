@@ -1,0 +1,44 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.uber-stats {
+
+	// Style 6
+	&.style-6 {
+		.stats-list {
+			.stats-asset {
+				.clearfix();
+				padding: 0;
+				margin-bottom: @t3-global-margin;
+			}
+
+			span {
+				display: block;
+
+				&.stats-item-counter {
+					color: @black;
+					padding: 0;
+					background-color: @gray-lighter;
+					border-radius: 2px;
+
+					.progressbar {
+						span {
+							background-color: @brand-primary;
+							color: @white;
+							font-size: @font-size-h6;
+							width: 0;
+							height: 10px;
+							border-radius: 2px;
+						}
+					}
+				}
+
+				&.stats-item-subject {
+					padding-left: 0;
+					color: @gray-light;
+				}
+			}
+		}
+	}
+}

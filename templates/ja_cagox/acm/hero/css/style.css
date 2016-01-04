@@ -1,0 +1,322 @@
+.block-hero {
+  padding: 60px 0;
+  position: relative;
+}
+.block-hero .container {
+  overflow: hidden;
+}
+@media screen and (min-width: 480px) {
+  .block-hero {
+    padding: 120px 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .block-hero {
+    padding: 300px 0;
+  }
+}
+.block-hero.full-screen {
+  padding: 0;
+  height: 100%;
+}
+.block-hero.full-screen .block-hero-item {
+  padding: 0;
+  height: 100%;
+}
+.block-hero.full-screen .block-hero-item .container {
+  overflow: hidden;
+}
+.block-hero.full-screen .block-hero-item .block-bg {
+  background-size: auto 100%;
+}
+.block-hero.full-screen .block-title {
+  font-size: 41px;
+}
+@media screen and (max-width: 991px) {
+  .block-hero.full-screen .block-title {
+    font-size: 28px;
+  }
+}
+.block-hero.full-screen .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 767px) {
+  .block-hero.full-screen .container {
+    width: 100%;
+  }
+}
+.ie8 .block-hero.full-screen .container {
+  position: relative;
+  top: 20%;
+  left: 0;
+}
+.block-hero .block-bg {
+  background-repeat: no-repeat;
+  background-position: left top;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media screen and (max-width: 1199px) {
+  .block-hero .block-bg {
+    background-size: cover;
+    background-position: center top;
+  }
+}
+.block-hero .block-intro {
+  font-weight: 300;
+}
+@media (max-width: 480px) {
+  .block-hero .block-intro {
+    display: none;
+  }
+}
+.block-hero .hero-btn-actions {
+  margin-top: 30px;
+}
+@media screen and (max-width: 991px) {
+  .block-hero .hero-btn-actions {
+    margin-top: 30px;
+  }
+  .block-hero .hero-btn-actions .btn-lg {
+    padding: 8px 20px;
+    text-transform: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .block-hero .hero-btn-actions {
+    margin-top: 30px;
+  }
+  .block-hero .hero-btn-actions .btn-lg {
+    padding: 8px 20px;
+    text-transform: none;
+  }
+}
+.block-hero.text-left .block-title,
+.block-hero.text-left .block-intro {
+  text-align: left;
+}
+.block-hero.text-right .block-title,
+.block-hero.text-right .block-intro,
+.block-hero.text-right .slideshow-btn-actions {
+  text-align: right;
+}
+.block-hero.text-center .block-title,
+.block-hero.text-center .block-intro {
+  text-align: center;
+}
+.block-hero .block-title {
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: 900;
+  margin-top: 0;
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+}
+@media screen and (min-width: 767px) {
+  .block-hero .block-title {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .block-hero .block-title {
+    font-size: 61.5px;
+    line-height: 1.3;
+  }
+}
+.block-hero .block-intro {
+  font-size: 16px;
+  margin-bottom: 0;
+  text-align: left;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) {
+  .block-hero .block-intro {
+    display: block;
+  }
+}
+.ft-info .block-hero .block-intro {
+  display: block;
+}
+.block-hero .hero-btn-actions {
+  text-align: left;
+}
+.block-hero .hero-btn-actions .btn {
+  margin-right: 15px;
+}
+.block-hero .hero-btn-actions .btn.btn-border {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+.block-hero .hero-btn-actions .btn.btn-border:hover,
+.block-hero .hero-btn-actions .btn.btn-border:focus,
+.block-hero .hero-btn-actions .btn.btn-border:active {
+  background-color: #222222;
+  color: #ffffff;
+  border-color: #222222;
+}
+@media screen and (max-width: 767px) {
+  .block-hero .hero-btn-actions .btn {
+    margin-bottom: 30px;
+  }
+}
+.block-hero.dark-style {
+  background-color: #000000;
+}
+@media (min-width: 767px) and (max-width: 1200px) {
+  .block-hero.dark-style .hero-content {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+}
+.block-hero.dark-style .btn.btn-border {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.block-hero.dark-style .btn.btn-border:hover,
+.block-hero.dark-style .btn.btn-border:focus,
+.block-hero.dark-style .btn.btn-border:active {
+  background-color: #ffffff;
+  color: #222222;
+  border-color: #ffffff;
+}
+.block-hero.light-style {
+  background-color: #eaeaea;
+}
+.block-hero.light-style .block-title {
+  color: #000000;
+}
+@media screen and (max-width: 767px) {
+  .block-hero.light-style .hero-content {
+    width: auto;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .item:nth-child(4) .block-hero.light-style .hero-content {
+    width: 60%;
+  }
+}
+.block-hero.light-style .block-intro {
+  color: #000000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.block-hero.light-style .btn.btn-border {
+  border-color: #222222;
+  color: #222222;
+}
+.block-hero.light-style .btn.btn-border:hover,
+.block-hero.light-style .btn.btn-border:focus,
+.block-hero.light-style .btn.btn-border:active {
+  background-color: #222222;
+  color: #ffffff;
+  border-color: #222222;
+}
+.block-hero.rotate-style .hero-content {
+  animation-fill-mode: forwards;
+  transform: rotate(90deg) scale(0);
+  transition-delay: 800ms;
+  transition-duration: 1000ms;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.block-hero.rotate-style .hero-content > * {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.block-hero.rotate-style.active .hero-content {
+  transform: rotate(0deg) scale(1);
+}
+.block-hero.move-style .hero-content {
+  transform: translate(200%, 0);
+  transition-delay: 800ms;
+  transition-duration: 800ms;
+  -webkit-transform: translate(200%, 0);
+  -webkit-transition-delay: 800ms;
+  -webkit-transition-duration: 800ms;
+  -moz-transform: translate(200%, 0);
+  -moz-transition-delay: 800ms;
+  -moz-transition-duration: 800ms;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.block-hero.move-style .hero-content > * {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.block-hero.move-style.active .hero-content {
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+}
+.block-hero.fade-style .hero-content {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(0, 50px);
+  transition-delay: 800ms;
+  transition-duration: 800ms;
+  -webkit-transform: translate(0, 50px);
+  -webkit-transition-delay: 800ms;
+  -webkit-transition-duration: 800ms;
+  -moz-transform: translate(0, 50px);
+  -moz-transition-delay: 800ms;
+  -moz-transition-duration: 800ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.block-hero.fade-style.active .hero-content {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+}
+.block-hero.scale-style .hero-content {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: scale(0);
+  transition-delay: 800ms;
+  transition-duration: 800ms;
+  -webkit-transform: scale(0);
+  -webkit-transition-delay: 800ms;
+  -webkit-transition-duration: 800ms;
+  -moz-transform: scale(0);
+  -moz-transition-delay: 800ms;
+  -moz-transition-duration: 800ms;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.block-hero.scale-style .hero-content > * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.block-hero.scale-style.active .hero-content {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+}

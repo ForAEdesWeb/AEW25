@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>mod_djc2frontpage</name>
+	<creationDate>August 2012</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>3.3</version>
+	<description>MOD_DJC2FRONTPAGE_MODULE_DESCRIPTION</description>
+	<files>
+		<filename module="mod_djc2frontpage">mod_djc2frontpage.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_djc2frontpage.xml</filename>
+		<folder>tmpl</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic"
+				addfieldpath="/administrator/components/com_djcatalog2/models/fields">
+				<field name="moduleclass_sfx" type="text" default=""
+					label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="css" type="list" default="0"
+					label="MOD_DJC2FRONTPAGE_CONFIG_CSSSTYLE" description="MOD_DJC2FRONTPAGE_CONFIG_CSSSTYLE_DESC">
+					<option value="default">MOD_DJC2FRONTPAGE_STYLE_DEFAULT</option>
+					<option value="bootstrap">MOD_DJC2FRONTPAGE_STYLE_BOOTSTRAP</option>
+				</field>
+				<!--
+				<field name="layout" type="list" default="default"
+					label="MOD_DJC2FRONTPAGE_CONFIG_LAYOUT" description="MOD_DJC2FRONTPAGE_CONFIG_LAYOUT_DESC">
+					<option value="default">MOD_DJC2FRONTPAGE_LAYOUT_DEFAULT</option>
+					<option value="tableless">MOD_DJC2FRONTPAGE_LAYOUT_TABLELESS</option>
+				</field>
+				-->
+				<field name="responsive_width" type="text" default="" label="MOD_DJC2FRONTPAGE_CONFIG_RESPONSIVE_WIDTH" description="MOD_DJC2FRONTPAGE_CONFIG_RESPONSIVE_WIDTH_DESC" />
+				<field name="showtitle" type="radio" default="1"
+					label="MOD_DJC2FRONTPAGE_SHOW_TITLE">
+					<option value="1">MOD_DJC2FRONTPAGE_YES</option>
+					<option value="0">MOD_DJC2FRONTPAGE_NO</option>
+				</field>
+				<field name="linktitle" type="radio" default="1"
+					label="MOD_DJC2FRONTPAGE_LINK_TITLE">
+					<option value="1">MOD_DJC2FRONTPAGE_YES</option>
+					<option value="0">MOD_DJC2FRONTPAGE_NO</option>
+				</field>
+				<field name="showcattitle" type="radio" default="1"
+					label="MOD_DJC2FRONTPAGE_SHOW_CATTITLE">
+					<option value="1">MOD_DJC2FRONTPAGE_YES</option>
+					<option value="0">MOD_DJC2FRONTPAGE_NO</option>
+				</field>
+				<field name="showprodtitle" type="radio" default="0"
+					label="MOD_DJC2FRONTPAGE_SHOW_PRODUCERTITLE">
+					<option value="1">MOD_DJC2FRONTPAGE_YES</option>
+					<option value="0">MOD_DJC2FRONTPAGE_NO</option>
+				</field>
+				<field name="showprice" type="radio" default="0"
+					label="MOD_DJC2FRONTPAGE_SHOW_PRICE">
+					<option value="1">MOD_DJC2FRONTPAGE_YES</option>
+					<option value="0">MOD_DJC2FRONTPAGE_NO</option>
+				</field>
+				<field name="showpagination" type="list" default="1"
+					label="MOD_DJC2FRONTPAGE_NAVIGATION">
+					<option value="1">MOD_DJC2FRONTPAGE_PAGINATION</option>
+					<option value="2">MOD_DJC2FRONTPAGE_ARROWS</option>
+					<option value="0">MOD_DJC2FRONTPAGE_NONE</option>
+				</field>
+				<field name="orderby" type="list" default="0"
+					label="MOD_DJC2FRONTPAGE_ORDERBY">
+					<option value="0">MOD_DJC2FRONTPAGE_ORDERING</option>
+					<option value="1">MOD_DJC2FRONTPAGE_NAME</option>
+					<option value="2">MOD_DJC2FRONTPAGE_CATEGORY</option>
+					<option value="3">MOD_DJC2FRONTPAGE_PRODUCER</option>
+					<option value="4">MOD_DJC2FRONTPAGE_PRICE</option>
+					<option value="5">MOD_DJC2FRONTPAGE_ID</option>
+					<option value="6">MOD_DJC2FRONTPAGE_DATE</option>
+					<option value="7">MOD_DJC2FRONTPAGE_HITS</option>
+				</field>
+				<field name="orderbydir" type="list" default="0"
+					label="MOD_DJC2FRONTPAGE_ORDERBYDIR">
+					<option value="0">MOD_DJC2FRONTPAGE_ASC</option>
+					<option value="1">MOD_DJC2FRONTPAGE_DESC</option>
+				</field>
+				<field name="featured_only" type="list" default="0" label="MOD_DJC2FRONTPAGE_FEATURED_ONLY" >
+					<option value="0">MOD_DJC2FRONTPAGE_NO</option>
+					<option value="1">MOD_DJC2FRONTPAGE_YES</option>
+				</field>
+				<field name="featured_first" type="list" default="0" label="MOD_DJC2FRONTPAGE_FEATURED_FIRST" >
+					<option value="0">MOD_DJC2FRONTPAGE_NO</option>
+					<option value="1">MOD_DJC2FRONTPAGE_YES</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label=""
+					description="" />
+				<field name="catsw" type="radio" default="0"
+					label="MOD_DJC2FRONTPAGE_CATEGORIES">
+					<option value="0">MOD_DJC2FRONTPAGE_ALL</option>
+					<option value="1">MOD_DJC2FRONTPAGE_SELECTED</option>
+				</field>
+				<field name="catid" type="djcategory" default="0" parent="false"
+					label="MOD_DJC2FRONTPAGE_CATEGORIESSWITCH" description="MOD_DJC2FRONTPAGE_CATEGORIES_DESC" multiple="true" size="10"/>
+				<field name="@spacer" type="spacer" default="" label=""
+					description="" />
+				<field name="cols" type="text" default="1"
+					label="MOD_DJC2FRONTPAGE_THCOLS" />
+				<field name="rows" type="text" default="3"
+					label="MOD_DJC2FRONTPAGE_THROWS" />
+				<field name="largeprocess" type="list" default="1" label="MOD_DJC2FRONTPAGE_LARGE_IMG_PROCESS" description="MOD_DJC2FRONTPAGE_IMG_PROCESS_DESC">
+					<option value="1">COM_DJCATALOG2_CONFIG_IMAGE_RESIZE_AND_CROP</option>
+					<option value="0">COM_DJCATALOG2_CONFIG_IMAGE_RESIZE</option>
+				</field>
+				<field name="largewidth" type="text" default="400" label="MOD_DJC2FRONTPAGE_LARGE_IMG_WIDTH" description="MOD_DJC2FRONTPAGE_IMG_WIDTH_DESC"/>
+				<field name="largeheight" type="text" default="240" label="MOD_DJC2FRONTPAGE_LARGE_IMG_HEIGHT" description="MOD_DJC2FRONTPAGE_IMG_HEIGHT_DESC" />
+				
+				<field name="smallprocess" type="list" default="1" label="MOD_DJC2FRONTPAGE_SMALL_IMG_PROCESS" description="MOD_DJC2FRONTPAGE_IMG_PROCESS_DESC">
+					<option value="1">COM_DJCATALOG2_CONFIG_IMAGE_RESIZE_AND_CROP</option>
+					<option value="0">COM_DJCATALOG2_CONFIG_IMAGE_RESIZE</option>
+				</field>
+				<field name="smallwidth" type="text" default="90" label="MOD_DJC2FRONTPAGE_SMALL_IMG_WIDTH" description="MOD_DJC2FRONTPAGE_IMG_WIDTH_DESC" />
+				<field name="smallheight" type="text" default="70" label="MOD_DJC2FRONTPAGE_SMALL_IMG_HEIGHT" description="MOD_DJC2FRONTPAGE_IMG_HEIGHT_DESC"/>
+				<!--<field name="mainimage" type="list" default="large"
+					label="MOD_DJC2FRONTPAGE_MAINIMAGE">
+					<option value="medium">MOD_DJC2FRONTPAGE_MEDIUM</option>
+					<option value="large">MOD_DJC2FRONTPAGE_LARGE</option>
+				</field>-->
+				<field name="trunc" type="list" default="0"
+					label="MOD_DJC2FRONTPAGE_DESCRIPTION_TRUNCATE" description="MOD_DJC2FRONTPAGE_DESCRIPTION_TRUNCATE_DESC">
+					<option value="1">MOD_DJC2FRONTPAGE_YES</option>
+					<option value="0">MOD_DJC2FRONTPAGE_NO</option>
+				</field>
+				<field name="trunclimit" type="text" default="0"
+					label="MOD_DJC2FRONTPAGE_DESCRIPTION_TRUNCATE_LENGTH" description="MOD_DJC2FRONTPAGE_DESCRIPTION_TRUNCATE_LENGTH_DESC" />
+				<field name="@spacer" type="spacer" default="" label=""
+					description="" />
+				
+				<field name="modalimage" type="radio" default="1"
+					label="MOD_DJC2FRONTPAGE_MODAL_IMAGE">
+					<option value="1">MOD_DJC2FRONTPAGE_MODAL_IMAGE_1</option>
+					<option value="0">MOD_DJC2FRONTPAGE_MODAL_IMAGE_0</option>
+				</field>
+				<field name="showreadmore" type="radio" default="1"
+					label="MOD_DJC2FRONTPAGE_SHOW_READMORE">
+					<option value="1">MOD_DJC2FRONTPAGE_YES</option>
+					<option value="0">MOD_DJC2FRONTPAGE_NO</option>
+				</field>
+				<field name="readmoretext" type="text" default=""
+					label="MOD_DJC2FRONTPAGE_READMORE_TEXT" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

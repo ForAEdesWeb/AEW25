@@ -1,0 +1,34 @@
+/*!
+ * com_userxtd
+ *
+ * Copyright 2012 Asikart.com
+ * License GNU General Public License version 2 or later; see LICENSE.txt, see LICENSE.php
+ *
+ * Generator: AKHelper
+ * Author: Asika
+ */
+
+#userxtd-wrap .user-item .profile-info-inner
+{
+	padding-left: 15px;
+}
+
+#member-profile fieldset dt label
+{
+	display: inline;
+}
+
+#user-form #member-profile fieldset
+{
+	border: none;
+}
+
+#Userxtd .profile-info
+{
+	padding-left: 20px;
+}
+
+.profile-content fieldset
+{
+	margin: 20px 0;
+}

@@ -1,0 +1,246 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ * @credits       Mary Lou - http://tympanus.net/codrops/2013/08/28/transitions-for-off-canvas-navigations/
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base-bs3/less/off-canvas.less";
+
+
+
+//
+// OFF-CANVAS
+// -------------------------------------
+.t3-wrapper {
+  z-index: 120;
+}
+
+// Toggle Button
+// -------------------
+.off-canvas-toggle {
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+  width: @navbar-height;
+  height: @navbar-height;
+  line-height: @navbar-height;
+  background: none; 
+  color: @gray-darker;
+  float: left;
+
+  .landing-page .dark-style & {
+    color: @white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover, &:active {
+    background: none;
+    color: @brand-primary!important;
+  }
+
+  .dark-style & {
+    color: @white;
+  }
+}
+
+
+//
+// OFF-CANVAS CONTENT STYLES
+// -------------------------------------
+.t3-off-canvas {
+  display: none;
+
+  &.off-canvas-current {
+    display: block;
+  }
+
+  // Generic
+  // -----------------------------------
+  background: @gray-darker;
+  color: @t3-off-canvas-text-color;
+
+
+  // Header
+  // -----------------------------------
+  .t3-off-canvas-header {
+    background: @t3-off-canvas-header-background;
+    color: @t3-off-canvas-header-text-color;
+    padding: @t3-global-padding 0;
+
+    // Title
+    h2 {
+      margin: 0;
+      line-height: 45px;
+      font-size: @font-size-base;
+      font-weight: 600;
+      text-transform: uppercase;
+      display: inline-block;
+      color: @t3-off-canvas-header-text-color;
+    }
+
+    .logo a {
+      height: @navbar-height;
+
+      img {
+        max-height: 100%;
+      }
+    }
+
+  }
+
+  // Close Button
+  .close {
+    margin: 0;
+    height: 33px;
+    line-height: 33px;
+    width: 33px;
+    background: lighten(@t3-off-canvas-header-background, 20%);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+
+  // Nav Pills
+  // -----------------------------------
+  .nav-pills {
+    > li {
+      margin-top: 0;
+
+      &.active > a {
+        background: @white;
+        color: @brand-primary;
+      }
+
+      & > a {
+        background: @white;
+        color: @t3-off-canvas-text-color;
+        padding-left: @t3-global-padding;
+        padding-right: @t3-global-padding;
+        border-top: 1px solid @t3-border-color;
+
+        &:hover, &:focus, &:active {
+          background: @white;
+          color: @brand-primary;
+        }
+      } 
+
+      // Dropdown Menu
+      & > .dropdown-menu {
+        border-top: 1px solid @t3-border-color;
+      }
+
+      .dropdown-menu {
+        background: none;
+        padding: 0;
+
+        li > a {
+          color: @t3-off-canvas-text-color;
+          padding-left: @t3-global-padding;
+          padding-right: @t3-global-padding;
+
+          &:hover, &:focus, &:active {
+            background: none;
+            color: @brand-primary;
+          }
+        }
+
+        .dropdown-menu {
+          li > a {
+            text-transform: none;
+            padding-left: @t3-global-padding*1.5;
+          }
+        }
+
+        > .dropdown-submenu > .dropdown-menu {
+          padding-left: @t3-global-padding / 2;
+        }
+      }
+    }
+  }
+
+
+  // Body
+  // -----------------------------------
+  .t3-off-canvas-body {
+    background: @white;
+    padding: 0;
+    font-family: @font-family-sans-serif;
+
+    // Links
+    // ------------
+    a {
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+
+        .caret {
+          border-top-color: @brand-primary;
+        }
+      }
+
+      &:focus {
+        .tab-focus();
+      }
+    }
+
+    .dropdown-menu .active > a {
+      background: transparent;
+      color: @brand-primary;
+    }
+
+
+    // Navigations
+    // ------------
+    .nav {
+
+      .caret {
+        margin-left: 5px;
+        border-top-color: @text-color;
+      }
+
+      .active {
+
+        .caret {
+          border-top-color: @white;
+        }
+      }
+    }
+
+    // Modules
+    // ------------
+    .t3-module {
+      margin-bottom: 0;
+      padding: 0;
+      .box-shadow(none);
+    }
+
+    .module-title  {
+      margin-bottom: @line-height-computed / 2;
+    }
+
+  // End Off-Canvas Body
+  }
+
+// End Off-Canvas Content Styles
+}

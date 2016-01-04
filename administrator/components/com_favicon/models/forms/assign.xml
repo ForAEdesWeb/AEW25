@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="menus"
+			type="menuitem"
+                        multiple="true"
+                        size="20"
+			label="COM_FAVICON_MENUS_LABEL"
+			description="COM_FAVICON_MENUS_DESC"
+		/>
+		<field
+			name="iconid"
+			type="hidden"
+		/>
+	</fieldset>
+</form>

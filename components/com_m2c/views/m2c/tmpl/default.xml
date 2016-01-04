@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<layout title="COM_M2C_VIEW_DEFAULT_TITLE">
+		<message>COM_M2C_VIEW_DEFAULT_DESC</message>
+	</layout>
+
+	<fields  name="params" 
+		addfieldpath="/administrator/components/com_modules/models/fields">
+		<fieldset name="params" label="COM_M2C_BASIC_OPTIONS_FIELDSET_LABEL">
+			<field name="position" type="moduleposition" default="" required="true"
+				label="Module position to load" 
+				description="You can define any module position. For exemple: left" 
+			/>
+			<field name="mdescription" type="textarea" default="" 
+				label="Module Description" rows="5" cols="80" 
+				filter="JComponentHelper::filterText"
+				description="Writes a module description. Leave it blank if you don't want to show a description" />
+
+		</fieldset>
+	</fields>
+</metadata>

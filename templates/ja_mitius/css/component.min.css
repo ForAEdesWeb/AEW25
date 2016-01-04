@@ -1,0 +1,31 @@
+body{background:#fff;border:0}#ja-mainbody{margin-top:0;padding:20px
+0}#ja-mainbody #ja-content{margin-left:0px !important}.k2ReportCommentFormContainer
+button.button{box-shadow:none;color:#444;text-shadow:0 1px 1px rgba(255,255,255,0.75);background-color:#363636;background-image:-moz-linear-gradient(top,#3c3c3c,#2f2f2f);background-image:-webkit-gradient(linear,0 0,0 100%,from(#3c3c3c),to(#2f2f2f));background-image:-webkit-linear-gradient(top,#3c3c3c,#2f2f2f);background-image:-o-linear-gradient(top,#3c3c3c,#2f2f2f);background-image:linear-gradient(to bottom,#3c3c3c,#2f2f2f);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b3b3b', endColorstr='#ff2e2e2e', GradientType=0);border-color:#2f2f2f #2f2f2f #090909;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);*background-color:#2f2f2f;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);border:solid 1px #1a1a1a;border-color:rgba(0,0,0,0.15) rgba(0,0,0,0.15) rgba(0,0,0,0.25);color:#fff;margin-right:5px;padding:4px
+14px;text-shadow:none}.k2ReportCommentFormContainer button.button:hover,
+.k2ReportCommentFormContainer button.button:active,
+.k2ReportCommentFormContainer button.button.active,
+.k2ReportCommentFormContainer button.button.disabled,
+.k2ReportCommentFormContainer button.button[disabled]{color:#444;background-color:#2f2f2f;*background-color:#222}.k2ReportCommentFormContainer button.button:active,
+.k2ReportCommentFormContainer
+button.button.active{background-color:#151515 \9}.k2ReportCommentFormContainer button.button:hover,
+.k2ReportCommentFormContainer button.button:focus,
+.k2ReportCommentFormContainer button.button:active{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#fc721a;background-image:-moz-linear-gradient(top,#ff7d2b,#f76000);background-image:-webkit-gradient(linear,0 0,0 100%,from(#ff7d2b),to(#f76000));background-image:-webkit-linear-gradient(top,#ff7d2b,#f76000);background-image:-o-linear-gradient(top,#ff7d2b,#f76000);background-image:linear-gradient(to bottom,#ff7d2b,#f76000);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff7d2b', endColorstr='#fff76000', GradientType=0);border-color:#f76000 #f76000 #ab4200;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);*background-color:#f76000;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);color:#fff;border-color:#c44c00}.k2ReportCommentFormContainer button.button:hover:hover,
+.k2ReportCommentFormContainer button.button:hover:active,
+.k2ReportCommentFormContainer button.button:hover.active,
+.k2ReportCommentFormContainer button.button:hover.disabled,
+.k2ReportCommentFormContainer button.button:hover[disabled],
+.k2ReportCommentFormContainer button.button:focus:hover,
+.k2ReportCommentFormContainer button.button:focus:active,
+.k2ReportCommentFormContainer button.button:focus.active,
+.k2ReportCommentFormContainer button.button:focus.disabled,
+.k2ReportCommentFormContainer button.button:focus[disabled],
+.k2ReportCommentFormContainer button.button:active:hover,
+.k2ReportCommentFormContainer button.button:active:active,
+.k2ReportCommentFormContainer button.button:active.active,
+.k2ReportCommentFormContainer button.button:active.disabled,
+.k2ReportCommentFormContainer button.button:active[disabled]{color:#fff;background-color:#f76000;*background-color:#de5600}.k2ReportCommentFormContainer button.button:hover:active,
+.k2ReportCommentFormContainer button.button:hover.active,
+.k2ReportCommentFormContainer button.button:focus:active,
+.k2ReportCommentFormContainer button.button:focus.active,
+.k2ReportCommentFormContainer button.button:active:active,
+.k2ReportCommentFormContainer button.button:active.active{background-color:#c44c00 \9}

@@ -1,0 +1,49 @@
+// ------------------------------------
+// FEATURES INTRO STYLE 4
+// ------------------------------------
+.acm-features {
+	&.style-4 {
+    text-align: center;
+
+    // features description
+    .features-description {
+      margin: 0 auto (@t3-global-margin*3);
+      text-align: center;
+    }
+
+    .features-item {
+      float: none;
+      margin: 0 auto (@t3-global-margin * 2);
+      padding: 0 @t3-global-margin;
+      text-align: left;
+
+      // Control screen mobile
+      @media screen and (min-width: @screen-sm) {
+        width: 550px;
+      }
+
+      .font-icon {
+        float: right;
+        font-size: 120px;
+        margin-left: @t3-global-margin * 1.5;
+        width: 128px;
+        height: 128px;
+      }
+
+      .img-icon {
+        float: right;
+        margin-left: @t3-global-margin * 1.5;
+        max-width: 130px;
+      }
+
+      &.odd .font-icon,
+      &.odd .img-icon {
+        float: left;
+        margin-right: @t3-global-margin*1.5;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+

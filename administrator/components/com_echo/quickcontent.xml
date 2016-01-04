@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component"
+	version="3.3"
+	method="upgrade">
+	<name>com_echo</name>
+
+    <files folder="site">
+        <filename>echo.php</filename>
+    </files>
+
+    <administration>
+        <menu>Just echo</menu>
+        <files folder="admin">
+            <filename>echo.php</filename>
+        </files>
+    </administration>
+</extension>
+

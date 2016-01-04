@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - Modules Manager CK</name>
+	<creationDate>June 2013</creationDate>
+	<author>Cedric KEIFLIN</author>
+	<authorEmail> </authorEmail>
+	<authorUrl> </authorUrl>
+	<copyright>Copyright (C) 2013   . All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.0.1</version>
+	<description>System plugin for the component Modules Manager CK</description>
+	<files>
+		<file plugin="modulesmanagersystemck">modulesmanagersystemck.php</file>
+		<filename>index.html</filename>
+	</files>
+</extension>

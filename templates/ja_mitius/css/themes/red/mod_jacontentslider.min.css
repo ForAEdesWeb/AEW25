@@ -1,0 +1,9 @@
+.ja-contentslider{height:100%;position:relative}.content-slide{border-bottom:1px solid #E5E5E5;margin-bottom:15px;padding-bottom:15px}.ja_slideimages{display:inline-block;float:left;margin:0px
+20px 15px 0px}.ja_slidetitle{color:#222;font-weight:bold}.ja_slidetitle
+a{color:#222;font-weight:bold}.ja_slidetitle a:hover,
+.ja_slidetitle a:focus,
+.ja_slidetitle a:active{color:#c33}.ja-slidereadmore
+a.readon{background:url('../../../images/readmore-bg.png') no-repeat left center;color:#999;cursor:pointer;display:inline-block;font-size:12px;padding-left:18px}.ja-slidereadmore a.readon:hover,
+.ja-slidereadmore a.readon:focus,
+.ja-slidereadmore a.readon:active{background-image:url('../../../images/readmore-hover-bg.png');color:#c33}.ja-button-control{position:absolute;top:-45px;right:0px}.ja-contentslider-right,.ja-contentslider-left{background-image:url('../../../images/button-nav.png');background-repeat:no-repeat;cursor:pointer;display:inline-block;width:30px;height:30px}.ja-contentslider-right{background-position:-30px 0}.ja-contentslider-right:hover,.ja-contentslider-right:focus,.ja-contentslider-right:active{background-position:-30px -30px}.ja-contentslider-left:hover,.ja-contentslider-left:focus,.ja-contentslider-left:active{background-position:0px -30px}.t3-spotlight .ja-contentslider-right,
+.t3-spotlight .ja-contentslider-left{background-image:url('../../../images/button-nav-vertical.png')}

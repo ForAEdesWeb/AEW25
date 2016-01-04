@@ -1,0 +1,50 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+
+// PRICING TABLE
+// ---------------------------------------
+.pricing-table {
+
+  // PRICING TABLE ( Style 2 )
+  // -------------------------
+  &.style-2 {
+
+    // First column
+    .col:first-child {
+      .col-header {
+        border-radius: 5px 0 0 0;
+      }
+
+      .col-footer {
+        border-radius: 0 0 0 5px;
+      }
+    }
+
+    // Last column
+    .col:last-child {
+      .col-header {
+        border-radius: 0 5px 0 0;
+      }
+
+      .col-footer {
+        border-radius: 0 0 5px 0;
+      }
+    }
+
+    .col-feature {
+      border-radius: 5px;
+
+      .col-header {
+        border-radius: 5px 5px 0 0;
+      }
+
+      .col-footer {
+        border-radius: 0 0 5px 5px;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,238 @@
+
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// 
+// COMPATIBLE WITH MIJOSHOP
+// ---------------------------------------------------------
+.com_mijoshop {
+
+  // All categories
+  // --------------
+  .box_oc {
+    .box-product {
+      margin-left: 0;
+      & > div {
+        float: left;
+        margin: 0;
+        width: 25%;
+
+        .image {
+          border: 1px solid @t3-border-color;
+          margin: 0 (@t3-global-margin / 2);
+          padding: 5px;
+          text-align: center;
+
+          a {
+            display: block;
+          }
+
+          img {
+            border: 0;
+            padding: 0;
+          }
+        }
+
+        .name {
+          padding: (@t3-global-padding / 2) 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+  // Category page ( Product list )
+  // ------------------------------
+
+  // Header
+  #header_oc {
+    margin: 0 0 @t3-global-margin;
+    padding: 0;
+
+    #currency {
+      top: 0;
+
+      a {
+        margin-top: 5px;
+      }
+    }
+
+    #cart {
+      border-left: 1px solid @t3-border-color;
+      margin-left: @t3-global-margin;
+      top: 5px;
+
+      .heading {
+        margin-top: 0;
+      }
+    }
+
+    #search_oc {
+      top: 10px;
+      width: 120px;
+
+      input[type="text"] {
+        border-radius: 0;
+        height: 25px;
+        .box-sizing(border-box);
+      }
+    }
+
+    .links {
+      bottom: 0;
+      top: auto;
+    }
+  }
+
+  // Content
+  #content_oc {
+    .box-heading {
+      background: @gray-lighter;
+      border-radius: 0;
+      padding: (@t3-global-padding / 2) @t3-global-padding;
+    }
+
+    .box-content {
+      border-radius: 0;
+      padding: @t3-global-padding;
+    }
+
+    // Product filter
+    .product-filter {
+      padding-bottom: @t3-global-padding / 2;
+
+      .display {
+        padding-top: 15px;
+      }  
+    }
+
+    // Product compare
+    .product-compare {
+      padding-top: @t3-global-padding;
+      margin-bottom: @t3-global-margin;
+    }
+
+    // Product grid
+    .product-grid {
+      .clearfix();
+      width: auto;
+      margin: 0 -(@t3-global-margin/2) -(@t3-global-margin);
+
+      > div {
+        float: left;
+        width: 25%;
+        margin-right: 0;
+        margin-bottom: 20px;
+
+        > div {
+          margin-right: @t3-global-margin/2;
+          margin-left: @t3-global-margin/2;
+          margin-bottom: @t3-global-margin/2;
+
+          &.wishlist,
+          &.compare {
+            font-size: @t3-font-size-smaller;
+            margin-bottom: (@t3-global-margin / 4);
+          }
+        }
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      > div:nth-child(4n + 1) {
+        clear: both;
+      }
+    }
+    
+  }
+
+
+
+  // Product detail
+  // --------------
+  .product-info {
+    .left {
+      width: 30% !important;
+    }
+
+    .right {
+      min-height: 352px;
+      width: 65% !important;
+
+      .description {
+        border-top: 0;
+        padding: 0 0 (@t3-global-padding / 2);
+      }
+
+      .cart div {
+        input[type="text"],
+        input[type="button"] {
+          display: inline-block;
+        }
+
+        input[type="text"] {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        span {
+          color: @gray-light;
+        }
+      }
+
+    }
+  }
+
+  #tab-description,
+  #tab-review {
+    padding: @t3-global-padding;
+  }
+
+
+  // My Account page
+  // ---------------
+  .content_oc {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+
+  // Checkout page
+  // -------------
+  .cart-info {
+    .quantity input[type='text'] {
+      .box-sizing(content-box);
+      height: 28px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .cart-module {
+    #coupon input,
+    #voucher input {
+      display: inline-block;
+    }
+
+    #shipping table {
+      border-bottom: 1px solid @t3-border-color;
+      margin-bottom: @t3-global-margin;
+    }
+
+    #shipping table td {
+      padding: (@t3-global-padding / 2) @t3-global-padding;
+    }
+  }
+
+
+  // Mijoshop modules
+  // ----------------
+  
+
+}

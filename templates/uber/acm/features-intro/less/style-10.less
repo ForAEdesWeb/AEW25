@@ -1,0 +1,76 @@
+// ------------------------------------
+// FEATURES INTRO STYLE 10
+// ------------------------------------
+.acm-features {
+	&.style-10 {
+    text-align: center;
+
+    // features description
+    .features-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .features-content {
+      margin: 0 auto;
+  
+      @media (min-width: @screen-sm) {
+        width: 65%;
+
+        &.features-content-right,
+        &.features-content-left {
+          width: 100%;
+        }
+      }
+
+      &.features-content-left {
+        text-align: right;
+        p {
+          padding-right: 0;
+        }
+
+        .features-image {
+        	margin-bottom: (@t3-global-margin * 2);
+
+          // Control screen desktop
+          @media screen and (min-width: @screen-md-min) {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.features-content-right {
+        text-align: left;
+        p {
+          padding-left: 0;
+        }
+
+        .features-image {
+        	margin-bottom: (@t3-global-margin * 2);
+
+          // Control screen desktop
+          @media screen and (min-width: @screen-md-min) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .features-image {
+      margin-bottom: @t3-global-margin*2;
+      > img {
+        max-width: 100%;
+      }
+    }
+
+    .features-item > p {
+      //margin-bottom: @t3-global-margin*2;
+  
+      @media (min-width: @screen-sm) {
+        padding: 0 10%;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,143 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ *------------------------------------------------------------------------------
+ */
+@import "../vars.less";
+
+// ---------------------------------------------------------
+// GLOSSARY LAYOUT
+// ---------------------------------------------------------
+
+// NAVIGATION
+// -----------------------------------
+.glossary-nav {
+  position: relative;
+  z-index: 10;
+  margin-bottom: @t3-global-margin * 2;
+
+  nav {
+    padding: 0;
+
+    &.affix {
+      top: auto;
+      position: relative;
+    }
+
+    .nav-pills {
+      background: #fff;
+
+      > li {
+        display: block;
+        float: left;
+        margin: 0 1px 10px 0;
+      }
+      > li > a {
+        background: @gray-dark;
+        color: @gray-lighter;
+        font-size: @font-size-large;
+        font-weight: 600;
+        line-height: normal;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        // Link states
+        &:hover, &:active, &:focus {
+          background: @brand-primary;
+          color: #fff;
+        }
+      }
+    }
+  // End nav
+  }
+
+//End
+}
+
+// Glossay Navigation has different style on Desktop
+@media screen and (min-width: @grid-float-breakpoint) {
+  .glossary-nav {
+    nav {
+      &.affix {
+        top: 57px;
+        position: fixed;
+      }
+      .nav-pills {
+        > li > a {
+          font-size: @font-size-h3;
+        }
+      }
+    // End nav
+    }
+  //End
+  }
+}
+
+
+
+
+// GLOSSARY ITEMS
+// -----------------------------------
+.glossary-items {
+}
+
+// Item
+// ---------------------
+.glossary-group {
+  margin-bottom: @t3-global-margin * 2;
+  position: relative;
+  a[name] {
+    position: absolute;
+    top: -120px;
+  }
+}
+
+// Title
+.glossary-group-title {
+  background: @gray-lightest;
+  color: @gray-darker;
+  font-weight: 600;
+  font-size: @font-size-h2;
+  margin: 0 0 @t3-global-margin;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+// The item
+.glossary-group-items {
+  ul {
+    padding: 0;
+    margin: 0;
+    > li {
+      list-style: none;
+      padding: 0;
+    }
+    > li > a {
+      color: @text-color;
+      display: block;
+      font-size: @font-size-large;
+      padding: 5px 15px;
+      // Link states
+      &:hover, &:active, &:focus {
+        color: @brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+// GLOSSARY DETAIL MODAL
+// -----------------------------------
+#glossary-detail {
+}

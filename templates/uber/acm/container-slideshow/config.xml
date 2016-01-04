@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>[Container] Slideshow</title>
+  <sampledata><![CDATA[ 
+	{"jatools-layout-container_slideshow":["default"],"container-slideshow[position]":["uber-slide-items"],"container-slideshow[enable-controls]":["1"],"container-slideshow[desktop-height]":["780"]}
+   ]]></sampledata>
+  <fields name="container-slideshow">
+  
+    <fieldset name="basic" label="SLIDESHOW_BASIC_LABEL" description="SLIDESHOW_BASIC_DESC" multiple="0">
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="position" type="moduleposition"    
+        description="SLIDESHOW_POSITION_DESC"
+        label="SLIDESHOW_POSITION_LABEL"
+        default=""
+        maxlength="50" />
+				
+			<field name="enable-autoplay" type="text" default="0" label="SLIDESHOW_TIME_AUTOPLAY_LABEL" description="SLIDESHOW_TIME_AUTOPLAY_DESC" />
+				
+			<field name="enable-controls" type="radio" default="0" label="SLIDESHOW_CONTROLS_LABEL" description="SLIDESHOW_CONTROLS_DESC" >
+      	<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+			
+      <field name="desktop-height" type="text" size="10" default="" label="SLIDESHOW_DESKTOP_HEIGHT_LABEL" description="SLIDESHOW_DESKTOP_HEIGHT_DESC"></field>
+    </fieldset>
+		
+  </fields>
+</form>

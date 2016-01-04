@@ -1,0 +1,9 @@
+.home-wedding .item-grid-view .item-image {
+  border: 1px dashed #96a1a3;
+  display: block;
+  padding: 6.5px;
+}
+.home-wedding .post-sticky {
+  background: #039be5;
+  color: #ffffff;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site">
+	<name>Custom CSS</name>
+	<author>Hyde-Design</author>
+	<creationDate>July 2013</creationDate>
+	<copyright>2013</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>sales@hyde-design.co.uk</authorEmail>
+	<authorUrl>www.hyde-design.co.uk</authorUrl>
+	<version>1.8</version>
+	<description>A simple Joomla 2.5 / 3 module to enable you to style individual pages with CSS.</description>
+
+	<files>
+		<filename module="mod_customcss">mod_customcss.php</filename>
+	</files>
+	
+	<config>
+        <fields name="params">
+
+            <fieldset name="basic">
+             <field name="customcss" type="textarea" default="/* Custom CSS */" label="Custom CSS" description="Replace with your inline custom CSS." rows="20" cols="45">
+             </field>
+            </fieldset>
+                       
+            <fieldset name="advanced">
+             <field name="browsercss" type="list" default="all" label="Conditional Style" description="Select if you wish your CSS to be rendered on a specific browser only.">
+             <option value="all">All Browsers</option>
+             <option value="msie">Internet Explorer</option>
+             <option value="firefox">FireFox</option>
+             <option value="safari">Safari</option>
+             <option value="chrome">Chrome</option>
+             <option value="opera">Opera</option>
+             </field>
+             <field name="externalcss" type="radio" default="0" label="Use an external CSS file?" description="Select if you prefer to load an external CSS file from the template's CSS folder.">
+             <option value="0">No</option>
+             <option value="1">Yes</option>
+             </field>
+             <field name="externalcssfile" type="textarea" default="" label="CSS URL" description="Type the full URL towards your external CSS file." rows="1" cols="45">
+             </field>
+            </fieldset>
+        </fields>
+	</config>
+	
+</extension>

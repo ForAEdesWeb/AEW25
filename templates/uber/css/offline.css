@@ -1,0 +1,213 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Jason Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+ 
+/**
+ * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.625;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/* BODY 
+---------------------*/
+#frame {
+	margin: 8% auto auto;
+	text-align: left;
+	width: 450px;
+}
+
+/* Title Offline */
+#offline-title h1 {
+	font-family: arial;
+	font-size: 45px;
+	line-height: 1;
+	margin: 0 0 13px 0;
+	text-align: center;
+}
+
+/* Description offline */
+.des-offline {
+	color: #96a1a3;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+  padding: 0 10px;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.des-offline br {
+	display: none;
+}
+
+#offline-img {
+	margin: 0 0 26px 0;
+	text-align: center;
+}
+
+#offline-img img {
+	max-width: 100%;
+}
+
+/* Form Offline */
+.input {
+	border: 1px solid #eee;
+	box-shadow: 0 1px 3px #eee;
+	padding: 26px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+#form-login-password {
+}
+
+.control-label {
+	display: block;
+	margin-bottom: 5px;
+	color: #555555;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.control-input {
+	border: 1px solid #ddd;
+	width: 100%;
+	height: 42px;
+	padding: 0 10px;
+}
+
+.control-input:focus {
+	border-color: #428bca;
+}
+
+/* Remember */
+#form-login-remember {
+}
+.inputbox {
+	margin: 0 3px 0 0;
+}
+
+#submit-buton {
+	text-align: center;
+	padding: 30px 0;
+}
+
+/* Button */
+.button {
+	background: #039be5;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px 52px;
+  font-weight: 100;
+  margin-bottom: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+	background: #3071a9;
+}
+
+/* Message Error */
+#system-message {
+	background: #f2dede;
+	color: #b94a48;
+	margin: auto;
+	padding: 20px;
+	width: 700px;
+}
+
+.error, .alert {
+	border-bottom: 1px solid #ebccd1;
+	color: #b94a48;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+.error.message, .alert.alert-warning {
+	border: 0;
+	color: #b94a48;
+	display: block;
+	font-weight: normal;
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+.error.message ul {
+	padding: 0;
+	list-style: none;
+}
+
+.alert {
+	position: relative;
+}
+
+.alert h4 {
+	font-size: 18px;
+	margin: 0;
+}
+
+.alert p {
+	margin-bottom: 0;
+}
+
+.close {
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+
+
+@media (max-width:  480px){
+	#frame {
+		padding: 0 20px;
+		width: 100%;
+	}
+
+	.offline-container {
+		background: none;
+		box-shadow: none;
+		border: none;
+		padding: 0;
+	}
+
+	.form-group {
+		width: 100%;
+	}
+}

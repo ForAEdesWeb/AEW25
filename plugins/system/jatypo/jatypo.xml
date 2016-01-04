@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>JA Typo</name>
+	<author>Joomla! Project</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>2.5.5</version>
+	<description>
+	<![CDATA[
+	<div style='text-align: left;'>
+	<h1>JA Typo Plugin for Joomla! 2.5</h1>
+	<p><span style="color: #ff6600;"><strong>Features:</strong></span></p>
+	<img border="0" alt="JA Typography Plugin" src="http://asset.joomlart.com/images/stories/extensions/joomla/jaec_typo_plg.png" style="float: left;">
+	Bonus Typography styles for your content. Choose styles right from your editor window. 
+	Colorful buttons, tables, forms, tags, headings, lists, badges, icons, CSS3 buttons and more styles will come up...
+	<p><strong><span style="color: #ff0000;">Important Instruction:</span><br /></strong></p>
+	<ul><li>Install JA Typo Button Plugin for this to be seen in the Editor</li>
+	<li>You can use many types to load from a popup</li>
+	</ul>
+	<p><strong><span style="color: #ff0000;">Upgrade Method:</span><br /></strong></p>
+	<ol><li>You can install new version directly over this version. Uninstallation is not required. Backup any customized files before upgrading.</li></ol>
+	<p><span style="color: #008000;"><strong>Links :</strong></span></p>
+	<ul>
+	<li><a target="_blank" href="http://www.joomlart.com/forums/showthread.php?49821">General Userguide</a></li>
+		 <li><a target='_blank' href='http://update.joomlart.com/'>Updates &amp; Versions</a></li>
+	</ul>
+	<p>Copyright 2004 - 2012 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+	</div>
+	]]>
+	</description>
+	<files>
+		<filename plugin="jatypo">jatypo.php</filename>
+		<folder plugin="jatypo">jatypo</folder>
+		<filename plugin="jatypo">index.html</filename>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_jatypo.ini</language>
+	</languages>
+</extension>

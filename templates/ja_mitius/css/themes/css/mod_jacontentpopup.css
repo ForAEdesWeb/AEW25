@@ -1,0 +1,58 @@
+.ja-cp-main {
+  margin: 0 30px;
+}
+.ja-cp-main .ja-cp-item {
+  background: url("../../../images/line.gif") repeat-y right top;
+}
+.ja-cp-main .item-inner {
+  margin: 0px 15px;
+}
+.ja-cp-main .ja-cp-item:last-child {
+  background: none;
+}
+.ja-cp-main .ja-cp-image {
+  padding: 0;
+}
+.ja-cp-main .ja-cp-title {
+  color: #999;
+  margin: 0;
+  text-align: left;
+}
+.ja-cp-main a:hover .ja-cp-title {
+  color: #fff;
+}
+.ja-cp-controls {
+  height: 90px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.ja-cp-controls > div {
+  background-image: url(../../../images/nav-popup.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  height: 90px;
+  width: 30px;
+}
+.ja-cp-controls > div.ja-cp-prev {
+  background-position: left top;
+  float: left;
+}
+.ja-cp-main .ja-cp-group .ja-cp-item {
+  width: auto !important;
+}
+.ja-cp-controls > div.ja-cp-prev:hover,
+.ja-cp-controls > div.ja-cp-prev:focus,
+.ja-cp-controls > div.ja-cp-prev:active {
+  background-position: 0 -90px;
+}
+.ja-cp-controls > div.ja-cp-next {
+  background-position: -30px top;
+  float: right;
+}
+.ja-cp-controls > div.ja-cp-next:hover,
+.ja-cp-controls > div.ja-cp-next:focus,
+.ja-cp-controls > div.ja-cp-next:active {
+  background-position: -30px -90px;
+}

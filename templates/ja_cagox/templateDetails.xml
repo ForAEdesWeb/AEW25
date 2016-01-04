@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name>ja_cagox</name>
+	<version>1.0.0</version>
+	<creationDate>05 March 2015</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.t3-framework.org</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<t3>
+		<base>base-bs3</base>
+	</t3>
+	<description>
+		<![CDATA[
+		<div align="center">
+			<div class="alert alert-success" style="background-color:#DFF0D8;border-color:#D6E9C6;color: #468847;padding: 1px 0;">
+				<h4>Responsive Joomla template for fashion store - JA Cagox</h4>
+				<p>Luring fashionistas fans to your online store and shopping for their latest temptations with our chic and trendy Joomla template JA Cagox.</p> 
+        		<p>With clever design, three different homepages, classic black & white, JA Cagox will surely stand the test of time as an online fashion shop, and helping you promote your clothing business. Cagox supports VirtueMart component for an intituitive online shopping experience. The fashion template is also equipped with the native Joomla custom blog, there's no need to install 3rd party solution. Built with the latest version of T3 Framework, JA Cagox performs smoothly across all connected devices and mobile screens. JA Cagox supports RTL language layout.</p>
+			</div>
+			<style>table.adminform{width: 100%;}</style>
+		</div>
+		]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>thememagic.xml</filename>
+		<filename>templateInfo.php</filename>
+		<filename>templateHook.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>language</folder>
+		<folder>images</folder>
+		<folder>tpls</folder>
+		<folder>acm</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_cagox.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_cagox.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>languageswitcherload</position>
+		<position>head-search</position>
+		<position>mainnav</position>
+		<position>navhelper</position>
+		<position>breadcrumbs</position>
+		<position>off-canvas</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>mast-col</position>
+		<position>footer</position>
+		<position>home-0</position>
+		<position>home-1</position>
+		<position>home-2</position>
+		<position>home-3</position>
+		<position>home-4</position>
+		<position>home-5</position>
+		<position>slideshow</position>
+		<position>section-1</position>
+		<position>section-2</position>
+		<position>section-3</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+		<position>footer-0</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-5</position>
+		<position>footer-6</position>
+		<position>footer-7</position>
+		<position>footer-8</position>
+		<position>footer-9</position>
+		<position>footer-10</position>
+		<position>debug</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+
+			<fieldset name="theme_params" label="T3_THEME_LABEL" description="T3_THEME_DESC">
+          <field name="theme_params_default" type="t3depend" function="@group">
+    				<option for="logofootertype" value="image">
+    					logofooterimage
+    				</option>
+            <option for="logotype" value="image">
+    					logoimage, logoimage_sm, enable_logoimage_sm
+    				</option>
+    				<option for="enable_logoimage_sm" value="1">
+    					logoimage_sm
+    				</option>
+    			</field>
+          <field name="theme_params_logolink" type="t3depend" function="@group">
+              <option for="logolink" value="page">
+                  logolink_id
+              </option>
+          </field>
+
+          <field name="logofootertype" type="list" default="image"
+    						 label="T3_THEME_LOGOFOOERTYPE_LABEL"
+    						 description="T3_THEME_LOGOFOOTERTYPE_DESC">
+    				<option value="text">T3_THEME_LOGOTYPE_TEXT</option>
+    				<option value="image">T3_THEME_LOGOTYPE_IMAGE</option>
+    			</field>   
+          <field name="logofooterimage" type="t3media" default=""
+					 label="T3_THEME_LOGOFOOTERIMAGE_LABEL"
+					 description="T3_THEME_LOGOFOOTERIMAGE_DESC"/> 
+      </fieldset>
+			
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>
+
+</extension>

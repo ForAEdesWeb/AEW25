@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Slideshow 1</title>
+	<sampledata><![CDATA[  
+		{":type":"acm_builder:header","header":{"jatools-layout-header":"style-7","slideshow-style[full-screen]":["full-screen"],"slideshow-style[block-title]":["We couldn't be prouder of it.","We couldn't be prouder of it."],"slideshow-style[block-intro]":["Everyone here has the sense that right now is one of those moments when we are influencing the future.","Everyone here has the sense that right now is one of those moments when we are influencing the future."],"slideshow-style[block-bg]":["images/builder/slideshow/img-slide-5.jpg","images/builder/slideshow/img-slide-6.jpg"],"slideshow-style[acm-style]":["light-style","light-style"],"slideshow-style[content-position]":["position-right","position-right"],"slideshow-style[text-align]":["text-right","text-right"],"slideshow-style[animation-style]":["none-style","none-style"],"slideshow-style[slideshow-btn1-text]":["View Demo","View Demo"],"slideshow-style[slideshow-btn1-class]":["btn-success btn-rounded","btn-success btn-rounded"],"slideshow-style[slideshow-btn1-link]":["#","#"]}}
+    ]]></sampledata>
+	
+  <fields name="slideshow-style">
+    <fieldset name="slideshow-basic" label="SLIDESHOW_BASIC_LABEL" description="SLIDESHOW_BASIC_DESC" >
+      <field name="full-screen" type="radio" default=""
+            label="FULL_SCREEN_LABEL"
+            description="FULL_SCREEN_DESC">
+          <option value="">No</option>
+          <option value="full-screen">Yes</option>
+      </field>
+
+      <field name="block-title" type="textarea" default="" rows="5" cols="40"  label="BLOCK_TITLE_LABEL" description="BLOCK_TITLE_DESC" />
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="acm-style" type="list" default="dark-style"
+          label="ACM_STYLE_LABEL"
+          description="ACM_STYLE_DESC">
+        <option value="dark-style">DARK_STYLE</option>
+        <option value="light-style">LIGHT_STYLE</option>
+      </field>
+      
+      <field name="content-position" type="list" default="position-left"
+          label="CONTENT_POSITION_LABEL"
+          description="CONTENT_POSITION_DESC">
+        <option value="position-left">JGLOBAL_LEFT</option>
+        <option value="position-center">JGLOBAL_CENTER</option>
+        <option value="position-right">JGLOBAL_RIGHT</option>
+      </field>
+      
+      <field name="slideshow-btn1-text" type="text" size="50" default="" label="SLIDESHOW_BUTTON1_TEXT_LABEL" description="SLIDESHOW_BUTTON1_TEXT_DESC" ></field>
+      <field name="slideshow-btn1-class" type="text" size="50" default="" label="SLIDESHOW_BUTTON1_CLASS_LABEL" description="SLIDESHOW_BUTTON1_CLASS_DESC"></field>
+      <field name="slideshow-btn1-link" type="text" size="50" default="" label="SLIDESHOW_BUTTON1_LINK_LABEL" description="SLIDESHOW_BUTTON1_LINK_DESC" ></field>
+    </fieldset>
+    <fieldset name="slideshow-content" label="SLIDESHOW_CONTENT_LABEL" description="SLIDESHOW_CONTENT_DESC" multiple="1">
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC"/>
+    </fieldset>
+  </fields>
+</form>

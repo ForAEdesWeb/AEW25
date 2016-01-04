@@ -1,0 +1,67 @@
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+body {
+  background: @white;
+  border: 0;
+}
+
+
+#ja-mainbody {
+  margin-top: 0;
+  padding: @baseLineHeight 0;
+}
+
+#ja-mainbody #ja-content {
+  margin-left: 0px !important;
+}
+
+/* --- Backend of K2 --- */
+
+.k2ReportCommentFormContainer button.button {
+  box-shadow: none;
+  .buttonBackground(@btnBackgroundHighlight, @btnBackground, @textColor, 0 1px 1px rgba(255,255,255,.75));
+  border: solid 1px @btnBorder;
+  border-color: rgba(0,0,0,.15) rgba(0,0,0,.15) rgba(0,0,0,.25);
+  color: @white;
+  margin-right: 5px;
+  padding: 4px 14px;
+  text-shadow: none;
+}
+
+.k2ReportCommentFormContainer button.button:hover,
+.k2ReportCommentFormContainer button.button:focus,
+.k2ReportCommentFormContainer button.button:active {
+  .buttonBackground(lighten(@btnBackgroundHover, 10%), @btnBackgroundHover);
+  color: @white;
+  border-color: darken(@btnBackgroundHover, 10%);
+}
+
+.adminFormK2Container .modal,
+#k2Tab2 .modal {
+  border: none;
+  box-shadow: none;
+  .border-radius(0px);
+  display: block;
+  position: inherit;
+  top: auto;
+  left: auto;
+  margin-left: 0;
+  width: auto;
+}
+
+.adminFormK2Container .modal img.k2AdminImage,
+#k2Tab2 .modal img.k2AdminImage {
+  margin: 0;
+}
+
+
+table.adminFormK2 tr td label.radiobtn {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 4px 10px 0 0;
+}
+
+.component .container  {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

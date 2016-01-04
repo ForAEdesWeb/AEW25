@@ -1,0 +1,167 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+.home-music {
+
+  // ---------------------------------------------------------
+  // MUSIC STYLE
+  // ---------------------------------------------------------
+  // Used for Spa Layout.
+
+  .acm-features.style-3 .img-icon {
+
+	  @media screen and (min-width: @screen-md) {
+	    max-width: 200px;
+	  }
+  }
+
+  ul.item-list-view {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-top: 0;
+      border-bottom: 1px solid @t3-border-color;
+      margin-bottom: @t3-global-margin / 2;
+      padding-bottom: @t3-global-padding / 2;
+      .clearfix();
+
+      &:first-child {
+        border-bottom-width: 1px;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      .item-image {
+        border-radius: 2px;
+        display: block;
+        float: left;
+        margin: 0 (@t3-global-margin / 2) 0 0;
+        width: 60px;
+
+        img {
+          margin: 3px 0;
+          padding: 0;
+          width: 100%;
+        }
+      }
+
+      .item-title {
+        font-size: @font-size-base;
+        font-weight: @font-weight-normal;
+        margin-top: 0;
+        margin-bottom: 5px;
+
+        a {
+          color: @gray-dark;
+
+          &:hover, &:focus, &:active {
+            color: @brand-primary;
+          }
+        }
+      }
+
+      .item-meta {
+        font-size: @font-size-small - 1;
+
+        .mod-articles-category-writtenby {
+          background: @gray-lighter;
+          border-radius: 2px;
+          display: inline-block;
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+
+  .acm-spotlight .container {
+    width: 100%;
+  }
+
+
+  // list-music
+  // -------------------
+  .list-music {
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding: 8px 0;
+
+      > a {
+        color: @gray-dark;
+        font-weight: @font-weight-bold;
+
+        > i {
+          margin-right: 10px;
+          color: @gray-light;
+        }
+
+        &:hover, &:focus {
+          color: @brand-primary;
+
+          > i {
+            color: @brand-primary;
+          }
+        }
+      }
+
+      .download {
+        float: right;
+
+        > i {
+          margin-right: 0;
+          color: @gray-lighter;
+        }
+      }
+    }
+  }
+
+// End
+}
+
+
+// Blog style 2 detail
+// -------------------
+.blog-detail {
+
+  // Intro image
+  .item-image {
+    margin-bottom: @t3-global-margin;
+
+    img {
+      max-width: 100%;
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+
+  // Item meta
+  .article-aside {
+    padding-top: 5px;
+  }
+}
+
+
+// Blog music news
+// -------------------
+
+.blog-music-news {
+  article {
+    margin-top: 0;
+  }
+
+  .item-image img {
+    margin-top: 0;
+  }
+}
+

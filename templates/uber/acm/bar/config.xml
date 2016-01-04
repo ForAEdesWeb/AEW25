@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Bar</title>
+	<sampledata><![CDATA[
+        {"jatools-layout-bar":["style-1"],"bar[bar-background]":["highlight-color"],"bar[bar-left-position]":["topbar-1"],"bar[bar-right-position]":[""],"bar[full-width]":["0"],"bar[enable-sticky]":["0"],"bar[enable-close]":["0"],"bar[bar-message]":["This is a demo store. Any orders placed through this store will not be honored or fulfilled."],"bar[facebook]":["joomlart"],"bar[google-plus]":["joomlart"],"bar[twitter]":["joomlart"],"bar[pinterest]":[""],"bar[linkedin]":["joom-solutions"]}
+    ]]></sampledata>
+    <fields name="bar">
+    	<fieldset name="basic" label="TOPBAR_BASIC_LABEL" description="BAR_BASIC_DESC">
+        <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+            
+    		<field name="bar-background" type="list" default="light-color"
+						 global="1"
+						 label="BAR_BACKGROUND_LABEL"
+						 description="BAR_BACKGROUND_DESC">
+					<option value="dark-color">DARK_COLOR</option>
+					<option value="black-color">BLACK_COLOR</option>
+					<option value="light-color">LIGHT_COLOR</option>
+					<option value="highlight-color">HIGHLIGHT_COLOR</option>
+					<option value="blue-color">BLUE_COLOR</option>
+					<option value="red-color">RED_COLOR</option>
+					<option value="purple-color">PURPLE_COLOR</option>
+					<option value="green-color">GREEN_COLOR</option>
+					<option value="yellow-color">YELLOW_COLOR</option>
+				</field>
+      	<field name="bar-left-position" type="moduleposition"    
+					        description="BAR_POSITION_1_DESC"
+					        label="BAR_POSITION_1_LABEL"
+					        default=""
+									layouts="style-1"/>
+				<field name="bar-right-position" type="moduleposition"    
+					        description="BAR_POSITION_2_DESC"
+					        label="BAR_POSITION_2_LABEL"
+					        default="" 
+									layouts="style-1"/>
+				<field name="full-width" type="radio" default="0" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+	      	<option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+	      </field>
+	      <field name="enable-sticky" type="radio" default="0" label="ACM_ENABLE_STICKY_LABEL" description="ACM_ENABLE_STICKY_DESC" >
+	      	<option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+	      </field>
+	      <field name="enable-close" type="radio" default="0" label="ACM_ENABLE_CLOSE_BUTTON_LABEL" description="ACM_ENABLE_CLOSE_BUTTON_DESC" >
+	      	<option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+	      </field>
+	      
+	      <field name="bar-message" required="1" type="textarea" cols="40" rows="5" default="" label="BAR_MESSAGE_LABEL" description="BAR_MESSAGE_DESC" layouts="style-2"></field>
+			</fieldset>
+			
+			<fieldset name="social" label="SOCIAL_LABEL" description="SOCIAL_DESC" multiple="0" layouts="style-1" >
+				<field name="facebook" type="text" size="40" default="" label="FACEBOOK_LABEL" description="FACEBOOK_DESC"></field>
+				<field name="google-plus" type="text" size="40" default="" label="GOOGLE_PLUS_LABEL" description="GOOGLE_PLUS_DESC"></field>
+				<field name="twitter" type="text" size="40" default="" label="TWITTER_LABEL" description="TWITTER_DESC"></field>
+				<field name="pinterest" type="text" size="40" default="" label="PINTEREST_LABEL" description="PINTEREST_DESC"></field>
+				<field name="linkedin" type="text" size="40" default="" label="LINKEDIN_LABEL" description="LINKEDIN_DESC"></field>
+			</fieldset> 
+    </fields>
+</form>

@@ -1,0 +1,115 @@
+@media screen and (min-width: 992px) {
+  .home-music .acm-features.style-3 .img-icon {
+    max-width: 200px;
+  }
+}
+.home-music ul.item-list-view {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.home-music ul.item-list-view li {
+  border-top: 0;
+  border-bottom: 1px solid #ecf0f1;
+  margin-bottom: 13px;
+  padding-bottom: 13px;
+}
+.home-music ul.item-list-view li:before,
+.home-music ul.item-list-view li:after {
+  content: " ";
+  display: table;
+}
+.home-music ul.item-list-view li:after {
+  clear: both;
+}
+.home-music ul.item-list-view li:first-child {
+  border-bottom-width: 1px;
+}
+.home-music ul.item-list-view li:last-child {
+  border-bottom: 0;
+}
+.home-music ul.item-list-view li .item-image {
+  border-radius: 2px;
+  display: block;
+  float: left;
+  margin: 0 13px 0 0;
+  width: 60px;
+}
+.home-music ul.item-list-view li .item-image img {
+  margin: 3px 0;
+  padding: 0;
+  width: 100%;
+}
+.home-music ul.item-list-view li .item-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.home-music ul.item-list-view li .item-title a {
+  color: #3d4045;
+}
+.home-music ul.item-list-view li .item-title a:hover,
+.home-music ul.item-list-view li .item-title a:focus,
+.home-music ul.item-list-view li .item-title a:active {
+  color: #039be5;
+}
+.home-music ul.item-list-view li .item-meta {
+  font-size: 13px;
+}
+.home-music ul.item-list-view li .item-meta .mod-articles-category-writtenby {
+  background: #ecf0f1;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 0 5px;
+}
+.home-music .acm-spotlight .container {
+  width: 100%;
+}
+.home-music .list-music {
+  padding: 0;
+}
+.home-music .list-music li {
+  list-style: none;
+  padding: 8px 0;
+}
+.home-music .list-music li > a {
+  color: #3d4045;
+  font-weight: 700;
+}
+.home-music .list-music li > a > i {
+  margin-right: 10px;
+  color: #96a1a3;
+}
+.home-music .list-music li > a:hover,
+.home-music .list-music li > a:focus {
+  color: #039be5;
+}
+.home-music .list-music li > a:hover > i,
+.home-music .list-music li > a:focus > i {
+  color: #039be5;
+}
+.home-music .list-music li .download {
+  float: right;
+}
+.home-music .list-music li .download > i {
+  margin-right: 0;
+  color: #ecf0f1;
+}
+.blog-detail .item-image {
+  margin-bottom: 26px;
+}
+.blog-detail .item-image img {
+  max-width: 100%;
+  margin-top: 0;
+  width: 100%;
+}
+.blog-detail .article-aside {
+  padding-top: 5px;
+}
+.blog-music-news article {
+  margin-top: 0;
+}
+.blog-music-news .item-image img {
+  margin-top: 0;
+}

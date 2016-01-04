@@ -1,0 +1,72 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.accordion .module-ct {
+  padding: 0;
+}
+
+.accordion .ja-accordion {
+  margin: 0 !important;
+}
+
+.ja-accordion .ja-accordion-containner {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.ja-accordion .ja-accordion-containner li {
+  border-bottom: solid 1px @grayLighter;
+  list-style: none;
+}
+
+.ja-accordion .ja-accordion-containner li.last-child {
+  border-bottom: none;
+}
+
+h3.ja-accordion-title,
+.ja-accordion ul.ja-accordion-containner li h3.ja-accordion-title {
+  background: @DescBackground;
+  border-bottom: none;
+  color: @TabsTextColor;
+  font-size: @baseFontSize + 1;
+  font-family: 'novecento_wide_lightbold', sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 @baseLineHeight;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+h3.ja-accordion-title.active,
+.ja-accordion ul.ja-accordion-containner li h3.ja-accordion-title.active, 
+.ja-accordion ul.ja-accordion-containner li:last-child h3.ja-accordion-title {
+  background: @white;
+}
+
+h3.ja-accordion-title.active span{
+  background: @TabsBackgroundActive;
+  color: @white;
+  display: inline-block;
+  margin-top: @baseLineHeight;
+  padding: 0 @baseLineHeight;
+  line-height: 28px;
+}
+
+.ja-accordion .ja-accordion-content {
+  padding-left: @baseLineHeight;
+  padding-right: @baseLineHeight;
+}
+
+.ja-accordion .ja-accordion-content .ja-sidenews-list {
+  background: @white;
+  padding: 0 0 @baseLineHeight;
+}
+
+.ja-cp-main .ja-cp-image img {
+  background-color: none;
+  border: none !important;
+  padding: 0 !important;
+}

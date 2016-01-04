@@ -1,0 +1,72 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+// ----------------------------------------
+// HERO STYLE 6
+// ----------------------------------------
+.acm-hero {
+  &.style-6 {
+    &.position-center .hero-content {
+      width: 90%;
+    }
+
+    .hero-heading {
+      font-family: 'edoregular', @headings-font-family;
+      font-size: @font-size-h2;
+      color: #f4c26a;
+      margin-bottom: 0;
+      line-height: 1;
+
+      // Control screen tablet
+      @media screen and (min-width: @screen-xs-min) {
+        font-size: 75px;
+      }
+
+      // Control screen medium desktop
+      @media screen and (min-width: @screen-md-min) {
+        font-size: 150px;
+      }
+
+      // Control screen large desktop
+      @media screen and (min-width: @screen-lg-min) {
+        font-size: 172px;
+      }
+    }
+
+    .hero-intro {
+      font-family: 'edoregular', @headings-font-family;
+      font-size: @font-size-h1;
+      text-transform: none;
+      width: 80%;
+      margin: 0 auto;
+      color: #e14e10;
+    }
+
+    .btn-halloween {
+      background: url(../images/btn-halloween.png) no-repeat center center;
+      color: #ffe1d2;
+      font-family: 'edoregular', @headings-font-family;
+      width: 308px;
+      height: 79px;
+      text-align: center;
+      line-height: 79px;
+      padding: 0;
+      font-size: 30px;
+      .transition(all 0.2s);
+      .opacity(1);
+
+      &:hover, &:focus, &:active {
+        outline: none;
+        .opacity(0.7);
+      }
+
+      // Control screen mobile
+      @media screen and (max-width: @screen-xs-max) {
+        width: 260px;
+        background-size: 100%;
+      }
+    }
+  }
+}

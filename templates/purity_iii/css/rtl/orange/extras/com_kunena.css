@@ -1,0 +1,73 @@
+
+.com_kunena #Kunena fieldset {
+  border: 1px solid #bfbfbf;
+}
+.com_kunena #Kunena fieldset legend {
+  margin: 0;
+  padding: 0 5px;
+  width: inherit;
+}
+.com_kunena #Kunena .kbutton,
+.com_kunena #Kunena .kbutton:hover,
+.com_kunena #Kunena .kbutton-container .kbutton {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  padding: 5px 10px;
+}
+.com_kunena #Kunena #kprofilebox .input span {
+  display: inline-block;
+  padding: 10px 0 10px 20px;
+}
+.com_kunena #Kunena #kprofilebox .input span .inputbox {
+  display: inline-block;
+}
+.com_kunena #Kunena .klist-actions .inputbox,
+.com_kunena #Kunena .klist-bottom .inputbox {
+  display: inline-block;
+  padding: 4px 3px;
+}
+.com_kunena #Kunena .klist-actions .kbutton,
+.com_kunena #Kunena .klist-bottom .kbutton {
+  display: inline-block;
+}
+.com_kunena #Kunena .klist-bottom {
+  padding-bottom: 0 !important;
+  overflow: hidden;
+}
+.com_kunena #Kunena div.kheader {
+  color: #ffffff !important;
+  padding: 10px 20px;
+}
+.com_kunena #Kunena div.kheader a {
+  color: #ffffff !important;
+}
+.com_kunena #Kunena #kwhoisonline .kwhoonline {
+  border-width: 0;
+  border-bottom-width: 1px;
+}
+.com_kunena #Kunena #kwhoisonline .kwholegend {
+  border-width: 0;
+  border-top-width: 1px;
+}
+.com_kunena #Kunena .kadvsearch input {
+  margin-bottom: 10px;
+}
+.com_kunena #Kunena .kadvsearch select {
+  background: #ffffff !important;
+  margin-bottom: 10px;
+  padding: 4px 3px;
+}
+.com_kunena #Kunena #kprofile-edit .tabs dt {
+  margin-left: 2px;
+  border-radius: 5px 5px 0 0;
+  font-weight: normal;
+}
+.com_kunena #Kunena #kprofile-edit .tabs .open {
+  background: #0077bb;
+  color: #ffffff;
+}
+.com_kunena #Kunena #kprofile-edit .tabs .closed {
+  background: #666666;
+  color: #ffffff;
+}

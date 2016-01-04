@@ -1,0 +1,233 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Slideshow Lite Module for J25 & J3.2
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - GNU/GPL, http://www.gnu.org/licenses/gpl.html
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites: http://www.joomlart.com - http://www.joomlancers.com
+ * ------------------------------------------------------------------------
+ */
+
+
+.ja-ss-slideshow {
+	position: relative;
+	height: 309px;
+}
+
+.ja-ss-loading:before {
+	content: "";
+	display: block;
+	background: url(../imgs/slideloading.gif) transparent no-repeat center center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 5;
+}
+ 
+.ja-ss-wrap {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.ja-ss-items {
+	width: 100%;
+}
+
+.ja-ss-item {
+	display: block;
+	float: left;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	min-height: 260px;
+	z-index: 1;
+	backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.ja-ss-item.prev {
+	display: block;
+}
+
+.ja-ss-item.next {
+	display: block;
+}
+
+.ja-ss-item.curr {
+	z-index: 2; /* IE7,8 */
+}
+
+.ja-ss-item img {
+	background: #fff;
+	width: 100%;
+	max-width: 100%;
+}
+
+.ja-ss-mask {
+}
+
+.ja-ss-mask.active {
+}
+
+.ja-ss-desc {
+	position: absolute;
+	left: 20px;
+	top: 48%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+	width: 60%;
+	padding: 10px;
+	color: #000;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
+
+	-webkit-border-radius: 2px; /* Android = 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 2px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	/* useful if you don't want a bg color from leaking outside the border: */
+	background-clip: padding-box;
+
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000, endColorstr=#33000000);/* For IE 5.5 - 7*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000, endColorstr=#33000000)";/* For IE 8*/
+	background: rgba(255,255,255,.7);/* Modern browser */
+}
+
+.ja-ss-desc h3 {
+	line-height: 1.4;
+	margin: 0;
+}
+
+.ja-ss-desc h3 a {
+	color: inherit;
+	line-height: normal;
+	text-decoration: none;
+}
+
+.ja-ss-desc p {
+	font-size: 12px;
+	line-height: 18px;
+	margin: 10px 0;
+}
+
+.ja-ss-btns {
+	z-index: 10;
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+
+.ja-ss-btns span {
+	background: url(../imgs/ctrl-btns.png) no-repeat top left;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	float: left;
+	height: 40px;
+	margin: 0 5px 0 0;
+	padding: 0;
+	width: 40px;
+	text-indent: -999em;
+}
+
+.ja-ss-btns .ja-ss-prev {
+	background-position: 0 0;
+}
+.ja-ss-btns .ja-ss-prev:hover {
+  background-position: left bottom;
+}
+
+.ja-ss-btns .ja-ss-next {
+	background-position: -40px 0;
+}
+.ja-ss-btns .ja-ss-next:hover {
+  background-position: -40px bottom;
+}
+
+.ja-ss-btns .ja-ss-stop {
+	background-position: -80px 0;
+}
+.ja-ss-btns .ja-ss-stop:hover {
+  background-position: -80px bottom;
+}
+
+.ja-ss-btns .ja-ss-play {
+	background-position: -120px 0;
+}
+.ja-ss-btns .ja-ss-play:hover {
+  background-position: -120px bottom;
+}
+
+.ja-ss-btns .ja-ss-playback {
+	background-position: right 0;
+}
+.ja-ss-btns .ja-ss-playback:hover {
+  background-position: right bottom;
+}
+
+.ja-ss-thumbs-wrap {
+	height: 72px;
+	width: 100%;
+	clear: both;
+	position: relative;
+	bottom: 72px;
+	overflow: hidden;
+	z-index: 9;
+	background: url(../imgs/white-trans.png) 0 0 repeat;
+}
+
+/* dynamic classes */
+.ja-ss-thumb-height {
+
+}
+
+.ja-ss-thumb-width {
+
+}
+
+.ja-ss-thumbs {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 5000px; /* horizontal thumbnails */
+	white-space: nowrap;
+	/*font-size: 0; can be use to remove space between inline-block*/
+}
+
+.ja-ss-thumbs .ja-ss-thumb {
+	display: inline-block;
+	overflow: hidden;
+	margin: 5px 3px;
+	border: 1px solid #fafafa;
+	text-align: center;
+	vertical-align: bottom;
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+
+	-webkit-border-radius: 2px; /* Android = 1.6, iOS 1-3.2, Safari 3-4 */
+	border-radius: 2px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	/* useful if you don't want a bg color from leaking outside the border: */
+	background-clip: padding-box;
+}
+
+.ja-ss-thumbs .ja-ss-thumb img {
+
+}
+
+.ja-ss-thumbs .ja-ss-thumb.active {
+	border: 1px solid #db7030;
+}
+
+.ja-ss-thumbs .ja-ss-thumb.active img {
+	opacity: 1;
+}

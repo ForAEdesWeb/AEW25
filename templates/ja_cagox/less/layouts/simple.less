@@ -1,0 +1,82 @@
+@import "../vars.less";
+
+.simple-page {
+  .t3-wrapper {
+    .container {
+      padding-left: @grid-gutter-width;
+      padding-right: @grid-gutter-width;
+
+      .container .container {
+        padding-right: @grid-gutter-width/2;
+        padding-left: @grid-gutter-width/2;
+      }
+    }
+
+    > .container {
+      padding-left: 0;
+      padding-right: 0;
+      border-left: 1px solid @t3-border-color;
+      border-right: 1px solid @t3-border-color;
+      border-top: 2px solid @gray-darker;
+    }
+  }
+
+  .section-inner {
+    border-bottom: 1px solid @t3-border-color;
+  }
+
+  // Header
+  // ---------------
+  .head-right {
+    .head-cart {
+      margin-right: @grid-gutter-width/2;
+    }
+  }
+
+
+  // Footer 
+  // ---------------
+  .t3-footnav {
+    border-bottom: 1px solid @gray-dark-lv3;
+    margin-right: 0;
+    margin-left: 0;
+
+    @media (max-width: @screen-sm-max) {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    > div {
+      padding-left: @grid-gutter-width;
+      padding-right: @grid-gutter-width;
+
+      .t3-footnav > div:first-child {
+        padding-left: 0;
+      }
+
+      .t3-footnav > div:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  // Modules Style
+  // ---------------
+
+  // Slideshow
+  .block-slideshow-item {
+    padding-top: @t3-global-padding * 5;
+    padding-bottom: @t3-global-padding * 5;
+  }
+
+
+  // Container Tabs
+  .acm-container-tabs .container-tabs-nav .nav-tabs {
+    text-align: center;
+
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+}

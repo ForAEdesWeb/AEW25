@@ -1,0 +1,49 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+.home-corporate {
+  // ---------------------------------------------------------
+  // CORPORATE STYLE
+  // ---------------------------------------------------------
+  // Used for Corporate Layout.
+
+
+  // Testimonial
+  // ----------------
+  .acm-testimonials.style-6 {
+    font-size: @font-size-large;
+    // Control screen tablet/ desktop
+    @media screen and (min-width: @screen-xs) {
+      font-size: @font-size-h2;
+    }
+
+    b {
+      font-size: @font-size-large;
+      // Control screen tablet/ desktop
+      @media screen and (min-width: @screen-xs) {
+        font-size: @font-size-h2;
+      }
+    }
+  }
+
+
+  // Tabs
+  // ----------------
+  .acm-tabs {
+    .style-1 .tab-content img {
+      margin-top: -(@t3-global-margin * 4);
+
+      // Control screen mobile
+      @media screen and (max-width: @screen-sm-max) {
+        margin-top: 0;
+      }
+    }
+  }
+
+}

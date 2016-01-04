@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Footer</title>
+	<sampledata><![CDATA[
+        {"jatools-layout-footer":["style-1"],"footer[footer-background]":["dark-color"],"footer[img]":[""],"footer[enable-breadcrumbs]":["0"],"footer[enable-backtotop]":["1"],"footer[footer-left-position]":["footer-1"],"footer[footer-right-position]":["footer-2"],"footer[full-width]":["0"],"footer[enable-sticky]":["0"],"footer[facebook]":["joomlart"],"footer[google-plus]":["joomlart"],"footer[twitter]":["joomlart"],"footer[pinterest]":["joomlart"],"footer[linkedin]":["joom-solutions"],"footer[spotlight-position]":["footnav-1"],"footer[xs]":["12"],"footer[sm]":["6"],"footer[md]":["4"],"footer[lg]":["4"]}
+    ]]></sampledata>
+	
+    <fields name="footer">
+    	<fieldset name="basic" label="FOOTER_BASIC_LABEL" description="FOOTER_BASIC_DESC" multiple="0">
+				<field name="footer-background" type="list" default="light-color"
+						 global="1"
+						 label="FOOTER_BACKGROUND_LABEL"
+						 description="FOOTER_BACKGROUND_DESC">
+					<option value="dark-color">DARK_COLOR</option>
+					<option value="light-color">LIGHT_COLOR</option>
+					<option value="highlight-color">HIGHLIGHT_COLOR</option>
+				</field>
+				<field name="img" type="media" default="" label="FOOTER_BACKGROUND_IMG_LABEL" description="FOOTER_BACKGROUND_IMG_DESC" />
+				<field name="enable-breadcrumbs" type="radio" default="0" label="FOOTER_ENABLE_BREADCRUMBS_LABEL" description="FOOTER_ENABLE_BREADCRUMBS_DESC" layouts="style-1,style-2,style-3,style-4" >
+          <option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+      	</field>
+      	<field name="enable-backtotop" type="radio" default="0" label="FOOTER_ENABLE_BACKTOTOP_LABEL" description="FOOTER_ENABLE_BACKTOTOP_DESC" >
+          <option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+      	</field>
+      	<field name="footer-left-position" type="moduleposition"    
+					        description="FOOTER_LEFT_POSITION_DESC"
+					        label="FOOTER_LEFT_POSITION_LABEL"
+					        default=""/>
+				<field name="footer-right-position" type="moduleposition"    
+					        description="FOOTER_RIGHT_POSITION_DESC"
+					        label="FOOTER_RIGHT_POSITION_LABEL"
+					        default=""/>
+				<field name="full-width" type="radio" default="0" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" >
+	      	<option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+	      </field>
+	      <field name="enable-sticky" type="radio" default="0" label="ENABLE_STICKY_LABEL" description="ENABLE_STICKY_DESC" layouts="style-5">
+	      	<option value="0" class="off">JNO</option>
+					<option value="1" class="on">JYES</option>
+	      </field>
+			</fieldset>
+			
+			<fieldset name="social" label="SOCIAL_LABEL" description="SOCIAL_DESC" multiple="0" layouts="style-1,style-2,style-3,style-4">
+				<field name="facebook" type="text" size="40" default="" label="FACEBOOK_LABEL" description="FACEBOOK_DESC"></field>
+				<field name="google-plus" type="text" size="40" default="" label="GOOGLE_PLUS_LABEL" description="GOOGLE_PLUS_DESC"></field>
+				<field name="twitter" type="text" size="40" default="" label="TWITTER_LABEL" description="TWITTER_DESC"></field>
+				<field name="pinterest" type="text" size="40" default="" label="PINTEREST_LABEL" description="PINTEREST_DESC"></field>
+				<field name="linkedin" type="text" size="40" default="" label="LINKEDIN_LABEL" description="LINKEDIN_DESC"></field>
+			</fieldset> 
+			
+			<fieldset name="spotlight" label="SPOTLIGHT_SETTING_LABEL" description="SPOTLIGHT_SETTING_DESC" layouts="style-2,style-3,style-4">
+        	<field name="data" type="jalist">
+            <item name="position" type="moduleposition"    
+					        description="SPOTLIGHT_POSITION_DESC"
+					        label="SPOTLIGHT_POSITION_LABEL"
+					        default=""
+					        maxlength="50" layouts="style-1"/>
+					  <item name="xs" type="list" label="SPOTLIGHT_EXTRA_SMALL_SCREEN" description="SPOTLIGHT_EXTRA_SMALL_SCREEN_DESC">
+					  	<option value="col-xs-12">12</option>
+					  	<option value="col-xs-11">11</option>
+					  	<option value="col-xs-10">10</option>
+					  	<option value="col-xs-9">9</option>
+					  	<option value="col-xs-8">8</option>
+					  	<option value="col-xs-7">7</option>
+							<option value="col-xs-6">6</option>
+							<option value="col-xs-5">5</option>
+							<option value="col-xs-4">4</option>
+							<option value="col-xs-3">3</option>
+							<option value="col-xs-2">2</option>
+							<option value="col-xs-1">1</option>
+						</item>
+						<item name="sm" type="list" label="SPOTLIGHT_SMALL_SCREEN" description="SPOTLIGHT_SMALL_SCREEN_DESC">
+					  	<option value="col-sm-12">12</option>
+					  	<option value="col-sm-11">11</option>
+					  	<option value="col-sm-10">10</option>
+					  	<option value="col-sm-9">9</option>
+					  	<option value="col-sm-8">8</option>
+					  	<option value="col-sm-7">7</option>
+							<option value="col-sm-6">6</option>
+							<option value="col-sm-5">5</option>
+							<option value="col-sm-4">4</option>
+							<option value="col-sm-3">3</option>
+							<option value="col-sm-2">2</option>
+							<option value="col-sm-1">1</option>
+						</item>
+						<item name="md" type="list" label="SPOTLIGHT_MEDIUM_SCREEN" description="SPOTLIGHT_MEDIUM_SCREEN_DESC">
+					  	<option value="col-md-12">12</option>
+					  	<option value="col-md-11">11</option>
+					  	<option value="col-md-10">10</option>
+					  	<option value="col-md-9">9</option>
+					  	<option value="col-md-8">8</option>
+					  	<option value="col-md-7">7</option>
+							<option value="col-md-6">6</option>
+							<option value="col-md-5">5</option>
+							<option value="col-md-4">4</option>
+							<option value="col-md-3">3</option>
+							<option value="col-md-2">2</option>
+							<option value="col-md-1">1</option>
+						</item>
+						<item name="lg" type="list" label="SPOTLIGHT_LARGE_SCREEN" description="SPOTLIGHT_LARGE_SCREEN_DESC">
+					  	<option value="col-lg-12">12</option>
+					  	<option value="col-lg-11">11</option>
+					  	<option value="col-lg-10">10</option>
+					  	<option value="col-lg-9">9</option>
+					  	<option value="col-lg-8">8</option>
+					  	<option value="col-lg-7">7</option>
+							<option value="col-lg-6">6</option>
+							<option value="col-lg-5">5</option>
+							<option value="col-lg-4">4</option>
+							<option value="col-lg-3">3</option>
+							<option value="col-lg-2">2</option>
+							<option value="col-lg-1">1</option>
+						</item>
+					</field>
+        </fieldset>
+    </fields>
+</form>

@@ -1,0 +1,97 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// FEATURES INTRO
+// ------------------------------------
+.acm-features {
+  &.style-2 {
+    .features-content {
+      padding: @t3-global-padding*2;
+      font-size: @font-size-small;
+      overflow: hidden;
+
+      .ft-top h3 {
+        background: none;
+        padding-bottom: 0;
+        font-size: @font-size-small;
+      }
+
+      @media (max-width: @screen-sm-max) { 
+        width: 50%;
+        float: left;
+      }
+
+      @media (max-width: @screen-xs-max) { 
+        width: 100%;
+        float: none;
+        height: auto !important;
+      }
+    }
+
+    .features-image {
+      position: relative;
+
+      &:before {
+        border-bottom: 10px solid @white;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        bottom: 0;
+        content: "";
+        left: 50%;
+        margin-left: -5px;
+        position: absolute;
+        width: 0;
+      }
+
+      &.bottom:before {
+        bottom: auto;
+        top: 0;
+        border-bottom: 0;
+        border-top: 10px solid @white;
+      }
+
+      @media (max-width: @screen-sm-max) { 
+        width: 50%;
+        float: left;
+
+        &:before {
+          border: 0;
+          border-bottom: 10px solid transparent;
+          border-top: 10px solid transparent;
+          border-right: 10px solid @white;
+          bottom: auto;
+          content: "";
+          left: auto;
+          margin-left: 0;
+          margin-top: -5px;
+          right: 0;
+          top: 50%;
+        }
+
+        &.bottom:before {
+          border: 0;
+          border-bottom: 10px solid transparent;
+          border-top: 10px solid transparent;
+          border-left: 10px solid @white;
+          bottom: auto;
+          content: "";
+          right: auto;
+          margin-left: 0;
+          margin-top: -5px;
+          left: 0;
+          top: 50%;
+        }
+      }
+
+      @media (max-width: @screen-xs-max) { 
+        display: none;
+      }
+    }
+  }
+}

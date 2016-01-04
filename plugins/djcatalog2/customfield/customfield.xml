@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="plugin"
+	version="1.6.0"
+	client="site"
+	method="upgrade"
+	group="djcatalog2">
+	<name>plg_djcatalog2_customfield</name>
+	<creationDate>April 2014</creationDate>
+	<author>DJ-Extensions.com LTD</author>
+	<copyright>Copyright (C) 2010-2012 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license> http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.0</version>
+	<description>PLG_DJCATALOG2_CUSTOMFIELD_DESC</description>
+	<files>
+		<filename plugin="customfield">customfield.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,12 @@
+.home-demo .section-inner + script + .section-inner,
+.home-demo .section-inner + .section-inner {
+  max-width: 1160px;
+  margin: 0 auto 26px;
+}
+.home-demo script + .section-inner {
+  margin: 26px auto;
+  max-width: 1160px;
+}
+.home-demo .uber-header.header-5 {
+  z-index: 20;
+}

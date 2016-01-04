@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1"
+	type="plugin"
+	group="editors"
+	method="upgrade">
+	<name>plg_editors_akmarkdown</name>
+	<author>Asika</author>
+	<creationDate>2013-05-07</creationDate>
+	<copyright>Copyright (C) 2014 Asikart.com</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>asika@asikart.com</authorEmail>
+	<authorUrl>http://asikart.com</authorUrl>
+	<version>1.1.2</version>
+	<description>PLG_EDITORS_AKMARKDOWN_XML_DESCRIPTION</description>
+
+
+	<scriptfile>install.php</scriptfile>
+
+	<!-- plugin editors now has no sql file
+	<install>
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/install.sql</file>
+  		</sql>
+    </install>
+	
+	
+	<uninstall>
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+  		</sql>
+    </uninstall>
+	-->
+
+
+	<files>
+		<filename plugin="akmarkdown">akmarkdown.php</filename>
+		<filename>index.html</filename>
+		<filename>install.php</filename>
+		<folder>fields</folder>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>lib</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic"
+				addfieldpath="plugins/editors/akmarkdown/fields">
+				<field
+					name="EditorButton_ConvertMarkdown"
+					type="radio"
+					label="PLG_EDITORS_AKMARKDOWN_CONVERT_MD"
+					description="PLG_EDITORS_AKMARKDOWN_CONVERT_MD_DESC"
+					default="1"
+					class="btn-group"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field
+					name="Editor_WordWrap"
+					type="radio"
+					label="PLG_EDITORS_AKMARKDOWN_EDITOR_WORD_WRAP"
+					description="PLG_EDITORS_AKMARKDOWN_EDITOR_WORD_WRAP_DESC"
+					default="1"
+					class="btn-group"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field
+					name="Editor_SoftWrapNum"
+					type="text"
+					label="PLG_EDITORS_AKMARKDOWN_EDITOR_SOFT_WRAP_NUM"
+					description="PLG_EDITORS_AKMARKDOWN_EDITOR_SOFT_WRAP_NUM_DESC"
+					default="0"
+					class="input-small inputbox"
+					size="5"
+					/>
+
+				<field
+					name="AceEditor_Theme"
+					type="acetheme"
+					label="PLG_EDITORS_AKMARKDOWN_EDITORS_THEME"
+					description="PLG_EDITORS_AKMARKDOWN_EDITORS_THEME_DESC"
+					default="twilight"
+					>
+				</field>
+
+				<field
+					name="MarkItUp_Theme"
+					type="markituptheme"
+					label="PLG_EDITORS_AKMARKDOWN_BUTTONS_THEME"
+					description="PLG_EDITORS_AKMARKDOWN_BUTTONS_THEME_DESC"
+					default="simple"
+					>
+				</field>
+
+				<field
+					name="MarkItUp_ButtonSet"
+					type="list"
+					label="PLG_EDITORS_AKMARKDOWN_BUTTON_SET"
+					description="PLG_EDITORS_AKMARKDOWN_BUTTON_SET_DESC"
+					default="markdown"
+					>
+					<option value="html">HTML</option>
+					<option value="markdown">Markdown</option>
+				</field>
+
+				<field
+					type="gotosystem"
+					/>
+			</fieldset>
+
+			<fieldset
+				name="amazon"
+				label="PLG_EDITORS_AKMARKDOWN_UPLOAD_LABEL"
+				>
+
+				<field
+					name="Upload_Handler"
+					type="list"
+					label="PLG_EDITORS_AKMARKDOWN_UPLOAD_HANDLER"
+					default=""
+					>
+					<option value="">JNO</option>
+					<!--<option value="local">PLG_EDITORS_AKMARKDOWN_UPLOAD_HANDLER_LOCAL</option>-->
+					<option value="s3">PLG_EDITORS_AKMARKDOWN_UPLOAD_HANDLER_S3</option>
+				</field>
+
+				<field
+					type="spacer"
+					label="PLG_EDITORS_AKMARKDOWN_UPLOAD_HANDLER_S3"
+					/>
+
+				<field
+					name="Upload_S3_Key"
+					type="text"
+					label="PLG_EDITORS_AKMARKDOWN_S3KEY"
+					default=""
+					size="50"
+					/>
+
+				<field
+					name="Upload_S3_SecretKey"
+					type="text"
+					label="PLG_EDITORS_AKMARKDOWN_S3SERETKEY"
+					default=""
+					size="50"
+					/>
+				<field
+					name="Upload_S3_Bucket"
+					type="text"
+					label="PLG_EDITORS_AKMARKDOWN_S3BUCKET"
+					default=""
+					/>
+
+				<field
+					name="Upload_S3_Subfolder"
+					type="text"
+					label="PLG_EDITORS_AKMARKDOWN_S3SUBFOLDER"
+					default=""
+					size="40"
+					/>
+
+				<field
+					name="Upload_AllowExtension"
+					type="text"
+					label="PLG_EDITORS_AKMARKDOWN_ALLOW_EXTENSION"
+					default="png,gif,jpg,jpeg,zip,txt,rar"
+					size="50"
+					/>
+
+				<field
+					name="Upload_ButtonCss"
+					type="text"
+					label="PLG_EDITORS_AKMARKDOWN_UPLOAD_BUTTON_CSS"
+					default="btn pull-right fltrt btn-inverse btn-upload delicious light green-pastel"
+					size="50"
+					/>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

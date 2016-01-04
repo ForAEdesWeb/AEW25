@@ -1,0 +1,53 @@
+.simple-page .t3-wrapper .container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.simple-page .t3-wrapper .container .container .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.simple-page .t3-wrapper > .container {
+  padding-left: 0;
+  padding-right: 0;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-top: 2px solid #222222;
+}
+.simple-page .section-inner {
+  border-bottom: 1px solid #eeeeee;
+}
+.simple-page .head-right .head-cart {
+  margin-right: 15px;
+}
+.simple-page .t3-footnav {
+  border-bottom: 1px solid #2d2d2d;
+  margin-right: 0;
+  margin-left: 0;
+}
+@media (max-width: 991px) {
+  .simple-page .t3-footnav {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+.simple-page .t3-footnav > div {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.simple-page .t3-footnav > div .t3-footnav > div:first-child {
+  padding-left: 0;
+}
+.simple-page .t3-footnav > div .t3-footnav > div:last-child {
+  padding-right: 0;
+}
+.simple-page .block-slideshow-item {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.simple-page .acm-container-tabs .container-tabs-nav .nav-tabs {
+  text-align: center;
+}
+.simple-page .acm-container-tabs .container-tabs-nav .nav-tabs > li {
+  float: none;
+  display: inline-block;
+}

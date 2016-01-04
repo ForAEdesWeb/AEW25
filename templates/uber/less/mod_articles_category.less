@@ -1,0 +1,72 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+// Item Grid view
+// --------------
+.t3-module,
+.section {
+  .item-grid-view {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0 @grid-gutter-width/2;
+      border-top: 0;
+      .item-inner {
+        background: @white;
+        padding: @t3-global-padding;
+      }
+
+      .item-image img {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+      }
+
+      .item-title {
+        font-size: @font-size-base + 4;
+        line-height: 1.4;
+        margin-top: @t3-global-margin;
+        min-height: 56px;
+
+        a {
+          color: @gray-dark;
+
+          &:hover, &:focus, &:active {
+            color: @link-hover-color;
+          }
+        }
+      }
+
+      .item-meta {
+        color: @gray-light;
+        font-size: @font-size-small;
+        margin-bottom: (@t3-global-margin / 4);
+
+        span {
+          margin-right: 5px;
+        }
+      }
+
+      .mod-articles-category-readmore {
+        font-size: @font-size-small;
+        font-weight: bold;
+        text-align: right;
+
+        a {
+          color: @gray-light;
+
+          &:hover, &:focus, &:active {
+            color: @link-hover-color;
+          }
+        }
+      }
+    }
+  }
+
+}

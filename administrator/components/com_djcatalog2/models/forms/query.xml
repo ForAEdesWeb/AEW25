@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="header">
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+			readonly="true" class="readonly" />
+		<field name="created_date" type="calendar"
+			label="COM_DJCATALOG2_ORDER_CREATED_DATE" description="COM_DJCATALOG2_ORDER_CREATED_DATE_DESC"
+			class="inputbox" size="22" format="%Y-%m-%d" filter="user_utc" />
+		<field name="customer_note" type="textarea" class="inputbox"
+			label="COM_DJCATALOG2_ORDER_NOTE"
+		/>
+	</fieldset>
+	<fieldset name="customer">
+		<field name="user_id" type="user" label="COM_DJCATALOG2_ORDER_USER_ID" readonly="readonly" />
+		<field name="email" type="email" validate="email"
+			label="COM_DJCATALOG2_UP_EMAIL" class="inputbox input" />
+
+		<field name="firstname" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_FIRSTNAME" class="inputbox input" />
+		<field name="lastname" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_LASTNAME" class="inputbox input" />
+		<field name="company" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_COMPANY" class="inputbox input" />
+
+		<field name="address" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_ADDRESS" class="inputbox input" />
+		<field name="city" type="text" filter="string" label="COM_DJCATALOG2_UP_CITY"
+			class="inputbox input"/>
+		<field name="postcode" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_POSTCODE" class="inputbox input"/>
+
+		<field name="country" type="text" default=""
+			label="COM_DJCATALOG2_UP_COUNTRY" class="inputbox input" />
+		<field name="vat_id" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_VATID" class="inputbox input" />
+	</fieldset>
+	
+	<field name="items" type="hidden" />
+	<field name="quote_items" type="hidden" />
+	
+</form>

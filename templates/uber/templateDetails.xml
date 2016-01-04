@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name>Uber</name>
+	<version>2.0.2</version>
+	<creationDate>28 November 2014</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.t3-framework.org</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<t3>
+		<base>base-bs3</base>
+	</t3>
+	<description>
+		<![CDATA[
+		<div class="overview-header" style="text-align: left;">
+			<h2>                             
+			  <small style="display: block;">Responsive All in 1 Joomla template - <strong>Uber</strong>.</small>
+			</h2>
+			<p>Uber is the perfect All in 1 Joomla template to help everyone build their business site. This special Joomla template is a feature project for Joomla 3 & Joomla 2.5. It is a built with T3 Framework template with Bootstrap 3, and the Advanced Custom Module.</p>
+			<p>Uber is the first JoomlArt template to sport on the brand new Advanced Custom Module (ACM). With ACM, one can build a whole website from the scratch with multiple content blocks for Testimonials, CTA, Gallery, Slideshow, Pricing Table, Features Intro, etc. Just choose the blocks you desire and start to connect them. Along with ThemeMagic and Layout Configurator, you can create your own startup site. Quick and easy.</p>
+			<p>This is the one-template-fits-all option for the go-getters in you, among the jungle of Joomla templates in the market.</p>
+			<p>Uber is our dedication to the JoomlArt club members to begin the fourth quarter with new dreams, new projects, and new possibilities; and to empower the startup communities with a dedicated Joomla product.</p>
+			<p>Note: The power of ACM is unleashed in this video. Take it at your own risk!</p>
+			</div>
+		]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>thememagic.xml</filename>
+		<filename>templateInfo.php</filename>
+		<filename>templateHook.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>templateHelper.php</filename>
+		<folder>acm</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>language</folder>
+		<folder>images</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_uber.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_uber.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>acymailing</position>
+		<position>acm-footer</position>
+		<position>acm-header</position>
+		<position>acm-topbar</position>
+		<position>app-home</position>
+		<position>gym-home</position>
+		<position>business-home</position>
+		<position>business-slide-items</position>
+		<position>charity-home</position>
+		<position>charity-slide-items</position>
+		<position>container-tabs</position>
+		<position>corporate-home</position>
+		<position>corporate-slide-items</position>
+		<position>footer</position>
+		<position>footnav-1</position>
+		<position>footnav-2</position>
+		<position>footnav-3</position>
+		<position>footnav-4</position>
+		<position>footnav-5</position>
+		<position>footnav-6</position>
+		<position>full-width</position>
+		<position>head-search</position>
+		<position>header-1</position>
+		<position>header-2</position>
+		<position>header-3</position>
+		<position>header-4</position>
+		<position>ja-social</position>
+		<position>mainnav</position>
+		<position>masthead</position>
+		<position>music-home</position>
+		<position>music-sl-1</position>
+		<position>music-sl-2</position>
+		<position>music-sl-3</position>
+		<position>music-slide-items</position>
+		<position>navhelper</position>
+		<position>off-canvas</position>
+		<position>product-banner</position>
+		<position>product-related</position>
+		<position>restaurant-home</position>
+		<position>restaurant-slide-items</position>
+		<position>right-menu</position>
+		<position>section</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>spa-home</position>
+		<position>spa-slide-items</position>
+		<position>submenu</position>
+		<position>topbar-1</position>
+		<position>topbar-2</position>
+		<position>topbar-3</position>
+		<position>uber-bar</position>
+		<position>uber-clients</position>
+		<position>uber-contact-info</position>
+		<position>uber-container-slide</position>
+		<position>uber-container-tabs</position>
+		<position>uber-cta</position>
+		<position>uber-featuresintro</position>
+		<position>uber-footer</position>
+		<position>uber-gallery</position>
+		<position>uber-header</position>
+		<position>uber-home</position>
+		<position>uber-hero</position>
+		<position>uber-menu</position>
+		<position>uber-pricingtable</position>
+		<position>uber-slide-items</position>
+		<position>uber-slide3-items</position>
+		<position>uber-slide3l-items</position>
+		<position>uber-slide4-items</position>
+		<position>uber-slideshow</position>
+		<position>uber-stats</position>
+		<position>uber-teams</position>
+		<position>uber-testimonial</position>
+		<position>university-contact</position>
+		<position>university-home</position>
+		<position>university-sl-1</position>
+		<position>university-sl-banner</position>
+		<position>university-sl-blog</position>
+		<position>university-sl-news</position>
+		<position>university-slide-items</position>
+		<position>wedding-home</position>
+		<position>wedding-slide-items</position>
+		<position>church-contact</position>
+		<position>church-events-items</position>
+		<position>church-home</position>
+		<position>church-sl-1</position>
+		<position>church-sl-2</position>
+		<position>church-slide-items</position>
+		<position>const-about-1</position>
+		<position>const-about-2</position>
+		<position>const-slide-home</position>
+		<position>construction-home</position>
+		<position>gym-home-slide-items</position>
+		<position>home-gym-sl-1-1</position>
+		<position>home-gym-sl-1-3</position>
+		<position>home-gym-sl-2-1</position>
+		<position>lawyer-home</position>
+		<position>breadcrumbs</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+		<position>footer-0</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-5</position>
+		<position>footer-6</position>
+		<position>footer-7</position>
+		<position>footer-8</position>
+		<position>footer-9</position>
+		<position>footer-10</position>
+		<position>debug</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+
+			<!-- Sample for add or disable template parameters -->
+			<!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+				<field name="group_disable" type="t3depend" function="@group">
+					<option for="menu_as_bg" value="no">menu_as_bg</option>
+				</field>
+			</fieldset-->
+			<fieldset name="theme_params" label="T3_THEME_LABEL" description="T3_THEME_DESC">
+
+				<field name="theme_params_logolink" type="t3depend" function="@group">
+					<option for="logolink" value="page">
+						logolink_id
+					</option>
+				</field>
+	
+				<field name="logolink" type="list" default="default"
+							 label="T3_THEME_LOGOLINK_LABEL"
+							 description="T3_THEME_LOGOLINK_DESC">
+					<option value="default">T3_THEME_LOGOLINK_DEFAULT</option>
+					<option value="page">T3_THEME_LOGOLINK_PAGE</option>
+				</field>
+				<field name="logolink_id" type="text" default=""
+							 label="T3_THEME_LOGOLINK_ID_LABEL"
+							 description="T3_THEME_LOGOLINK_ID_DESC"/>			
+		  </fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>
+
+</extension>

@@ -1,0 +1,24 @@
+.acm-spotlight > .row {
+  margin: 0;
+}
+.acm-spotlight > .row > div {
+  border-right: 1px solid #eeeeee;
+  padding: 0;
+}
+.acm-spotlight > .row > div:last-child {
+  border-right: 0;
+}
+@media (max-width: 991px) {
+  .acm-spotlight > .row > div {
+    border-right: 0;
+  }
+}
+.acm-spotlight > .row > div > div img {
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  .acm-spotlight .col-sm-12 .bannergroup {
+    float: left;
+    width: 50%;
+  }
+}

@@ -1,0 +1,96 @@
+.top-login{float:right;background:none}.top-login
+ul{position:relative}.top-login ul
+li{display:inline-block;float:left;position:relative}.top-login ul li
+a{background:#111;border-left:solid 1px #000;color:#666;display:inline-block;font-size:92%;font-weight:bold;padding:9px
+20px;z-index:1}.top-login ul li a:hover,
+.top-login ul li a:focus,
+.top-login ul li a:active{color:#e5e5e5}.top-login ul li
+a.show{background:#222;color:#999}.top-login ul li.first
+a{border:none}.top-login ul li
+a.show{z-index:3}#login-form{margin:0}#login-form ul li a,
+#login-form ul li a:link,
+#login-form ul li a:visited{background-image:url('../../../images/bullet-dark.png');color:#666;font-weight:normal;padding:0
+0 0 15px !important}#login-form ul li a:hover,
+#login-form ul li a:focus,
+#login-form ul li a:active{background-image:url('../../../images/bullet-hover.png');color:#c33}.login-greeting{color:#fff;float:right;margin-right:10px;margin-top:10px}.top-login .logout-button{float:right;margin:5px
+20px 5px 0}#member-registration{margin-bottom:0}#ja-user-register.hascaptcha{width:430px !important}#ja-user-login,#ja-user-register{background:#222;border:1px
+solid #222;box-shadow:5px 5px 5px rgba(0,0,0,0.3);display:none;padding:20px;position:absolute;right:0;z-index:2;top:38px}#ja-user-login label,
+#ja-user-register
+label{color:#999;display:inline-block;margin-bottom:2px}#ja-user-login .inputbox,
+#ja-user-register input[type="text"],
+#ja-user-register input[type="password"],
+#ja-user-register input[type="email"]{background:#151515;border:1px
+solid #2f2f2f;box-shadow:none;width:230px}#ja-user-login .inputbox:hover,
+#ja-user-login .inputbox:focus,
+#ja-user-register input[type="text"]:hover,
+#ja-user-register input[type="password"]:hover,
+#ja-user-register input[type="email"]:hover{border:1px
+solid #444;box-shadow:none}#ja-user-login .invalid,
+#ja-user-register input[type="text"].invalid,
+#ja-user-register input[type="password"].invalid,
+#ja-user-register input[type="email"].invalid{border-color:#c33}#ja-user-login #modlgn-remember{background:none;border:none !important;vertical-align:top;width:auto}#form-login-username,#form-login-password,#form-login-remember{margin-bottom:5px;margin-top:0}#ja-user-register fieldset
+dl{margin-bottom:0}#ja-user-register fieldset
+dt{clear:none;float:none;padding:0}#ja-user-register fieldset
+dd{padding:0;margin-bottom:5px;margin-left:0}#ja-user-register fieldset+p{color:#666;font-size:12px;font-style:italic;margin-bottom:10px}.top-login input.button,
+.top-login
+button{border:solid 1px #1a1a1a !important;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#363636;background-image:-moz-linear-gradient(top,#3c3c3c,#2f2f2f);background-image:-webkit-gradient(linear,0 0,0 100%,from(#3c3c3c),to(#2f2f2f));background-image:-webkit-linear-gradient(top,#3c3c3c,#2f2f2f);background-image:-o-linear-gradient(top,#3c3c3c,#2f2f2f);background-image:linear-gradient(to bottom,#3c3c3c,#2f2f2f);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b3b3b', endColorstr='#ff2e2e2e', GradientType=0);border-color:#2f2f2f #2f2f2f #090909;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);*background-color:#2f2f2f;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);color:#999;font-weight:bold;text-shadow:none;padding:6px
+14px}.top-login input.button:hover,
+.top-login input.button:active,
+.top-login input.button.active,
+.top-login input.button.disabled,
+.top-login input.button[disabled],
+.top-login button:hover,
+.top-login button:active,
+.top-login button.active,
+.top-login button.disabled,
+.top-login button[disabled]{color:#fff;background-color:#2f2f2f;*background-color:#222}.top-login input.button:active,
+.top-login input.button.active,
+.top-login button:active,
+.top-login
+button.active{background-color:#151515 \9}input.button:hover,
+input.button:focus,
+input.button:active,
+.top-login button:hover,
+.top-login button:focus,
+.top-login button:active{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#d24b4b;background-image:-moz-linear-gradient(top,#d65c5c,#c33);background-image:-webkit-gradient(linear,0 0,0 100%,from(#d65c5c),to(#c33));background-image:-webkit-linear-gradient(top,#d65c5c,#c33);background-image:-o-linear-gradient(top,#d65c5c,#c33);background-image:linear-gradient(to bottom,#d65c5c,#c33);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd65b5b', endColorstr='#ffcc3333', GradientType=0);border-color:#c33 #c33 #8f2424;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);*background-color:#c33;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);border-color:#c33;color:#fff}input.button:hover:hover,
+input.button:hover:active,
+input.button:hover.active,
+input.button:hover.disabled,
+input.button:hover[disabled],
+input.button:focus:hover,
+input.button:focus:active,
+input.button:focus.active,
+input.button:focus.disabled,
+input.button:focus[disabled],
+input.button:active:hover,
+input.button:active:active,
+input.button:active.active,
+input.button:active.disabled,
+input.button:active[disabled],
+.top-login button:hover:hover,
+.top-login button:hover:active,
+.top-login button:hover.active,
+.top-login button:hover.disabled,
+.top-login button:hover[disabled],
+.top-login button:focus:hover,
+.top-login button:focus:active,
+.top-login button:focus.active,
+.top-login button:focus.disabled,
+.top-login button:focus[disabled],
+.top-login button:active:hover,
+.top-login button:active:active,
+.top-login button:active.active,
+.top-login button:active.disabled,
+.top-login button:active[disabled]{color:#fff;background-color:#c33;*background-color:#b82e2e}input.button:hover:active,
+input.button:hover.active,
+input.button:focus:active,
+input.button:focus.active,
+input.button:active:active,
+input.button:active.active,
+.top-login button:hover:active,
+.top-login button:hover.active,
+.top-login button:focus:active,
+.top-login button:focus.active,
+.top-login button:active:active,
+.top-login button:active.active{background-color:#a32929 \9}p#form-login-remember
+label{display:inline-block}.tip-wrap{z-index:9999}

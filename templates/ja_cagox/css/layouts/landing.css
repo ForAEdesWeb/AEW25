@@ -1,0 +1,17 @@
+.landing-page #fp-nav {
+  z-index: 9999;
+}
+.landing-page #fp-nav ul li a span {
+  background: none;
+  border: 2px solid #000000;
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+}
+.landing-page #fp-nav ul li a.active span {
+  background: none;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.landing-page #fp-nav.dark-style ul li a span {
+  border-color: #ffffff;
+}

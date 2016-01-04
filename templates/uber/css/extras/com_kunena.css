@@ -1,0 +1,163 @@
+.com_kunena body #Kunena a {
+  color: #039be5 !important;
+}
+.com_kunena body #Kunena a:hover,
+.com_kunena body #Kunena a:focus,
+.com_kunena body #Kunena a:active {
+  color: #000000 !important;
+  text-decoration: none;
+}
+.com_kunena body #Kunena .kwho-admin,
+.com_kunena body #Kunena .kwho-admin:hover,
+.com_kunena body #Kunena .kwho-admin:focus,
+.com_kunena body #Kunena .kwho-admin:active {
+  color: #f00 !important;
+}
+.com_kunena body #Kunena .kwho-globalmoderator,
+.com_kunena body #Kunena .kwho-globalmoderator:hover,
+.com_kunena body #Kunena .kwho-globalmoderator:focus,
+.com_kunena body #Kunena .kwho-globalmoderator:active {
+  color: #800000 !important;
+}
+.com_kunena body #Kunena .kwho-moderator,
+.com_kunena body #Kunena .kwho-globalmoderator:hover,
+.com_kunena body #Kunena .kwho-globalmoderator:focus,
+.com_kunena body #Kunena .kwho-globalmoderator:active {
+  color: #00f !important;
+}
+.com_kunena body #Kunena .kwho-banned,
+.com_kunena body #Kunena .kwho-banned:hover,
+.com_kunena body #Kunena .kwho-banned:focus,
+.com_kunena body #Kunena .kwho-banned:active {
+  color: #a39d49 !important;
+}
+.com_kunena body #Kunena .kwho-user,
+.com_kunena body #Kunena .kwho-user:hover,
+.com_kunena body #Kunena .kwho-user:focus,
+.com_kunena body #Kunena .kwho-user:active {
+  color: #5388b4 !important;
+}
+.com_kunena body #Kunena .kwho-guest,
+.com_kunena body #Kunena .kwho-guest:hover,
+.com_kunena body #Kunena .kwho-guest:focus,
+.com_kunena body #Kunena .kwho-guest:active {
+  color: #666 !important;
+}
+.com_kunena body #Kunena #ktab ul.menu li a:hover,
+.com_kunena body #Kunena #ktab ul.menu li a:focus {
+  background: #039be5 !important;
+}
+.com_kunena body #Kunena #ktab ul.menu li.active a,
+.com_kunena body #Kunena #ktab li#current.selected a {
+  background-color: #039be5 !important;
+}
+.com_kunena body #Kunena #ktop {
+  border-bottom: 3px solid #039be5 !important;
+}
+.com_kunena body #Kunena .kprofileboxcnt .k_guest b {
+  color: #039be5;
+}
+.com_kunena body #Kunena .button:hover,
+.com_kunena body #Kunena .button:focus,
+.com_kunena body #Kunena .button:active,
+.com_kunena body #Kunena .kbutton:hover,
+.com_kunena body #Kunena .kbutton:focus,
+.com_kunena body #Kunena .kbutton:active,
+.com_kunena body #Kunena #kbutton_addvideo1:hover,
+.com_kunena body #Kunena #kbutton_addvideo1:focus,
+.com_kunena body #Kunena #kbutton_addvideo1:active,
+.com_kunena body #Kunena #kbutton_addvideo2:hover,
+.com_kunena body #Kunena #kbutton_addvideo2:focus,
+.com_kunena body #Kunena #kbutton_addvideo2:active,
+.com_kunena body #Kunena #kbbcode-link-options input[type="button"]:hover,
+.com_kunena body #Kunena #kbbcode-image-options input[type="button"]:hover {
+  background-color: #039be5;
+  border: solid 1px #039be5 !important;
+}
+.com_kunena body #Kunena .ja-announcement-field #kanncreated_img {
+  background-color: #039be5;
+}
+.com_kunena body #Kunena .ja-announcement-field #kanncreated_img:hover {
+  background-color: #039be5;
+}
+.com_kunena body #Kunena .kbuttononline-yes span.online-yes {
+  color: #039be5;
+}
+.com_kunena body #Kunena .kbuttononline-yes span.online-yes span {
+  color: #039be5;
+}
+.com_kunena body #Kunena .kfile-input:hover,
+.com_kunena body #Kunena .kfile-input:active,
+.com_kunena body #Kunena .kfile-input:focus {
+  background: #039be5;
+}
+.com_kunena body #Kunena .kheader h2,
+.com_kunena body #Kunena .kheader h3 {
+  background: #039be5;
+}
+.com_kunena body #Kunena .kblock div.kheader,
+.com_kunena body #Kunena div#Kunena div.kblock > div.kheader {
+  background: #ecf0f1 !important;
+}
+.com_kunena body #Kunena .kicon-button:hover span,
+.com_kunena body #Kunena .kicon-button:focus span,
+.com_kunena body #Kunena .kicon-button:active span {
+  color: #039be5;
+}
+.com_kunena body #Kunena .kpagination a:link,
+.com_kunena body #Kunena .kpagination a:visited,
+.com_kunena body #Kunena .kpagination a,
+.com_kunena body #Kunena .kpagination span {
+  color: #039be5;
+}
+.com_kunena body #Kunena .kpagination a:hover,
+.com_kunena body #Kunena #Kunena .kpagination span {
+  background: #039be5;
+  border-color: #039be5;
+}
+.com_kunena body #Kunena .kwho-admin {
+  color: #039be5;
+}
+.com_kunena body #Kunena div#khistory tr.ksth a {
+  color: #039be5;
+}
+.com_kunena body #Kunena div.kthead-title a:hover,
+.com_kunena body #Kunena div.kthead-title a:focus,
+.com_kunena body #Kunena div.kthead-title a:active {
+  color: #039be5;
+}
+.com_kunena body #Kunena dl.tabs dt.open {
+  color: #039be5 !important;
+}
+.com_kunena body #Kunena dl.tabs dt.open:hover,
+.com_kunena body #Kunena dl.tabs dt.open:focus,
+.com_kunena body #Kunena dl.tabs dt.open:active {
+  background: #ffffff;
+  color: #039be5 !important;
+}
+.com_kunena body #Kunena dl.tabs dt:hover {
+  background: #039be5;
+  border-color: #039be5;
+}
+.com_kunena body #Kunena span.kheadbtn a:hover {
+  background: #039be5 !important;
+  border-color: #039be5 !important;
+}
+.com_kunena body #Kunena table.kprofilebox .kprofileboxcnt .klink-block a:hover,
+.com_kunena body #Kunena table.kprofilebox .kprofileboxcnt .klink-block a:focus,
+.com_kunena body #Kunena table.kprofilebox .kprofileboxcnt .klink-block a:active {
+  color: #039be5;
+}
+.com_kunena body #Kunena .button:hover .kbutton-back {
+  color: #039be5;
+}
+.com_kunena body #Kunena .kforum-pathway .path-element,
+.com_kunena body #Kunena .kforum-pathway-bottom .path-element {
+  background: url("../../images/system/arrow.png") no-repeat left center;
+}
+.com_kunena body #Kunena .kheader h2,
+.com_kunena body #Kunena .kheader h2 a,
+.com_kunena body #Kunena .kheader h3,
+.com_kunena body #Kunena .kheader h3 a {
+  color: #ffffff !important;
+}

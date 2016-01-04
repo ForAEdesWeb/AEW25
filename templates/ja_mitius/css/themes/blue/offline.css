@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------------------
+ * JA Mitius Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+*/
+
+input.button:active,
+input.button:focus,
+input.button:hover {
+  background-color: #3ba7e5;
+  background-image: -moz-linear-gradient(top,#3ba7e5,#1188cc);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#3ba7e5),to(#1188cc));
+  background-image: -webkit-linear-gradient(top,#3ba7e5,#1188cc);
+  background-image: -o-linear-gradient(top,#3ba7e5,#1188cc);
+  background-image: linear-gradient(to bottom,#3ba7e5,#1188cc);
+  background-repeat: repeat-x;
+  border-color: #1188cc #1188cc #1a7ab1;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  *background-color: #3ba7e5;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: #3ba7e5;
+
+}

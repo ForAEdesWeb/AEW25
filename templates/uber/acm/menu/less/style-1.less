@@ -1,0 +1,70 @@
+// -------------------------------
+// MENU STYLE 1
+// -------------------------------
+.acm-menu {
+  .style-1 {
+    .clearfix();
+
+    .dish-item {
+      margin-bottom: @t3-global-margin;
+
+      .item-inner {
+        border-bottom: 1px dashed @gray-light;
+        .clearfix();
+      }
+      
+      .dish-name {
+        font-size: @t3-font-size-bigger;
+        float: left;
+        margin: 0 0 (@t3-global-margin / 4);
+        width: 78%;
+      }
+
+      .dish-price {
+        float: right;
+        font-weight: @font-weight-bold;
+        text-align: right;
+        width: 20%;
+      }
+
+      .dish-description {
+        font-size: @font-size-small;
+        float: left;
+        max-width: 78%;
+        min-height: 46px;
+      }
+
+    }
+
+    // Menu style
+    &.style-dark {
+      color: @white;
+    }
+  }
+}
+
+// FIX BUG IE 8
+// ------------
+.ie8 .team-items .item {
+  .img-intro p {
+    display: none;
+  }
+
+  &:hover {
+    .img-intro {
+      p {
+        display: block;
+        
+        &:after {
+          background: @brand-primary;
+          content: "";
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+// ----------------------------------------
+// HERO STYLE 7
+// ----------------------------------------
+.acm-hero {
+  &.style-7 {
+    position: relative;
+    .hero-content {
+      background-color: #ce2920;
+      padding: @t3-global-padding;
+      color: @white;
+      border: 5px solid #ce2920;
+              border-image: url(../images/border2.png) 5 5 5 5 repeat;
+         -moz-border-image: url(../images/border2.png) 5 5 5 5 repeat;
+      -webkit-border-image: url(../images/border2.png) 5 5 5 5 repeat;
+
+      .hero-heading {
+        color: @white; 
+        margin-bottom: 0;       
+
+        + .hero-intro {
+          margin-top: @t3-global-margin;
+        }
+      }
+
+      .hero-intro {
+        color: @white;
+        font-weight: @font-weight-bold;
+        font-size: @font-size-small;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

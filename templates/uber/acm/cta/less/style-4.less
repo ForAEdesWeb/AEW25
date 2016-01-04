@@ -1,0 +1,124 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.acm-cta {
+	// ---------------------------------------
+	// CTA STYLE 4
+	// --------------------------------------
+	&.style-4 {
+		text-align: center;
+
+		a {
+			color: @white;
+			display: block;
+			font-size: @font-size-h4;
+			font-weight: @font-weight-normal;
+			padding: @t3-global-padding * 3;
+			letter-spacing: 0.33em;
+			text-transform: uppercase;
+
+			.fa {
+				margin-left: (@t3-global-margin / 2);
+				font-size: @font-size-base;
+				top: -2px;
+				position: relative;
+			}
+
+			@media (max-width: @screen-xs-max) {
+				font-size: @font-size-base;
+			}
+		}
+	}
+
+	// Background - Brand Primary
+	// --------------------------
+	&.brand-primary {
+		background-color: @brand-primary;
+		.transition( background 0.35s);
+
+		&:hover {
+			background-color: darken(@brand-primary, 10%);
+		}
+	}
+
+	// Background - Brand Secondary
+	// ----------------------------
+	&.brand-secondary {
+		background-color: @brand-secondary;
+		.transition( background 0.35s);
+
+		&:hover {
+			background-color: darken(@brand-secondary, 10%);
+		}
+	}	
+
+	// Background - Brand Success
+	// --------------------------
+	&.brand-success {
+		background-color: @brand-success;
+		.transition( background 0.35s);
+
+		&:hover {
+			background-color: darken(@brand-success, 10%);
+		}
+	}	
+
+	// Background - Brand Warning
+	// --------------------------
+	&.brand-warning {
+		background-color: @brand-warning;
+		.transition( background 0.35s);
+
+		&:hover {
+			background-color: darken(@brand-warning, 10%);
+		}
+	}	
+
+	// Background - Brand Danger
+	// -------------------------
+	&.brand-danger {
+		background-color: @brand-danger;
+		.transition( background 0.35s);
+
+		&:hover {
+			background-color: darken(@brand-danger, 10%);
+		}
+	}	
+
+	// Background - Brand Info
+	// ------------------------
+	&.brand-info {
+		background-color: @brand-info;
+		.transition( background 0.35s);
+
+		&:hover {
+			background-color: darken(@brand-info, 10%);
+		}
+	}	
+
+	// Background - Gray Light
+	// ----------------------
+	&.gray-light {
+		background-color: @gray-lighter;
+		.transition( background 0.35s);
+		a {
+			color: @gray-dark;
+		}
+
+		&:hover {
+			background-color: darken(@gray-lighter, 10%);
+		}
+	}	
+
+	// Background info
+	// ------------------
+	&.gray-dark {
+		background-color: @gray-darker;
+		.transition( background 0.35s);
+
+		&:hover {
+			background-color: darken(@gray-darker, 10%);
+		}
+	}	
+}

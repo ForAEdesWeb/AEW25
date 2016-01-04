@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="header">
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+			readonly="true" class="readonly" />
+		<field name="order_number" type="text" class="inputbox readonly"
+			readonly="true" default="" label="COM_DJCATALOG2_ORDER_NUMBER" />
+		<field name="invoice_number" type="text" class="inputbox"
+			 default="" label="COM_DJCATALOG2_ORDER_INVOICE_NUMBER" />
+		<field name="created_date" type="calendar"
+			label="COM_DJCATALOG2_ORDER_CREATED_DATE" description="COM_DJCATALOG2_ORDER_CREATED_DATE_DESC"
+			class="inputbox" size="22" format="%Y-%m-%d" filter="user_utc" />
+		<field name="invoice_date" type="calendar"
+			label="COM_DJCATALOG2_ORDER_INVOICE_DATE" description="COM_DJCATALOG2_ORDER_INVOICE_DATE_DESC"
+			class="inputbox" size="22" format="%Y-%m-%d" filter="user_utc" />
+
+		<field name="payment_method" type="text" default=""
+			label="COM_DJCATALOG2_ORDER_PAYMENT_METHOD" />
+		<field name="currency" type="text" default=""
+			label="COM_DJCATALOG2_ORDER_CURRENCY" />
+		<field name="status" type="list" default="C"
+			label="COM_DJCATALOG2_ORDER_STATUS">
+			<option value="N">COM_DJCATALOG2_ORDER_STATUS_N</option>
+			<option value="A">COM_DJCATALOG2_ORDER_STATUS_A</option>
+			<option value="C">COM_DJCATALOG2_ORDER_STATUS_C</option>
+			<option value="R">COM_DJCATALOG2_ORDER_STATUS_R</option>
+			<option value="W">COM_DJCATALOG2_ORDER_STATUS_W</option>
+		</field>
+		<field name="customer_note" type="textarea" class="inputbox"
+			label="COM_DJCATALOG2_ORDER_NOTE"
+		/>
+	</fieldset>
+	<fieldset name="order-prices">
+		<field name="total" type="text" default="0"
+			label="COM_DJCATALOG2_ORDER_TOTAL" />
+		<field name="tax" type="text" default="0" label="COM_DJCATALOG2_ORDER_TAX" />
+		<field name="grand_total" type="text" default="0"
+			label="COM_DJCATALOG2_ORDER_GRAND_TOTAL" />
+	</fieldset>
+	<fieldset name="customer">
+		<field name="user_id" type="user" label="COM_DJCATALOG2_ORDER_USER_ID" />
+		<field name="email" type="email" validate="email"
+			label="COM_DJCATALOG2_UP_EMAIL" class="inputbox input" required="true" />
+
+		<field name="firstname" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_FIRSTNAME" class="inputbox input" required="true" />
+		<field name="lastname" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_LASTNAME" class="inputbox input" required="true" />
+		<field name="company" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_COMPANY" class="inputbox input" />
+
+		<field name="address" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_ADDRESS" class="inputbox input" required="true" />
+		<field name="city" type="text" filter="string" label="COM_DJCATALOG2_UP_CITY"
+			class="inputbox input" required="true" />
+		<field name="postcode" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_POSTCODE" class="inputbox input" required="true" />
+
+		<field name="country" type="text" default=""
+			label="COM_DJCATALOG2_UP_COUNTRY" class="inputbox input" required="true" />
+		<field name="vat_id" type="text" filter="string"
+			label="COM_DJCATALOG2_UP_VATID" class="inputbox input" />
+	</fieldset>
+	
+	<field name="items" type="hidden" />
+	<field name="order_items" type="hidden" />
+	
+</form>

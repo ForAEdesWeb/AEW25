@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="information"
+		align="left"
+		horz="true">
+
+		<field name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="JFIELD_TITLE_DESC"
+			required="true"
+			size="50"
+			labelclass="control-label"
+			class="input-xlarge"
+			/>
+
+		<field name="catid"
+			type="categoryadd"
+			label="JCATEGORY"
+			description="JFIELD_CATEGORY_DESC"
+			extension="com_userxtd"
+			labelclass="control-label"
+			quickadd="true"
+			>
+			<!--<option value="0">COM_USERXTD_TITLE_UNCATEGORISED</option>-->
+		</field>
+
+		<field name="field_type"
+			type="fieldtype"
+			label="LIB_WINDWALKER_FIELD_TYPE"
+			description="LIB_WINDWALKER_FIELD_TYPE_DESC"
+			required="true"
+			labelclass="control-label"
+			default="text"
+			onchange="AKFields.changeType(this)"
+
+			>
+			<!--<option value="text">Text</option>
+			<option value="list">List</option>-->
+		</field>
+
+		<field name="attrs"
+			type="fields"
+			label="COM_USERXTD_INTROTEXT"
+			description="COM_USERXTD_INTROTEXT_DESC"
+			filter="raw"
+			buttons="true"
+			hide="readmore,pagebreak,article"
+			labelclass="control-label"
+			class="form-horizontal"
+			fset="attrs"
+			/>
+
+		<field name="options"
+			type="fields"
+			label="LIB_WINDWALKER_FIELD_ATTR_OPTIONS"
+			description="LIB_WINDWALKER_FIELD_ATTR_OPTIONS_DESC"
+			filter="raw"
+			buttons="true"
+			hide="readmore,pagebreak,article"
+			labelclass="control-label"
+			nolabel="true"
+			fset="options"
+			/>
+	</fieldset>
+
+	<fieldset name="advanced">
+		<field name="advanced"
+			type="fields"
+			label=""
+			description="COM_USERXTD_INTROTEXT_DESC"
+			filter="raw"
+			buttons="true"
+			hide="readmore,pagebreak,article"
+			labelclass="control-label"
+			class="form-horizontal"
+			fset="advanced"
+			/>
+	</fieldset>
+
+	<fieldset
+		name="publish"
+		align="right"
+		horz="true">
+
+		<field name="published"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1"
+			>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field name="id"
+			type="text"
+			default="0"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+			/>
+
+		<field name="created_by"
+			type="user"
+			label="COM_USERXTD_CREATED_BY"
+			description="COM_USERXTD_CREATED_BY_DESC"
+			/>
+
+		<field name="created"
+			type="calendar"
+			label="COM_USERXTD_CREATED"
+			description="COM_USERXTD_CREATED_DESC"
+			/>
+
+	</fieldset>
+
+	<!-- Need this field as child of root node for access setting. -->
+	<field name="asset_id"
+		type="hidden"
+		filter="unset"/>
+
+	<fieldset name="rules">
+		<field name="rules"
+			type="rules"
+			translate_label="false"
+			class="inputbox"
+			filter="rules"
+			component="com_userxtd"
+			section="field"
+			validate="rules"
+			/>
+	</fieldset>
+
+	<!-- For Quick Ajax AddNew -->
+	<fieldset name="quickadd">
+		<field name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="JFIELD_TITLE_DESC"
+			required="true"
+			size="50"
+			labelclass=""
+			class="input-xlarge"
+			/>
+
+		<field name="catid"
+			type="category"
+			label="JCATEGORY"
+			description="JFIELD_CATEGORY_DESC"
+			extension="com_userxtd"
+			labelclass=""
+			>
+			<option value="0">COM_USERXTD_TITLE_UNCATEGORISED</option>
+		</field>
+
+		<!--<field name="parent_id"
+			type="field_list"
+			label="COM_USERXTD_PARENT_ITEM"
+			description="COM_USERXTD_PARENT_ITEM_DESC"
+			labelclass=""
+			class="input-xlarge inputbox"
+			access="true"
+		>
+			<option>JSELECT</option>
+			<option value="1">JLIB_HTML_ADD_TO_ROOT</option>
+		</field>-->
+	</fieldset>
+
+</form>

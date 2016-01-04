@@ -1,0 +1,110 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+
+.home-gym {
+
+  .acm-hero.style-5 .hero-content .hero-heading {
+    @media screen and (max-width: @screen-xs-max) {
+      font-size: @font-size-h3;
+    }
+  }
+
+  .section-inner .section-title span {
+    @media screen and (max-width: @screen-xs-max) {
+      font-size: @font-size-h5;
+    }
+  }
+
+  .acm-features {
+
+  }
+  
+  // Schedule
+  .home-gym-schedule {
+    ul {
+      margin-left: -@t3-global-margin;
+      margin-right: -@t3-global-margin;
+      @media screen and (max-width: @screen-xs-max) {
+        margin: 0;
+      }
+    }
+    li {
+      width: 25%;
+      display: block;
+      float: left;
+      padding: 0 @t3-global-margin;
+      margin: 0;
+
+      @media screen and (max-width: @screen-xs-max) {
+        width: 100%;
+        float: none;
+      }
+
+      @media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+        width: 50%;
+      }
+    }
+  }
+
+  // Schedule Feature
+
+  .home-gym-schedule-featured {
+    .acm-menu .style-2.style-light {
+      background: @brand-secondary;
+    }
+
+    .acm-menu .style-2 .dish-item .item-inner {
+      background: none;
+      color: @white;
+
+      .dish-name {
+        font-size: @font-size-base;
+      }
+    }
+  }
+
+  .acm-spotlight .t3-module .module-title span {
+    background: none;
+    padding-left: 0;
+
+  }
+
+  .section-lighter .t3-module .module-title span {
+      color: @gray-darker;
+    }
+
+  // Testimonial
+  .acm-spotlight .acm-testimonials .carousel-inner .item {
+    text-align: left;
+
+    .testimonial-text {
+      font-size: 20px;
+    }
+  }
+  // Menu Item
+
+  .gym-timetable-menu {
+    padding-top: 0;
+  }
+
+  .acm-menu .style-2 .dish-item .item-inner {
+    padding-right: 190px;
+    .dish-name {
+      font-size: 18px;
+    }
+    .dish-price {
+      font-size: 16px;
+      width: 180px;
+    }
+    .dish-description {
+      margin: 0;
+    }
+  }
+}

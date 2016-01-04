@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="basic">
+        <fieldset name="information" align="left" horz="true">
+        
+            <field name="title"
+                type="text"
+                label="JGLOBAL_TITLE"
+                description="JFIELD_TITLE_DESC"
+                required="true"
+                size="50"
+                labelclass=""
+                class="input-xlarge"
+            />
+            
+            <field name="alias"
+                type="text"
+                label="JFIELD_ALIAS_LABEL"
+                description="JFIELD_ALIAS_DESC"
+                size="50"
+                labelclass=""
+            />
+            
+            <field name="catid"
+                type="categoryadd"
+                label="JCATEGORY"
+                description="JFIELD_CATEGORY_DESC"
+                extension="com_webgallery"
+                labelclass=""
+                quickadd="true"
+            >
+                <option value="0">COM_WEBGALLERY_TITLE_UNCATEGORISED</option>
+            </field>
+            
+            <field name="url"
+                type="text"
+                label="COM_WEBGALLERY_URL"
+                description="COM_WEBGALLERY_URL_DESC"
+                size="60"
+                labelclass=""
+            />
+            
+            <field name="tags"
+                type="tag"
+                label="JTAG"
+                description="JTAG_DESC"
+                size="60"
+                labelclass=""
+                multiple="true"
+                mode="ajax"
+                custom="allow"
+            />
+        </fieldset>
+        
+        <fields name="thumbs">
+            <fieldset name="thumbs" align="right" horz="true">
+            	<field name="rescan"
+	                type="checkbox"
+	                label="COM_WEBGALLERY_THUMB_RESCAN"
+	                description="COM_WEBGALLERY_THUMB_RESCAN_DESC"
+	                value="1"
+					default="0"
+	                class="input-xlarge"
+	                labelclass=""
+	            />
+	            
+                <field name="url1"
+                    type="text"
+                    label="COM_WEBGALLERY_THUMB_URL"
+                    description="COM_WEBGALLERY_THUMB_URL_DESC"
+                    size="60"
+                    class="input-xlarge"
+                    labelclass=""
+                />
+                
+                <field name="url2"
+                    type="text"
+                    label="COM_WEBGALLERY_THUMB_URL"
+                    description="COM_WEBGALLERY_THUMB_URL_DESC"
+                    size="60"
+                    class="input-xlarge"
+                    labelclass=""
+                />
+                
+                <field name="url3"
+                    type="text"
+                    label="COM_WEBGALLERY_THUMB_URL"
+                    description="COM_WEBGALLERY_THUMB_URL_DESC"
+                    size="60"
+                    class="input-xlarge"
+                    labelclass=""
+                />
+                
+                <field name="url4"
+                    type="text"
+                    label="COM_WEBGALLERY_THUMB_URL"
+                    description="COM_WEBGALLERY_THUMB_URL_DESC"
+                    size="60"
+                    class="input-xlarge"
+                    labelclass=""
+                />
+                
+                <field name="url5"
+                    type="text"
+                    label="COM_WEBGALLERY_THUMB_URL"
+                    description="COM_WEBGALLERY_THUMB_URL_DESC"
+                    size="60"
+                    class="input-xlarge"
+                    labelclass=""
+                />
+            </fieldset>
+        </fields>
+        
+        <fieldset name="text" align="left">
+            <field name="introtext"
+                type="editor"
+                label="COM_WEBGALLERY_INTROTEXT"
+                description="COM_WEBGALLERY_INTROTEXT_DESC"
+                filter="raw"
+                buttons="true"
+                hide="readmore,pagebreak,article"
+                labelclass=""
+            />
+    
+            <field name="checked_out" type="hidden" filter="unset" />
+            <field name="checked_out_time" type="hidden" filter="unset" />
+            
+        </fieldset>    
+    </fields>
+    
+    <fields name="advanced">
+        <fieldset name="created">
+            <field name="access"
+                type="accesslevel"
+                label="JFIELD_ACCESS_LABEL"
+                description="JFIELD_ACCESS_DESC"
+                labelclass=""
+                default="1"
+            />
+            
+            <field name="language"
+                type="language"
+                label="JGRID_HEADING_LANGUAGE"
+                description="JGRID_HEADING_LANGUAGE"
+                labelclass=""
+            >
+                <option value="*">JALL</option>
+            </field>
+        </fieldset>
+        
+        <fieldset name="publish" align="right" horz="true">
+            <field name="published"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1"
+                labelclass=""
+            >
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field>
+            
+            <field name="id" 
+                type="text" 
+                default="0" 
+                label="JGLOBAL_FIELD_ID_LABEL"
+                readonly="true" 
+                class="readonly"
+                description="JGLOBAL_FIELD_ID_DESC"
+                labelclass=""
+            />
+            
+            <field name="created_by"
+                type="user"
+                label="COM_WEBGALLERY_CREATED_BY"
+                description="COM_WEBGALLERY_CREATED_BY_DESC"
+                labelclass=""
+            />
+            
+            <field name="created"
+                type="calendar"
+                label="COM_WEBGALLERY_CREATED"
+                description="COM_WEBGALLERY_CREATED_DESC"
+                labelclass=""
+            />
+            
+            <field name="publish_up"
+                type="calendar"
+                label="COM_WEBGALLERY_PUBLISH_UP"
+                description="COM_WEBGALLERY_PUBLISH_UP_DESC"
+                labelclass=""
+            />
+            
+            <field name="publish_down"
+                type="calendar"
+                label="COM_WEBGALLERY_PUBLISHED_DOWN"
+                description="COM_WEBGALLERY_PUBLISH_DOWN_DESC"
+                labelclass=""
+            />
+            
+            
+        </fieldset>
+    </fields>
+    
+    
+    <!-- Need this field br child of root node for access setting. -->
+    <field name="asset_id" type="hidden" filter="unset" />
+    
+    <fields name="rules">
+        <fieldset name="rules">
+            <field name="rules"
+                type="rules"
+                label=""
+                translate_label="false"
+                class="inputbox"
+                filter="rules"
+                component="com_webgallery"
+                section="item"
+                validate="rules"
+            />
+        </fieldset>
+    </fields>
+    
+    
+    <!-- For Quick Ajax AddNew -->
+    <fieldset name="quickadd">
+        <field name="title"
+            type="text"
+            label="JGLOBAL_TITLE"
+            description="JFIELD_TITLE_DESC"
+            required="true"
+            size="50"
+            labelclass=""
+            class="input-xlarge"
+        />
+        
+        <field name="catid"
+            type="category"
+            label="JCATEGORY"
+            description="JFIELD_CATEGORY_DESC"
+            extension="com_webgallery"
+            labelclass=""
+        >
+            <option value="0">COM_WEBGALLERY_TITLE_UNCATEGORISED</option>
+        </field>
+        
+        <!--<field name="parent_id"
+            type="item_list"
+            label="COM_WEBGALLERY_PARENT_ITEM"
+            description="COM_WEBGALLERY_PARENT_ITEM_DESC"
+            labelclass=""
+            class="input-xlarge inputbox"
+            access="true"
+        >
+            <option>JSELECT</option>
+            <option value="1">JLIB_HTML_ADD_TO_ROOT</option>
+        </field>-->
+    </fieldset>
+    
+</form>

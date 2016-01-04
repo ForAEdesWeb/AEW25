@@ -1,0 +1,51 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+.acm-cta {
+	// ---------------------------------------
+	// CTA STYLE 3
+	// --------------------------------------
+	&.style-3 {
+		// Header
+		.cta-showcase-header {
+			margin-top: 0;
+		}
+
+		// Button action
+		.cta-showcase-actions {
+			margin-top: @t3-global-margin * 2;
+
+			a {
+				display: inline-block;
+				margin-bottom: @t3-global-margin / 2;
+				margin-right: @t3-global-margin / 2;
+
+				// Control screen mobile
+				@media screen and (max-width: @screen-xs-max) {
+					display: block;
+					margin-left: 0;
+				}
+			}
+
+			.fa {
+				margin-right: @t3-global-margin / 4;
+			}
+		}
+
+		// Style Light
+		&.light {
+			color: @gray;
+
+			// Header
+			.cta-showcase-header {
+				color: @gray-dark;
+			}
+		}
+
+		&.bg-image {
+			padding-bottom: (@t3-global-padding * 4);
+			padding-top: (@t3-global-padding * 4);
+		}
+	}
+}

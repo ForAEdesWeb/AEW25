@@ -1,0 +1,68 @@
+.t3-module .item-grid-view,
+.section .item-grid-view {
+  list-style: none;
+  padding: 0;
+}
+.t3-module .item-grid-view li,
+.section .item-grid-view li {
+  padding: 0 20px;
+  border-top: 0;
+}
+.t3-module .item-grid-view li .item-inner,
+.section .item-grid-view li .item-inner {
+  background: #ffffff;
+  padding: 26px;
+}
+.t3-module .item-grid-view li .item-image img,
+.section .item-grid-view li .item-image img {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+}
+.t3-module .item-grid-view li .item-title,
+.section .item-grid-view li .item-title {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-top: 26px;
+  min-height: 56px;
+}
+.t3-module .item-grid-view li .item-title a,
+.section .item-grid-view li .item-title a {
+  color: #3d4045;
+}
+.t3-module .item-grid-view li .item-title a:hover,
+.section .item-grid-view li .item-title a:hover,
+.t3-module .item-grid-view li .item-title a:focus,
+.section .item-grid-view li .item-title a:focus,
+.t3-module .item-grid-view li .item-title a:active,
+.section .item-grid-view li .item-title a:active {
+  color: #026899;
+}
+.t3-module .item-grid-view li .item-meta,
+.section .item-grid-view li .item-meta {
+  color: #96a1a3;
+  font-size: 14px;
+  margin-bottom: 6.5px;
+}
+.t3-module .item-grid-view li .item-meta span,
+.section .item-grid-view li .item-meta span {
+  margin-right: 5px;
+}
+.t3-module .item-grid-view li .mod-articles-category-readmore,
+.section .item-grid-view li .mod-articles-category-readmore {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+}
+.t3-module .item-grid-view li .mod-articles-category-readmore a,
+.section .item-grid-view li .mod-articles-category-readmore a {
+  color: #96a1a3;
+}
+.t3-module .item-grid-view li .mod-articles-category-readmore a:hover,
+.section .item-grid-view li .mod-articles-category-readmore a:hover,
+.t3-module .item-grid-view li .mod-articles-category-readmore a:focus,
+.section .item-grid-view li .mod-articles-category-readmore a:focus,
+.t3-module .item-grid-view li .mod-articles-category-readmore a:active,
+.section .item-grid-view li .mod-articles-category-readmore a:active {
+  color: #026899;
+}

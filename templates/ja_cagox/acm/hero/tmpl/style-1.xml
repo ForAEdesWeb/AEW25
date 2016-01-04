@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Hero</title>
+	<sampledata></sampledata>
+	
+  <fields name="hero-style">
+    <fieldset name="hero-content" label="HERO_CONTENT_LABEL" description="HERO_CONTENT_DESC" >
+      <field name="block-title" type="textarea" default="" rows="5" cols="40"  label="HERO_BLOCK_TITLE_LABEL" description="HERO_BLOCK_TITLE_DESC" />
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="HERO_BLOCK_INTRO_LABEL" description="HERO_BLOCK_INTRO_DESC" />
+      <field name="block-bg" type="media" default="" label="HERO_BACKGROUND_LABEL" description="HERO_BACKGROUND_DESC"/>
+      <field name="acm-style" type="list" default="dark-style"
+          label="ACM_STYLE_LABEL"
+          description="ACM_STYLE_DESC">
+        <option value="dark-style">DARK_STYLE</option>
+        <option value="light-style">LIGHT_STYLE</option>
+      </field>
+      
+      <field name="content-position" type="list" default="position-left"
+          label="CONTENT_POSITION_LABEL"
+          description="CONTENT_POSITION_DESC">
+        <option value="position-left">JGLOBAL_LEFT</option>
+        <option value="position-center">JGLOBAL_CENTER</option>
+        <option value="position-right">JGLOBAL_RIGHT</option>
+      </field>
+      
+      <field name="text-align" type="list" default="text-left"
+          label="TEXT_ALIGN_LABEL"
+          description="TEXT_ALIGN_DESC">
+        <option value="text-left">JGLOBAL_LEFT</option>
+        <option value="text-center">JGLOBAL_CENTER</option>
+        <option value="text-right">JGLOBAL_RIGHT</option>
+      </field>
+
+      <field name="hero-btn1-text" type="text" size="50" default="" label="HERO_BUTTON1_TEXT_LABEL" description="HERO_BUTTON1_TEXT_DESC" ></field>
+      <field name="hero-btn1-class" type="text" size="50" default="" label="HERO_BUTTON1_CLASS_LABEL" description="HERO_BUTTON1_CLASS_DESC"></field>
+      <field name="hero-btn1-link" type="text" size="50" default="" label="HERO_BUTTON1_LINK_LABEL" description="HERO_BUTTON1_LINK_DESC" ></field>
+    </fieldset>
+  </fields>
+</form>

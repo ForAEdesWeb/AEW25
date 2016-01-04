@@ -1,0 +1,105 @@
+.pane-sliders h3.title {
+	padding: 5px;
+}
+.inputbox, select, input, textarea {
+	padding: 4px;
+	color: #333;
+}
+.button2-left {
+	margin-top: 5px;
+}
+.media-preview {
+	padding: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.djtitle {
+	display: inline-block;
+	background: #f7f7f7;
+	color: #2678CD;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	margin-top: 10px;
+	text-indent: 10px;
+}
+.panel fieldset.panelform .djtitle label,
+form div.current .djtitle label {
+	max-width: 100%;
+	text-align: left;
+	padding: 2px 0;
+	
+}
+.djsep {
+	display: inline-block;
+	border-top: 1px solid #ccc;
+	width: 100%;
+	margin-top: 10px;
+}
+.djinfo {
+	display: inline-block;
+	background: #C3D2E5;
+	color: #0055BB;
+	border: 1px solid #84A7DB;
+	width: 98%;
+	margin: 5px 0;
+}
+.djnotice {
+	display: inline-block;
+	background: #fcc;
+	color: #c00;
+	border: 1px solid #c00;
+	width: 98%;
+	margin: 5px 0;
+}
+.panel fieldset.panelform .djinfo label,
+form div.current .djinfo label,
+div fieldset.adminform .djinfo label,
+.panel fieldset.panelform .djnotice label,
+form div.current .djnotice label,
+div fieldset.adminform .djnotice label {
+	max-width: 100%;
+	text-align: left;
+	padding: 5px 10px;
+	
+}
+.panel fieldset.panelform label, 
+.panel fieldset.panelform div.paramrow label, 
+.panel fieldset.panelform span.faux-label {
+	padding: 5px 10px 5px 0;
+	text-align: right;
+}
+form div.current label, 
+form div.current span.faux-label {
+	margin: 3px 0 !important;
+	padding: 5px 10px 5px 0;
+	text-align: right;
+}
+ul#rules table.group-rules td label {
+	text-align: left;
+}
+div fieldset.adminform label, 
+div fieldset.adminform span.faux-label {
+	padding: 5px 0;
+}
+div fieldset.adminform fieldset.radio,
+.panel fieldset.panelform fieldset.radio {
+	padding-top: 5px;
+}
+form div.current fieldset.radio label,
+div fieldset.adminform fieldset.radio label, 
+.panel fieldset.panelform fieldset.radio label {
+	padding: 0 10px 0 0;
+	text-align: left;
+}
+form div.current select {
+	margin-bottom:0;
+}
+
+div.plgParams {
+	background: #f5f5f5;
+	border: 1px solid #ccc;
+	padding: 5px 20px;
+	margin: 10px 0;
+	clear:both;
+}

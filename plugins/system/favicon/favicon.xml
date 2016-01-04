@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>plg_system_favicon</name>
+	<author>Michael Richey</author>
+	<creationDate>April 2011</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Michael Richey. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>favicon@richeyweb.com</authorEmail>
+	<authorUrl>www.richeyweb.com</authorUrl>
+	<version>1.16</version>
+	<description>PLG_SYSTEM_FAVICON_XML_DESCRIPTION</description>
+	<media>
+	</media>
+	<files>
+		<filename plugin="favicon">favicon.php</filename>
+		<filename>index.html</filename>
+                <folder>fields</folder>
+	</files>
+        <languages>
+                <language tag="en-GB">en-GB.plg_system_favicon.ini</language>
+                <language tag="en-GB">en-GB.plg_system_favicon.sys.ini</language>
+        </languages>
+        <config>
+	  <fields name="params">
+	    <fieldset name="basic" addfieldpath="/plugins/system/favicon/fields">
+	      <field type="spacer" label="PLG_SYSTEM_FAVICON_DESC" />
+	      <field type="jsonhidden" label="" name="assignments" default=""/>
+	      <field type="hidden" name="default" default="0" />
+	    </fieldset>
+	  </fields>
+        </config>
+</extension>

@@ -1,0 +1,98 @@
+.block-video {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  background-position: center;
+}
+.block-video .block-content {
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+.block-video .block-title {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-weight: 900;
+  margin-top: 0;
+  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+}
+@media screen and (min-width: 767px) {
+  .block-video .block-title {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .block-video .block-title {
+    font-size: 61.5px;
+    line-height: 1.3;
+  }
+}
+.block-video .mask {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+}
+.block-video .block-play {
+  clear: both;
+  display: block;
+}
+.block-video .block-play a {
+  color: #ffffff;
+}
+.block-video .block-play a:hover,
+.block-video .block-play a:focus,
+.block-video .block-play a:active {
+  outline: none;
+}
+.block-video .block-play i {
+  border: 2px solid #ffffff;
+  width: 60px;
+  height: 60px;
+  line-height: 56px;
+  border-radius: 50%;
+}
+.block-video .block-play i:before {
+  margin-left: 2px;
+}
+.block-video .block-play i:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.block-video .box-video {
+  position: fixed;
+  z-index: 9999;
+  width: 590px;
+  height: 345px;
+  padding: 15px;
+  left: 50%;
+  top: 50%;
+  margin-left: -295px;
+  margin-top: -172.5px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.block-video .box-video .close-video {
+  background: url("../../../images/ico/closelabel.png") no-repeat #ffffff;
+  height: 8px;
+  padding: 2px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 8px;
+  cursor: pointer;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.block-video .box-video .close-video:hover,
+.block-video .box-video .close-video:focus,
+.block-video .box-video .close-video:active {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}

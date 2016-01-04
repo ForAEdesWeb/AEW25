@@ -1,0 +1,39 @@
+
+
+.corporate .slideshow {
+  background: #f7f7f7;
+  border-bottom: 1px solid #eeeeee;
+  padding: 40px 0;
+}
+.corporate .t3-sl-1 {
+  border-bottom: 1px solid #eeeeee;
+}
+.corporate .t3-sl-1 .t3-module,
+.corporate .t3-sl-2 .t3-module,
+.corporate .t3-sl-3 .t3-module {
+  margin-bottom: 0;
+}
+.corporate .t3-sl-2 {
+  padding: 0;
+}
+.corporate .carousel-caption {
+  background: rgba(0, 0, 0, 0.3);
+}
+.corporate .t3-module .media {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 10px;
+}
+.corporate .t3-module .media:last-child {
+  border: 0;
+  padding: 0;
+}
+.corporate .items-leading {
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 40px;
+}
+.corporate .items-row {
+  border-bottom: 1px solid #eeeeee;
+}
+.corporate .items-row:last-child {
+  border: 0;
+}

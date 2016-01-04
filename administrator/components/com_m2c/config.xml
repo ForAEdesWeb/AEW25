@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<fieldset name="component" label="Settings" description="Settings_Desc">
+		<field name="position" type="text" default="" label="Module position to load" description="You can define any module position. For exemple: left" />
+		<field name="mdescription" type="textarea" default="" label="Module Description" rows="3" cols="50" description="Writes a module description. Leave it blank if you don't want to show a description" />
+	</fieldset>
+</config>

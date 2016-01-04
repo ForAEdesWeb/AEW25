@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Testimonials</title>
+	<sampledata><![CDATA[ 
+    {"jatools-layout-testimonials":["default"],"testimonials[text-color]":[""],"testimonials[author-info-color]":[""],"testimonials[full-width]":["0"],"testimonials[testimonial-text]":["Wasn't sure where to compliment. I just wanted to say I am so happy to be your customer. You make my life so easy, thanks for your great service. ","We love the theme, it allows me to seek creativity. I set up my e-store without having to be a coding expert."],"testimonials[author-name]":["Marsk W. via Twitter","Trung Chu"],"testimonials[author-title]":["Co-Founder","Manager"],"testimonials[author-img]":["",""],"testimonials[text-1]":["We create impact via design. \nOur team are"],"testimonials[color]":["#0077bb"],"testimonials[carousel]":["Standard"]}
+    ]]></sampledata>
+  <fields name="testimonials">
+    <fieldset name="basic" label="TESTIMONIAL_BASIC_LABEL" description="TESTIMONIAL_BASIC_DESC">
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+     
+      <field name="text-color" type="text" size="10" default="" label="TESTIMONIAL_TEXTCOLOR_LABEL" description="TESTIMONIAL_TEXTCOLOR_DESC" layouts="style-1,style-2,style-3,style-4,style-5,style-7"></field>
+      <field name="author-info-color" type="text" size="10" default="" label="TESTIMONIAL_AUTHORINFOCOLOR_LABEL" description="TESTIMONIAL_AUTHORINFOCOLOR_DESC" layouts="style-1,style-2,style-3,style-4,style-5,style-7"></field>
+      <field name="full-width" type="radio" default="1" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC" layouts="style-1,style-2,style-3,style-4,style-5,style-7">
+      	<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+      <field name="enable-controls" type="radio" default="0" label="ACM_CONTROLS_LABEL" description="ACM_CONTROLS_DESC" layouts="style-1,style-2,style-3,style-7" >
+				<option value="0" class="off">JNO</option>
+				<option value="1" class="on">JYES</option>
+      </field>
+    </fieldset>
+
+    <fieldset name="testimonial-box" label="TESTIMONIALS_BOX_LABEL" description="TESTIMONIALS_BOX_DESC" layouts="style-1,style-2,style-3,style-4,style-5,style-7">
+    	<field name="data" type="jalist" layouts="style-1, style-3">
+	      <item name="testimonial-text" type="textarea" cols="40" rows="5" default="" label="TESTIMONIAL_TEXT_LABEL" description="TESTIMONIAL_TEXT_DESC" />
+	      <item name="author-name" type="text" size="50" default="" label="TESTIMONIAL_NAME_LABEL" description="TESTIMONIAL_NAME_DESC" />
+      </field>
+      
+      <field name="data-special" type="jalist" layouts="style-2, style-4, style-5, style-7">
+	      <item name="testimonial-text" type="textarea" cols="40" rows="5" default="" label="TESTIMONIAL_TEXT_LABEL" description="TESTIMONIAL_TEXT_DESC" />
+	      <item name="author-name" type="text" size="50" default="" label="TESTIMONIAL_NAME_LABEL" description="TESTIMONIAL_NAME_DESC" />
+	      <item name="author-title" type="text" size="50" default="" label="TESTIMONIAL_TITLE_LABEL" description="TESTIMONIAL_TITLE_DESC"  />
+	      <item name="author-img" type="media" default="" label="TESTIMONIAL_IMG_LABEL" description="TESTIMONIAL_IMG_DESC" />
+      </field>
+    </fieldset>
+		
+		<fieldset name="basic-1" label="TESTIMONIAL_INTRO_TEXT_LABEL" description="TESTIMONIAL_INTRO_TEXT_DESC" layouts="style-6">
+			<field name="text-1" type="textarea" default="" label="TESTIMONIAL_TEXT1_LABEL" description="TESTIMONIAL_TEXT1_DESC" cols="40" rows="5"></field>
+    </fieldset>
+		
+		<fieldset name="carousel-text" label="TESTIMONIAL_CARSOUSEL_SETTING_LABEL" description="TESTIMONIAL_CARSOUSEL_SETTING_DESC" layouts="style-6">
+			<field name="data-carousel" type="jalist">
+				<item name="color" type="text" default="" label="TESTIMONIAL_COLOR_TEXT" description="TESTIMONIAL_COLOR_TEXT_DESC" />
+				<item name="carousel" type="text" default="" label="TESTIMONIAL_TEXT_HIGHLIGHT" required="1" description="TESTIMONIAL_TEXT_HIGHLIGHT_DESC" />
+			</field>
+    </fieldset>
+
+  </fields>
+</form>

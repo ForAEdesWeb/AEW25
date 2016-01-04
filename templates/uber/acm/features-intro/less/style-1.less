@@ -1,0 +1,29 @@
+// ------------------------------------
+// FEATURES INTRO STYLE 1
+// ------------------------------------
+.acm-features {
+  &.style-1 {
+    .row {
+      > .features-item {
+        margin-bottom: @t3-global-margin*2;
+
+        &.col-sm-3,
+        &.col-sm-4 {
+          margin-bottom: @t3-global-margin*2;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.col-sm-2:nth-child(6n+1),
+        &.col-sm-3:nth-child(4n+1),
+        &.col-sm-4:nth-child(3n+1),
+        &.col-sm-6:nth-child(2n+1) {
+          clear: both;
+        }
+      }
+    }
+  }
+}
+

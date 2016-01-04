@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="contact" label="COM_DJCATALOG2_FORM_LABEL">
+		<field name="contact_name"
+			type="text"
+			label="COM_DJCATALOG2_CONTACT_EMAIL_NAME_LABEL"
+			filter="string"
+			required="true"
+			size="40"
+			class="inputbox input-large"
+		/>
+		<field name="contact_email"
+			type="email"
+			label="COM_DJCATALOG2_EMAIL_LABEL"
+			filter="string"
+			required="true"
+			size="40"
+			class="inputbox input-large"
+		/>
+		<field name="contact_subject"
+			type="text"
+			label="COM_DJCATALOG2_CONTACT_MESSAGE_SUBJECT_LABEL"
+			filter="string"
+			required="true"
+			size="40"
+			class="inputbox input-large"
+		/>
+		<field name="contact_message"
+			type="textarea"
+			cols="50"
+			rows="10"
+			label="COM_DJCATALOG2_CONTACT_ENTER_MESSAGE_LABEL"
+			filter="htmlsafe"
+			required="true"
+			class="inputbox input-large"
+		/>
+		<field name="contact_email_copy"
+			type="checkbox"
+			id="contact-email-copy"
+			label="COM_DJCATALOG2_CONTACT_EMAIL_A_COPY_LABEL"
+			default="0"
+			class="checkbox inline"
+		/>
+		
+		<field name="contact_phone"
+			type="text"
+			label="COM_DJCATALOG2_CONTACT_PHONE_LABEL"
+			filter="string"
+			size="40"
+			class="inputbox input-large"
+		/>
+		<field name="contact_street"
+			type="text"
+			label="COM_DJCATALOG2_CONTACT_STREET_LABEL"
+			filter="string"
+			size="40"
+			class="inputbox input-large"
+		/>
+		<field name="contact_city"
+			type="text"
+			label="COM_DJCATALOG2_CONTACT_CITY_LABEL"
+			filter="string"
+			size="40"
+			class="inputbox input-large"
+		/>
+		<field name="contact_zip"
+			type="text"
+			label="COM_DJCATALOG2_CONTACT_ZIP_LABEL"
+			filter="string"
+			size="40"
+			class="inputbox input-large"
+		/>
+		<field name="contact_country"
+			type="text"
+			label="COM_DJCATALOG2_CONTACT_COUNTRY_LABEL"
+			filter="string"
+			size="40"
+			class="inputbox input-large"
+		/>
+		<field name="contact_company_name"
+			type="text"
+			label="COM_DJCATALOG2_CONTACT_COMPANY_NAME_LABEL"
+			filter="string"
+			size="40"
+			class="inputbox input-large"
+		/>
+
+	</fieldset>
+	<fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_DJCATALOG2_CAPTCHA_LABEL"
+			validate="captcha"
+			namespace="contact"
+		/>
+	</fieldset>
+</form>

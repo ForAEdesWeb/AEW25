@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Gallery</title>
+	<sampledata><![CDATA[  		{"jatools-layout-gallery":["style-2"],"isotope[col]":["5"],"isotope[gutter]":["20"],"isotope[fullwidth]":[""],"isotope[mask]":[""],"isotope[animation]":[""],"isotope[hover-animation]":["scale"],"isotope[btn-text]":["View Demo"],"isotope[btn-class]":["btn btn-primary"],"isotope[btn-link]":["http://www.joomlart.com/"],"isotope[text-1]":[""],"isotope[selectitem]":["1","2","1"],"isotope[img]":["images/joomlart/corporate/items/item-1.jpg","images/joomlart/corporate/items/item-x1.jpg","images/joomlart/corporate/items/item-16.jpg"],"isotope[title]":["","",""],"isotope[link]":["","",""],"isotope[details]":["","",""]}
+    ]]></sampledata>
+    <fields name="isotope">
+		<fieldset name="basic-1" label="ISOTOPE_BASIC1_LABEL" description="ISOTOPE_BASIC1_DESC">
+			<field name="block-intro" type="textarea" default="" rows="5" cols="40"  label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      <field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+			<field name="colmb" type="list" label="ISOTOPE_COL_MOBILE_LABEL" default="" description="ISOTOPE_COL_MOBILE_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field name="coltb" type="list" label="ISOTOPE_COL_TABLET_LABEL" default="" description="ISOTOPE_COL_TABLET_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field name="coldt" type="list" label="ISOTOPE_COL_DESKTOP_LABEL" default="" description="ISOTOPE_COL_DESKTOP_DESC">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</field>
+			
+			<field name="gutter" type="text" default="0" label="ISOTOPE_GUTTER_LABEL" description="ISOTOPE_GUTTER_DESC" filter="integer"></field>
+			<field name="fullwidth" type="radio" default="" label="ACM_FULL_WIDTH_LABEL" description="ACM_FULL_WIDTH_DESC">
+				<option value=" container">JNO</option>
+				<option value="">JYES</option>
+			</field>
+			
+			<field name="animation" type="list" default="None" label="ISOTOPE_ANIMATION_LABEL" description="ISOTOPE_ANIMATION_DESC">
+				<option value="">None</option>
+				<option value="effect">Scale</option>
+			</field>
+			
+			<field name="hover-animation" type="list" default="none" label="ISOTOPE_HOVER_ANIMATION_LABEL" description="ISOTOPE_HOVER_ANIMATION_DESC">
+				<option value="none">None</option>
+				<option value="scale">Scale</option>
+				<option value="lily">Lily</option>
+				<option value="sadie">Sadie</option>
+				<option value="flip">Flip</option>
+				<option value="zoe">Zoe</option>
+				<option value="swiper">Swiper</option>
+			</field>
+			
+	  <field name="btn-text" type="text" size="50" default="" label="BTN_TEXT_LABEL" description="BTN_TEXT_DESC" layouts="style-2"></field>
+      <field name="btn-class" type="text" size="50" default="" label="BTN_CLASS_LABEL" description="BTN_CLASS_DESC" layouts="style-2"></field>
+      <field name="btn-link" type="text" size="50" default="" label="BTN_LINK_LABEL" description="BTN_LINK_DESC" layouts="style-2"></field>
+	  <field name="text-1" type="textarea" label="ISOTOPE_TEXT1_LABEL" description="ISOTOPE_TEXT1_DESC" cols="40" rows="5"></field>
+			
+		</fieldset>
+		
+    <fieldset name="basic-2" label="ISOTOPE_BASIC2_LABEL" description="ISOTOPE_BASIC2_DESC" multiple="0">
+			<field name="gallery" type="jalist">
+				<item name="selectitem" type="list" default="1" label="ISOTOPE_SIZE_ITEMS_LABEL"
+										 description="ISOTOPE_SIZE_ITEMS_DESC">
+										<option value="1">Item 1x1</option>
+										<option value="2">Item 2x2</option>
+				</item>
+				<item name="img" type="media" label="ISOTOPE_IMG_LABEL" description="ISOTOPE_IMG_DESC" required="1"/>
+				<item name="title" type="text" size="50" label="ISOTOPE_TITLE_LABEL" description="ISOTOPE_TITLE_DESC" layouts="style-2,style-3" />
+				<item name="link" type="text" size="50" label="ISOTOPE_LINK_LABEL" description="ISOTOPE_LINK_DESC" layouts="style-2,style-3" />
+				<item name="details" type="textarea" cols="40" rows="5" label="ISOTOPE_DETAILS_LABEL" description="ISOTOPE_DETAILS_DESC" layouts="style-2,style-3" />
+			</field>
+    </fieldset>
+    </fields>
+</form>

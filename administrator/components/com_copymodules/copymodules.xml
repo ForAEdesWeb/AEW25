@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component"
+	version="3.2"
+	method="upgrade">
+	<name>com_copymodules</name>
+	<creationDate>2014-9-28</creationDate>
+	<copyright>Copyright (C) 2014 Lewis Jang. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>Lewis Jang</author>
+	<authorEmail>lewis.aedes@gmail.com</authorEmail>
+	<authorUrl>http://lewisget.github.io</authorUrl>
+	<version>1.0.0</version>
+	<description>COM_COPYMODULES_XML_DESCRIPTION</description>
+
+	<scriptfile>install.php</scriptfile>
+
+	<administration>
+		<menu>COM_COPYMODULES</menu>
+
+		<files>
+			<folder>asset</folder>
+			<folder>controller</folder>
+			<folder>etc</folder>
+			<folder>helper</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>language</folder>
+			<folder>model</folder>
+			<folder>sql</folder>
+			<folder>src</folder>
+			<folder>table</folder>
+			<folder>view</folder>
+			<filename>access.xml</filename>
+			<filename>component.php</filename>
+			<filename>composer.json</filename>
+			<filename>config.xml</filename>
+			<filename>copymodules.php</filename>
+			<filename>index.html</filename>
+			<filename>install.php</filename>
+		</files>
+	</administration>
+
+</extension>
+

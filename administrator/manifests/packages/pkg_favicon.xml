@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5" method="upgrade">
+	<name>Favicon Package</name>
+	<packagename>favicon</packagename>
+	<version>1.16</version>
+	<url>http://www.richeyweb.com</url>
+	<packager>Michael Richey</packager>
+	<packagerurl>http://www.richeyweb.com</packagerurl>
+	<description><![CDATA[<p>Favicon Component and Plugin package.</p>]]></description>
+	<files folder="packages">
+		<file type="plugin" id="favicon" group="system">plg_favicon.zip</file>
+		<file type="component" id="com_favicon">com_favicon.zip</file>
+	</files>
+</extension>

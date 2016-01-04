@@ -1,0 +1,37 @@
+.icon-48-favicon { background: url(../images/favicon.png) no-repeat; }
+.icon-48-faviconedit { background: url(../images/edit.png) no-repeat; }
+.removebutton, .icontable {float:left;clear:both}
+.icontable {
+    border:1px solid #999;
+    border-collapse:collapse;
+}
+.icontable .sizerow {
+    text-align:center;
+}
+.bc32, .bc24, .bc8, .bc4, .bc1 {
+    text-align:right;
+}
+.bc32, .bc8, .bc1 {
+    background-color:#ccc;
+}
+.icontable td, .icontable th {
+    border-left:1px solid #999;
+}
+.nonstandard {
+    float:left;
+    clear:left;
+    width:100%;
+    margin:5px;
+}
+.iconlist {
+    border-collapse:collapse;
+    width:100%;
+}
+.iconlist td { vertical-align:top }
+.iconlist .line0 { background-color:#fff }
+.iconlist .iconid { width:20px; text-align:left }
+.iconlist .iconedit, .iconlist .x16 { width: 50px; text-align:center }
+.iconlist .iconsize { width: 80px; text-align:left }
+.iconlist .imagecount { width: 80px; text-align:left }
+.iconlist .default, .iconlist .delete { width: 80px; text-align:center }
+.iconlist .assignments {text-align:left}

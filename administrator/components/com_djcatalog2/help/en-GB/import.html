@@ -1,0 +1,846 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_GB" xml:lang="en_GB">
+	<head>
+		<link href="../css/help.css" rel="stylesheet" type="text/css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>CSV Import in DJ-Catalog2</title>
+	</head>
+	<body>
+		<h1>DJ-Catalog2 CSV Import guidelines</h1>
+		<h2>1. General information</h2>
+		<ol>
+			<li>CSV file has to be <strong>UTF-8</strong> encoded.</li>
+			<li>Only CSV files with ',' (comma) or ';' (semicolon) <strong>separators</strong> and single or double-quoted (' or ") <strong>text limiters/enclosures</strong> are supported.</li>
+			<li>CSV file must contain column <strong>headers</strong>, e. g. 'name', 'description'.</li>
+			<li>Order of columns within CSV file is not important.</li>
+			<li>All ID columns (e.g. product ID, category ID, group ID, etc.) should contain valid IDs (pointing to values that already exist in the database). Be carefull, as those values are not being validated.</li>
+			<li>If you want to import <strong>images</strong> and/or <strong>attachments</strong> they has to be uploaded before, via FTP, repectively to:
+				<ul>
+					<li><code>/media/djcatalog2/import/images/</code></li>
+					<li><code>/media/djcatalog2/import/files/</code></li>
+				</ul>
+			</li>
+			<li>
+				Depending on which type of data (product, category, producer) you want to import, you can choose default values for some columns (if they are not provided in CSV file). For example, if you do not provide <code>cat_id</code> value (or column, at all) for a product, then chosen 'Default Category' will be used instead.
+			</li>
+			<li>Some server settings may not allow you to import large amount of data and the import process may be stopped in the middle. If you exceed 'maximum execution time' or 'memory limit', try importing data in smaller portions - for example 50-100 products at a time.</li>
+			<li><strong>Please make a back-up of your webiste, before importing</strong>, especially if you use import function to <strong>update existing records</strong> in your database.</li>
+		</ol>
+		<h2>2. Product import</h2>
+		<p>List of valid column names and their description:</p>
+		<table>
+			<thead>
+				<tr>
+					<th class="col_name">
+						Column name
+					</th>
+					<th class="col_req">
+						Required
+					</th>
+					<th class="col_notice">
+						Notice
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="col_name">
+						<code>id</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						If provided, has to point to existing product. Product will be updated then with the provided data for CSV file.<br />
+						If ID is empty (or 0), a new product will be created. 
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>name</code>
+					</td>
+					<td class="col_req">
+						Yes
+					</td>
+					<td class="col_notice">
+						Should be unique within product's category, because based on product's name, an alias is being generated. Therefore there cannot be two products with the same alias.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>alias</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						---
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>group_id</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						ID of product's field group.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>cat_id</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						ID of product's category.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>producer_id</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						ID of product's producer.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>description</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Full description. Can contain HTML code.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>intro_desc</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Short description. Can contain HTML code.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>price</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Regular price. Should be a valid floating point number or an integer. Dot should be used as decimal point, e.g. 1099.95
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>special_price</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Discount price. Should be a valid floating point number or an integer. Dot should be used as decimal point, e.g. 1099.95
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>metatitle</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						meta-title.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>metakey</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						meta-keywords.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>metadesc</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						meta-description.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>published</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						State [0/1]. 0 = un-published, 1 = published.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>featured</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Featured product flag [0/1]. 0 = not featured, 1 = featured.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>ordering</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Integer number indicating product's order within its category.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>created</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Creation date in Date-Time format: [RRRR-MM-DD HH:MM:SS] or [RRRR-MM-DD].
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>created_by</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						ID of the Joomla! user who should be the owner of the product.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>images</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Comma-separated list of file names that should be located in /media/djcatalog2/import/images/ directory. For example: image1.jpg,image2.jpg,image3.jpg
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>files</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Comma-separated list of file names that should be located in /media/djcatalog2/import/files/ directory. For example: chart1.pdf,manual.pdf
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h3>Example 1</h3>
+		<table class="examples">
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>description</th>
+					<th>intro_desc</th>
+					<th class="short">price</th>
+					<th class="short">special_price</th>
+					<th>featured</th>
+					<th>images</th>
+					<th>files</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						Crystal vase
+					</td>
+					<td>
+						Very beautiful crystal vase from XVI century.
+					</td>
+					<td>
+						Nice crystal vase.
+					</td>
+					<td>
+						1200.00
+					</td>
+					<td>
+						99.95
+					</td>
+					<td>1</td>
+					<td>vase1.jpg,vase2.jpg</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						TV set
+					</td>
+					<td>
+						40", Full HD LCD television set 
+					</td>
+					<td>
+						Real must-have
+					</td>
+					<td>
+						2999.00
+					</td>
+					<td>
+						2699.95
+					</td>
+					<td>0</td>
+					<td>tv40.jpg</td>
+					<td>manual.pdf,chart.xls</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>Example 2</h3>
+		<table class="examples">
+		<caption>Notice that some records doesn't have any values in 'id' column - these will be new products in the database.<br />Also, 'cat_id' and 'producer_id' are IDs of already existing categories and producers.</caption>
+			<thead>
+				<tr>
+					<th class="short">id</th>
+					<th class="short">cat_id</th>
+					<th class="short">producer_id</th>
+					<th>name</th>
+					<th class="short">price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						24
+					</td>
+					<td>
+						2
+					</td>
+					<td>
+						4
+					</td>
+					<td>
+						Updated product
+					</td>
+					<td>
+						599.00
+					</td>
+				</tr>
+				<tr>
+					<td>
+						25
+					</td>
+					<td>
+						2
+					</td>
+					<td>
+						5
+					</td>
+					<td>
+						Updated product #2
+					</td>
+					<td>
+						499
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						2
+					</td>
+					<td>
+						6
+					</td>
+					<td>
+						New product #1
+					</td>
+					<td>
+						1999
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						2
+					</td>
+					<td>
+						6
+					</td>
+					<td>
+						New product #2
+					</td>
+					<td>
+						300.00
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>3. Category import</h2>
+		<p>List of valid column names and their description:</p>
+		<table>
+			<thead>
+				<tr>
+					<th class="col_name">
+						Column name
+					</th>
+					<th class="col_req">
+						Required
+					</th>
+					<th class="col_notice">
+						Notice
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="col_name">
+						<code>id</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						If provided, has to point to existing category. Category will be updated then with the provided data for CSV file.<br />
+						If ID is empty (or 0), a new category will be created. 
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>name</code>
+					</td>
+					<td class="col_req">
+						Yes
+					</td>
+					<td class="col_notice">
+						Should be unique within category's parent category, because based on category name, an alias is being generated. Therefore there cannot be two sibling categories with the same alias.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>alias</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						---
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>description</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Full description. Can contain HTML code.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>metatitle</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						meta-title.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>metakey</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						meta-keywords.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>metadesc</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						meta-description.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>published</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						State [0/1]. 0 = un-published, 1 = published.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>ordering</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Integer number indicating category's order within its parent category.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>created</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Creation date in Date-Time format: [RRRR-MM-DD HH:MM:SS] or [RRRR-MM-DD].
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>created_by</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						ID of the Joomla! user who should be the owner of the category.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>images</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Comma-separated list of file names that should be located in /media/djcatalog2/import/images/ directory. For example: image1.jpg,image2.jpg,image3.jpg
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>Example 3</h3>
+		<table class="examples">
+			<caption>Notice that all ID columns are empty. This script will only add new categories, assuming that there already exists a category with ID=1.</caption>
+			<thead>
+				<tr>
+					<th class="short">id</th>
+					<th class="short">parent_id</th>
+					<th>name</th>
+					<th>description</th>
+					<th>images</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+					</td>
+					<td>
+						1
+					</td>
+					<td>
+						Cars
+					</td>
+					<td>
+						All available cars.
+					</td>
+					<td>cars.jpg</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						1
+					</td>
+					<td>
+						Motorbikes
+					</td>
+					<td>
+						Full range of our motorcycles.
+					</td>
+					<td>bikes.jpg</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						1
+					</td>
+					<td>
+						Trucks
+					</td>
+					<td>
+						The biggest 18-wheelers.
+					</td>
+					<td>truck.png</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h2>4. Producer import</h2>
+		<p>List of valid column names and their description:</p>
+		<table>
+			<thead>
+				<tr>
+					<th class="col_name">
+						Column name
+					</th>
+					<th class="col_req">
+						Required
+					</th>
+					<th class="col_notice">
+						Notice
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="col_name">
+						<code>id</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						If provided, has to point to existing producer. Producer will be updated then with the provided data for CSV file.<br />
+						If ID is empty (or 0), a new producer will be created. 
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>name</code>
+					</td>
+					<td class="col_req">
+						Yes
+					</td>
+					<td class="col_notice">
+						Should be unique, because based on producer's name, an alias is being generated. Therefore there cannot be two producers with the same alias.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>alias</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						---
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>description</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Full description. Can contain HTML code.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>metatitle</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						meta-title.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>metakey</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						meta-keywords.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>metadesc</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						meta-description.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>published</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						State [0/1]. 0 = un-published, 1 = published.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>ordering</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Integer number indicating producer's order.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>created</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Creation date in Date-Time format: [RRRR-MM-DD HH:MM:SS] or [RRRR-MM-DD].
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>created_by</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						ID of the Joomla! user who should be the owner of the category.
+					</td>
+				</tr>
+				<tr>
+					<td class="col_name">
+						<code>images</code>
+					</td>
+					<td class="col_req">
+						No
+					</td>
+					<td class="col_notice">
+						Comma-separated list of file names that should be located in /media/djcatalog2/import/images/ directory. For example: image1.jpg,image2.jpg,image3.jpg
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h3>Example 4</h3>
+		<table class="examples">
+			<caption>Following example will add 3 new producers and update 2 existing ones (IDs 1 &amp; 2).</caption>
+			<thead>
+				<tr>
+					<th class="short">id</th>
+					<th>name</th>
+					<th>description</th>
+					<th>images</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						1
+					</td>
+					<td>
+						Car manufacturer 1
+					</td>
+					<td>
+						Lorem ipsum dolor sit amet...
+					</td>
+					<td>cf1.jpg,cf2.jpg</td>
+				</tr>
+				<tr>
+					<td>
+						2
+					</td>
+					<td>
+						Car manufacturer 2
+					</td>
+					<td>
+						Lorem ipsum dolor sit amet...
+					</td>
+					<td>cf3.jpg,cf4.jpg</td>
+				</tr>
+				<tr>
+					<td>
+						
+					</td>
+					<td>
+						Car manufacturer 3
+					</td>
+					<td>
+						Lorem ipsum dolor sit amet...
+					</td>
+					<td>cf5.jpg</td>
+				</tr>
+				<tr>
+					<td>
+						
+					</td>
+					<td>
+						Car manufacturer 4
+					</td>
+					<td>
+						Lorem ipsum dolor sit amet...
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						
+					</td>
+					<td>
+						Car manufacturer 5
+					</td>
+					<td>
+						Lorem ipsum dolor sit amet...
+					</td>
+					<td>cf6.png,cf7.jpg</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

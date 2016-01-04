@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Hero</title>
+	<sampledata><![CDATA[  {"jatools-layout-hero":["style-5"],"hero-style[hero-style]":["style-dark"],"hero-style[hero-content-position]":["position-center"],"hero-style[hero-text-align]":["text-center"],"hero-style[hero-screen]":["full-screen"],"hero-style[hero-effect]":[""],"hero-style[hero-heading]":["Create revolutionary products. "],"hero-style[hero-heading-size]":[""],"hero-style[hero-intro]":["((span))Start your ((strong))coding  career((/strong)) and build things we are all ((strong))proud of((/strong)).((span)) \n((/p))"],"hero-style[hero-quote]":["Our Team"],"hero-style[hero-img]":[""],"hero-style[hero-btn1-text]":["View Demo"],"hero-style[hero-btn1-class]":[""],"hero-style[hero-btn1-link]":["http://www.joomlart.com/"],"hero-style[hero-btn2-text]":["Download"],"hero-style[hero-btn2-link]":["http://www.joomlart.com/forums/downloads.php?do=cat&id=72"],"hero-style[hero-bg]":[""],"hero-style[hero-video]":["vimeo=94101559"]}
+    ]]></sampledata>
+  <fields name="hero-style">
+    <fieldset name="basic" label="HERO_BASIC_LABEL" description="HERO_BASIC_DESC" multiple="0"> 
+      <field name="block-intro" type="textarea" default="" rows="5" cols="40" label="BLOCK_INTRO_LABEL" description="BLOCK_INTRO_DESC" />
+      <field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+    
+      <field name="hero-style" type="list" default="style-dark"
+          global="1"
+          label="HERO_STYLE_LABEL"
+          description="HERO_STYLE_DESC">
+        <option value="style-dark">LAYOUT_HERO_DARK</option>
+        <option value="style-light">LAYOUT_HERO_LIGHT</option>
+      </field>
+      
+      <field name="hero-content-position" type="list" default="position-left"
+          global="1"
+          label="HERO_CONTENT_POSITION_LABEL"
+          description="HERO_CONTENT_POSITION_DESC">
+        <option value="position-left">JGLOBAL_LEFT</option>
+        <option value="position-center">JGLOBAL_CENTER</option>
+        <option value="position-right">JGLOBAL_RIGHT</option>
+      </field>
+      
+      <field name="hero-text-align" type="list" default="text-left"
+          global="1"
+          label="HERO_TEXT_ALIGN_LABEL"
+          description="HERO_TEXT_ALIGN_DESC">
+        <option value="text-left">JGLOBAL_LEFT</option>
+        <option value="text-center">JGLOBAL_CENTER</option>
+        <option value="text-right">JGLOBAL_RIGHT</option>
+      </field>
+	  
+	  <field name="hero-screen" type="radio" default=""
+          global="1"
+          label="HERO_SCREEN_LABEL"
+          description="HERO_SCREEN_DESC" layouts="style-1, style-4, style-7">
+        <option value="">No</option>
+        <option value="full-screen">Yes</option>
+    </field>
+			
+		<field name="hero-effect" type="radio" default=""
+          global="1"
+          label="HERO_EFFECT_LABEL"
+          description="HERO_EFFECT_DESC" layouts="style-1, style-7">
+        <option value="">No</option>
+        <option value=" effect">Yes</option>
+      </field>
+      
+    </fieldset>
+
+    <fieldset name="hero-content" label="HERO_CONTENT_LABEL" description="HERO_CONTENT_DESC" multiple="0">
+      <field name="hero-heading" type="textarea" cols="40" rows="5" default="" label="HERO_HEADING_LABEL" description="HERO_HEADING_DESC"></field>
+      <field name="hero-heading-size" type="list" default="" label="HERO_HEADINGSIZE_LABEL" description="HERO_HEADINGSIZE_DESC" layouts="style-5">
+				<option value="">Default</option>
+        <option value="lg">Large</option>
+			</field>
+      <field name="hero-intro" type="textarea" cols="40" rows="5" default="" label="HERO_INTRODUCTION_LABEL" description="HERO_INTRODUCTION_DESC"></field>
+	  	<field name="hero-quote" type="textarea" cols="40" rows="5" default="" label="HERO_QUOTE_LABEL" description="HERO_QUOTE_DESC" layouts="style-2"></field>
+	  	<field name="hero-img" type="media" default="" label="HERO_IMG_LABEL" description="HERO_IMG_DESC" layouts="style-5"></field>
+      <field name="hero-btn1-text" type="text" size="50" default="" label="HERO_BUTTON1_TEXT_LABEL" description="HERO_BUTTON1_TEXT_DESC" layouts="style-1, style-5, style-6"></field>
+      <field name="hero-btn1-class" type="text" size="50" default="" label="HERO_BUTTON1_CLASS_LABEL" description="HERO_BUTTON1_CLASS_DESC" layouts="style-5, style-6"></field>
+      <field name="hero-btn1-link" type="text" size="50" default="" label="HERO_BUTTON1_LINK_LABEL" description="HERO_BUTTON1_LINK_DESC" layouts="style-1, style-5"></field>
+      <field name="hero-btn2-text" type="text" size="50" default="" label="HERO_BUTTON2_TEXT_LABEL" description="HERO_BUTTON2_TEXT_DESC" layouts="style-1"></field>
+      <field name="hero-btn2-link" type="text" size="50" default="" label="HERO_BUTTON2_LINK_LABEL" description="HERO_BUTTON2_LINK_DESC" layouts="style-1"></field>      
+      <field name="hero-bg" type="media" default="" label="HERO_BACKGROUND_LABEL" description="HERO_BACKGROUND_DESC" layouts="style-1,style-2,style-3,style-5,style-6, style-7"></field>
+      <field name="hero-video" type="type" size="50" default="vimeo=" label="HERO_VIDEOBACKGROUND_LABEL" description="HERO_VIDEOBACKGROUND_DESC" layouts="style-4"></field>
+    </fieldset>
+  </fields>
+</form>

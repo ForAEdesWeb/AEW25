@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="attribs">
+    <fieldset name="extra-fields" label="TPL_GROUP_EXTRA_FIELDS_LABEL" description="" group="extrafields">
+		    <field
+		                name="title_caption"
+		                type="text"
+		                label="TPL_CONTENT_SUB_TITLE_LABEL"
+		                description="TPL_CONTENT_SUB_TITLE_DESC"
+		                />
+				<field
+		                name="live_demo"
+		                type="text"
+		                label="TPL_CONTENT_LIVE_DEMO_LABEL"
+		                description="TPL_CONTENT_LIVE_DEMO_DESC"
+		                />
+		    <field
+		                name="download"
+		                type="text"
+		                label="TPL_CONTENT_DOWNLOAD_LABEL"
+		                description="TPL_CONTENT_DOWNLOAD_DESC"
+		                />
+		                
+		  	<field
+		                name="document"
+		                type="text"
+		                label="TPL_CONTENT_DOCUMENT_LABEL"
+		                description="TPL_CONTENT_DOCUMENT_DESC"
+		                />
+		                
+		    <field
+		                name="blogreview"
+		                type="text"
+		                label="TPL_CONTENT_BLOGREVIEW_LABEL"
+		                description="TPL_CONTENT_BLOGREVIEW_DESC"
+		                />
+		                
+		  	<field name="type" type="list" multiple="true" default="theme" label="TPL_CONTENT_TYPE_LABEL"
+                   description="TPL_CONTENT_TYPE_DESC">
+	                <option value="theme">Theme</option>
+	                <option value="extension">Extension</option>
+        </field>
+		                
+		    <field
+		                name="bugtracker"
+		                type="text"
+		                label="TPL_CONTENT_BUGTRACKER_LABEL"
+		                description="TPL_CONTENT_BUGTRACKER_DESC"
+		                />
+										            
+				<field
+		                name="price"
+		                type="text"
+		                label="TPL_CONTENT_PRICE_LABEL"
+		                description="TPL_CONTENT_PRICE_DESC"
+		                />
+		                
+		    <field
+		                name="version"
+		                type="text"
+		                label="TPL_CONTENT_VERSION_LABEL"
+		                description="TPL_CONTENT_VERSION_DESC"
+		                />
+		                
+		    <field
+		                name="lastupdate"
+		                type="text"
+		                label="TPL_CONTENT_LASTUPDATE_LABEL"
+		                description="TPL_CONTENT_LASTUPDATE_DESC"
+		                />
+		    
+				<field
+		                name="requirement"
+		                type="text"
+		                label="TPL_CONTENT_REQUIREMENT_LABEL"
+		                description="TPL_CONTENT_REQUIREMENT_DESC"
+		                />
+    </fieldset>
+</fields>
+</form>

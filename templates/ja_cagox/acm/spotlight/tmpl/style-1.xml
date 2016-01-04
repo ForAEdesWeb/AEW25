@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <title>Spotlight Style 1</title>
+	<sampledata><![CDATA[
+	{"jatools-layout-spotlight":["default"],"spotlight[position]":["position-1","position-2"],"spotlight[xs]":["12-12"],"spotlight[sm]":["12-12"],"spotlight[md]":["7-5"],"spotlight[lg]":["7-5"]}
+    ]]></sampledata>
+ 
+    <fields name="spotlight">
+        <fieldset name="spotlight" label="SPOTLIGHT_SETTING_LABEL" description="SPOTLIGHT_SETTING_DESC">
+        	<field name="block-extra-class" type="textarea" default="" rows="5" cols="40" label="BLOCK_EXTRA_CLASS_LABEL" description="BLOCK_EXTRA_CLASS_DESC" />
+      		<field name="block-bg" type="media" default="" label="TPL_MENU_ITEM_MODULE_BACKGROUND_LABEL" description="TPL_MENU_ITEM_MODULE_BACKGROUND_DESC" />
+        	<field name="data" type="jalist">
+            <item name="position" type="moduleposition"    
+					        description="SPOTLIGHT_POSITION_DESC"
+					        label="SPOTLIGHT_POSITION_LABEL"
+					        default=""
+					        maxlength="50" layouts="style-1"/>
+					  <item name="xs" type="list" label="SPOTLIGHT_EXTRA_SMALL_SCREEN" description="SPOTLIGHT_EXTRA_SMALL_SCREEN_DESC">
+					  	<option value="col-xs-12">12</option>
+					  	<option value="col-xs-11">11</option>
+					  	<option value="col-xs-10">10</option>
+					  	<option value="col-xs-9">9</option>
+					  	<option value="col-xs-8">8</option>
+					  	<option value="col-xs-7">7</option>
+							<option value="col-xs-6">6</option>
+							<option value="col-xs-5">5</option>
+							<option value="col-xs-4">4</option>
+							<option value="col-xs-3">3</option>
+							<option value="col-xs-2">2</option>
+							<option value="col-xs-1">1</option>
+						</item>
+						<item name="sm" type="list" label="SPOTLIGHT_SMALL_SCREEN" description="SPOTLIGHT_SMALL_SCREEN_DESC">
+					  	<option value="col-sm-12">12</option>
+					  	<option value="col-sm-11">11</option>
+					  	<option value="col-sm-10">10</option>
+					  	<option value="col-sm-9">9</option>
+					  	<option value="col-sm-8">8</option>
+					  	<option value="col-sm-7">7</option>
+							<option value="col-sm-6">6</option>
+							<option value="col-sm-5">5</option>
+							<option value="col-sm-4">4</option>
+							<option value="col-sm-3">3</option>
+							<option value="col-sm-2">2</option>
+							<option value="col-sm-1">1</option>
+						</item>
+						<item name="md" type="list" label="SPOTLIGHT_MEDIUM_SCREEN" description="SPOTLIGHT_MEDIUM_SCREEN_DESC">
+					  	<option value="col-md-12">12</option>
+					  	<option value="col-md-11">11</option>
+					  	<option value="col-md-10">10</option>
+					  	<option value="col-md-9">9</option>
+					  	<option value="col-md-8">8</option>
+					  	<option value="col-md-7">7</option>
+							<option value="col-md-6">6</option>
+							<option value="col-md-5">5</option>
+							<option value="col-md-4">4</option>
+							<option value="col-md-3">3</option>
+							<option value="col-md-2">2</option>
+							<option value="col-md-1">1</option>
+						</item>
+						<item name="lg" type="list" label="SPOTLIGHT_LARGE_SCREEN" description="SPOTLIGHT_LARGE_SCREEN_DESC">
+					  	<option value="col-lg-12">12</option>
+					  	<option value="col-lg-11">11</option>
+					  	<option value="col-lg-10">10</option>
+					  	<option value="col-lg-9">9</option>
+					  	<option value="col-lg-8">8</option>
+					  	<option value="col-lg-7">7</option>
+							<option value="col-lg-6">6</option>
+							<option value="col-lg-5">5</option>
+							<option value="col-lg-4">4</option>
+							<option value="col-lg-3">3</option>
+							<option value="col-lg-2">2</option>
+							<option value="col-lg-1">1</option>
+						</item>
+					</field>
+        </fieldset>
+    </fields>
+</form>

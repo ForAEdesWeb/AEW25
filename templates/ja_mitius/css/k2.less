@@ -1,0 +1,3179 @@
+/**
+ * @version		$Id: k2.css 1492 2012-02-22 17:40:09Z joomlaworks@gmail.com $
+ * @package		K2
+ * @author		JoomlaWorks http://www.joomlaworks.net
+ * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
+ * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+
+ @import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+/*----------------------------------------------------------------------
+	Common Elements
+----------------------------------------------------------------------*/
+/* --- Basic typography --- */
+
+/* --- END --- */
+a:active,
+a:focus {
+  outline: 0;
+}
+
+/*----------------------------------------------------------------------
+	Component: Item view
+----------------------------------------------------------------------*/
+a.itemPrintThisPage {
+  background: #F7FAFE;
+  border: 1px solid #ccc;
+  color: #555;
+  display: block;
+  font-size: 13px;
+  margin: 4px auto 16px;
+  padding: 4px;
+  text-align: center;
+  width: 160px;
+}
+
+a.itemPrintThisPage:hover {
+  background: #eee;
+  text-decoration: none;
+}
+
+a.itemRelTitle {
+}
+
+/* --- Read more --- */
+a.k2ReadMore {
+}
+
+a.k2ReadMore:hover {
+}
+
+a.ubUserFeedIcon span,
+	a.ubUserFeedIcon:hover span {
+  display: none;
+}
+
+a.ubUserFeedIcon,
+	a.ubUserFeedIcon:hover {
+  background: url(../images/fugue/feed.png) no-repeat 50% 50%;
+  display: inline-block;
+  height: 16px;
+  margin: 0 2px 0 0;
+  padding: 0;
+  width: 16px;
+}
+
+a.ubUserURL span,
+	a.ubUserURL:hover span {
+  display: none;
+}
+
+a.ubUserURL,
+a.ubUserURL:hover {
+  background: url(../images/fugue/globe.png) no-repeat 50% 50%;
+  display: inline-block;
+  height: 16px;
+  margin: 0 2px 0 0;
+  padding: 0;
+  width: 16px;
+}
+
+body.contentpane #k2Container {
+  padding: 16px; /* used in popups */
+}
+
+div#itemListLeading {
+}
+
+div#itemListLinks {
+  background: #f7fafe;
+  border: 1px solid #ddd;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+div#itemListPrimary {
+}
+
+div#itemListSecondary {
+}
+
+div.catItemAttachmentsBlock {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.catItemAttachmentsBlock span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+div.catItemAttachmentsBlock ul.catItemAttachments {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.catItemAttachmentsBlock ul.catItemAttachments li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0 4px;
+  text-align: center;
+}
+
+div.catItemAttachmentsBlock ul.catItemAttachments li a {
+}
+
+div.catItemAttachmentsBlock ul.catItemAttachments li a:hover {
+}
+
+div.catItemAttachmentsBlock ul.catItemAttachments li span {
+  color: #999;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+div.catItemBody {
+  margin: 0;
+  padding: 8px 0;
+}
+
+div.catItemCategory {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.catItemCategory a {
+}
+
+div.catItemCategory span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+/* Anchor link to comments */
+div.catItemCommentsLink {
+  border-right: 1px solid #ccc;
+  display: inline;
+  margin: 0 8px 0 0;
+  padding: 0 8px 0 0;
+}
+
+div.catItemCommentsLink a {
+}
+
+div.catItemCommentsLink a:hover {
+}
+
+div.catItemExtraFields h4, div.genericItemExtraFields h4 {
+  line-height: normal !important;
+  margin: 0;
+  padding: 0 0 8px 0;
+}
+
+div.catItemExtraFields ul li span.catItemExtraFieldsLabel, div.genericItemExtraFields ul li span.genericItemExtraFieldsLabel {
+  display: block;
+  float: left;
+  font-weight: bold;
+  margin: 0 4px 0 0;
+  width: 30%;
+}
+
+div.catItemExtraFields ul li span.catItemExtraFieldsValue {
+}
+
+div.catItemExtraFields ul li, div.genericItemExtraFields ul li {
+  display: block;
+}
+
+div.catItemExtraFields ul, div.genericItemExtraFields ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.catItemExtraFields, div.genericItemExtraFields {
+  border-top: 1px dotted #ddd;
+  margin: 16px 0 0 0;
+  padding: 8px 0 0 0;
+}
+
+div.catItemHeader {
+}
+
+div.catItemHeader h3.catItemTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 110%;
+  margin: 0;
+  padding: 10px 0 4px 0;
+}
+
+div.catItemHeader h3.catItemTitle span {
+}
+
+div.catItemHeader h3.catItemTitle span sup {
+  color: #CF1919;
+  font-size: 12px;
+  /* superscript */
+  text-decoration: none;
+}
+
+div.catItemHeader span.catItemAuthor {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+div.catItemHeader span.catItemAuthor a {
+}
+
+div.catItemHeader span.catItemAuthor a:hover {
+}
+
+div.catItemHeader span.catItemDateCreated {
+  color: #999;
+  font-size: 11px;
+}
+
+div.catItemHitsBlock {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.catItemImageBlock {
+  margin: 0 0 16px 0;
+  padding: 8px;
+}
+
+/* Image Gallery */
+div.catItemImageGallery {
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+div.catItemIntroText {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+  padding: 4px 0 12px 0;
+}
+
+div.catItemIntroText img {
+}
+
+div.catItemIsFeatured {
+}
+
+div.catItemLinks {
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+div.catItemRatingBlock {
+  padding: 8px 0;
+}
+
+div.catItemRatingBlock span {
+  color: #999;
+  display: block;
+  float: left;
+  font-style: normal;
+  margin: 0;
+  padding: 0 4px 0 0;
+}
+
+/* Read more link */
+div.catItemReadMore {
+  display: inline;
+}
+
+div.catItemReadMore a {
+}
+
+div.catItemReadMore a:hover {
+}
+
+div.catItemTagsBlock {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.catItemTagsBlock span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+div.catItemTagsBlock ul.catItemTags {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.catItemTagsBlock ul.catItemTags li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 0 0;
+  text-align: center;
+}
+
+div.catItemTagsBlock ul.catItemTags li a {
+}
+
+div.catItemTagsBlock ul.catItemTags li a:hover {
+}
+
+/* Video */
+div.catItemVideoBlock {
+  background: #010101 url(../images/system/videoplayer-bg.gif) repeat-x bottom;
+  margin: 0 0 16px 0;
+  padding: 16px;
+}
+
+div.catItemVideoBlock div.catItemVideoEmbedded {
+  text-align: center; /* for embedded videos (not using AllVideos) */
+}
+
+div.catItemVideoBlock span.catItemVideo {
+  display: block;
+}
+
+div.genericItemBody {
+  margin: 0;
+  padding: 8px 0;
+}
+
+div.genericItemCategory {
+  border-right: 1px solid #ccc;
+  display: inline;
+  margin: 0 8px 0 0;
+  padding: 0 8px 0 0;
+}
+
+div.genericItemCategory a {
+}
+
+div.genericItemCategory span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+div.genericItemExtraFields {
+}
+
+div.genericItemExtraFields h4 {
+}
+
+div.genericItemExtraFields ul {
+}
+
+div.genericItemExtraFields ul li {
+}
+
+div.genericItemExtraFields ul li span.genericItemExtraFieldsLabel {
+}
+
+div.genericItemExtraFields ul li span.genericItemExtraFieldsValue {
+}
+
+div.genericItemHeader {
+}
+
+div.genericItemHeader h2.genericItemTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 110%;
+  margin: 0;
+  padding: 10px 0 4px 0;
+}
+
+div.genericItemHeader span.genericItemDateCreated {
+  color: #999;
+  font-size: 11px;
+}
+
+div.genericItemImageBlock {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+div.genericItemIntroText {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+  padding: 4px 0 12px 0;
+}
+
+div.genericItemIntroText img {
+}
+
+div.genericItemList {
+}
+
+/* Read more link */
+div.genericItemReadMore {
+  display: inline;
+}
+
+div.genericItemReadMore a {
+}
+
+div.genericItemReadMore a:hover {
+}
+
+div.genericItemView {
+  border-bottom: 1px dotted #ccc;
+  /* this is the item container for this view */
+  margin: 0 0 16px 0;
+  padding: 8px 0;
+}
+
+/*----------------------------------------------------------------------
+	Component: Itemlist view (generic)
+----------------------------------------------------------------------*/
+div.genericView {
+}
+
+/* Additional class appended to the element above for further styling per group item */
+	div.groupLeading {
+}
+
+div.groupLinks {
+  margin: 0;
+  padding: 0;
+}
+
+div.groupPrimary {
+}
+
+div.groupSecondary {
+}
+
+div.itemAttachmentsBlock {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.itemAttachmentsBlock span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+div.itemAttachmentsBlock ul.itemAttachments {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.itemAttachmentsBlock ul.itemAttachments li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0 4px;
+  text-align: center;
+}
+
+div.itemAttachmentsBlock ul.itemAttachments li a {
+}
+
+div.itemAttachmentsBlock ul.itemAttachments li a:hover {
+}
+
+div.itemAttachmentsBlock ul.itemAttachments li span {
+  color: #999;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+/* Author block */
+div.itemAuthorBlock {
+  background: #f7fafe;
+  border: 1px solid #ddd;
+  margin: 0 0 16px 0;
+  padding: 8px;
+}
+
+div.itemAuthorBlock div.itemAuthorDetails {
+  margin: 0;
+  padding: 4px 0 0 0;
+}
+
+div.itemAuthorBlock div.itemAuthorDetails h3.authorName {
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+
+div.itemAuthorBlock div.itemAuthorDetails h3.authorName a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+div.itemAuthorBlock div.itemAuthorDetails h3.authorName a:hover {
+}
+
+div.itemAuthorBlock div.itemAuthorDetails p {
+}
+
+div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorEmail {
+  color: #555;
+  font-weight: bold;
+}
+
+div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorUrl {
+  border-right: 1px solid #ccc;
+  color: #555;
+  font-weight: bold;
+  margin: 0 4px 0 0;
+  padding: 0 8px 0 0;
+}
+
+div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorUrl a,
+	div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorEmail a {
+  font-weight: normal;
+}
+
+div.itemAuthorBlock img.itemAuthorAvatar {
+  background: #fff;
+  border: 1px solid #ddd;
+  display: block;
+  float: left;
+  margin: 0 8px 0 0;
+  padding: 4px;
+}
+
+/* Author latest */
+div.itemAuthorLatest {
+  margin-bottom: 16px;
+  padding: 0;
+}
+
+div.itemAuthorLatest h3 {
+}
+
+div.itemAuthorLatest ul {
+}
+
+div.itemAuthorLatest ul li {
+}
+
+div.itemAuthorLatest ul li a {
+}
+
+div.itemAuthorLatest ul li a:hover {
+}
+
+/* Back to top link */
+div.itemBackToTop {
+  text-align: right;
+}
+
+div.itemBackToTop a {
+  text-decoration: underline;
+}
+
+div.itemBackToTop a:hover {
+  text-decoration: underline;
+}
+
+div.itemBody {
+  margin: 0;
+  padding: 8px 0;
+}
+
+div.itemCategory {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.itemCategory a {
+}
+
+div.itemCategory span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+/* Comments */
+div.itemComments {
+  background: #f7fafe;
+  border: 1px solid #ddd;
+  padding: 16px;
+}
+
+div.itemComments ul.itemCommentsList {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+div.itemComments ul.itemCommentsList li {
+  border-bottom: 1px dotted #ddd;
+  margin: 0;
+  padding: 4px;
+}
+
+div.itemComments ul.itemCommentsList li img {
+  background: #fff;
+  border-bottom: 1px solid #d7d7d7;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  float: left;
+  margin: 4px 4px 4px 0;
+  padding: 4px;
+}
+
+div.itemComments ul.itemCommentsList li p {
+  padding: 4px 0;
+}
+
+div.itemComments ul.itemCommentsList li span.commentAuthorEmail {
+  display: none;
+}
+
+div.itemComments ul.itemCommentsList li span.commentAuthorName {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+div.itemComments ul.itemCommentsList li span.commentDate {
+  border-right: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 8px 0 0;
+  padding: 0 4px 0 0;
+}
+
+div.itemComments ul.itemCommentsList li span.commentLink {
+  float: right;
+  margin-left: 8px;
+}
+
+div.itemComments ul.itemCommentsList li span.commentLink a {
+  color: #999;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+div.itemComments ul.itemCommentsList li span.commentLink a:hover {
+  color: #555;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+div.itemComments ul.itemCommentsList li span.commentToolbar {
+  clear: both;
+  display: block;
+}
+
+div.itemComments ul.itemCommentsList li span.commentToolbar a {
+  color: #999;
+  font-size: 11px;
+  margin-right: 4px;
+  text-decoration: underline;
+}
+
+div.itemComments ul.itemCommentsList li span.commentToolbar a:hover {
+  color: #555;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+div.itemComments ul.itemCommentsList li span.commentToolbarLoading {
+  background: url(../images/system/searchLoader.gif) no-repeat 100% 50%;
+}
+
+div.itemComments ul.itemCommentsList li.authorResponse {
+  background: url(../images/system/stripes.png) repeat;
+}
+
+div.itemComments ul.itemCommentsList li.unpublishedComment {
+  background: #ffeaea;
+}
+
+div.itemCommentsForm form {
+}
+
+div.itemCommentsForm form .formLogLoading {
+  background: url(../images/system/loading.gif) no-repeat left center;
+}
+
+div.itemCommentsForm form input#submitCommentButton {
+  background: #eee;
+  border: 1px solid #ccc;
+  display: block;
+  font-size: 16px;
+  margin: 16px 0 0 0;
+  padding: 4px;
+}
+
+div.itemCommentsForm form input.inputbox {
+  display: block;
+  margin: 0;
+  width: 350px;
+}
+
+div.itemCommentsForm form label.formComment {
+  display: block;
+  margin: 12px 0 0 2px;
+}
+
+div.itemCommentsForm form label.formEmail {
+  display: block;
+  margin: 12px 0 0 2px;
+}
+
+div.itemCommentsForm form label.formName {
+  display: block;
+  margin: 12px 0 0 2px;
+}
+
+div.itemCommentsForm form label.formRecaptcha {
+  display: block;
+  margin: 12px 0 0 2px;
+}
+
+div.itemCommentsForm form label.formUrl {
+  display: block;
+  margin: 12px 0 0 2px;
+}
+
+div.itemCommentsForm form span#formLog {
+  color: #CF1919;
+  font-weight: bold;
+  margin: 0 0 0 20px;
+  padding: 0 0 0 20px;
+}
+
+div.itemCommentsForm form textarea.inputbox {
+  display: block;
+  height: 160px;
+  margin: 0;
+  width: 350px;
+}
+
+div.itemCommentsForm h3 {
+  margin: 0;
+  padding: 0 0 4px 0;
+}
+
+div.itemCommentsForm p.itemCommentsFormNotes {
+  border-top: 2px solid #ccc;
+}
+
+div.itemCommentsPagination {
+  margin: 0 0 24px 0;
+  padding: 4px;
+}
+
+div.itemCommentsPagination span.pagination {
+  clear: both;
+  display: block;
+  float: right;
+}
+
+div.itemContainer {
+  float: left;
+}
+
+div.itemContainerLast {
+}
+
+div.itemContentFooter {
+  border-top: 1px solid #ddd;
+  color: #999;
+  display: block;
+  margin: 16px 0 4px 0;
+  padding: 4px;
+  text-align: right;
+}
+
+div.itemExtraFields {
+  border-top: 1px dotted #ddd;
+  margin: 16px 0 0 0;
+  padding: 8px 0 0 0;
+}
+
+div.itemExtraFields h3 {
+  line-height: normal !important;
+  margin: 0;
+  padding: 0 0 8px 0;
+}
+
+div.itemExtraFields ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.itemExtraFields ul li {
+  display: block;
+}
+
+div.itemExtraFields ul li span.itemExtraFieldsLabel {
+  display: block;
+  float: left;
+  font-weight: bold;
+  margin: 0 4px 0 0;
+  width: 30%;
+}
+
+div.itemExtraFields ul li span.itemExtraFieldsValue {
+}
+
+div.itemFacebookButton {
+  float: left;
+  margin-right: 24px;
+  width: 200px;
+}
+
+div.itemFullText {
+}
+
+div.itemFullText h3 {
+  margin: 0;
+  padding: 16px 0 4px 0;
+}
+
+div.itemFullText img {
+}
+
+div.itemFullText p {
+}
+
+div.itemGooglePlusOneButton {
+}
+
+div.itemHeader {
+}
+
+div.itemHeader h2.itemTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 110%;
+  margin: 0;
+  padding: 10px 0 4px 0;
+}
+
+div.itemHeader h2.itemTitle span {
+}
+
+div.itemHeader h2.itemTitle span sup {
+  color: #CF1919;
+  font-size: 12px;
+  /* "Featured" presented in superscript */
+  text-decoration: none;
+}
+
+div.itemHeader span.itemAuthor {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+div.itemHeader span.itemAuthor a {
+}
+
+div.itemHeader span.itemAuthor a:hover {
+}
+
+div.itemHeader span.itemDateCreated {
+  color: #999;
+  font-size: 11px;
+}
+
+div.itemImageBlock {
+  margin: 0 0 16px 0;
+  padding: 8px;
+}
+
+/* Image Gallery */
+div.itemImageGallery {
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+div.itemIntroText {
+  color: #444;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  padding: 4px 0 12px 0;
+}
+
+div.itemIntroText img {
+}
+
+div.itemIsFeatured {
+}
+
+/* --- Featured flags: the classes are repeated further below to indicate placement in the CSS structure --- */
+div.itemIsFeatured,
+div.catItemIsFeatured,
+div.userItemIsFeatured {
+  background: url(../images/system/featuredItem.png) no-repeat 100% 0;
+}
+
+div.itemLinks {
+  margin: 16px 0;
+  padding: 0;
+}
+
+/* --- Item groups --- */
+div.itemList {
+}
+
+/*----------------------------------------------------------------------
+	Component: Itemlist view (category)
+----------------------------------------------------------------------*/
+
+div.itemListCategoriesBlock {
+}
+
+/* --- Category block --- */
+div.itemListCategory {
+  background: #f7fafe;
+  border: 1px solid #ddd;
+  margin: 4px 0;
+  padding: 8px;
+}
+
+div.itemListCategory h2 {
+}
+
+div.itemListCategory img {
+  background: #fff;
+  border: 1px solid #ddd;
+  display: block;
+  float: left;
+  margin: 0 8px 0 0;
+  padding: 4px;
+}
+
+div.itemListCategory p {
+}
+
+/* --- Sub-category block --- */
+div.itemListSubCategories {
+}
+
+div.itemListSubCategories h3 {
+}
+
+/* Article navigation */
+div.itemNavigation {
+  background: #fffff0;
+  border-bottom: 1px dotted #ccc;
+  border-top: 1px dotted #ccc;
+  margin: 0 0 24px 0;
+  padding: 4px 8px;
+}
+
+div.itemNavigation a.itemNext {
+  padding: 0 12px;
+}
+
+div.itemNavigation a.itemPrevious {
+  padding: 0 12px;
+}
+
+div.itemNavigation span.itemNavigationTitle {
+  color: #999;
+}
+
+div.itemRatingBlock {
+  padding: 8px 0;
+}
+
+div.itemRatingBlock span {
+  color: #999;
+  display: block;
+  float: left;
+  font-style: normal;
+  margin: 0;
+  padding: 0 4px 0 0;
+}
+
+div.itemRatingForm .formLogLoading {
+  background: url(../images/system/loading.gif) no-repeat left center;
+  height: 25px;
+  padding: 0 0 0 20px;
+}
+
+div.itemRelated h3 {
+}
+
+div.itemRelated ul {
+}
+
+div.itemRelated ul li {
+}
+
+div.itemRelated ul li.clr {
+  border: none;
+  clear: both;
+  display: block;
+  float: none;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+div.itemRelated ul li.k2ScrollerElement {
+  background: #fff;
+  border: 1px solid #ccc;
+  float: left;
+  margin: 0 4px 4px 0;
+  overflow: hidden;
+  padding: 4px;
+}
+
+div.itemRelAuthor {
+}
+
+div.itemRelAuthor a {
+}
+
+div.itemRelCat {
+}
+
+div.itemRelCat a {
+}
+
+div.itemRelFulltext {
+}
+
+div.itemRelImageGallery {
+}
+
+div.itemRelIntrotext {
+}
+
+div.itemRelMedia {
+}
+
+div.itemSocialSharing {
+  padding: 8px 0;
+}
+
+div.itemTagsBlock {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.itemTagsBlock span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+div.itemTagsBlock ul.itemTags {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.itemTagsBlock ul.itemTags li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 0 0;
+  text-align: center;
+}
+
+div.itemTagsBlock ul.itemTags li a {
+}
+
+div.itemTagsBlock ul.itemTags li a:hover {
+}
+
+div.itemToolbar {
+  background: #f7fafe;
+  border-bottom: 1px dotted #ccc;
+  border-top: 1px dotted #ccc;
+  margin: 16px 0 0 0;
+  padding: 2px 0;
+}
+
+div.itemToolbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+div.itemToolbar ul > li:first-child {
+  border: none; /* remove the first CSS border from the left of the toolbar */
+}
+
+div.itemToolbar ul li {
+  background: none;
+  border-left: 1px solid #ccc;
+  display: inline;
+  font-size: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 0 8px;
+  text-align: center;
+}
+
+div.itemToolbar ul li a {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+div.itemToolbar ul li a img {
+  vertical-align: middle;
+}
+
+div.itemToolbar ul li a span {
+}
+
+div.itemToolbar ul li a#fontDecrease {
+  margin: 0 0 0 2px;
+}
+
+div.itemToolbar ul li a#fontDecrease img {
+  background: url(../images/system/font_decrease.gif) no-repeat;
+  height: 13px;
+  width: 13px;
+}
+
+div.itemToolbar ul li a#fontDecrease span,
+	div.itemToolbar ul li a#fontIncrease span {
+  display: none;
+}
+
+div.itemToolbar ul li a#fontIncrease {
+  margin: 0 0 0 2px;
+}
+
+div.itemToolbar ul li a#fontIncrease img {
+  background: url(../images/system/font_increase.gif) no-repeat;
+  height: 13px;
+  width: 13px;
+}
+
+div.itemToolbar ul li a.itemCommentsLink {
+}
+
+div.itemToolbar ul li a.itemCommentsLink span {
+}
+
+div.itemToolbar ul li a.itemEmailLink {
+}
+
+div.itemToolbar ul li a.itemEmailLink span {
+}
+
+div.itemToolbar ul li a.itemImageGalleryLink {
+}
+
+div.itemToolbar ul li a.itemImageGalleryLink span {
+}
+
+div.itemToolbar ul li a.itemPrintLink {
+}
+
+div.itemToolbar ul li a.itemPrintLink span {
+}
+
+div.itemToolbar ul li a.itemVideoLink {
+}
+
+div.itemToolbar ul li a.itemVideoLink span {
+}
+
+div.itemToolbar ul li a:hover {
+}
+
+div.itemToolbar ul li span.itemTextResizerTitle {
+}
+
+div.itemTwitterButton {
+  float: left;
+  margin: 2px 24px 0 0;
+}
+
+/* Video */
+div.itemVideoBlock {
+  background: #010101 url(../images/system/videoplayer-bg.gif) repeat-x bottom;
+  margin: 0 0 16px 0;
+  padding: 16px;
+}
+
+div.itemVideoBlock div.itemVideoEmbedded {
+  text-align: center; /* for embedded videos (not using AllVideos) */
+}
+
+div.itemVideoBlock span.itemVideo {
+  display: block;
+  overflow: hidden;
+}
+
+div.itemVideoBlock span.itemVideoCaption {
+  color: #eee;
+  display: block;
+  float: left;
+  font-size: 11px;
+  font-weight: bold;
+  width: 60%;
+}
+
+div.itemVideoBlock span.itemVideoCredits {
+  color: #eee;
+  display: block;
+  float: right;
+  font-size: 11px;
+  font-style: italic;
+  text-align: right;
+  width: 35%;
+}
+
+div.itemView {
+  border-bottom: 1px dotted #ccc; /* this is the item container for this view */
+  margin: 0 0 24px 0;
+  padding: 8px 0 24px 0;
+}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_tools
+----------------------------------------------------------------------*/
+/* --- Archives --- */
+div.k2ArchivesBlock {
+}
+
+div.k2ArchivesBlock ul {
+}
+
+div.k2ArchivesBlock ul li {
+}
+
+div.k2ArchivesBlock ul li a {
+}
+
+div.k2ArchivesBlock ul li a:hover {
+}
+
+/* --- Authors --- */
+div.k2AuthorsListBlock {
+}
+
+div.k2AuthorsListBlock ul {
+}
+
+div.k2AuthorsListBlock ul li {
+}
+
+div.k2AuthorsListBlock ul li a.abAuthorAvatar img {
+}
+
+div.k2AuthorsListBlock ul li a.abAuthorLatestItem {
+  clear: both;
+  display: block;
+}
+
+div.k2AuthorsListBlock ul li a.abAuthorLatestItem:hover {
+}
+
+div.k2AuthorsListBlock ul li a.abAuthorName {
+}
+
+div.k2AuthorsListBlock ul li a.abAuthorName:hover {
+}
+
+div.k2AuthorsListBlock ul li span.abAuthorCommentsCount {
+}
+
+/* --- Breadcrumbs --- */
+div.k2BreadcrumbsBlock {
+}
+
+div.k2BreadcrumbsBlock a {
+}
+
+div.k2BreadcrumbsBlock a:hover {
+}
+
+div.k2BreadcrumbsBlock span.bcSeparator {
+  font-size: 14px;
+  padding: 0 4px;
+}
+
+div.k2BreadcrumbsBlock span.bcTitle {
+  color: #999;
+  padding: 0 4px 0 0;
+}
+
+div.k2CalendarLoader {
+  background: #fff url(../images/system/k2CalendarLoader.gif) no-repeat 50% 50%;
+}
+
+/* --- Category List/Menu --- */
+div.k2CategoriesListBlock {
+}
+
+div.k2CategoriesListBlock ul {
+}
+
+div.k2CategoriesListBlock ul li {
+}
+
+div.k2CategoriesListBlock ul li a {
+}
+
+div.k2CategoriesListBlock ul li a span.catCounter {
+}
+
+div.k2CategoriesListBlock ul li a span.catTitle {
+  padding-right: 4px;
+}
+
+div.k2CategoriesListBlock ul li a:hover {
+}
+
+div.k2CategoriesListBlock ul li a:hover span.catCounter {
+}
+
+div.k2CategoriesListBlock ul li a:hover span.catTitle {
+}
+
+div.k2CategoriesListBlock ul li.activeCategory {
+}
+
+div.k2CategoriesListBlock ul li.activeCategory a {
+  font-weight: bold;
+}
+
+/* --- Category Tree Select Box --- */
+div.k2CategorySelectBlock {
+}
+
+div.k2CategorySelectBlock form select {
+  width: auto;
+}
+
+div.k2CategorySelectBlock form select option {
+}
+
+/* --- Custom Code --- */
+div.k2CustomCodeBlock {
+}
+
+/* --- RSS feed icon --- */
+div.k2FeedIcon {
+  padding: 4px 8px;
+}
+
+div.k2FeedIcon a span,
+div.k2FeedIcon a:hover span {
+  display: none;
+}
+
+div.k2FeedIcon a,
+div.k2FeedIcon a:hover {
+  background: url(../images/fugue/feed.png) no-repeat 50% 50%;
+  display: block;
+  float: right;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  width: 16px;
+}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_content
+----------------------------------------------------------------------*/
+
+div.k2ItemsBlock {
+}
+
+div.k2ItemsBlock a.moduleCustomLink {
+}
+
+div.k2ItemsBlock a.moduleCustomLink:hover {
+}
+
+div.k2ItemsBlock p.modulePretext {
+}
+
+div.k2ItemsBlock ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div.k2ItemsBlock ul li {
+}
+
+div.k2ItemsBlock ul li a {
+}
+
+div.k2ItemsBlock ul li a.moduleItemAuthorAvatar img {
+}
+
+div.k2ItemsBlock ul li a.moduleItemCategory {
+}
+
+div.k2ItemsBlock ul li a.moduleItemComments {
+  border-right: 1px solid #ccc;
+  margin: 0 8px 0 0;
+  padding: 0 4px 0 0;
+}
+
+div.k2ItemsBlock ul li a.moduleItemComments:hover {
+}
+
+div.k2ItemsBlock ul li a.moduleItemReadMore {
+}
+
+div.k2ItemsBlock ul li a.moduleItemReadMore:hover {
+}
+
+div.k2ItemsBlock ul li a.moduleItemTitle {
+}
+
+div.k2ItemsBlock ul li a.moduleItemTitle:hover {
+}
+
+div.k2ItemsBlock ul li a:hover {
+}
+
+div.k2ItemsBlock ul li div.moduleAttachments {
+}
+
+div.k2ItemsBlock ul li div.moduleItemAuthor {
+}
+
+div.k2ItemsBlock ul li div.moduleItemAuthor a {
+}
+
+div.k2ItemsBlock ul li div.moduleItemAuthor a:hover {
+}
+
+div.k2ItemsBlock ul li div.moduleItemExtraFields {
+}
+
+div.k2ItemsBlock ul li div.moduleItemIntrotext {
+  display: block;
+  line-height: 120%;
+  padding: 4px 0;
+}
+
+div.k2ItemsBlock ul li div.moduleItemIntrotext a.moduleItemImage img {
+  border: 2px solid #ddd;
+  float: right;
+  margin: 2px 0 4px 4px;
+  padding: 0;
+}
+
+div.k2ItemsBlock ul li div.moduleItemTags {
+}
+
+div.k2ItemsBlock ul li div.moduleItemTags a {
+  padding: 0 2px;
+}
+
+div.k2ItemsBlock ul li div.moduleItemTags a:hover {
+}
+
+div.k2ItemsBlock ul li div.moduleItemTags b {
+}
+
+div.k2ItemsBlock ul li div.moduleItemVideo {
+}
+
+div.k2ItemsBlock ul li div.moduleItemVideo span.moduleItemVideoCaption {
+}
+
+div.k2ItemsBlock ul li div.moduleItemVideo span.moduleItemVideoCredits {
+}
+
+div.k2ItemsBlock ul li span.moduleItemDateCreated {
+}
+
+div.k2ItemsBlock ul li span.moduleItemHits {
+  border-right: 1px solid #ccc;
+  margin: 0 8px 0 0;
+  padding: 0 4px 0 0;
+}
+
+div.k2ItemsBlock ul li.lastItem {
+}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_comments
+----------------------------------------------------------------------*/
+
+/* Latest Comments */
+div.k2LatestCommentsBlock {
+}
+
+div.k2LatestCommentsBlock ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div.k2LatestCommentsBlock ul li {
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  padding: 10px 0;
+}
+
+div.k2LatestCommentsBlock ul li a {
+}
+
+div.k2LatestCommentsBlock ul li a.lcAvatar img {
+}
+
+div.k2LatestCommentsBlock ul li a:hover {
+}
+
+div.k2LatestCommentsBlock ul li span.lcComment {
+}
+
+div.k2LatestCommentsBlock ul li span.lcCommentDate {
+  color: #999;
+}
+
+div.k2LatestCommentsBlock ul li span.lcItemCategory {
+}
+
+div.k2LatestCommentsBlock ul li span.lcItemTitle {
+}
+
+div.k2LatestCommentsBlock ul li span.lcUsername {
+}
+
+div.k2LatestCommentsBlock ul li,
+div.k2TopCommentersBlock ul li,
+div.k2ItemsBlock ul li,
+div.k2LoginBlock ul li,
+div.k2UserBlock ul.k2UserBlockActions li,
+div.k2UserBlock ul.k2UserBlockRenderedMenu li,
+div.k2ArchivesBlock ul li,
+div.k2AuthorsListBlock ul li,
+div.k2CategoriesListBlock ul li,
+div.k2UsersBlock ul li {
+}
+
+div.k2LatestCommentsBlock ul li.lastItem {
+}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_user (mod_k2_login will be removed in v2.6)
+----------------------------------------------------------------------*/
+
+div.k2LoginBlock {
+}
+
+div.k2LoginBlock fieldset.input {
+  margin: 0;
+  padding: 0 0 8px 0;
+}
+
+div.k2LoginBlock fieldset.input input.button {
+}
+
+div.k2LoginBlock fieldset.input p {
+  margin: 0;
+  padding: 0 0 4px 0;
+}
+
+div.k2LoginBlock fieldset.input p input {
+  display: block;
+}
+
+div.k2LoginBlock fieldset.input p label {
+  display: block;
+}
+
+div.k2LoginBlock fieldset.input p#form-login-remember label,
+	div.k2LoginBlock fieldset.input p#form-login-remember input {
+  display: inline;
+}
+
+div.k2LoginBlock p.postText {
+}
+
+div.k2LoginBlock p.preText {
+}
+
+div.k2LoginBlock ul {
+}
+
+div.k2LoginBlock ul li {
+}
+
+/* --- Pagination --- */
+div.k2Pagination {
+  color: #999;
+  margin: 24px 0 4px 0;
+  padding: 8px;
+  text-align: center;
+}
+
+/* --- Pagination (additional styling for Joomla! 1.6+) --- */
+div.k2Pagination ul {
+  text-align: center;
+}
+
+div.k2Pagination ul li {
+  display: inline;
+}
+
+/* "Report comment" form */
+div.k2ReportCommentFormContainer {
+  margin: 0 auto;
+  padding: 8px;
+  width: 480px;
+}
+
+div.k2ReportCommentFormContainer blockquote {
+  background: #f7fafe;
+  border: 1px solid #ddd;
+  margin: 0 0 8px 0;
+  padding: 8px;
+  width: 462px;
+}
+
+div.k2ReportCommentFormContainer blockquote span.quoteIconLeft {
+  color: #135CAE;
+  display: block;
+  float: left;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 30px;
+  vertical-align: top;
+}
+
+div.k2ReportCommentFormContainer blockquote span.quoteIconRight {
+  color: #135CAE;
+  display: block;
+  float: right;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 30px;
+  vertical-align: top;
+}
+
+div.k2ReportCommentFormContainer blockquote span.theComment {
+  color: #000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: normal;
+  padding: 0 4px;
+}
+
+div.k2ReportCommentFormContainer form #recaptcha {
+  margin-bottom: 24px;
+}
+
+div.k2ReportCommentFormContainer form .formLogLoading {
+  background: url(../images/system/loading.gif) no-repeat left center;
+}
+
+div.k2ReportCommentFormContainer form input,
+	div.k2ReportCommentFormContainer form textarea {
+  border: 1px solid #ddd;
+  display: block;
+  font-size: 12px;
+  margin: 0 0 8px 0;
+  padding: 2px;
+  width: 474px;
+}
+
+div.k2ReportCommentFormContainer form label {
+  display: block;
+  font-weight: bold;
+}
+
+div.k2ReportCommentFormContainer form span#formLog {
+  color: #CF1919;
+  font-weight: bold;
+  margin: 0 0 0 20px;
+  padding: 0 0 0 20px;
+}
+
+/* n level (n) - like the above... */
+
+/* --- Search Box --- */
+div.k2SearchBlock {
+  position: relative;
+}
+
+div.k2SearchBlock div.k2LiveSearchResults {
+  background: #fff;
+  border: 1px solid #ccc;
+  display: none;
+  margin-top: -1px;
+  position: absolute;
+  z-index: 99;
+}
+
+/* Live search results (fetched via ajax) */
+	div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a {
+  border-top: 1px dotted #eee;
+  display: block;
+  padding: 1px 2px;
+}
+
+div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a:hover {
+  background: #fffff0;
+}
+
+div.k2SearchBlock form {
+}
+
+div.k2SearchBlock form input.button {
+}
+
+div.k2SearchBlock form input.inputbox {
+}
+
+div.k2SearchBlock form input.k2SearchLoading {
+  background: url(../images/system/searchLoader.gif) no-repeat 100% 50%;
+}
+
+/* --- Tag Cloud --- */
+div.k2TagCloudBlock {
+  padding: 8px 0;
+}
+
+div.k2TagCloudBlock a {
+  display: block;
+  float: left;
+  padding: 4px;
+}
+
+div.k2TagCloudBlock a:hover {
+  background: #135cae;
+  color: #fff;
+  display: block;
+  float: left;
+  padding: 4px;
+  text-decoration: none;
+}
+
+/* Top Commenters */
+div.k2TopCommentersBlock {
+}
+
+div.k2TopCommentersBlock ul {
+}
+
+div.k2TopCommentersBlock ul li {
+}
+
+div.k2TopCommentersBlock ul li a.tcAvatar img {
+}
+
+div.k2TopCommentersBlock ul li a.tcLatestComment {
+}
+
+div.k2TopCommentersBlock ul li a.tcLatestComment:hover {
+}
+
+div.k2TopCommentersBlock ul li a.tcLink {
+}
+
+div.k2TopCommentersBlock ul li a.tcLink:hover {
+}
+
+div.k2TopCommentersBlock ul li span.tcCommentsCounter {
+}
+
+div.k2TopCommentersBlock ul li span.tcLatestCommentDate {
+  color: #999;
+}
+
+div.k2TopCommentersBlock ul li span.tcUsername {
+}
+
+div.k2TopCommentersBlock ul li.lastItem {
+}
+
+div.k2UserBlock {
+}
+
+div.k2UserBlock div.k2UserBlockDetails a.ubAvatar img {
+}
+
+div.k2UserBlock div.k2UserBlockDetails span.ubCommentsCount {
+}
+
+div.k2UserBlock div.k2UserBlockDetails span.ubName {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+div.k2UserBlock form {
+}
+
+div.k2UserBlock form input.ubLogout {
+}
+
+div.k2UserBlock p.ubGreeting {
+  border-bottom: 1px dotted #ccc;
+}
+
+div.k2UserBlock ul.k2UserBlockActions {
+}
+
+div.k2UserBlock ul.k2UserBlockActions li {
+}
+
+div.k2UserBlock ul.k2UserBlockActions li a {
+}
+
+div.k2UserBlock ul.k2UserBlockActions li a:hover {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu li {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu li a {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu li a:hover {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu li ul {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu li ul li {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu li ul li a {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu li ul ul {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu li ul ul li {
+}
+
+div.k2UserBlock ul.k2UserBlockRenderedMenu li ul ul li a {
+}
+
+/*----------------------------------------------------------------------
+	Modules: mod_k2_users
+----------------------------------------------------------------------*/
+
+div.k2UsersBlock {
+}
+
+div.k2UsersBlock ul {
+}
+
+div.k2UsersBlock ul li {
+}
+
+div.k2UsersBlock ul li a.ubUserAvatar img {
+}
+
+div.k2UsersBlock ul li a.ubUserName {
+}
+
+div.k2UsersBlock ul li a.ubUserName:hover {
+}
+
+div.k2UsersBlock ul li div.ubUserAdditionalInfo {
+}
+
+div.k2UsersBlock ul li div.ubUserDescription {
+}
+
+div.k2UsersBlock ul li h3 {
+  clear: both;
+  margin: 8px 0 0 0;
+  padding: 0;
+}
+
+div.k2UsersBlock ul li ul.ubUserItems {
+}
+
+div.k2UsersBlock ul li ul.ubUserItems li {
+}
+
+div.k2UsersBlock ul li.lastItem {
+}
+
+div.latestItemBody {
+  margin: 0;
+  padding: 8px 0;
+}
+
+div.latestItemCategory {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.latestItemCategory a {
+}
+
+div.latestItemCategory span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+/* Anchor link to comments */
+div.latestItemCommentsLink {
+  border-right: 1px solid #ccc;
+  display: inline;
+  margin: 0 8px 0 0;
+  padding: 0 8px 0 0;
+}
+
+div.latestItemCommentsLink a {
+}
+
+div.latestItemCommentsLink a:hover {
+}
+
+div.latestItemHeader {
+}
+
+div.latestItemHeader h3.latestItemTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 110%;
+  margin: 0;
+  padding: 10px 0 4px 0;
+}
+
+div.latestItemImageBlock {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+div.latestItemIntroText {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+  padding: 4px 0 12px 0;
+}
+
+div.latestItemIntroText img {
+}
+
+div.latestItemLinks {
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+/* Latest items list */
+div.latestItemList {
+  padding: 0 8px 8px 0;
+}
+
+/* Read more link */
+div.latestItemReadMore {
+  display: inline;
+}
+
+div.latestItemReadMore a {
+}
+
+div.latestItemReadMore a:hover {
+}
+
+/* Category info block */
+div.latestItemsCategory {
+  background: #f7fafe;
+  border: 1px solid #ddd;
+  margin: 0 8px 8px 0;
+  padding: 8px;
+}
+
+div.latestItemsCategory h2 {
+}
+
+div.latestItemsCategory p {
+}
+
+div.latestItemsCategoryImage {
+  text-align: center;
+}
+
+div.latestItemsCategoryImage img {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 0 8px 0 0;
+  padding: 4px;
+}
+
+/*----------------------------------------------------------------------
+	Component: Latest view
+----------------------------------------------------------------------*/
+
+div.latestItemsContainer {
+  float: left;
+}
+
+/* User info block */
+div.latestItemsUser {
+  background: #f7fafe;
+  border: 1px solid #ddd;
+  clear: both;
+  margin: 0 8px 8px 0;
+  padding: 8px;
+}
+
+div.latestItemsUser h2 {
+}
+
+div.latestItemsUser img {
+  background: #fff;
+  border: 1px solid #ddd;
+  display: block;
+  float: left;
+  margin: 0 8px 0 0;
+  padding: 4px;
+}
+
+div.latestItemsUser p.latestItemsUserAdditionalInfo {
+  margin: 8px 0 0 0;
+  padding: 4px 0;
+}
+
+div.latestItemsUser p.latestItemsUserDescription {
+  padding: 4px 0;
+}
+
+div.latestItemTagsBlock {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.latestItemTagsBlock span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+div.latestItemTagsBlock ul.latestItemTags {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.latestItemTagsBlock ul.latestItemTags li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 0 0;
+  text-align: center;
+}
+
+div.latestItemTagsBlock ul.latestItemTags li a {
+}
+
+div.latestItemTagsBlock ul.latestItemTags li a:hover {
+}
+
+/* Video */
+div.latestItemVideoBlock {
+  background: #010101 url(../images/system/videoplayer-bg.gif) repeat-x bottom;
+  margin: 0 0 16px 0;
+  padding: 16px;
+}
+
+div.latestItemVideoBlock span.latestItemVideo {
+  display: block;
+}
+
+div.latestItemView {
+}
+
+div.moduleItemExtraFields ul {
+}
+
+div.moduleItemExtraFields ul li {
+}
+
+div.moduleItemExtraFields ul li span.moduleItemExtraFieldsLabel {
+  display: block;
+  float: left;
+  font-weight: bold;
+  margin: 0 4px 0 0;
+  width: 30%;
+}
+
+div.moduleItemExtraFields ul li span.moduleItemExtraFieldsValue {
+}
+
+div.subCategory {
+  background: #f7fafe;
+  border: 1px solid #ddd;
+  margin: 4px;
+  padding: 8px;
+}
+
+div.subCategory a.subCategoryImage img,
+				div.subCategory a.subCategoryImage:hover img {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 0 8px 0 0;
+  padding: 4px;
+}
+
+div.subCategory a.subCategoryImage,
+				div.subCategory a.subCategoryImage:hover {
+  display: block;
+  text-align: center;
+}
+
+div.subCategory h2 {
+}
+
+div.subCategory h2 a {
+}
+
+div.subCategory h2 a:hover {
+}
+
+div.subCategory p {
+}
+
+div.subCategoryContainer {
+  float: left;
+}
+
+div.subCategoryContainerLast {
+}
+
+div.tagItemBody {
+  margin: 0;
+  padding: 8px 0;
+}
+
+div.tagItemCategory {
+  border-right: 1px solid #ccc;
+  display: inline;
+  margin: 0 8px 0 0;
+  padding: 0 8px 0 0;
+}
+
+div.tagItemCategory a {
+}
+
+div.tagItemCategory span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+div.tagItemExtraFields {
+}
+
+div.tagItemExtraFields h4 {
+}
+
+div.tagItemExtraFields ul {
+}
+
+div.tagItemExtraFields ul li {
+}
+
+div.tagItemExtraFields ul li span.tagItemExtraFieldsLabel {
+}
+
+div.tagItemExtraFields ul li span.tagItemExtraFieldsValue {
+}
+
+div.tagItemHeader {
+}
+
+div.tagItemHeader h2.tagItemTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 110%;
+  margin: 0;
+  padding: 10px 0 4px 0;
+}
+
+div.tagItemHeader span.tagItemDateCreated {
+  color: #999;
+  font-size: 11px;
+}
+
+div.tagItemImageBlock {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+div.tagItemIntroText {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+  padding: 4px 0 12px 0;
+}
+
+div.tagItemIntroText img {
+}
+
+div.tagItemList {
+}
+
+/* Read more link */
+div.tagItemReadMore {
+  display: inline;
+}
+
+div.tagItemReadMore a {
+}
+
+div.tagItemReadMore a:hover {
+}
+
+div.tagItemView {
+  border-bottom: 1px dotted #ccc;
+  /* this is the item container for this view */
+  margin: 0 0 16px 0;
+  padding: 8px 0;
+}
+
+/*----------------------------------------------------------------------
+	Component: Itemlist view (tag)
+----------------------------------------------------------------------*/
+div.tagView {
+}
+
+div.userBlock {
+  background: #f7fafe;
+  border: 1px solid #ddd;
+  clear: both;
+  margin: 0 0 16px 0;
+  padding: 8px;
+}
+
+div.userBlock div.userAdditionalInfo {
+  margin: 8px 0 0 0;
+  padding: 4px 0;
+}
+
+div.userBlock div.userDescription {
+  padding: 4px 0;
+}
+
+div.userBlock h2 {
+}
+
+div.userBlock img {
+  background: #fff;
+  border: 1px solid #ddd;
+  display: block;
+  float: left;
+  margin: 0 8px 0 0;
+  padding: 4px;
+}
+
+div.userItemBody {
+  margin: 0;
+  padding: 8px 0;
+}
+
+div.userItemCategory {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.userItemCategory a {
+}
+
+div.userItemCategory span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+/* Anchor link to comments */
+div.userItemCommentsLink {
+  border-right: 1px solid #ccc;
+  display: inline;
+  margin: 0 8px 0 0;
+  padding: 0 8px 0 0;
+}
+
+div.userItemCommentsLink a {
+}
+
+div.userItemCommentsLink a:hover {
+}
+
+div.userItemHeader {
+}
+
+div.userItemHeader h3.userItemTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 110%;
+  margin: 0;
+  padding: 10px 0 4px 0;
+}
+
+div.userItemHeader h3.userItemTitle span sup {
+  color: #CF1919;
+  font-size: 12px;
+  /* "Unpublished" presented in superscript */
+  text-decoration: none;
+}
+
+div.userItemHeader span.userItemDateCreated {
+  color: #999;
+  font-size: 11px;
+}
+
+div.userItemImageBlock {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+div.userItemIntroText {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+  padding: 4px 0 12px 0;
+}
+
+div.userItemIntroText img {
+}
+
+div.userItemIsFeatured {
+}
+
+div.userItemLinks {
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+div.userItemList {
+}
+
+/* Read more link */
+div.userItemReadMore {
+  display: inline;
+}
+
+div.userItemReadMore a {
+}
+
+div.userItemReadMore a:hover {
+}
+
+div.userItemTagsBlock {
+  border-bottom: 1px dotted #ccc;
+  padding: 4px;
+}
+
+div.userItemTagsBlock span {
+  color: #555;
+  font-weight: bold;
+  padding: 0 4px 0 0;
+}
+
+div.userItemTagsBlock ul.userItemTags {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.userItemTagsBlock ul.userItemTags li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0 4px 0 0;
+  text-align: center;
+}
+
+div.userItemTagsBlock ul.userItemTags li a {
+}
+
+div.userItemTagsBlock ul.userItemTags li a:hover {
+}
+
+div.userItemViewUnpublished {
+  background: #fffff2;
+  border: 4px dashed #ccc;
+  margin: 8px 0;
+  opacity: 0.9;
+  padding: 8px;
+}
+
+/*----------------------------------------------------------------------
+	Component: Itemlist view (user)
+----------------------------------------------------------------------*/
+
+/* User info block */
+div.userView {
+}
+
+/* Items presented in a list */
+h2.latestItemTitleList {
+  border-bottom: 1px dotted #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  margin: 8px 0 2px 0;
+  padding: 2px 0;
+}
+
+img {
+  border: none;
+}
+
+img.itemRelImg {
+}
+
+img.k2AccountPageImage {
+  border: 4px solid #ddd;
+  display: block;
+  margin: 10px 0;
+  padding: 0;
+}
+
+span.catItemAddLink {
+  border-bottom: 1px dotted #ccc;
+  display: block;
+  margin: 0 0 4px 0;
+  padding: 8px 0;
+  text-align: right;
+}
+
+span.catItemAddLink a {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+
+span.catItemAddLink a:hover {
+  background: #ffffcc;
+}
+
+/* Modified date */
+span.catItemDateModified {
+  border-top: 1px solid #ddd;
+  color: #999;
+  display: block;
+  margin: 4px 0;
+  padding: 4px;
+  text-align: right;
+}
+
+span.catItemEditLink {
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 4px 0;
+  text-align: right;
+  width: 120px;
+}
+
+span.catItemEditLink a {
+  background: #eee;
+  border: 1px solid #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  padding: 2px 12px;
+  text-decoration: none;
+}
+
+span.catItemEditLink a:hover {
+  background: #ffffcc;
+}
+
+span.catItemHits {
+}
+
+span.catItemImage {
+  display: block;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+span.catItemImage img {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+span.genericItemImage {
+  display: block;
+  margin: 0 8px 8px 0;
+  text-align: center;
+}
+
+span.genericItemImage img {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+span.itemDateModified {
+}
+
+span.itemEditLink {
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 4px 0;
+  text-align: right;
+  width: 120px;
+}
+
+span.itemEditLink a {
+  background: #eee;
+  border: 1px solid #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  padding: 2px 12px;
+  text-decoration: none;
+}
+
+span.itemEditLink a:hover {
+  background: #ffffcc;
+}
+
+span.itemHits {
+  float: left;
+}
+
+span.itemImage {
+  display: block;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+span.itemImage img {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+span.itemImageCaption {
+  color: #666;
+  display: block;
+  float: left;
+  font-size: 11px;
+}
+
+span.itemImageCredits {
+  color: #999;
+  display: block;
+  float: right;
+  font-size: 11px;
+  font-style: italic;
+}
+
+span.latestItemDateCreated {
+  color: #999;
+  font-size: 11px;
+}
+
+span.latestItemImage {
+  display: block;
+  margin: 0 8px 8px 0;
+  text-align: center;
+}
+
+span.latestItemImage img {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+span.latestItemsUserEmail {
+  color: #555;
+  display: block;
+  font-weight: bold;
+}
+
+span.latestItemsUserURL {
+  color: #555;
+  display: block;
+  font-weight: bold;
+}
+
+span.siteRoot {
+  display: none;
+}
+
+span.tagItemImage {
+  display: block;
+  margin: 0 8px 8px 0;
+  text-align: center;
+}
+
+span.tagItemImage img {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+span.ubUserEmail {
+  background: url(../images/fugue/mail.png) no-repeat 50% 50%;
+  display: inline-block;
+  height: 16px;
+  margin: 0 2px 0 0;
+  overflow: hidden;
+  padding: 0;
+  width: 16px;
+}
+
+span.ubUserEmail a {
+  display: inline-block;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  text-indent: -9999px;
+  width: 16px;
+}
+
+span.userEmail {
+  color: #555;
+  display: block;
+  font-weight: bold;
+}
+
+span.userItemAddLink {
+  border-bottom: 1px dotted #ccc;
+  display: block;
+  margin: 0 0 4px 0;
+  padding: 8px 0;
+  text-align: right;
+}
+
+span.userItemAddLink a {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+
+span.userItemAddLink a:hover {
+  background: #ffffcc;
+}
+
+span.userItemEditLink {
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 4px 0;
+  text-align: right;
+  width: 120px;
+}
+
+span.userItemEditLink a {
+  background: #eee;
+  border: 1px solid #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  padding: 2px 12px;
+  text-decoration: none;
+}
+
+span.userItemEditLink a:hover {
+  background: #ffffcc;
+}
+
+span.userItemImage {
+  display: block;
+  margin: 0 8px 8px 0;
+  text-align: center;
+}
+
+span.userItemImage img {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+span.userURL {
+  color: #555;
+  display: block;
+  font-weight: bold;
+}
+
+table.calendar {
+  background: #fff;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+table.calendar tr td {
+  background: #fff;
+  border: 1px solid #f4f4f4;
+  padding: 2px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table.calendar tr td.calendarCurrentMonth {
+  background: #f3f3f3;
+}
+
+table.calendar tr td.calendarDate {
+}
+
+table.calendar tr td.calendarDateEmpty {
+  background: #fbfbfb;
+}
+
+table.calendar tr td.calendarDateLinked {
+  padding: 0;
+}
+
+table.calendar tr td.calendarDateLinked a {
+  background: #eee;
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+}
+
+table.calendar tr td.calendarDateLinked a:hover {
+  background: #135cae;
+  color: #fff;
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+}
+
+table.calendar tr td.calendarDayName {
+  background: #e9e9e9;
+  font-size: 11px;
+  width: 14.2%;
+}
+
+table.calendar tr td.calendarNavMonthNext {
+  background: #f3f3f3;
+  text-align: right;
+}
+
+table.calendar tr td.calendarNavMonthNext a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+table.calendar tr td.calendarNavMonthNext a:hover {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+table.calendar tr td.calendarNavMonthPrev {
+  background: #f3f3f3;
+  text-align: left;
+}
+
+table.calendar tr td.calendarNavMonthPrev a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+table.calendar tr td.calendarNavMonthPrev a:hover {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+table.calendar tr td.calendarToday {
+  background: #135cae;
+  color: #fff;
+}
+
+table.calendar tr td.calendarTodayLinked {
+  background: #135cae;
+  color: #fff;
+  padding: 0;
+}
+
+table.calendar tr td.calendarTodayLinked a {
+  color: #fff;
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+}
+
+table.calendar tr td.calendarTodayLinked a:hover {
+  background: #BFD9FF;
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+}
+
+/* --- Extra fields: CSV data styling --- */
+table.csvData {
+}
+
+table.csvData tr td {
+}
+
+table.csvData tr th {
+}
+
+/* Root level (0) */
+	ul.level0 {
+}
+
+ul.level0 li {
+}
+
+ul.level0 li a {
+}
+
+ul.level0 li a span {
+}
+
+ul.level0 li a:hover {
+}
+
+ul.level0 li a:hover span {
+}
+
+/* First level (1) */
+		ul.level1 {
+}
+
+ul.level1 li {
+}
+
+ul.level1 li a {
+}
+
+ul.level1 li a span {
+}
+
+ul.level1 li a:hover {
+}
+
+ul.level1 li a:hover span {
+}
+
+.clearList {
+  clear: both; /* this class is used to clear all previous floating list elements */
+  display: none;
+  float: none;
+}
+
+/* --- Clearing --- */
+.clr {
+  border: none;
+  clear: both;
+  display: block;
+  float: none;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Zebra rows --- */
+.even {
+  background: #fffff0;
+  border-bottom: 1px dotted #ccc;
+  padding: 2px;
+}
+
+/* --- Rating --- */
+.itemRatingForm {
+  display: block;
+  float: left;
+  line-height: 25px;
+  vertical-align: middle;
+}
+
+.itemRatingList {
+  background-position: left top;
+  float: left;
+  height: 25px;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 125px;
+}
+
+.itemRatingList .itemCurrentRating {
+  background-position: 0 center;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.itemRatingList a,
+.itemRatingList .itemCurrentRating {
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  left: 0;
+  line-height: 25px;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -1000px;
+  top: 0;
+}
+
+.itemRatingList a.five-stars {
+  width: 100%;
+  z-index: 2;
+}
+
+.itemRatingList a.four-stars {
+  width: 80%;
+  z-index: 3;
+}
+
+.itemRatingList a.one-star {
+  width: 20%;
+  z-index: 6;
+}
+
+.itemRatingList a.three-stars {
+  width: 60%;
+  z-index: 4;
+}
+
+.itemRatingList a.two-stars {
+  width: 40%;
+  z-index: 5;
+}
+
+.itemRatingList a:hover {
+  background-position: left bottom;
+}
+
+.itemRatingList li {
+  background: none;
+  display: inline;
+  padding: 0;
+}
+
+.itemRatingList,
+.itemRatingList a:hover,
+.itemRatingList .itemCurrentRating {
+  background: transparent url(../images/system/transparent_star.gif) left -1000px repeat-x;
+}
+
+.itemRatingLog {
+  float: left;
+  font-size: 11px;
+  margin: 0;
+  padding: 0 0 0 4px;
+}
+
+/*----------------------------------------------------------------------
+	Component: Register & profile page views (register.php & profile.php)
+----------------------------------------------------------------------*/
+.k2AccountPage {
+}
+
+.k2AccountPage div.k2AccountPageNotice {
+  padding: 8px;
+}
+
+.k2AccountPage div.k2AccountPageUpdate {
+  border-top: 1px dotted #ccc;
+  margin: 8px 0;
+  padding: 8px;
+  text-align: right;
+}
+
+.k2AccountPage table {
+}
+
+.k2AccountPage table tr td {
+}
+
+.k2AccountPage table tr td label {
+  white-space: nowrap;
+}
+
+.k2AccountPage table tr th {
+}
+
+/* Profile edit */
+.k2AccountPage table.admintable {
+}
+
+.k2AccountPage table.admintable td.key,
+.k2AccountPage table.admintable td.paramlist_key {
+  background: #f6f6f6;
+  border-bottom: 1px solid #e9e9e9;
+  border-right: 1px solid #e9e9e9;
+  color: #666;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: right;
+  width: 140px;
+}
+
+.k2AccountPage table.admintable tr td {
+}
+
+.k2AccountPage table.admintable tr td span {
+}
+
+.k2AccountPage table.admintable tr td span label {
+}
+
+.k2AccountPage td#userAdminParams {
+  margin: 0;
+  padding: 0;
+}
+
+.k2AccountPage th.k2ProfileHeading {
+  background: #f6f6f6;
+  font-size: 18px;
+  padding: 8px;
+  text-align: left;
+}
+
+/* --- Avatars --- */
+.k2Avatar img {
+  background: #fff;
+  border: 1px solid #ccc;
+  display: block;
+  float: left;
+  margin: 2px 4px 4px 0;
+  padding: 2px;
+}
+
+/* --- General padding --- */
+.k2Padding {
+  padding: 4px;
+}
+
+.largerFontSize {
+  font-size: 150%;
+  line-height: 140%;
+}
+
+.lastItem {
+  border: none; /* class appended on last list item */
+}
+
+.odd {
+  background: #fff;
+  border-bottom: 1px dotted #ccc;
+  padding: 2px;
+}
+
+/* --- ReCaptcha --- */
+.recaptchatable .recaptcha_image_cell,
+#recaptcha_table {
+  background-color: #fff !important;
+}
+
+/* --- CSS added with Javascript --- */
+.smallerFontSize {
+  font-size: 100%;
+  line-height: inherit;
+}
+
+/* --- Global K2 container --- */
+#k2Container {
+  padding: 0 0 24px 0;
+}
+
+/* --- Google Search --- */
+#k2Container div.gsc-branding-text {
+  text-align: right;
+}
+
+#k2Container div.gsc-control {
+  width: 100%;
+}
+
+#k2Container div.gs-visibleUrl {
+  display: none;
+}
+
+#recaptcha_response_field {
+  background-color: #fff !important;
+  border-color: #ccc !important;
+}
+
+#recaptcha_table {
+  border-color: #ccc !important;
+}
+
+/* --- Item block for each item group --- */
+div.catItemView {
+  padding: 4px; /* this is the item container for this view - we add a generic padding so that items don't get stuck with each other */
+}
+
+/* Related by tag */
+div.itemRelated {
+  margin-bottom: 16px;
+  /* Add overflow-x:scroll; if you want to enable the scrolling features, as explained in item.php */
+  padding: 0;
+}
+
+/* --- Calendar --- */
+div.k2CalendarBlock {
+  height: 190px;
+  /* use this height value so that the calendar height won't change on Month change via ajax */
+  margin-bottom: 8px;
+}
+
+/* --- Primary lists in modules --- */
+div.k2LatestCommentsBlock ul,
+div.k2TopCommentersBlock ul,
+div.k2ItemsBlock ul,
+div.k2LoginBlock ul,
+div.k2UserBlock ul.k2UserBlockActions,
+div.k2UserBlock ul.k2UserBlockRenderedMenu,
+div.k2ArchivesBlock ul,
+div.k2AuthorsListBlock ul,
+div.k2CategoriesListBlock ul,
+div.k2UsersBlock ul {
+}
+
+/* User items */
+div.userItemView {
+}
