@@ -21,7 +21,7 @@ class JConfig {
 	public $secret = 'r0wd2lyQzk84YrvU';
 	public $gzip = '0';
 	public $error_reporting = 'default';
-	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
+	public $helpurl = 'https://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '';
 	public $ftp_port = '';
 	public $ftp_user = 'sense';
@@ -30,14 +30,14 @@ class JConfig {
 	public $ftp_enable = '0';
 	public $offset = 'UTC';
 	public $mailonline = '1';
-	public $mailer = 'mail';
+	public $mailer = 'sendmail';
 	public $mailfrom = 'sapience.tw@gmail.com';
 	public $fromname = 'Sapience 智勝國際企業有限公司';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
-	public $smtpuser = '';
-	public $smtppass = '';
-	public $smtphost = 'localhost';
+	public $smtpuser = 'auto@sapience.com.tw';
+	public $smtppass = 'p^!^p,V>U&H|1';
+	public $smtphost = 'mail.sapience.com.tw';
 	public $smtpsecure = 'none';
 	public $smtpport = '25';
 	public $caching = '0';
@@ -83,4 +83,10 @@ class JConfig {
 	public $cookie_domain = '';
 	public $cookie_path = '';
 	public $asset_id = '1';
+	public $redis_persist = '1';
+	public $redis_server_host = 'localhost';
+	public $redis_server_port = '6379';
+	public $redis_server_auth = '';
+	public $redis_server_db = '0';
+	public $massmailoff = '0';
 }
